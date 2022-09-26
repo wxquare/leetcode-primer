@@ -33,100 +33,58 @@
 4. [Best Position for a Service Centre] (https://leetcode.com/problems/best-position-for-a-service-centre/)
 
 ## 6. Greedy && Brainteaser
-1. [Minimum Possible Integer After at Most K Adjacent Swaps On Digits](https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/)
-2. [Last Moment Before All Ants Fall Out of a Plank](https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/)
-
-
-Pair with Target Sum (easy)
-
-Remove Duplicates (easy)
-
-Squaring a Sorted Array (easy)
-
-Triplet Sum to Zero (medium)
-
-Triplet Sum Close to Target (medium)
-
-Triplets with Smaller Sum (medium)
-
-Subarrays with Product Less than a Target (medium)
-
-Dutch National Flag Problem (medium)
+- [Minimum Possible Integer After at Most K Adjacent Swaps On Digits](https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/)
+- [Last Moment Before All Ants Fall Out of a Plank](https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/)
+- Pair with Target Sum (easy)
+- Remove Duplicates (easy)
+- Squaring a Sorted Array (easy)
+- Triplet Sum to Zero (medium)
+- Triplet Sum Close to Target (medium)
+- Triplets with Smaller Sum (medium)
+- Subarrays with Product Less than a Target (medium)
+- Dutch National Flag Problem (medium)
 
 
 
 
 ## 3. Pattern: Fast & Slow pointers, 快慢指针类型
-经典题目：
+- LinkedList Cycle (easy)
+- Start of LinkedList Cycle (medium)
+- Happy Number (medium)
+- Middle of the LinkedList (easy)
 
-LinkedList Cycle (easy)
-
-Start of LinkedList Cycle (medium)
-
-Happy Number (medium)
-
-Middle of the LinkedList (easy)
-
-
-
-4. Pattern: Merge Intervals，区间合并类型
-经典题目：
-
-Merge Intervals (medium)
-
-Insert Interval (medium)
-
-Intervals Intersection (medium)
-
-Conflicting Appointments (medium)
+## 4. Pattern: Merge Intervals，区间合并类型
+- Merge Intervals (medium)
+- Insert Interval (medium)
+- Intervals Intersection (medium)
+- Conflicting Appointments (medium)
 
 
 
 ## 5. Pattern: Cyclic Sort，循环排序
-经典题目：
-
-Cyclic Sort (easy)
-
-Find the Missing Number (easy)
-
-Find all Missing Numbers (easy)
-
-Find the Duplicate Number (easy)
-
-Find all Duplicate Numbers (easy)
-
+- Cyclic Sort (easy)
+- Find the Missing Number (easy)
+- Find all Missing Numbers (easy)
+- Find the Duplicate Number (easy)
+- Find all Duplicate Numbers (easy)
 
 
 ## 6. Pattern: In-place Reversal of a LinkedList，链表翻转
-经典题目：
-
-Reverse a LinkedList (easy)
-
-Reverse a Sub-list (medium)
-
-Reverse every K-element Sub-list (medium)
+- Reverse a LinkedList (easy)
+- Reverse a Sub-list (medium)
+- Reverse every K-element Sub-list (medium)
 
 
 
 ## 7. Pattern: Tree Breadth First Search，树上的BFS
-经典题目：
-
-Binary Tree Level Order Traversal (easy)
-
-Reverse Level Order Traversal (easy)
-
-Zigzag Traversal (medium)
-
-Level Averages in a Binary Tree (easy)
-
-Minimum Depth of a Binary Tree (easy)
-
-Level Order Successor (easy)
-
-Connect Level Order Siblings (medium)
-
-
-[Reorder Routes to Make All Paths Lead to the City Zero](https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/)
+- Binary Tree Level Order Traversal (easy)
+- Reverse Level Order Traversal (easy)
+- Zigzag Traversal (medium)
+- Level Averages in a Binary Tree (easy)
+- Minimum Depth of a Binary Tree (easy)
+- Level Order Successor (easy)
+- Connect Level Order Siblings (medium)
+- [Reorder Routes to Make All Paths Lead to the City Zero](https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/)
 
 
 ## 8. Pattern: Tree Depth First Search，树上的DFS
@@ -232,30 +190,19 @@ Smallest Number Range (Hard)
 
 
 ## 14. Pattern: 0/1 Knapsack (Dynamic Programming)，0/1背包类型
-经典题目：
-
-0/1 Knapsack (medium)
-
-Equal Subset Sum Partition (medium)
-
-Subset Sum (medium)
-
-Minimum Subset Sum Difference (hard)
+- 0/1 Knapsack (medium)
+- Equal Subset Sum Partition (medium)
+- Subset Sum (medium)
+- Minimum Subset Sum Difference (hard)
 
 
 
 ## 15. Pattern: Topological Sort (Graph)，拓扑排序类型
-经典题目：
-
-Topological Sort (medium)
-
-Tasks Scheduling (medium)
-
-Tasks Scheduling Order (medium)
-
-All Tasks Scheduling Orders (hard)
-
-Alien Dictionary (hard)
+- Topological Sort (medium)
+- Tasks Scheduling (medium)
+- Tasks Scheduling Order (medium)
+- All Tasks Scheduling Orders (hard)
+- Alien Dictionary (hard)
 
 
 
