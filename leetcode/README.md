@@ -88,104 +88,60 @@
 
 
 ## 8. Pattern: Tree Depth First Search，树上的DFS
-经典题目：
-
-Binary Tree Path Sum (easy)
-
-All Paths for a Sum (medium)
-
-Sum of Path Numbers (medium)
-
-Path With Given Sequence (medium)
-
-Count Paths for a Sum (medium)
+- Binary Tree Path Sum (easy)
+- All Paths for a Sum (medium)
+- Sum of Path Numbers (medium)
+- Path With Given Sequence (medium)
+- Count Paths for a Sum (medium)
 
 
 
 ## 9. Pattern: Two Heaps，双堆类型
-经典题目：
-
-Find the Median of a Number Stream (medium)
-
-Sliding Window Median (hard)
-
-Maximize Capital (hard)
-
+- Find the Median of a Number Stream (medium)
+- Sliding Window Median (hard)
+- Maximize Capital (hard)
 
 
 ## 10. Pattern: Subsets，子集类型，一般都是使用多重DFS
-经典题目：
-
-Subsets (easy)
-
-Subsets With Duplicates (easy)
-
-Permutations (medium)
-
-String Permutations by changing case (medium)
-
-Balanced Parentheses (hard)
-
-Unique Generalized Abbreviations (hard)
-
+- Subsets (easy)
+- Subsets With Duplicates (easy)
+- Permutations (medium)
+- String Permutations by changing case (medium)
+- Balanced Parentheses (hard)
+- Unique Generalized Abbreviations (hard)
 
 
 ## 11. Pattern: Modified Binary Search，改造过的二分
-经典题目：
-
-Order-agnostic Binary Search (easy)
-
-Ceiling of a Number (medium)
-
-Next Letter (medium)
-
-Number Range (medium)
-
-Search in a Sorted Infinite Array (medium)
-
-Minimum Difference Element (medium)
-
-Bitonic Array Maximum (easy)
+- Order-agnostic Binary Search (easy)
+- Ceiling of a Number (medium)
+- Next Letter (medium)
+- Number Range (medium)
+- Search in a Sorted Infinite Array (medium)
+- Minimum Difference Element (medium)
+- Bitonic Array Maximum (easy)
 
 
 
 ## 12. Pattern: Top ‘K’ Elements，前K个系列
-经典题目：
-
-Top ‘K’ Numbers (easy)
-
-Kth Smallest Number (easy)
-
-‘K’ Closest Points to the Origin (easy)
-
-Connect Ropes (easy)
-
-Top ‘K’ Frequent Numbers (medium)
-
-Frequency Sort (medium)
-
-Kth Largest Number in a Stream (medium)
-
-‘K’ Closest Numbers (medium)
-
-Maximum Distinct Elements (medium)
-
-Sum of Elements (medium)
-
-Rearrange String (hard)
+- Top ‘K’ Numbers (easy)
+- Kth Smallest Number (easy)
+- ‘K’ Closest Points to the Origin (easy)
+- Connect Ropes (easy)
+- Top ‘K’ Frequent Numbers (medium)
+- Frequency Sort (medium)
+- Kth Largest Number in a Stream (medium)
+- ‘K’ Closest Numbers (medium)
+- Maximum Distinct Elements (medium)
+- Sum of Elements (medium)
+- Rearrange String (hard)
 
 
 
 ## 13. Pattern: K-way merge，多路归并
-经典题目：
-
-Merge K Sorted Lists (medium)
-
-Kth Smallest Number in M Sorted Lists (Medium)
-
-Kth Smallest Number in a Sorted Matrix (Hard)
-
-Smallest Number Range (Hard)
+- Merge K Sorted Lists (medium)
+- Kth Smallest Number in M Sorted Lists (Medium)
+- Kth Smallest Number in a Sorted Matrix (Hard)
+- Smallest Number Range (Hard)
 
 
 
@@ -204,5 +160,7 @@ Smallest Number Range (Hard)
 - All Tasks Scheduling Orders (hard)
 - Alien Dictionary (hard)
 
+## 16. 位运算
+- 面试题 17.19. 消失的两个数字
 
 
