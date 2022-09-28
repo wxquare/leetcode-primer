@@ -135,6 +135,7 @@
 - Maximum Distinct Elements (medium)
 - Sum of Elements (medium)
 - Rearrange String (hard)
+- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
 
 
 
