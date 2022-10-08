@@ -17,6 +17,7 @@
 7. [Count Unique Characters of All Substrings of a Given String](https://leetcode.com/problems/count-unique-characters-of-all-substrings-of-a-given-string/)
 8. [Avoid Flood in The City](https://leetcode.com/problems/avoid-flood-in-the-city/)
 9. 面试题 01.02. 判定是否互为字符重排
+10. [优势洗牌，田忌赛马](https://leetcode.cn/problems/advantage-shuffle/)
 
 ## 3. Trie Tree
 1. [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
