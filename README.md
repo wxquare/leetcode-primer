@@ -1,14 +1,6 @@
 # online-algorithm-coding
 
 
----
-title: 熟悉常用的数据结构和算法
-categories: 
-- C/C++
----
-
-
-
 ## design pattern
 - [单例模式的实现](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/singleton.cpp)
 - [工厂模式的实现](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/factory.cpp)
