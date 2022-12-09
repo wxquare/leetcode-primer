@@ -1,6 +1,9 @@
 # online-algorithm-coding
 
 
+## 拒绝抽样、水塘抽样、随机、概率
+- 
+
 ## design pattern
 - [单例模式的实现](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/singleton.cpp)
 - [工厂模式的实现](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/factory.cpp)
