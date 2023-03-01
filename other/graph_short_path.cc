@@ -4,6 +4,29 @@
 using namespace std;
 
 
+
+vector<int> bfs(vector<vector<pair<int,int>>>& graph,int start){
+    int n = graph.size();
+    vector<int> dis(n,INT_MAX);
+    vector<bool> vis(n,false);
+    queue<int> q;
+    q.push(start);
+    dis[start] = 0;
+    vis[start] = true;        
+    while(!q.empty()){
+        int cur = q.front();
+        q.pop();
+        for(auto [next,w] : graph[cur]){
+            dis[next] = min(dis[cur]+w,dis[next]);
+            if(vis[next]) continue;
+            vis[next] = true;
+            q.push(next);
+        }
+    }
+    return dis;
+}
+
+
 /*
  1. 用于求单源最短路
  2. 作用于求非负权图
@@ -104,7 +127,7 @@ int main(){
     graph[3] = {{0, 20}, {2, 2}, {4, 1}};
     graph[4] = {{3, 1}};
 
-    std::vector<int> dist = dijkstra(graph,0);
+    std::vector<int> dist = bfs(graph,0);
     for(auto d : dist){
         std::cout << d << '\t';
     }
