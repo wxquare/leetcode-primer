@@ -170,7 +170,7 @@
    - dijksta
    - ballmanford
    - floyd
-   - [A*]()
+   - [A*](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
 2. 环问题，判断是否存在环，最短环
 3. 
 
