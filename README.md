@@ -166,9 +166,11 @@
 
 ## 图论问题
 1. [最短路径](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
+   - bfs
    - dijksta
    - ballmanford
    - floyd
+   - [A*]()
 2. 环问题，判断是否存在环，最短环
 3. 
 
