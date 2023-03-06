@@ -178,10 +178,10 @@
 
 
 ## 数学问题
-- 判断是否是素数
-- 求一个数的所有素数
-- 求多个数的所有素数
-- 求多个数的公共素数
-- 两数、多数最大公约数
-- 两数、多数最小公倍数
+- [判断是否是素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+- [求一个数的所有素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+- [求多个数的所有素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+- [求多个数的公共素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+- [两数、多数最大公约数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+- [两数、多数最小公倍数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
 
