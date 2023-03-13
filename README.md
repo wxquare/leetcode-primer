@@ -175,7 +175,10 @@
 
 
 ## 区间问题
-
+- 线段树
+- 树状数组
+- 差分
+- 前缀和
 
 ## 数学问题
 - [判断是否是素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
