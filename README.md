@@ -175,12 +175,13 @@
 
 
 ## 区间问题
+- 前缀和数组
+- 差分数组 （区间修改，求单点和）
+  - [Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings/submissions/213589517/)
 - 树状数组 (单点修改，前缀和和区间和）
   - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
 - 线段树 （区间修改，求区间和）
   - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
-- 差分
-- 前缀和
 
 ## 数学问题
 - [判断是否是素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
