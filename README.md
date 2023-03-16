@@ -175,9 +175,10 @@
 
 
 ## 区间问题
-- 线段树
-  - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/description/)
-- 树状数组
+- 树状数组 (单点修改，前缀和和区间和）
+  - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
+- 线段树 （区间修改，求区间和）
+  - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
 - 差分
 - 前缀和
 
