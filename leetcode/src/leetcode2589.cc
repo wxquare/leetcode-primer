@@ -101,6 +101,33 @@ private:
         return  query(rt->GetLeftChild(),l,r) + query(rt->GetRightChild(),l,r);
     }
 
+    int binary_search(SegNode* rt,int end,int k){
+        if(rt->R == end){
+            // 区间内0的数量
+            int cnt = rt->R - rt->L + 1 - rt->sum;
+            if(cnt < k){
+                return -cnt;
+            }
+        }
+
+        if(rt->L == rt->R) return rt->L;
+
+
+        int mid = (rt->L + rt->R) / 2;
+        
+        //终点在左子树
+        if(end <= mid){
+            return binary_search(rt->GetLeftChild(),end,k);
+        } 
+
+        int ret = binary_search(rt->GetRightChild(),end,k);
+        if(ret > 0) return ret; // 结果在右树中
+
+        int ret2 = binary_search(rt->GetLeftChild(),mid,k+ret);
+        if(ret2 > 0) return ret2;
+        return ret2 + ret;
+    }
+
 public:
     SegNode* root;
     SegTree(int l,int r){
