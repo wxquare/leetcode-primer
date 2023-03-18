@@ -1,4 +1,5 @@
 #include <vector>
+#include <iostream>
 using namespace std;
 
 
@@ -76,13 +77,8 @@ private:
             return;
         }
         push_down(rt);
-        int mid = (rt->R + rt->L) / 2;
-        if(rt->R - mid - Query(rt->L,rt->R) >= v){
-            update(rt->GetRightChild(),l,r,v); // 优先更新右子树,只需更新右子树
-        } else {
-            update(rt->GetRightChild(),l,r,1);
-            update(rt->GetLeftChild(),l,r,v - (rt->R - mid - Query(rt->L,rt->R)));
-        }
+        update(rt->GetRightChild(),l,r,1);
+        update(rt->GetLeftChild(),l,r,1);
         push_up(rt);
     }
 
@@ -101,32 +97,7 @@ private:
         return  query(rt->GetLeftChild(),l,r) + query(rt->GetRightChild(),l,r);
     }
 
-    int binary_search(SegNode* rt,int end,int k){
-        if(rt->R == end){
-            // 区间内0的数量
-            int cnt = rt->R - rt->L + 1 - rt->sum;
-            if(cnt < k){
-                return -cnt;
-            }
-        }
 
-        if(rt->L == rt->R) return rt->L;
-
-
-        int mid = (rt->L + rt->R) / 2;
-        
-        //终点在左子树
-        if(end <= mid){
-            return binary_search(rt->GetLeftChild(),end,k);
-        } 
-
-        int ret = binary_search(rt->GetRightChild(),end,k);
-        if(ret > 0) return ret; // 结果在右树中
-
-        int ret2 = binary_search(rt->GetLeftChild(),mid,k+ret);
-        if(ret2 > 0) return ret2;
-        return ret2 + ret;
-    }
 
 public:
     SegNode* root;
@@ -139,7 +110,31 @@ public:
     }
 
     int Query(int l,int r){
-        query(root,l,r);
+        return query(root,l,r);
+    }
+
+    // 在end的左边找一个节点，使得[left,end]包含k个零
+    bool binary_search(SegNode* rt,int end,int& k,int& left){
+        if(rt->R == end){
+            // 区间内0的数量
+            int cnt = rt->R - rt->L + 1 - rt->sum;
+            if(cnt == k){
+                left = rt->L;
+                return true; // 结束
+            } else if(cnt < k){
+                k -= cnt;
+                return false;
+            } 
+        } 
+        int mid = (rt->L + rt->R) / 2;
+        //终点在左子树
+        if(end <= mid){
+            return binary_search(rt->GetLeftChild(),end,k,left);
+        } else {
+            int ret = binary_search(rt->GetRightChild(),end,k,left);
+            if(!ret) return binary_search(rt->GetLeftChild(),mid,k,left);
+        }
+        return true;
     }
 };
 
@@ -150,7 +145,6 @@ public:
         1. 按照右值排序，贪心
         2. 使用线段树求区间和，修改区间值
     */
-
     int findMinimumTime(vector<vector<int>>& tasks) {
         // 按照右值排序
         sort(tasks.begin(),tasks.end(),[](const vector<int>& a,const vector<int>& b){
@@ -158,13 +152,24 @@ public:
         });
 
         SegTree* tr = new SegTree(0,tasks.back()[1]);
-
         for(auto task : tasks){
             int start = task[0],end = task[1],d= task[2];
             d -= tr->Query(start,end);
             if(d <= 0) continue;
-            tr->Update(start,end,d); // 如何在[star,end]区间内新增d个时间点
+
+            // 线段树中使用二分查找更新的左端点,使得end点左右包含d个0值
+            int left;
+            tr->binary_search(tr->root,end,d,left);
+            tr->Update(left,end,1); 
         }
         return tr->root->sum;
     }
 };
+
+int main(int argc, char const *argv[]){
+    /* code */
+    Solution* so = new Solution();
+    vector<vector<int>> tasks = {{1,2000,2000}};
+    std::cout << so->findMinimumTime(tasks) << std::endl;
+    return 0;
+}
