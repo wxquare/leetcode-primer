@@ -210,12 +210,12 @@
    - [A*](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
 2. 环问题，判断是否存在环，最短环
 3. 拓扑排序
-  - 课程表1，课程表2
-  - Topological Sort (medium)
-  - Tasks Scheduling (medium)
-  - Tasks Scheduling Order (medium)
-  - All Tasks Scheduling Orders (hard)
-  - Alien Dictionary (hard)
+     - 课程表1，课程表2
+     - Topological Sort (medium)
+     - Tasks Scheduling (medium)
+     - Tasks Scheduling Order (medium)
+     - All Tasks Scheduling Orders (hard)
+     - Alien Dictionary (hard)
 4. 并查集
   - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
   - [399. 除法求值](https://leetcode-cn.com/problems/evaluate-division/)(graph)
