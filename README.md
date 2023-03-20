@@ -113,6 +113,24 @@
 - Kth Smallest Number in a Sorted Matrix (Hard)
 - Smallest Number Range (Hard)
 
+
+## 数学问题
+- [判断是否是素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+- [求一个数的所有素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+- [求多个数的所有素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+- [求多个数的公共素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+- [两数、多数最大公约数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+- [两数、多数最小公倍数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+
+## 位运算
+- [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
+- 面试题 17.19. 消失的两个数字
+
+
+## 拒绝抽样、水塘抽样、随机、概率问题
+
+
+
 ## 贪心/优先队列/任务调度问题
 - Find the Median of a Number Stream (medium)
 - Sliding Window Median (hard)
@@ -158,6 +176,7 @@
 - Balanced Parentheses (hard)
 - Unique Generalized Abbreviations (hard)
 
+
 ## DP问题
 - 0/1 Knapsack (medium)
 - Equal Subset Sum Partition (medium)
@@ -182,20 +201,36 @@
 18. [87. 扰乱字符串](https://leetcode-cn.com/problems/scramble-string/)
 
 
-## 数学问题
-- [判断是否是素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-- [求一个数的所有素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-- [求多个数的所有素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-- [求多个数的公共素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-- [两数、多数最大公约数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-- [两数、多数最小公倍数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-
-## 位运算
-- [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
-- 面试题 17.19. 消失的两个数字
-
-
-## 拒绝抽样、水塘抽样、随机、概率问题
+## 图论问题：最短路
+1. [最短路径](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
+   - BFS
+   - Dijksta
+   - Ballmanford
+   - Floyd
+   - [A*](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
+2. 环问题，判断是否存在环，最短环
+3. 拓扑排序
+  - 课程表1，课程表2
+  - Topological Sort (medium)
+  - Tasks Scheduling (medium)
+  - Tasks Scheduling Order (medium)
+  - All Tasks Scheduling Orders (hard)
+  - Alien Dictionary (hard)
+4. 并查集
+  - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
+  - [399. 除法求值](https://leetcode-cn.com/problems/evaluate-division/)(graph)
+  - [ws面试：有一个矩形格子框，每个框都有一个字母，需要你找到路径，使得这条路径上的字母都不重复，请问这个最长的路径是多长?]
+  - [执行交换操作后的最小汉明距离](https://leetcode-cn.com/problems/minimize-hamming-distance-after-swap-operations/)
+  - [1202. 交换字符串中的元素](https://leetcode-cn.com/problems/smallest-string-with-swaps/)
+  - [684. 冗余连接](https://leetcode-cn.com/problems/redundant-connection/)
+  - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
+  - [210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)
+  - [721. 账户合并](https://leetcode-cn.com/problems/accounts-merge/)
+  - [相似字符串组](https://leetcode-cn.com/problems/similar-string-groups/)
+  - [Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree](https://leetcode.com/problems/- find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/)
+  - [friend circles](https://leetcode.com/problems/friend-circles/)
+  - [Path with Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/)
+  - [Best Position for a Service Centre](https://leetcode.com/problems/best-position-for-a-service-centre/)
 
 
 ## 区间问题
@@ -210,39 +245,3 @@
   - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
 - 线段树 （区间修改，求区间和）
   - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
-
-
-## 图问题：并查集
-1. [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
-2. [399. 除法求值](https://leetcode-cn.com/problems/evaluate-division/)(graph)
-3. [ws面试：有一个矩形格子框，每个框都有一个字母，需要你找到路径，使得这条路径上的字母都不重复，请问这个最长的路径是多长?]
-4. [执行交换操作后的最小汉明距离](https://leetcode-cn.com/problems/minimize-hamming-distance-after-swap-operations/)
-5. [1202. 交换字符串中的元素](https://leetcode-cn.com/problems/smallest-string-with-swaps/)
-6. [684. 冗余连接](https://leetcode-cn.com/problems/redundant-connection/)
-7. [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
-8. [210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)
-9. [721. 账户合并](https://leetcode-cn.com/problems/accounts-merge/)
-并查集时间复杂读分析(https://leetcode-cn.com/problems/number-of-provinces/solution/jie-zhe-ge-wen-ti-ke-pu-yi-xia-bing-cha-0unne/)
-10. [相似字符串组](https://leetcode-cn.com/problems/similar-string-groups/)
-1. [Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/)
-2. [friend circles](https://leetcode.com/problems/friend-circles/)
-3. [Path with Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/)
-4. [Best Position for a Service Centre] (https://leetcode.com/problems/best-position-for-a-service-centre/)
-
-
-## 图论问题：最短路
-1. [最短路径](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
-   - BFS
-   - Dijksta
-   - Ballmanford
-   - Floyd
-   - [A*](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
-2. 环问题，判断是否存在环，最短环
-
-## 图问题：拓扑排序类型
-- 课程表1，课程表2
-- Topological Sort (medium)
-- Tasks Scheduling (medium)
-- Tasks Scheduling Order (medium)
-- All Tasks Scheduling Orders (hard)
-- Alien Dictionary (hard)
