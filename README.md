@@ -209,7 +209,7 @@
       - Floyd
       - [A*](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
 2. 环问题，判断是否存在环，最短环
-3. 拓扑排序
+3. [拓扑排序模板](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
      - 课程表1，课程表2
      - Topological Sort (medium)
      - Tasks Scheduling (medium)
