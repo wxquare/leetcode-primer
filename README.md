@@ -174,6 +174,7 @@
 - String Permutations by changing case (medium)
 - Balanced Parentheses (hard)
 - Unique Generalized Abbreviations (hard)
+- [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets/submissions/415822742/)
 
 
 ## DP问题
