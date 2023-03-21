@@ -210,27 +210,17 @@
       - [A*](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
 2. 环问题，判断是否存在环，最短环
 3. [拓扑排序模板](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
-     - 课程表1，课程表2
-     - Topological Sort (medium)
-     - Tasks Scheduling (medium)
+     - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
+     - [210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)
      - Tasks Scheduling Order (medium)
      - All Tasks Scheduling Orders (hard)
      - Alien Dictionary (hard)
 4. [并查集模版](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
      - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
-     - [399. 除法求值](https://leetcode-cn.com/problems/evaluate-division/)(graph)
-     - [ws面试：有一个矩形格子框，每个框都有一个字母，需要你找到路径，使得这条路径上的字母都不重复，请问这个最长的路径是多长?]
      - [执行交换操作后的最小汉明距离](https://leetcode-cn.com/problems/minimize-hamming-distance-after-swap-operations/)
-     - [1202. 交换字符串中的元素](https://leetcode-cn.com/problems/smallest-string-with-swaps/)
      - [684. 冗余连接](https://leetcode-cn.com/problems/redundant-connection/)
-     - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
-     - [210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)
      - [721. 账户合并](https://leetcode-cn.com/problems/accounts-merge/)
-     - [相似字符串组](https://leetcode-cn.com/problems/similar-string-groups/)
-     - [Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree](https://leetcode.com/problems/- find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/)
      - [friend circles](https://leetcode.com/problems/friend-circles/)
-     - [Path with Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/)
-     - [Best Position for a Service Centre](https://leetcode.com/problems/best-position-for-a-service-centre/)
 5. [最小生成树](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
 
 
