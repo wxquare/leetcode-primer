@@ -130,7 +130,6 @@
 ## 拒绝抽样、水塘抽样、随机、概率问题
 
 
-
 ## 贪心/优先队列/任务调度问题
 - Find the Median of a Number Stream (medium)
 - Sliding Window Median (hard)
@@ -149,7 +148,7 @@
 - Dutch National Flag Problem (medium)
 - [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
 
-## DFS & BFS (遍历/搜索问题）
+## 回溯算法 (DFS/剪枝/状态恢复/记忆化搜索）
 - Binary Tree Path Sum (easy)
 - All Paths for a Sum (medium)
 - Sum of Path Numbers (medium)
