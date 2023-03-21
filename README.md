@@ -207,22 +207,25 @@
       - Dijksta
       - Ballmanford
       - Floyd
-      - [A*](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
-2. 环问题，判断是否存在环，最短环
-3. [拓扑排序模板](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
+      - [A*]
+            - [八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
+2. [K短路]
+      - [2045. 到达目的地的第二短时间]https://leetcode.cn/problems/second-minimum-time-to-reach-destination/submissions/416029633/
+4. [拓扑排序模板](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
      - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
      - [210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)
      - Tasks Scheduling Order (medium)
      - All Tasks Scheduling Orders (hard)
      - Alien Dictionary (hard)
-4. [并查集模版](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
+5. [并查集模版](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
      - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
      - [执行交换操作后的最小汉明距离](https://leetcode-cn.com/problems/minimize-hamming-distance-after-swap-operations/)
      - [684. 冗余连接](https://leetcode-cn.com/problems/redundant-connection/)
      - [721. 账户合并](https://leetcode-cn.com/problems/accounts-merge/)
      - [friend circles](https://leetcode.com/problems/friend-circles/)
-5. 最小生成树
+6. 最小生成树
       - [Kruskal](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
+7. 环问题，判断是否存在环，最短环
 
 
 ## 区间问题
