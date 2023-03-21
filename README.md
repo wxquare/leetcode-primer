@@ -231,6 +231,7 @@
      - [friend circles](https://leetcode.com/problems/friend-circles/)
      - [Path with Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/)
      - [Best Position for a Service Centre](https://leetcode.com/problems/best-position-for-a-service-centre/)
+5. [最小生成树](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
 
 
 ## 区间问题
