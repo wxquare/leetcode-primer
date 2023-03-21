@@ -221,7 +221,8 @@
      - [684. 冗余连接](https://leetcode-cn.com/problems/redundant-connection/)
      - [721. 账户合并](https://leetcode-cn.com/problems/accounts-merge/)
      - [friend circles](https://leetcode.com/problems/friend-circles/)
-5. [最小生成树](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
+5. 最小生成树
+      - [Kruskal](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
 
 
 ## 区间问题
