@@ -216,7 +216,7 @@
      - Tasks Scheduling Order (medium)
      - All Tasks Scheduling Orders (hard)
      - Alien Dictionary (hard)
-4. 并查集
+4. [并查集模版](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
      - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
      - [399. 除法求值](https://leetcode-cn.com/problems/evaluate-division/)(graph)
      - [ws面试：有一个矩形格子框，每个框都有一个字母，需要你找到路径，使得这条路径上的字母都不重复，请问这个最长的路径是多长?]
