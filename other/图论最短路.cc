@@ -4,6 +4,8 @@
     - BFS（广度优先搜索) 可用于求单源最短路，用于求无权路（同权路）的最短路。也有用于求无环图的权重图，一般不考虑。O(n)
     
     - Dijkstra 算法都是单源最短路径算法，作用于非负权图，可以有环。O(nlog(n))
+
+    - 
     
     - 而 Floyd 算法和 Bellman-Ford 算法是多源最短路径算法。
 
@@ -25,7 +27,7 @@ using namespace std;
 
 
 /*
-    1. 一般只用于求无权路的最短路。（也可用于求无环、权重图，单不常见）
+    1. 一般只用于求无权路的最短路。（也可用于求无环、权重图，但不常见）
     2. edges 表示边的集合，n：节点数量，start：源点
 */
 vector<int> bfs(vector<vector<int>>& edges,int n,int start){
@@ -58,19 +60,23 @@ vector<int> bfs(vector<vector<int>>& edges,int n,int start){
  2. 作用于求非负权图
  3. 不用用于检测负环
 */
-vector<int> dijkstra(vector<vector<pair<int,int>>>& graph, int start){
-    int n = graph.size();
+vector<int> dijkstra(vector<vector<int>>& edges, int n,int start){
+    unordered_map<int,vector<pair<int,int>>> g;
+    for(auto e : edges){
+        int u = e[0],v=e[1],w=e[2];
+        g[u].push_back({w,v});
+    }
     vector<int> dis(n,INT_MAX);
+    vector<bool> vis(n,false);
     dis[start] = 0;
     priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> q;
     q.push({0,start});
-    vector<bool> vis(n,false);
     while(!q.empty()){
         auto [w,u] = q.top();
         q.pop();
         if(vis[u]) continue;
         vis[u] = true;
-        for(auto [v,w] : graph[u]){
+        for(auto [v,w] : g[u]){
             if(dis[u] + w < dis[v]){
                 dis[v] = dis[u] + w;
                 q.push({dis[v],v});
@@ -86,22 +92,26 @@ vector<int> dijkstra(vector<vector<pair<int,int>>>& graph, int start){
     2. 支持负权图
     3. 可以用于检测负环
 */
-vector<int> bellmanFord(vector<vector<pair<int,int>>>& graph,int start){
-    int n = graph.size();
+vector<int> bellmanFord(vector<vector<int>>& edges,int n,int start){
+    unordered_map<int,vector<pair<int,int>>> g;
+    for(auto e : edges){
+        g[e[0]].push_back({e[2],e[1]});
+    }
+
     vector<int> dis(n,INT_MAX);
     dis[start] = 0;
     for(int i=0;i<n-1;i++){ // n - 1 轮松弛
         for(int j=0;j<n;j++){ // from:j,to:v
-            for(auto [v,w] : graph[j]){
-                if(dis[j] != INT_MAX && w != INT_MAX){
+            for(auto [v,w] : g[j]){
+                if(dis[j] != INT_MAX){
                     dis[v] = min(dis[v],dis[j]+w);
                 }
             }
         }
     }
     for(int i=0;i<n;i++){ // from:i,to:v
-        for(auto [v,w] : graph[i]){
-            if(dis[i] != INT_MAX && w != INT_MAX){
+        for(auto [v,w] : g[i]){
+            if(dis[i] != INT_MAX){
                 if(dis[i] + w < dis[v]){
                     std::cout << "has negative cycle" << std::endl;
                     return vector<int>();
@@ -139,22 +149,4 @@ vector<vector<int>> floyd(vector<vector<int>>& graph){
         }
     }
     return dist;
-}
-
-
-int main(){
-    int n = 5;
-    std::vector<std::vector<std::pair<int, int>>> graph(n);
-    graph[0] = {{1, 10}, {2, 3}, {3, 20}};
-    graph[1] = {{0, 10}, {2, 5}};
-    graph[2] = {{0, 3}, {1, 5}, {3, 2}};
-    graph[3] = {{0, 20}, {2, 2}, {4, 1}};
-    graph[4] = {{3, 1}};
-
-    std::vector<int> dist = bfs(graph,0);
-    for(auto d : dist){
-        std::cout << d << '\t';
-    }
-    std::cout << std::endl;
-
 }
