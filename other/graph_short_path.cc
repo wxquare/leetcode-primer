@@ -1,12 +1,38 @@
+
+/*
+
+    - BFS（广度优先搜索) 可用于求单源最短路，用于求无权路（同权路）的最短路。也有用于求无环图的权重图，一般不考虑。O(n)
+    
+    - Dijkstra 算法都是单源最短路径算法，作用于非负权图，可以有环。O(nlog(n))
+    
+    - 而 Floyd 算法和 Bellman-Ford 算法是多源最短路径算法。
+
+    BFS 通过遍历从源节点可达的所有节点，层层递进，最终到达终点节点。BFS 可以求出从源节点到终点节点的最短路径，但只适用于无权图。
+
+    Dijkstra 算法则是一种贪心算法，它能够处理带权图。它通过维护一个距离集合，从源节点开始，每次选取距离最小的节点进行松弛操作，并将该节点标记为已访问。Dijkstra 算法不能处理带有负权边的图。
+
+    Floyd 算法和 Bellman-Ford 算法都可以处理带有负权边的图。Floyd 算法通过动态规划的思想，维护任意两个节点之间的最短距离。它通过多次迭代，逐步计算出所有节点之间的最短路径。Floyd 算法的时间复杂度为 O(n^3)，适用于节点数较小的图。
+
+    Bellman-Ford 算法则是一种基于松弛操作的算法，通过不断的松弛操作，更新节点之间的距离。它可以处理带有负权边的图，并且能够检测出负权环。但是 Bellman-Ford 算法的时间复杂度较高，为 O(nm)，其中 n 和 m 分别为节点数和边数。
+
+*/
+
 #include <vector>
 #include <iostream>
+#include <unordered_map>
 #include <queue>
 using namespace std;
 
 
-
-vector<int> bfs(vector<vector<pair<int,int>>>& graph,int start){
-    int n = graph.size();
+/*
+    1. 一般只用于求无权路的最短路。（也可用于求无环、权重图，单不常见）
+    2. edges 表示边的集合，n：节点数量，start：源点
+*/
+vector<int> bfs(vector<vector<int>>& edges,int n,int start){
+    unordered_map<int,vector<int>> g;
+    for(auto e : edges){
+        g[e[0]].push_back(e[1]);
+    }
     vector<int> dis(n,INT_MAX);
     vector<bool> vis(n,false);
     queue<int> q;
@@ -14,13 +40,13 @@ vector<int> bfs(vector<vector<pair<int,int>>>& graph,int start){
     dis[start] = 0;
     vis[start] = true;        
     while(!q.empty()){
-        int cur = q.front();
+        int u = q.front();
         q.pop();
-        for(auto [next,w] : graph[cur]){
-            dis[next] = min(dis[cur]+w,dis[next]);
-            if(vis[next]) continue;
-            vis[next] = true;
-            q.push(next);
+        for(auto v : g[u]){
+            dis[v] = dis[u] + 1;
+            if(vis[v]) continue;
+            vis[v] = true;
+            q.push(v);
         }
     }
     return dis;
@@ -37,20 +63,18 @@ vector<int> dijkstra(vector<vector<pair<int,int>>>& graph, int start){
     vector<int> dis(n,INT_MAX);
     dis[start] = 0;
     priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> q;
-    // dis,cur
     q.push({0,start});
     vector<bool> vis(n,false);
     while(!q.empty()){
-        int v = q.top().second;
+        auto [w,u] = q.top();
         q.pop();
-        if(vis[v]) continue;
-        vis[v] = true;
-        for(auto [nv,nu] : graph[v]){
-            if(vis[nv]) continue;
-            if(dis[v] == INT_MAX && nu == INT_MAX) continue;
-            if(dis[v] + nu >= dis[nv]) continue;
-            dis[nv] = dis[v] + nu;
-            q.push({dis[nv],nv});
+        if(vis[u]) continue;
+        vis[u] = true;
+        for(auto [v,w] : graph[u]){
+            if(dis[u] + w < dis[v]){
+                dis[v] = dis[u] + w;
+                q.push({dis[v],v});
+            }
         }
     }
     return dis;
