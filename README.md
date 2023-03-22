@@ -204,11 +204,12 @@
 ## 图论
 1. [最短路径](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
       - BFS
-      - Dijksta
+      - Dijkstra
       - Ballmanford
       - Floyd
       - A*
             - [八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
+      - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time/submissions/416407193/)
 2. K短路
       - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination/submissions/416029633/)
 4. [拓扑排序模板](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
