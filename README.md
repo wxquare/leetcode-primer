@@ -227,6 +227,8 @@
 6. 最小生成树
       - [Kruskal](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
 7. 环问题，判断是否存在环，最短环
+8. 欧拉回路/通路
+      - [Reconstruct Itinerary](https://leetcode.cn/problems/reconstruct-itinerary/submissions/417006045/)
 
 
 ## 区间问题
