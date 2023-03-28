@@ -212,7 +212,7 @@
       - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time/submissions/416407193/)
 2. K短路
       - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination/submissions/416029633/)
-4. [拓扑排序模板](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
+4. [拓扑排序和度](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
      - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
      - [210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)
      - Tasks Scheduling Order (medium)
