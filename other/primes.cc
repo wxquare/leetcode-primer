@@ -15,14 +15,15 @@ bool isPrime(int n){
 
 /*
     埃氏筛法求素数
+    求[1,n] 之间包含哪些素数
 */
 vector<int> getPrimes(int n){
     vector<bool> isPrimes(n+1,true);
     vector<int> primes;
-    for(int i=2;i*i<n;i++){
+    for(int i=2;i<=n;i++){
         if(isPrimes[i]){
             primes.push_back(i);
-            for(int j=i*i;j<n;j+=i){
+            for(int j=i*i;j<=n;j+=i){
                 isPrimes[j] = false;
             }
         }
