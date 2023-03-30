@@ -230,6 +230,8 @@
 7. 环问题，判断是否存在环，最短环
 8. 欧拉回路/通路
       - [Reconstruct Itinerary](https://leetcode.cn/problems/reconstruct-itinerary/submissions/417006045/)
+9. 连通量
+      - [1489. 找到最小生成树里的关键边和伪关键边](https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/submissions/419266120/)
 
 
 ## 区间问题
