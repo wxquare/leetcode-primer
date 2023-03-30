@@ -9,17 +9,18 @@
 #include <numeric>
 using namespace std;
 
-
 class UnionFind {
 public:
     vector<int> parents;
     vector<int> sizes;
+    int setCnt; //连通量
     UnionFind(int n){
         parents = vector<int>(n,0);
         iota(parents.begin(),parents.end(),0);
         sizes = vector<int>(n,1);
+        setCnt = n;
     }
-
+    
     // 启发式union
     void Union(int x,int y){
         int px = Find(x);
@@ -30,18 +31,11 @@ public:
         }
         parents[py] = px;
         sizes[px] += parents[py];
+        setCnt--;
     }
 
     int Find(int x){
         // 路径压缩
         return parents[x] == x ? x : parents[x] = Find(parents[x]);
-    }
-
-    int Count(){
-        int ans = 0;
-        for(int i=0;i<parents.size();i++){
-            if(i == i) ans++;
-        }
-        return ans;
     }
 };
