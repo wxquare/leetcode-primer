@@ -1,6 +1,5 @@
 # online-algorithm-coding
 
-
 ## 链表问题
 - Reverse a LinkedList (easy)
 - Reverse a Sub-list (medium)
@@ -198,7 +197,6 @@
 15. [115. 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)
 16. [5. 最长回文子串](https://leetcode-cn.com/problems/distinct-subsequences/)
 17. [198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/)
-18. [87. 扰乱字符串](https://leetcode-cn.com/problems/scramble-string/)
 
 
 ## 图论
