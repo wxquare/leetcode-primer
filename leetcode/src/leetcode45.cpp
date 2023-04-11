@@ -46,6 +46,38 @@ public:
     }
 };
 
+
+
+// 单调栈
+class Solution{
+public:
+    int jump(vector<int>& nums){
+
+        vector<pair<int,int>> st;  // step,index
+
+        int n = nums.size();
+
+        for(int i=n-1;i>=0;i--){
+            int mn = INT_MAX;
+            if(i == n-1){
+                mn = 0;
+            }else{
+                auto it = lower_bound(st.begin(),st.end(),i+nums[i],[](const auto& a,int b){
+                    return a.second > b;
+                });
+                if(it != st.end()){
+
+                }
+            }
+
+        }
+
+
+
+    }
+};
+
+
 int main(int argc, char const *argv[])
 {
     vector<int> v = {2,3,1,1,4};

@@ -11,13 +11,14 @@
 
 #include <vector>
 #include <queue>
+#include <iostream>
 using namespace std;
 
 
 /*
     时间复杂度：(m+n)*(mn)
 */
-class Solution {
+class Solution1 {
 public:
     int minimumVisitedCells(vector<vector<int>>& grid) {
         queue<pair<int,int>> q;
@@ -59,14 +60,24 @@ public:
 };
 
 
+void printVector(vector<pair<int,int>>& data){
+    for(auto it : data){
+        std::cout << '{' << it.first << ',' << it.second << '}' << ','; 
+    }
+    std::cout << std::endl;
+}
+
 class Solution {
 public:
     int minimumVisitedCells(vector<vector<int>> &grid) {
-        int m = grid.size(), n = grid[0].size(), mn;
+        int m = grid.size();
+        int n = grid[0].size();
+        int mn;
         vector<vector<pair<int, int>>> col_st(n); // 每列的单调栈
         
         for (int i = m - 1; i >= 0; --i) {
             vector<pair<int, int>> st; // 当前行的单调栈
+
             for (int j = n - 1; j >= 0; --j) {
                 auto &st2 = col_st[j];
                 mn = INT_MAX;
@@ -74,14 +85,21 @@ public:
                     mn = 0;
                 else if (int g = grid[i][j]; g) {
                     // 在单调栈上二分
+                    // 降序的二分查找
                     auto it = lower_bound(st.begin(), st.end(), j + g, [](const auto &a, const int b) {
                         return a.second > b;
                     });
-                    if (it < st.end()) mn = min(mn, it->first);
+                    if (it < st.end()) {
+                        mn = min(mn, it->first);
+                        //std::cout << "=== " << i << '\t' << j << '\t' << it->first << '\t' << it->second << std::endl;
+                    }
                     it = lower_bound(st2.begin(), st2.end(), i + g, [](const auto &a, const int b) {
                         return a.second > b;
                     });
-                    if (it < st2.end()) mn = min(mn, it->first);
+                    if (it < st2.end()) {
+                        mn = min(mn, it->first);
+                        //std::cout << i << '\t' << j << '\t' << it->first << '\t' << it->second << std::endl;
+                    }
                 }
                 if (mn == INT_MAX) continue;
 
@@ -90,11 +108,21 @@ public:
                 while (!st.empty() && mn <= st.back().first)
                     st.pop_back();
                 st.emplace_back(mn, j);
+                printVector(st);
                 while (!st2.empty() && mn <= st2.back().first)
                     st2.pop_back();
                 st2.emplace_back(mn, i);
+                printVector(st2);
             }
         }
         return mn < INT_MAX ? mn : -1;
     }
 };
+
+
+int main(int argc, char const *argv[])
+{
+    vector<vector<int>> grid = {{3,4,2,1},{4,2,3,1},{2,1,0,0},{2,4,0,0}};
+    std::cout << Solution().minimumVisitedCells(grid) << std::endl;
+    return 0;
+}
