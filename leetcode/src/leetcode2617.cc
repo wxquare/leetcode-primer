@@ -12,112 +12,48 @@
 #include <vector>
 #include <queue>
 #include <iostream>
+#include <set>
 using namespace std;
-
 
 /*
     时间复杂度：(m+n)*(mn)
 */
-class Solution1 {
+class Solution{
 public:
     int minimumVisitedCells(vector<vector<int>>& grid) {
-        queue<pair<int,int>> q;
-        q.push({0,0});
-        int step = 0;
-        if(grid.size() == 1 && grid[0].size() == 1) return 1;
-        int m = grid.size();
-        int n = grid[0].size();
-        vector<bool> vis(m*n,false);
-        while(!q.empty()){
-            step++; 
-            int size = q.size();
-            for(int i=0;i<size;i++){
-                int curx = q.front().first;
-                int cury = q.front().second;
-                q.pop();
-                if(curx == m-1 && cury == n-1){
-                    return step;
-                }
-                if(vis[curx*n+cury]) continue;
-                vis[curx*n+cury] = true;
-                for(int j=1;j<=grid[curx][cury];j++){
-                    int nx = curx + j;
-                    int ny = cury + j;
-                    
-                   if(nx >= grid.size() && ny >= grid[0].size()) break;
+        int m = grid.size(); // m rows
+        int n = grid[0].size(); // n cols
 
-                    if(nx < grid.size()){
-                        q.push({nx,cury});
+        vector<set<pair<int,int>>> colsts(n); // 每一列的平衡二叉树
+
+        vector<vector<int>> ans(m,vector<int>(n,INT_MAX/2)); //到达该位置的最小需要走的步数
+        for(int i=0;i<m;i++){
+            set<pair<int,int>> st;
+            for(int j=0;j<n;j++){
+                if(i == 0 && j == 0){
+                    ans[i][j] = 0;
+                } else {
+                    while(!st.empty() && st.begin()->second < j){
+                        st.erase(st.begin());
                     }
-                    if(ny < grid[0].size()){
-                        q.push({curx,ny});
+                    while(!colsts[j].empty() && colsts[j].begin()->second < i){
+                        colsts[j].erase(colsts[j].begin());
                     }
-                }    
+                    if(!st.empty()){
+                        ans[i][j] = min(ans[i][j],st.begin()->first);
+                    }
+                    if(!colsts[j].empty()){
+                        ans[i][j] = min(ans[i][j],colsts[j].begin()->first);
+                    }
+                }
+                st.insert({ans[i][j]+1,j+grid[i][j]});
+                colsts[j].insert({ans[i][j]+1,i+grid[i][j]});
             }
         }
-        return -1;
+        return ans[m-1][n-1] == INT_MAX/2 ? -1 : ans[m-1][n-1] + 1;
     }
 };
 
-
-void printVector(vector<pair<int,int>>& data){
-    for(auto it : data){
-        std::cout << '{' << it.first << ',' << it.second << '}' << ','; 
-    }
-    std::cout << std::endl;
-}
-
-class Solution {
-public:
-    int minimumVisitedCells(vector<vector<int>> &grid) {
-        int m = grid.size();
-        int n = grid[0].size();
-        int mn;
-        vector<vector<pair<int, int>>> col_st(n); // 每列的单调栈
-        
-        for (int i = m - 1; i >= 0; --i) {
-            vector<pair<int, int>> st; // 当前行的单调栈
-
-            for (int j = n - 1; j >= 0; --j) {
-                auto &st2 = col_st[j];
-                mn = INT_MAX;
-                if (i == m - 1 && j == n - 1) // 特殊情况：已经是终点
-                    mn = 0;
-                else if (int g = grid[i][j]; g) {
-                    // 在单调栈上二分
-                    // 降序的二分查找
-                    auto it = lower_bound(st.begin(), st.end(), j + g, [](const auto &a, const int b) {
-                        return a.second > b;
-                    });
-                    if (it < st.end()) {
-                        mn = min(mn, it->first);
-                        //std::cout << "=== " << i << '\t' << j << '\t' << it->first << '\t' << it->second << std::endl;
-                    }
-                    it = lower_bound(st2.begin(), st2.end(), i + g, [](const auto &a, const int b) {
-                        return a.second > b;
-                    });
-                    if (it < st2.end()) {
-                        mn = min(mn, it->first);
-                        //std::cout << i << '\t' << j << '\t' << it->first << '\t' << it->second << std::endl;
-                    }
-                }
-                if (mn == INT_MAX) continue;
-
-                ++mn; // 加上 (i,j) 这个格子
-                // 插入单调栈
-                while (!st.empty() && mn <= st.back().first)
-                    st.pop_back();
-                st.emplace_back(mn, j);
-                printVector(st);
-                while (!st2.empty() && mn <= st2.back().first)
-                    st2.pop_back();
-                st2.emplace_back(mn, i);
-                printVector(st2);
-            }
-        }
-        return mn < INT_MAX ? mn : -1;
-    }
-};
 
 
 int main(int argc, char const *argv[])
