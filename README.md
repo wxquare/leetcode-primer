@@ -221,10 +221,6 @@
      - Alien Dictionary (hard)
 5. [并查集模版](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
      - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
-     - [执行交换操作后的最小汉明距离](https://leetcode-cn.com/problems/minimize-hamming-distance-after-swap-operations/)
-     - [684. 冗余连接](https://leetcode-cn.com/problems/redundant-connection/)
-     - [721. 账户合并](https://leetcode-cn.com/problems/accounts-merge/)
-     - [friend circles](https://leetcode.com/problems/friend-circles/)
 6. 最小生成树
       - [Kruskal](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
       - [1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/submissions/424543501/)
