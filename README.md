@@ -186,7 +186,7 @@
 7. 区间 DP
       - 最长回文子序列
 8. 状压 DP
-      - 
+      - 旅行商问题
 10. 状态机 DP
 11. 数位 DP
 12. 树形 DP
@@ -215,7 +215,6 @@
 16. [5. 最长回文子串](https://leetcode-cn.com/problems/distinct-subsequences/)
 17. [198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/)
 18. [87. 扰乱字符串](https://leetcode-cn.com/problems/scramble-string/)
-19. [xxxxx]
 
 
 ## 图论
