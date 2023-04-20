@@ -177,6 +177,24 @@
 
 
 ## DP问题
+1. 记忆化搜索
+2. 线性 DP
+      - 最长上升子序列
+4. 背包 DP
+      - 
+6. 序列 DP
+      - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
+7. 区间 DP
+      - 最长回文子序列
+8. 状压 DP
+      - 旅行商问题
+10. 状态机 DP
+11. 数位 DP
+12. 树形 DP
+      - 打家劫舍 III
+      - 最小化旅行的价格总和
+
+2. 
 - 0/1 Knapsack (medium)
 - Equal Subset Sum Partition (medium)
 - Subset Sum (medium)
@@ -198,7 +216,10 @@
 16. [5. 最长回文子串](https://leetcode-cn.com/problems/distinct-subsequences/)
 17. [198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/)
 18. [87. 扰乱字符串](https://leetcode-cn.com/problems/scramble-string/)
-19. [xxxxx]
+19. [198.打家劫舍](https://leetcode.cn/problems/house-robber/submissions/426232067/)
+20. [213.打家劫舍 II](https://leetcode.cn/problems/house-robber-ii/submissions/426239633/)
+21. [337.打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/submissions/426327228/)
+22. [打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv/submissions/399760539/)
 
 
 ## 图论
@@ -216,17 +237,11 @@
      - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
      - [210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)
      - [2603. 收集树中金币](https://leetcode.cn/problems/collect-coins-in-a-tree/submissions/418411707/)
-     - Tasks Scheduling Order (medium)
-     - All Tasks Scheduling Orders (hard)
-     - Alien Dictionary (hard)
 5. [并查集模版](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
      - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
-     - [执行交换操作后的最小汉明距离](https://leetcode-cn.com/problems/minimize-hamming-distance-after-swap-operations/)
-     - [684. 冗余连接](https://leetcode-cn.com/problems/redundant-connection/)
-     - [721. 账户合并](https://leetcode-cn.com/problems/accounts-merge/)
-     - [friend circles](https://leetcode.com/problems/friend-circles/)
 6. 最小生成树
       - [Kruskal](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
+      - [1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/submissions/424543501/)
 7. 环问题，判断是否存在环，最短环
 8. 欧拉回路/通路
       - [Reconstruct Itinerary](https://leetcode.cn/problems/reconstruct-itinerary/submissions/417006045/)
