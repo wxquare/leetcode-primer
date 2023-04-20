@@ -181,7 +181,8 @@
 2. 线性 DP
       - 最长上升子序列
 4. 背包 DP
-5. 序列 DP
+      - 
+6. 序列 DP
       - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
 7. 区间 DP
       - 最长回文子序列
@@ -215,10 +216,10 @@
 16. [5. 最长回文子串](https://leetcode-cn.com/problems/distinct-subsequences/)
 17. [198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/)
 18. [87. 扰乱字符串](https://leetcode-cn.com/problems/scramble-string/)
-19. 打家劫舍
-20. 打家劫舍 II
-21. 打家劫舍 III
-22. 打家劫舍 IV
+19. [198.打家劫舍](https://leetcode.cn/problems/house-robber/submissions/426232067/)
+20. [213.打家劫舍 II](https://leetcode.cn/problems/house-robber-ii/submissions/426239633/)
+21. [337.打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/submissions/426327228/)
+22. [打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv/submissions/399760539/)
 
 
 ## 图论
