@@ -177,10 +177,19 @@
 
 
 ## DP问题
-1. 树形DP
+1. 记忆化搜索
+2. 线性 DP
+3. 背包 DP
+4. 序列 DP
+5. 区间 DP
+6. 状压 DP
+7. 状态机 DP
+8. 数位 DP
+9. 树形 DP
       - 337. 打家劫舍 III
       - 310. 最小高度树
       - 2646. 最小化旅行的价格总和
+
 2. 
 - 0/1 Knapsack (medium)
 - Equal Subset Sum Partition (medium)
