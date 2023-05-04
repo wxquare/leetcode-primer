@@ -11,7 +11,6 @@
  https://leetcode.cn/problems/coin-change-ii/solutions/821592/gong-shui-san-xie-xiang-jie-wan-quan-bei-6hxv/
 */
 
-
 #include <vector>
 using namespace std;
 
@@ -31,15 +30,12 @@ int zeroOnePack(vector<int>& w,vector<int>& v,int c){
     vector<int> dp(c+1,0);
     int n = w.size();
     for(int i=0;i<n;i++){
-        for(int j=c;j>=0;j--){
-            if(j - w[i] >= 0){
-                dp[j] = max(dp[j],dp[j-w[i]] + v[i]);
-            }
+        for(int j=c;j>=w[i];j--){
+            dp[j] = max(dp[j],dp[j-w[i]] + v[i]);
         }
     }
     return dp[c];
 }
-
 
 
 int completePack(vector<int>& w,vector<int>& v,int c){
@@ -48,13 +44,13 @@ int completePack(vector<int>& w,vector<int>& v,int c){
         2. 组合优化问题，完全背包
         3. 子问题定义：前i种商品，背包容量为j，其最大价值为dp[i][j]
         4. 递推关系；
-            dp[i][j] = max(dp[i-1][j],dp[i-1][j-k*w[i]]+k*v[i]),0<=k*v[i]<=j
+            dp[i][j] = max(dp[i-1][j],dp[i-1][j-k*w[i]]+k*v[i]),0<=k*w[i]<=j
             dp[i][j] = max(dp[i-1][j],dp[i][j-w[i]]+v[i])
             dp[j] = max(dp[j],dp[j-w[i]]+v[i])
    */ 
     int n = w.size();
     vector<int> dp(c+1,0);
-    for(int i=0;i<<n;i++){
+    for(int i=0;i<n;i++){
         for(int j=0;j<=c;j++){
             int n = dp[j];
             int y = 0;;
