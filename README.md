@@ -180,14 +180,20 @@
 1. 记忆化搜索
 2. 线性 DP
       - 最长上升子序列
+      - 斐波那契数列
 4. 背包 DP
-      - 
+      - 01背包
+      - 完全背包
+      - 多重背包，多重背包二进制优化
 6. 序列 DP
       - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
+      - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
 7. 区间 DP
-      - 最长回文子序列
+      - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
+      - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
 8. 状压 DP
       - 旅行商问题
+      - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
 10. 状态机 DP
 11. 数位 DP
 12. 树形 DP
