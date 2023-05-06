@@ -188,7 +188,7 @@
       - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
       - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
 7. 区间 DP
-      - 最长回文子序列
+      - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
 8. 状压 DP
       - 旅行商问题
 10. 状态机 DP
