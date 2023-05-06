@@ -193,6 +193,7 @@
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
 8. 状压 DP
       - 旅行商问题
+      - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
 10. 状态机 DP
 11. 数位 DP
 12. 树形 DP
