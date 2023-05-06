@@ -189,6 +189,7 @@
       - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
 7. 区间 DP
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
+      - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
 8. 状压 DP
       - 旅行商问题
 10. 状态机 DP
