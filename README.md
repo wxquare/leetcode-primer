@@ -181,7 +181,7 @@
 2. 线性 DP
       - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
       - 斐波那契数列
-      - [最长公共子序列（LCS）]
+      - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence/submissions/430898547/)
       - 数字三角形
 4. 背包 DP
       - 01背包
