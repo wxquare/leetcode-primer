@@ -179,8 +179,10 @@
 ## DP问题
 1. 记忆化搜索
 2. 线性 DP
-      - 最长上升子序列
+      - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
       - 斐波那契数列
+      - [最长公共子序列（LCS）]
+      - 数字三角形
 4. 背包 DP
       - 01背包
       - 完全背包
