@@ -25,6 +25,31 @@ i + j < n
 using namespace std;
 
 
+class SolutionDP{
+public:
+    int jump(vector<int>& nums){
+        /*
+            1. 朴素动态规划
+            2. dp[i] 表示到[i]最少跳几次
+            3. dp[i] = min(dp[j]+1),j>=0 && j<i,j+nums[j]>=i
+            4. 时间复杂度：n^2
+        */
+        int n = nums.size();
+        vector<int> dp(n,INT_MAX);
+        dp[0] = 0;
+        for(int i=1;i<n;i++){
+            for(int j=0;j<i;j++){
+                if(j+nums[j] >= i){
+                    dp[i] = min(dp[i],dp[j]+1);
+                }
+            }
+        }
+        return dp[n-1] == INT_MAX ? -1 : dp[n-1];
+    }
+};
+
+
+
 /*
     时间复杂度：O(n*n)
 */
