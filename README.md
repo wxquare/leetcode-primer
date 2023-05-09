@@ -179,8 +179,10 @@
 ## DP问题
 1. 记忆化搜索
 2. 线性 DP
-      - 最长上升子序列
-      - 斐波那契数列
+      - 斐波那契数列：leetcode509
+      - 数字三角形,leetcode120
+      - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
+      - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence/submissions/430898547/)
 4. 背包 DP
       - 01背包
       - 完全背包
@@ -205,15 +207,13 @@
 - Equal Subset Sum Partition (medium)
 - Subset Sum (medium)
 - Minimum Subset Sum Difference (hard)
-1. [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
-2. [poj，ws面试,最长的递增递减子序列长度](https://my.oschina.net/Alexanderzhou/blog/205171)
 3. [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)，最多买卖一次
 4. [122. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)，可以买卖任意次数
 5. [123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)，最多可以买卖两次
 6. [188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)，最多可以买卖K次
 7. [309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
 8. [714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
-9. [ 完成所有工作的最短时间](https://leetcode-cn.com/problems/find-minimum-time-to-finish-all-jobs/)，状态压缩DP或者dfs加剪枝
+9. [完成所有工作的最短时间](https://leetcode-cn.com/problems/find-minimum-time-to-finish-all-jobs/)，状态压缩DP或者dfs加剪枝
 11. [回文字符串分割IV](https://leetcode-cn.com/problems/palindrome-partitioning-iv)
 12. [354. 俄罗斯套娃信封问题](https://leetcode-cn.com/problems/russian-doll-envelopes/)
 13. [131. 分割回文串](https://leetcode-cn.com/problems/palindrome-partitioning/)
