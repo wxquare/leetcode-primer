@@ -183,6 +183,8 @@
       - [数字三角形](https://leetcode.cn/problems/triangle/submissions/431243125/)
       - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
       - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence/submissions/430898547/)
+      - [跳跃游戏](https://leetcode.cn/problems/jump-game/submissions/431244632/)
+      - [跳跃游戏2]()
 4. 背包 DP
       - 01背包
       - 完全背包
