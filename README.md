@@ -184,7 +184,9 @@
       - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
       - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence/submissions/430898547/)
       - [跳跃游戏](https://leetcode.cn/problems/jump-game/submissions/431244632/)
-      - [跳跃游戏2]()
+      - [跳跃游戏2](https://leetcode.cn/problems/jump-game-ii/submissions/424001382/)
+      - [跳跃游戏3](https://leetcode.cn/problems/jump-game-iii/submissions/431516086/)
+      - 
 4. 背包 DP
       - 01背包
       - 完全背包
