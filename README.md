@@ -186,7 +186,7 @@
       - [跳跃游戏](https://leetcode.cn/problems/jump-game/submissions/431244632/)
       - [跳跃游戏2](https://leetcode.cn/problems/jump-game-ii/submissions/424001382/)
       - [跳跃游戏3](https://leetcode.cn/problems/jump-game-iii/submissions/431516086/)
-      - 
+      - [跳跃游戏4](https://leetcode.cn/problems/jump-game-iv/submissions/431789470/)
 4. 背包 DP
       - 01背包
       - 完全背包
