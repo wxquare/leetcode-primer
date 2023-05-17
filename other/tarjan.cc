@@ -8,8 +8,6 @@ using namespace std;
 /*
     1. 求有向图的强连通分量
     2. stack<int> st;
-
-
     1...n 个节点
 */
 vector<vector<int>> tarjan(vector<vector<int>>& edges,int n){
@@ -18,19 +16,18 @@ vector<vector<int>> tarjan(vector<vector<int>>& edges,int n){
 
     // 存储dfs中遍历过的点
     stack<int> st;
-    vector<bool> inst(n,false);
+    vector<bool> inst(n+1,false); // 是否在栈中
 
     int sccCnt = 0; // 连通分量的数量
-    vector<int> scc(n,0); // 记录每个点属于第几个连通分量
+    vector<int> scc(n+1,0); // 记录每个点属于第几个连通分量
 
     unordered_map<int,vector<int>> g;
     for(auto e : edges){
         g[e[0]].push_back(e[1]);
     }
-    int time = 0;
 
-    function<void(int)> dfs;
-    dfs = [&](int u){
+    int time = 0;
+    function<void(int)> dfs = [&](int u){
         dfn[u] = low[u] = ++time;
         st.push(u);
         inst[u] = true;
@@ -49,21 +46,19 @@ vector<vector<int>> tarjan(vector<vector<int>>& edges,int n){
                 st.pop();
                 inst[v] = false;
                 scc[v] = sccCnt;  // 节点属于第几个连通分量
-                if (u == v) {
-                    break;
-                }
+                if(u == v) break;
             }
         }
     };
 
-    for(int i=1;i<n;i++){
+    for(int i=1;i<=n;i++){
         if(dfn[i] == 0){
             dfs(i);
         }
     }
 
     vector<vector<int>> ans(sccCnt);
-    for(int i=1;i<n;i++){
+    for(int i=1;i<=n;i++){
         ans[scc[i]-1].push_back(i);
     }
     return ans;
@@ -71,7 +66,7 @@ vector<vector<int>> tarjan(vector<vector<int>>& edges,int n){
 
 int main() {
     vector<vector<int>> edges = {{1,3},{1,2},{2,4},{3,4},{5,3},{4,6},{6,5}};
-    vector<vector<int>> sccs = tarjan(edges,7);
+    vector<vector<int>> sccs = tarjan(edges,6);
     for(auto sc : sccs){
         for(auto node : sc){
             std::cout << node << '\t';
