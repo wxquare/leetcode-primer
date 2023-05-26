@@ -164,6 +164,8 @@
 - Level Order Successor (easy)
 - Connect Level Order Siblings (medium)
 - [Reorder Routes to Make All Paths Lead to the City Zero](https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/)
+- 切割回文串135
+- 惩罚数2689
 
 ## 搜索:子集问题
 - Subsets，子集类型，一般都是使用多重DFS
