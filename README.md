@@ -193,6 +193,7 @@ https://zerotrac.github.io/leetcode_problem_rating/
       - [跳跃游戏2](https://leetcode.cn/problems/jump-game-ii/submissions/424001382/)
       - [跳跃游戏3](https://leetcode.cn/problems/jump-game-iii/submissions/431516086/)
       - [跳跃游戏4](https://leetcode.cn/problems/jump-game-iv/submissions/431789470/)
+      - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group/submissions/436302364/)
 3. 背包 DP
       - 01背包
       - 完全背包
