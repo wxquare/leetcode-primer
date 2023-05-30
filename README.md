@@ -122,6 +122,7 @@ https://zerotrac.github.io/leetcode_problem_rating/
 - [求多个数的公共素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
 - [两数、多数最大公约数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
 - [两数、多数最小公倍数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+- [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
 
 ## 位运算
 - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
@@ -251,6 +252,7 @@ https://zerotrac.github.io/leetcode_problem_rating/
      - [2603. 收集树中金币](https://leetcode.cn/problems/collect-coins-in-a-tree/submissions/418411707/)
 5. [并查集模版](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
      - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
+     - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
 6. 最小生成树
       - [Kruskal](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
       - [1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/submissions/424543501/)
@@ -278,4 +280,6 @@ https://zerotrac.github.io/leetcode_problem_rating/
   - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
 
 ## 预处理
+- [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
+
 
