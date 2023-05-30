@@ -168,6 +168,7 @@
       - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings/submissions/213589517/)
 3. 树状数组 (单点修改，前缀和和区间和）
       - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
+      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436429471/)
 4. 线段树 （区间修改，求区间和）
       - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
 
