@@ -115,7 +115,7 @@ https://zerotrac.github.io/leetcode_problem_rating/
 - Smallest Number Range (Hard)
 
 
-## 数学问题
+## 数学/数论问题
 - [判断是否是素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
 - [求一个数的所有素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
 - [求多个数的所有素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
@@ -213,12 +213,6 @@ https://zerotrac.github.io/leetcode_problem_rating/
       -  [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix/submissions/436001561/)
       -  [2407. 最长递增子序列 II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/description/)
 
-
-2. 
-- 0/1 Knapsack (medium)
-- Equal Subset Sum Partition (medium)
-- Subset Sum (medium)
-- Minimum Subset Sum Difference (hard)
 3. [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)，最多买卖一次
 4. [122. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)，可以买卖任意次数
 5. [123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)，最多可以买卖两次
@@ -282,3 +276,6 @@ https://zerotrac.github.io/leetcode_problem_rating/
   - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
 - 线段树 （区间修改，求区间和）
   - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
+
+## 预处理
+
