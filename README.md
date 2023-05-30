@@ -1,5 +1,7 @@
 # online-algorithm-coding
 
+https://zerotrac.github.io/leetcode_problem_rating/
+
 ## 链表问题
 - Reverse a LinkedList (easy)
 - Reverse a Sub-list (medium)
@@ -113,13 +115,15 @@
 - Smallest Number Range (Hard)
 
 
-## 数学问题
+## 数学/数论问题
 - [判断是否是素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
 - [求一个数的所有素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
 - [求多个数的所有素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
 - [求多个数的公共素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
 - [两数、多数最大公约数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
 - [两数、多数最小公倍数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+- [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
+- [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
 
 ## 位运算
 - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
@@ -164,6 +168,8 @@
 - Level Order Successor (easy)
 - Connect Level Order Siblings (medium)
 - [Reorder Routes to Make All Paths Lead to the City Zero](https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/)
+- 切割回文串135
+- [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
 
 ## 搜索:子集问题
 - Subsets，子集类型，一般都是使用多重DFS
@@ -178,7 +184,8 @@
 
 ## DP问题
 1. 记忆化搜索
-2. 线性 DP
+      - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string/submissions/436332452/)
+3. 线性 DP
       - [斐波那契数列](https://leetcode.cn/problems/fibonacci-number/submissions/431236355/)
       - [数字三角形](https://leetcode.cn/problems/triangle/submissions/431243125/)
       - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
@@ -187,30 +194,29 @@
       - [跳跃游戏2](https://leetcode.cn/problems/jump-game-ii/submissions/424001382/)
       - [跳跃游戏3](https://leetcode.cn/problems/jump-game-iii/submissions/431516086/)
       - [跳跃游戏4](https://leetcode.cn/problems/jump-game-iv/submissions/431789470/)
+      - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group/submissions/436302364/)
 4. 背包 DP
       - 01背包
       - 完全背包
       - 多重背包，多重背包二进制优化
-6. 序列 DP
+5. 序列 DP
       - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
       - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
-7. 区间 DP
+6. 区间 DP
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
-8. 状压 DP
+7. 状压 DP
       - 旅行商问题
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
-10. 状态机 DP
-11. 数位 DP
-12. 树形 DP
+8. 状态机 DP
+9. 数位 DP
+10. 树形 DP
       - 打家劫舍 III
       - 最小化旅行的价格总和
+11. 数据结构优化DP
+      -  [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix/submissions/436001561/)
+      -  [2407. 最长递增子序列 II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/description/)
 
-2. 
-- 0/1 Knapsack (medium)
-- Equal Subset Sum Partition (medium)
-- Subset Sum (medium)
-- Minimum Subset Sum Difference (hard)
 3. [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)，最多买卖一次
 4. [122. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)，可以买卖任意次数
 5. [123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)，最多可以买卖两次
@@ -249,6 +255,8 @@
      - [2603. 收集树中金币](https://leetcode.cn/problems/collect-coins-in-a-tree/submissions/418411707/)
 5. [并查集模版](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
      - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
+     - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
+     - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
 6. 最小生成树
       - [Kruskal](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
       - [1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/submissions/424543501/)
@@ -274,3 +282,10 @@
   - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
 - 线段树 （区间修改，求区间和）
   - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
+
+## 预处理
+- [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
+- [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
+- [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
+
+
