@@ -168,7 +168,7 @@ https://zerotrac.github.io/leetcode_problem_rating/
 - Connect Level Order Siblings (medium)
 - [Reorder Routes to Make All Paths Lead to the City Zero](https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/)
 - 切割回文串135
-- 惩罚数2689
+- [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
 
 ## 搜索:子集问题
 - Subsets，子集类型，一般都是使用多重DFS
@@ -281,5 +281,6 @@ https://zerotrac.github.io/leetcode_problem_rating/
 
 ## 预处理
 - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
+- [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
 
 
