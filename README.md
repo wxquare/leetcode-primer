@@ -30,7 +30,7 @@
 - [739. 每日温度](https://leetcode-cn.com/problems/daily-temperatures/)
 - [基本计算器](https://leetcode-cn.com/problems/basic-calculator/)
 - [基本计算器2](https://leetcode-cn.com/problems/basic-calculator-ii/)
-- [验证二叉树的前序序列化](https://leetcode-cn.com/problems/verify-preorder-serialization-of-a-binary-tree/)
+- [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436392377/)
 
 ## 二分搜索/二分答案
 - [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
@@ -168,6 +168,7 @@
       - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings/submissions/213589517/)
 3. 树状数组 (单点修改，前缀和和区间和）
       - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
+      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436429471/)
 4. 线段树 （区间修改，求区间和）
       - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
 
