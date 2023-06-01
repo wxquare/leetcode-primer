@@ -171,6 +171,8 @@
       - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436429471/)
 4. 线段树 （区间修改，求区间和）
       - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
+      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436608727/)
+      - 最长递增子序列II
 
 ## 数学
 1. 数论问题
