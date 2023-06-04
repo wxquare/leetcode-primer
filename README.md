@@ -89,10 +89,12 @@
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
 7. 状态机 DP
 8. 数位 DP
-9. 树形 DP
+      - [统计整数的数量](https://leetcode.cn/problems/count-of-integers/submissions/437570070/)
+      - 
+10. 树形 DP
       - 打家劫舍 III
       - 最小化旅行的价格总和
-10. 数据结构优化DP
+11. 数据结构优化DP
       -  [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix/submissions/436001561/)
       -  [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
 
