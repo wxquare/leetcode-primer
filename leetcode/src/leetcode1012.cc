@@ -7,30 +7,26 @@ class Solution {
 public:
     int numDupDigitsAtMostN(int n) {
         string s = to_string(n);
+
         //从i开始到n不包含重复数字
-        int memo[n][1<<10];
+        int memo[s.length()][1<<10][2];
         //从i开始到n包含重复数字
         memset(memo,-1,sizeof(memo));
-        function<int(int,int,bool)> dfs = [&](int i,int mask,bool is_limit){
+        function<int(int,int,bool)> dfs = [&](int i,int mask,int same){
             if(i == s.length()){
                 return 1;
             }
-            if(!is_limit && memo[i][mask] != -1){
-                std::cout << "====" << std::endl;
-                return memo[i][mask];
+            if(memo[i][mask][same] != -1){
+                return memo[i][mask][same];
             }
-
             int res = 0;
-            int up = is_limit ? s[i] - '0' : 9;
+            int up = same ? s[i] - '0' : 9;
             for(int d=0;d<=up;d++){
                 if(mask & (1 << d)) continue;
                 int m = (mask == 0 && d == 0) ? mask : (mask | (1<<d));
-                res = res + dfs(i+1,m,is_limit && d==up);
+                res = res + dfs(i+1,m,same && d==up);
             }
-            if(!is_limit) {
-                std::cout << "====31 " << i << '\t' << mask << std::endl;
-                memo[i][mask] = res;
-            }
+            memo[i][mask][same] = res;
             return res;
         };
         return n - dfs(0,0,true) +1;
@@ -39,6 +35,6 @@ public:
 
 int main(int argc, char const *argv[])
 {
-    std::cout << Solution().numDupDigitsAtMostN(37) << std::endl;
+    std::cout << Solution().numDupDigitsAtMostN(1000) << std::endl;
     return 0;
 }
