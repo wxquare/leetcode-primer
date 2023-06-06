@@ -167,8 +167,8 @@
 - [统计异或值在范围内的数对有多少](https://leetcode-cn.com/problems/count-pairs-with-xor-in-a-range/)
 
 ## 区间问题/前缀/后缀/差分/树状数组/线段树
-1. 前缀和数组
-2. 差分数组 （区间修改，求单点和）
+1. 前缀和prefixSum,后缀和suffixSum
+2. 差分数组 （多次区间加减操作，求最后单点值）
       - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings/submissions/213589517/)
 3. 树状数组 (单点修改，前缀和和区间和）
       - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
