@@ -92,7 +92,8 @@
       - [统计整数的数量](https://leetcode.cn/problems/count-of-integers/submissions/437570070/)
       - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits/description/)
       - [233. 数字 1 的个数](https://leetcode.cn/problems/number-of-digit-one/submissions/437909738/)
-      - leetcode600
+      - [600. 不含连续1的非负整数](https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones/submissions/438160324/)
+      - [902. 最大为 N 的数字组合](https://leetcode.cn/problems/numbers-at-most-n-given-digit-set/submissions/438171960/)
       - 数位DP模版
 10. 树形 DP
       - 打家劫舍 III
