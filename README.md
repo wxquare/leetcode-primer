@@ -194,3 +194,6 @@
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
 3. 拒绝抽样、水塘抽样、随机、概率问题
 
+## 脑筋急转弯/趣味题
+- [1503. 所有蚂蚁掉下来前的最后一刻](https://leetcode.cn/problems/last-moment-before-all-ants-fall-out-of-a-plank/submissions/439537379/)
+- [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots/submissions/439535180/))
