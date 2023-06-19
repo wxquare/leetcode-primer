@@ -14,16 +14,15 @@ public:
        for(int i = 0; i < n; i++){
            p[i] = {nums1[i], nums2[i]};
        }
-
-       for(int i = 0; i < m; i++){
-           queries[i].push_back(i);
-       }
-
        // p 是按照第一个数排序的
        sort(p.begin(), p.end(), [&](const auto &a, const auto &b){
            return a.first > b.first;
        });
 
+
+       for(int i = 0; i < m; i++){
+           queries[i].push_back(i);
+       }
         // queries 也是按照第一个数排序的
        sort(queries.begin(),queries.end(),[&](const auto &a, const auto &b){
            return a[0] > b[0];

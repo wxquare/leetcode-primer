@@ -15,7 +15,7 @@ using namespace std;
 // 针对付费工人，如何暴力选和不选？时间复杂度为2^n
 class SolutionBF{
 public:
-    int painWalls(vector<int>& cost,vector<int>& time){
+    int paintWalls(vector<int>& cost,vector<int>& time){
         int n = cost.size();
         function<int(int,int,int)> dfs = [&](int i,int k,int t){
             int ans = INT_MAX;
@@ -41,7 +41,7 @@ public:
 // 如何在暴力选和不选中加入记忆化搜索？将搜索状态保存在memo中，空间换时间时间复杂度为n^3
 class SolutionMemo {
 public:
-    int painWalls(vector<int>& cost,vector<int>& time){
+    int paintWalls(vector<int>& cost,vector<int>& time){
         int n = cost.size();
         int memo[n][n][n];
         memset(memo,-1,sizeof(memo));
@@ -75,7 +75,7 @@ public:
     /*
         1. 当状态很多时，需要考虑状态能否进一步缩减
     */
-    int painWalls(vector<int>& cost,vector<int>& time){
+    int paintWalls(vector<int>& cost,vector<int>& time){
         int n = cost.size();
         int memo[n][2*n]; // 从i开始，付费时间 - 不付费的差值，这里有可能为负数，需要加上偏移量
         memset(memo,-1,sizeof(memo));
@@ -113,6 +113,6 @@ int main(int argc, char const *argv[])
 {
     vector<int> cost = {1,2,3,2};
     vector<int> time = {1,2,3,2};
-    std::cout << SolutionMemo2().painWalls(cost,time) << std::endl;
+    std::cout << SolutionMemo2().paintWalls(cost,time) << std::endl;
     return 0;
 }

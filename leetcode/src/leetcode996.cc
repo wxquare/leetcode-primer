@@ -1,5 +1,6 @@
 #include <vector>
 #include <iostream>
+#include <unordered_set>
 using namespace std;
 
 
@@ -46,6 +47,7 @@ public:
 };
 
 // 记忆化搜索 + 状态压缩，n*(2^n)
+// 预处理
 class Solution {
 public:
     int numSquarefulPerms(vector<int>& nums){
@@ -57,16 +59,22 @@ public:
                 return 1;
             }
             int ans = 0;
+            unordered_set<int> vis;
             for(int j=0;j<n;j++){
                 if((mask & (1 << j)) != 0) continue;
                 if(isSquare[nums[j]+nums[pre]] == false) continue;
+                if(vis.count(nums[j])) continue;
+                vis.insert(nums[j]);
                 ans += dfs(i+1, mask|(1<<j),j);
             }
             return ans;
         };
         int ans = 0;
         int mask = 0;
+        unordered_set<int> vis;
         for(int i=0;i<n;i++){
+            if(vis.count(nums[i])) continue;
+            vis.insert(nums[i]);
             ans += dfs(1,mask|(1 << i),i);
         }
         return ans;
