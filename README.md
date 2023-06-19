@@ -48,7 +48,7 @@
 - [Last Moment Before All Ants Fall Out of a Plank](https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/)
 - [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
 
-## DFS深度搜索/剪枝/回溯与状态恢复/记忆化搜索/选与不选/分割问题）
+## DFS/剪枝/回溯与状态恢复/记忆化搜索/状态压缩记忆化/选与不选/分割问题）
 - [Paint House III](https://leetcode.com/problems/paint-house-iii/)
 - [Probability of a Two Boxes Having The Same Number of Distinct Balls](https://leetcode.com/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/)
 - [Avoid Flood in The City](https://leetcode.com/problems/avoid-flood-in-the-city/)
