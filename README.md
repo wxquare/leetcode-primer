@@ -48,7 +48,7 @@
 - [Last Moment Before All Ants Fall Out of a Plank](https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/)
 - [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
 
-## 回溯算法 (DFS/剪枝/状态恢复/记忆化搜索，选与不选/分割）
+## DFS深度搜索/剪枝/回溯与状态恢复/记忆化搜索/选与不选/分割问题）
 - [Paint House III](https://leetcode.com/problems/paint-house-iii/)
 - [Probability of a Two Boxes Having The Same Number of Distinct Balls](https://leetcode.com/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/)
 - [Avoid Flood in The City](https://leetcode.com/problems/avoid-flood-in-the-city/)
@@ -60,11 +60,13 @@
 - [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets/submissions/415822742/)
 2. 记忆化搜索
 - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string/submissions/436332452/)
+- [2742. 给墙壁刷油漆](https://leetcode.cn/problems/painting-the-walls/submissions/440997959/)
+3. 状态压缩记忆化搜索
+- [2741. 特别的排列](https://leetcode.cn/problems/special-permutations/submissions/440660237/)
+- [996. 正方形数组的数目](https://leetcode.cn/problems/number-of-squareful-arrays/submissions/441000077/)
 
-## DP问题
-1. 记忆化搜索
-      - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string/submissions/436332452/)
-2. 线性 DP
+## DP问题（递推类DP）
+1. 线性 DP
       - [斐波那契数列](https://leetcode.cn/problems/fibonacci-number/submissions/431236355/)
       - [数字三角形](https://leetcode.cn/problems/triangle/submissions/431243125/)
       - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
@@ -74,31 +76,31 @@
       - [跳跃游戏3](https://leetcode.cn/problems/jump-game-iii/submissions/431516086/)
       - [跳跃游戏4](https://leetcode.cn/problems/jump-game-iv/submissions/431789470/)
       - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group/submissions/436302364/)
-3. 背包 DP
+2. 背包 DP
       - 01背包
       - 完全背包
       - 多重背包，多重背包二进制优化
-4. 序列 DP
+3. 序列 DP
       - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
       - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
-5. 区间 DP
+4. 区间 DP
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
-6. 状压 DP
+5. 状压 DP
       - 旅行商问题
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
-7. 状态机 DP
-8. 数位 DP
+6. 状态机 DP
+7. 数位 DP
       - [统计整数的数量](https://leetcode.cn/problems/count-of-integers/submissions/437570070/)
       - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits/description/)
       - [233. 数字 1 的个数](https://leetcode.cn/problems/number-of-digit-one/submissions/437909738/)
       - [600. 不含连续1的非负整数](https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones/submissions/438160324/)
       - [902. 最大为 N 的数字组合](https://leetcode.cn/problems/numbers-at-most-n-given-digit-set/submissions/438171960/)
       - 数位DP模版
-10. 树形 DP
+8. 树形 DP
       - 打家劫舍 III
       - 最小化旅行的价格总和
-11. 数据结构优化DP
+9. 数据结构优化DP
       -  [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix/submissions/436001561/)
       -  [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
 
