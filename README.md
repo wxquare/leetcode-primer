@@ -58,15 +58,12 @@
 5. 记忆化搜索 （动态规划，状态优化）
       - [2742. 给墙壁刷油漆，状态优化](https://leetcode.cn/problems/painting-the-walls/submissions/440997959/)
       - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string/submissions/436332452/)
+      - [132. 切割回文串132]
 6. 状态压缩记忆化搜索 （状态压缩动态规划）
       - [996. 正方形数组的数目，预处理/重复数字全排列](https://leetcode.cn/problems/number-of-squareful-arrays/submissions/441000077/)
       - [2741. 特别的排列，全排列/剪枝](https://leetcode.cn/problems/special-permutations/submissions/440660237/)
 7. 分支限界搜索
 8. 启发式搜索
-
-- 切割回文串135
-
-
 
 ## DP问题（递推类DP）
 1. 线性 DP
