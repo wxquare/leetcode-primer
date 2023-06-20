@@ -49,6 +49,13 @@
 - [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
 
 ## DFS/剪枝/回溯与状态恢复/记忆化搜索/状态压缩记忆化/选与不选/分割问题）
+1. DFS 深度搜索 （树、图）
+2. BFS 宽度搜索
+3. 回溯（深度搜索+限制条件+限制搜索路径）
+4. 记忆化搜索 （动态规划）
+5. 状态压缩记忆化搜索 （状态压缩动态规划）
+6. 分支限界搜索
+7. 启发式搜索
 - [Paint House III](https://leetcode.com/problems/paint-house-iii/)
 - [Probability of a Two Boxes Having The Same Number of Distinct Balls](https://leetcode.com/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/)
 - [Avoid Flood in The City](https://leetcode.com/problems/avoid-flood-in-the-city/)
