@@ -52,25 +52,18 @@
 1. DFS 深度搜索 （树、图）
 2. BFS 宽度搜索
 3. 回溯（深度搜索+限制条件+限制搜索路径）
-4. 记忆化搜索 （动态规划）
-5. 状态压缩记忆化搜索 （状态压缩动态规划）
-6. 分支限界搜索
-7. 启发式搜索
-- [Paint House III](https://leetcode.com/problems/paint-house-iii/)
-- [Probability of a Two Boxes Having The Same Number of Distinct Balls](https://leetcode.com/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/)
-- [Avoid Flood in The City](https://leetcode.com/problems/avoid-flood-in-the-city/)
-- [Reorder Routes to Make All Paths Lead to the City Zero](https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/)
-- 切割回文串135
-- [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
-1. 搜索:子集问题
-- Unique Generalized Abbreviations (hard)
-- [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets/submissions/415822742/)
-2. 记忆化搜索
-- [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string/submissions/436332452/)
-- [2742. 给墙壁刷油漆](https://leetcode.cn/problems/painting-the-walls/submissions/440997959/)
-3. 状态压缩记忆化搜索
-- [2741. 特别的排列](https://leetcode.cn/problems/special-permutations/submissions/440660237/)
-- [996. 正方形数组的数目](https://leetcode.cn/problems/number-of-squareful-arrays/submissions/441000077/)
+      - [2698. 求一个整数的惩罚数，预处理+回溯](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
+      - [131. 切割回文串131，切割+保存状态路径]
+5. 记忆化搜索 （动态规划，状态优化）
+      - [2742. 给墙壁刷油漆，状态优化](https://leetcode.cn/problems/painting-the-walls/submissions/440997959/)
+      - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string/submissions/436332452/)
+      - [132. 切割回文串132]
+      - [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets/submissions/415822742/)
+6. 状态压缩记忆化搜索 （状态压缩动态规划）
+      - [996. 正方形数组的数目，预处理/重复数字全排列](https://leetcode.cn/problems/number-of-squareful-arrays/submissions/441000077/)
+      - [2741. 特别的排列，全排列/剪枝](https://leetcode.cn/problems/special-permutations/submissions/440660237/)
+7. 分支限界搜索
+8. 启发式搜索
 
 ## DP问题（递推类DP）
 1. 线性 DP
