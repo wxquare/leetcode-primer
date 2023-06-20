@@ -54,8 +54,9 @@
 3. 回溯（深度搜索+限制条件+限制搜索路径）
 4. 记忆化搜索 （动态规划）
 5. 状态压缩记忆化搜索 （状态压缩动态规划）
-6. 分支限界搜索
-7. 启发式搜索
+      - [996. 正方形数组的数目，预处理/重复数字全排列](https://leetcode.cn/problems/number-of-squareful-arrays/submissions/441000077/)
+7. 分支限界搜索
+8. 启发式搜索
 - [Paint House III](https://leetcode.com/problems/paint-house-iii/)
 - [Probability of a Two Boxes Having The Same Number of Distinct Balls](https://leetcode.com/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/)
 - [Avoid Flood in The City](https://leetcode.com/problems/avoid-flood-in-the-city/)
@@ -70,7 +71,7 @@
 - [2742. 给墙壁刷油漆](https://leetcode.cn/problems/painting-the-walls/submissions/440997959/)
 3. 状态压缩记忆化搜索
 - [2741. 特别的排列](https://leetcode.cn/problems/special-permutations/submissions/440660237/)
-- [996. 正方形数组的数目](https://leetcode.cn/problems/number-of-squareful-arrays/submissions/441000077/)
+
 
 ## DP问题（递推类DP）
 1. 线性 DP
