@@ -182,13 +182,12 @@
       - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
 5. 离线问题
       - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/submissions/444263284/)
-      - 1851. 包含每个查询的最小区间
+      - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query/submissions/444281304/)
       - 1938. 查询最大基因差
       - 2070. 每一个查询的最大美丽值
       - 2343. 裁剪数字后查询第 K 小的数字
       - 2503. 矩阵查询可获得的最大分数
       - 2736. 最大和查询
-      - 2747. 统计没有收到请求的服务器数目
 
 ## 数学
 1. 数论问题
