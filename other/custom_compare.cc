@@ -28,6 +28,7 @@ struct GreaterNode {
 };
 
 
+// 比较少用
 bool compareNode(const Node& n1,const Node& n2){
     return n1.x < n2.x;
 }
