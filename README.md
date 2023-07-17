@@ -164,7 +164,7 @@
 - [HashMap](https://leetcode-cn.com/problems/design-hashmap/)
 - 跳表
 
-## Trie Tree/
+## Trie Tree/kmp/ac状态
 - [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
 - [Implement Magic Dictionary](https://leetcode.com/problems/implement-magic-dictionary/)
 - [统计异或值在范围内的数对有多少](https://leetcode-cn.com/problems/count-pairs-with-xor-in-a-range/)
