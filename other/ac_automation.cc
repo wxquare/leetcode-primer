@@ -10,7 +10,6 @@ struct Node {
     bool isEnd; // 是否是一个敏感词的结尾节点
     unordered_map<char, Node*> children; // 子节点
     Node* fail; // 失败指针，用于构建自动机
-
     Node() : isEnd(false), fail(nullptr) {}
 };
 
@@ -49,7 +48,7 @@ void buildACAutomaton(Node* root, const vector<string>& keywords) {
             while (failNode != nullptr && failNode->children.find(c) == failNode->children.end()) {
                 failNode = failNode->fail;
             }
-
+            
             child->fail = (failNode != nullptr) ? failNode->children[c] : root;
         }
     }
