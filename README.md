@@ -208,6 +208,8 @@
       - [382. 链表随机节点](https://leetcode.cn/problems/linked-list-random-node/description/)
       - [398. 随机数索引](https://leetcode.cn/problems/random-pick-index/submissions/305425474/)
       - [reservoirSampling](https://github.com/wxquare/online-algorithm-coding/blob/master/other/math.cc)
+4. 洗牌算法
+      - [384. 打乱数组](https://leetcode.cn/problems/shuffle-an-array/submissions/)
 4. 位运算
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
 
