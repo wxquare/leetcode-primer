@@ -1,5 +1,6 @@
 
 #include <vector>
+#include <random>
 using namespace std;
 
 
@@ -12,6 +13,25 @@ bool isPrime(int n){
     }
     return true;
 }
+
+
+
+// 求一个范围内的prime number.
+const int MX = 10000;
+vector<int> primes;
+int init = [](){
+    vector<bool> isPrime(MX+1,true);
+    for(int i=2;i<=MX;i++){
+        if(isPrime[i]){
+            primes.push_back(i);
+            // j may out of bounds.
+            for(long long j=i*i;j<=MX;j+=i){
+                isPrime[j] = false;
+            }
+        }
+    }
+    return 0;
+}();
 
 /*
     埃氏筛法求素数
@@ -70,6 +90,10 @@ vector<int> getCommonPrimes(vector<int>& nums){
     而对于 C++ 17，我们可以使用 <numeric> 头中的 std::gcd 与 std::lcm 来求最大公约数和最小公倍数。
     1. 最大公约数 (Greatest Common Divisor),Least Common Multiple, LCM
     2. O(log min(a, b))
+
+
+    100 12
+    12,100%12= 4;
 */
 int gcd(int x,int y){
     if(y == 0) return x;
@@ -98,3 +122,34 @@ int lcmMultiple(vector<int>& nums){
     return res * m;
 }
 
+
+// 水塘抽样
+vector<int> reservoirSampling(vector<int>& data,int k){
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    int n = data.size();
+    vector<int> reservoir;
+    for(int i=0;i<n;i++){
+        if(i < k){
+            reservoir.push_back(data[i]);
+        } else {
+            // 生成一个0到i-1的随机数
+            std::uniform_int_distribution<> dis(0, i);//[0,i]
+            int j = dis(gen);
+            if(j < k) reservoir[j] = data[i];
+        }
+    }
+    return reservoir;
+}
+
+// 洗牌算法
+void shuffle(vector<int>& nums){
+    random_device rd;
+    mt19937 gen(rd());
+    int n = nums.size();
+    for (int i = nums.size() - 1; i > 0; --i) {
+        std::uniform_int_distribution<> dis(0, i);
+        int j = dis(gen);
+        std::swap(nums[i], nums[j]);
+    }
+}
