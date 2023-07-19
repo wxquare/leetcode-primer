@@ -203,7 +203,7 @@
       - [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
       - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
 2. 拒绝抽样(rejection sampling)
-      - 
+      - [用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7/solutions/978527/yong-rand7-shi-xian-rand10-by-leetcode-s-qbmd/)
 3. 水塘抽样
       - [382. 链表随机节点](https://leetcode.cn/problems/linked-list-random-node/description/)
       - [398. 随机数索引](https://leetcode.cn/problems/random-pick-index/submissions/305425474/)
