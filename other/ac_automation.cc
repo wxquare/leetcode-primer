@@ -10,12 +10,11 @@ const int inf = 0x3f3f3f3f;
 
 // AC 自动机的节点结构
 struct Node {
-    bool isEnd; // 是否是一个敏感词的结尾节点
-    int minLen;  // 到节点恰好有终点的最短字符串的长度
     unordered_map<char, Node*> children; // 子节点
+    bool isEnd; // 是否是一个敏感词的结尾节点
     Node* fail; // 失败指针，用于构建自动机
+    int minLen;  // 到节点恰好有终点的最短字符串的长度
     Node() : isEnd(false),minLen(inf),fail(nullptr) {}
-    string data;
 };
 
 // 构建 AC 自动机
@@ -31,31 +30,26 @@ void buildACAutomaton(Node* root, vector<string>& keywords) {
         }
         curr->isEnd = true;
         curr->minLen = min(curr->minLen,int(word.length()));
-        curr->data = word;
     }
 
-    // 构建失败指针
+    // BFS构建失败指针
     queue<Node*> q;
     for (auto& kvp : root->children) {
         Node* child = kvp.second;
         child->fail = root;
         q.push(child);
     }
-
     while (!q.empty()) {
         Node* curr = q.front();
         q.pop();
-
         for (auto& kvp : curr->children) {
             char c = kvp.first;
             Node* child = kvp.second;
             q.push(child);
-
             Node* failNode = curr->fail;
             while (failNode != nullptr && failNode->children.find(c) == failNode->children.end()) {
                 failNode = failNode->fail;
             }
-            
             child->fail = (failNode != nullptr) ? failNode->children[c] : root;
             child->minLen = min(child->minLen,child->fail->minLen);
         }
@@ -79,17 +73,12 @@ public:
                 curr = curr->children[word[i]];
                 if (curr->minLen != inf) {
                     left = max(left,i+1-curr->minLen+1);
-                    ans = max(ans,i-left+1);
                     curr = curr->fail;
-                } else {
-                    ans = max(ans,i - left + 1);
-                }
+                } 
             } else {
                 curr = root;
-                ans = max(ans,i - left + 1);
             }
-
-            // std::cout << i << '\t' << left << '\t' << ans << std::endl;
+            ans = max(ans,i - left + 1);
         }
         return ans;
     }

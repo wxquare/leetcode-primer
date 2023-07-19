@@ -1,57 +1,55 @@
-
-
-
-#include <iostream>
+#include <string>
 #include <vector>
-
+#include <iostream>
 using namespace std;
 
-
-void kmp(string& text,string pattern) {
+int kmp(string& text,string &pattern){
+    /*
+        A B A B C A B A B A
+        0,0,1,2,0,1,2,3,4 3
+    */
     int n = pattern.length();
-    vector<int> lps(n,0);  // the longest length prefix that equals to suffix.
+    vector<int> lps(n,0); // the length of common prefix and suffix
     int len = 0;
-    for(int i=1;i<pattern.length();){
+    for(int i=1;i<n;){
         if(pattern[i] == pattern[len]){
             len++;
             lps[i] = len;
             i++;
         } else {
-            if(len != 0){
+            if(len - 1 >= 0){
                 len = lps[len - 1];
             } else {
+                len = 0;
                 lps[i] = 0;
                 i++;
             }
         }
     }
-
     int i = 0; // point to text
     int j = 0; // point to pattern
-    while(i < text.length()){
+    for(;i < text.length();){
         if(text[i] == pattern[j]){
             i++;
             j++;
-        }
-        // 找个一个匹配的
-        if(j == pattern.length()){
-            int start = i - j;
-            std::cout << "find and start " << start << std::endl;
-            j = lps[j-1]; 
-        } else if(i < text.length() && text[i] != pattern[j]){
-            if(j != 0){
-                j = lps[j-1];
+        } else {
+            if(j - 1 >= 0){
+                j = lps[j - 1];
             } else {
                 i++;
             }
         }
+        if(j == pattern.length()){
+            // find 
+            return i - pattern.length();
+        }
     }
+    return -1;
 }
 
-
-int main() {
+int main(){
     string text = "ABABDABACDABABCABAB";
     string pattern = "ABABCABAB";
-    kmp(text,pattern);
+    std::cout << kmp(text,pattern) << std::endl;
     return 0;
 }
