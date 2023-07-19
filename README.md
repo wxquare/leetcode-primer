@@ -202,9 +202,15 @@
       - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
       - [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
       - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
-2. 位运算
+2. 拒绝抽样(rejection sampling)
+      - 
+3. 水塘抽样
+      - [382. 链表随机节点](https://leetcode.cn/problems/linked-list-random-node/description/)
+      - [398. 随机数索引](https://leetcode.cn/problems/random-pick-index/submissions/305425474/)
+      - [reservoirSampling](https://github.com/wxquare/online-algorithm-coding/blob/master/other/math.cc)
+4. 位运算
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
-3. 拒绝抽样、水塘抽样、随机、概率问题
+
 
 ## 脑筋急转弯/趣味题
 - [1503. 所有蚂蚁掉下来前的最后一刻](https://leetcode.cn/problems/last-moment-before-all-ants-fall-out-of-a-plank/submissions/439537379/)
