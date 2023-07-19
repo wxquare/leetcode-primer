@@ -202,6 +202,8 @@
       - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
       - [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
       - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
+2. 快速幂
+      - [50. Pow(x, n)](https://leetcode.cn/problems/powx-n/submissions/448492142/)
 2. 拒绝抽样(rejection sampling)
       - [用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7/solutions/978527/yong-rand7-shi-xian-rand10-by-leetcode-s-qbmd/)
 3. 水塘抽样
@@ -210,8 +212,9 @@
       - [reservoirSampling](https://github.com/wxquare/online-algorithm-coding/blob/master/other/math.cc)
 4. 洗牌算法
       - [384. 打乱数组](https://leetcode.cn/problems/shuffle-an-array/submissions/)
-4. 位运算
+5. 位运算
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
+      - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
 
 
 ## 脑筋急转弯/趣味题
