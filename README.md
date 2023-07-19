@@ -48,7 +48,7 @@
 - [Last Moment Before All Ants Fall Out of a Plank](https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/)
 - [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
 
-## DFS/剪枝/回溯与状态恢复/记忆化搜索/状态压缩记忆化/选与不选/分割问题）
+## 搜索问题 DFS/剪枝/回溯与状态恢复/记忆化搜索/状态压缩记忆化/选与不选/分割问题）
 1. DFS 深度搜索 （树、图）
 2. BFS 宽度搜索
 3. 回溯（深度搜索+限制条件+限制搜索路径）
@@ -164,7 +164,7 @@
 - [HashMap](https://leetcode-cn.com/problems/design-hashmap/)
 - 跳表
 
-## Trie Tree/kmp/ac状态
+## 字符串匹配问题Trie Tree/kmp/ac状态
 - [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
 - [Implement Magic Dictionary](https://leetcode.com/problems/implement-magic-dictionary/)
 - [统计异或值在范围内的数对有多少](https://leetcode-cn.com/problems/count-pairs-with-xor-in-a-range/)
@@ -204,6 +204,9 @@
       - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
 2. 快速幂
       - [50. Pow(x, n)](https://leetcode.cn/problems/powx-n/submissions/448492142/)
+      - [372. 超级次方](https://leetcode.cn/problems/super-pow/submissions/245597022/)
+3. 模运算 ？？
+4. 分解质因数        
 2. 拒绝抽样(rejection sampling)
       - [用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7/solutions/978527/yong-rand7-shi-xian-rand10-by-leetcode-s-qbmd/)
 3. 水塘抽样
