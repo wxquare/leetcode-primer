@@ -168,6 +168,8 @@
 - [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
 - [Implement Magic Dictionary](https://leetcode.com/problems/implement-magic-dictionary/)
 - [统计异或值在范围内的数对有多少](https://leetcode-cn.com/problems/count-pairs-with-xor-in-a-range/)
+- [kmp](https://github.com/wxquare/online-algorithm-coding/blob/master/other/kmp.cc)
+- [最长合法子字符串的长度 ac 自动机](https://leetcode.cn/submissions/detail/448173370/)
 
 ## 区间问题/前缀/后缀/差分/树状数组/线段树
 1. 前缀和prefixSum,后缀和suffixSum
