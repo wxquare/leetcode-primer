@@ -205,7 +205,9 @@
 2. 快速幂
       - [50. Pow(x, n)](https://leetcode.cn/problems/powx-n/submissions/448492142/)
       - [372. 超级次方](https://leetcode.cn/problems/super-pow/submissions/245597022/) （快速幂和模运算）
-3. 模运算 
+3. 模运算
+      - (a + b) mod c = ((a mod c) + (b mod c)) mod c
+      - (a * b) mod c =  ((a mod c) * (b mod c)) mod c
 2. 拒绝抽样(rejection sampling)
       - [用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7/solutions/978527/yong-rand7-shi-xian-rand10-by-leetcode-s-qbmd/)
 3. 水塘抽样
@@ -217,7 +219,6 @@
 5. 位运算
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
       - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
-
 
 ## 脑筋急转弯/趣味题
 - [1503. 所有蚂蚁掉下来前的最后一刻](https://leetcode.cn/problems/last-moment-before-all-ants-fall-out-of-a-plank/submissions/439537379/)
