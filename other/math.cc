@@ -1,6 +1,7 @@
 
 #include <vector>
 #include <random>
+#include <iostream>
 using namespace std;
 
 
@@ -151,5 +152,27 @@ void shuffle(vector<int>& nums){
         std::uniform_int_distribution<> dis(0, i);
         int j = dis(gen);
         std::swap(nums[i], nums[j]);
+    }
+}
+
+
+// 分解质因数
+vector<int> primeFactorization(int n){
+    vector<int> ans;
+    for(int i=2;i*i<=n;i++){
+        if((n  % i) == 0){
+            ans.push_back(i);
+            while(n % i == 0){
+                n /= i;
+            }
+        }
+    }
+    return ans;
+}
+
+int main(){
+    vector<int> ans = primeFactorization(600);
+    for(auto f : ans){
+        std::cout << f << std::endl;
     }
 }
