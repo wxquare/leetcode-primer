@@ -173,9 +173,9 @@
 
 ## 区间问题/前缀/后缀/差分/树状数组/线段树
 1. 前缀和prefixSum,后缀和suffixSum
-2. 差分数组 （多次区间加减操作，求最后单点值）
+2. 差分数组 （区间同时加减一个数，求最终单点的值）
       - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings/submissions/213589517/)
-3. 树状数组 (单点修改，前缀和和区间和）
+3. 树状数组 (单点修改，前缀和和区间和）（lowbit 函数会求出一个二进制的最低位1代表的数字， x & -x，树状树组index从1开始）
       - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
       - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436429471/)
 4. 线段树 （区间修改，求区间和）
