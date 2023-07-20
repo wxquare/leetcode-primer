@@ -193,10 +193,10 @@
 
 ## 数学
 1. 数论问题
-      - [判断是否是素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-      - [求一个数的所有素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-      - [求多个数的所有素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-      - [求多个数的公共素数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+      - [判断是否是素数（质数）](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+      - [求1-n之间的所有素数，素数筛选法](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+      - 分解质因数  
+      - [求多个数的公共质因子](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
       - [两数、多数最大公约数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
       - [两数、多数最小公倍数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
       - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
@@ -204,9 +204,10 @@
       - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
 2. 快速幂
       - [50. Pow(x, n)](https://leetcode.cn/problems/powx-n/submissions/448492142/)
-      - [372. 超级次方](https://leetcode.cn/problems/super-pow/submissions/245597022/)
-3. 模运算 ？？
-4. 分解质因数        
+      - [372. 超级次方](https://leetcode.cn/problems/super-pow/submissions/245597022/) （快速幂和模运算）
+3. 模运算
+      - (a + b) mod c = ((a mod c) + (b mod c)) mod c
+      - (a * b) mod c =  ((a mod c) * (b mod c)) mod c
 2. 拒绝抽样(rejection sampling)
       - [用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7/solutions/978527/yong-rand7-shi-xian-rand10-by-leetcode-s-qbmd/)
 3. 水塘抽样
@@ -219,7 +220,14 @@
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
       - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
 
-
 ## 脑筋急转弯/趣味题
 - [1503. 所有蚂蚁掉下来前的最后一刻](https://leetcode.cn/problems/last-moment-before-all-ants-fall-out-of-a-plank/submissions/439537379/)
 - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots/submissions/439535180/))
+
+## 参考
+- [leetcode](https://leetcode.cn/)
+- [灵茶山艾府](https://leetcode.cn/u/endlesscheng/)
+- [宫水三叶](https://github.com/SharingSource/LogicStack-LeetCode)
+- [代码随想录](https://github.com/youngyangyang04/leetcode-master)
+- https://oi-wiki.org/
+- https://zerotrac.github.io/leetcode_problem_rating/
