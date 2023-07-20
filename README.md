@@ -223,3 +223,11 @@
 ## 脑筋急转弯/趣味题
 - [1503. 所有蚂蚁掉下来前的最后一刻](https://leetcode.cn/problems/last-moment-before-all-ants-fall-out-of-a-plank/submissions/439537379/)
 - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots/submissions/439535180/))
+
+## 参考
+- [leetcode](https://leetcode.cn/)
+- [灵茶山艾府](https://leetcode.cn/u/endlesscheng/)
+- [宫水三叶](https://github.com/SharingSource/LogicStack-LeetCode)
+- [代码随想录](https://github.com/youngyangyang04/leetcode-master)
+- https://oi-wiki.org/
+- https://zerotrac.github.io/leetcode_problem_rating/
