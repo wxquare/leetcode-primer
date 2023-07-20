@@ -22,7 +22,7 @@ https://www.bilibili.com/video/BV1ce411u7qP/?spm_id_from=333.337.search-card.all
 using namespace std;
 
 class FenwickTree {
-private:
+public:
     vector<int> tree;
 
 public:
@@ -55,11 +55,15 @@ public:
 };
 
 int main(){
-    FenwickTree ft(8);
-    for(int i=1;i<=8;i++){
+    FenwickTree ft(6);
+    for(int i=1;i<=6;i++){
         ft.update(i,i);
     }
-    std::cout << ft.getPrefixSum(3) << std::endl;
+
+    for(int i=1;i<=6;i++){
+        std::cout << ft.tree[i] << std::endl;
+    }
+    // std::cout << ft.getPrefixSum(3) << std::endl;
 }
 
 

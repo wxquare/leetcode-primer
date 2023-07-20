@@ -69,6 +69,8 @@ vector<vector<int>> getSomePrimes(int n){
 }
 
 
+
+// 质因子
 vector<int> getCommonPrimes(vector<int>& nums){
     int n = *max_element(nums.begin(),nums.end());
     vector<int> primes = getPrimes(n);  
