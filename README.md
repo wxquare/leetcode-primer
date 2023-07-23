@@ -155,6 +155,9 @@
       - [tarjan 求有向图的连通分量](https://github.com/wxquare/online-algorithm-coding/blob/master/other/tarjan.cc)
       - [2685. 统计完全连通分量的数量](https://leetcode.cn/problems/count-the-number-of-complete-components/submissions/432982804/)
       - https://www.cnblogs.com/Jr1Preg/p/12300735.html
+10. 寻找符合条件的路径
+      - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree/description/)
+      - 
 
 
 ## 复杂数据结构运用和设计问题
