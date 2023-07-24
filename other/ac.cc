@@ -72,8 +72,8 @@ void buildFailurePointer(TrieNode* root) {
 // AC 自动机匹配
 void acAutomaton(TrieNode* root, string text) {
     TrieNode* curr = root;
-    for (char c : text) {
-        int idx = c - 'a';
+    for (int i=0;i<text.length();i++) {
+        int idx = text[i] - 'a';
         while (curr && !curr->children[idx]) {
             curr = curr->fail;
         }
@@ -86,7 +86,7 @@ void acAutomaton(TrieNode* root, string text) {
         TrieNode* temp = curr;
         while (temp) {
             if (temp->isEnd) {
-                cout << "Pattern found at index: " << (text.size() - temp->depth) << endl;
+                cout << "Pattern found at index: " << (i + 1- temp->depth) << endl;
             }
             temp = temp->fail;
         }

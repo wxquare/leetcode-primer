@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <queue>
 using namespace std;
 
 
@@ -83,3 +84,104 @@ public:
         return p->isEnd;
     }
 };
+
+
+
+
+namespace ac_actomation{
+
+
+const int ALPHABET_SIZE = 26;
+
+struct Node {
+    vector<Node*> children;
+    bool isEnd;
+    Node* fail;
+    int len;
+    Node(){
+        children = vector<Node*>(26,nullptr);
+        isEnd = false;
+        fail = nullptr;
+        len = 0;
+    }
+};
+
+
+class acAutomaton{
+public:
+    Node* root;
+    acAutomaton(){
+        root = new Node();
+    }
+
+    void build(vector<string>& words){
+        // build trie tree
+        for(auto & s : words){
+            Node* p = root;
+            for(auto & c : s){
+                if(p->children[c - 'a'] == nullptr){
+                    p->children[c - 'a'] = new Node();
+                }
+                p = p->children[c - 'a'];
+            }
+            p->isEnd = true;
+            p->len = s.length();
+        }
+
+        // build fail pointer
+        // BFS
+        queue<Node*> q;
+        for(int i=0;i<ALPHABET_SIZE;i++){
+            if(root->children[i] != nullptr){
+                q.push(root->children[i]);
+                root->children[i]->fail = root;
+            }
+        }
+        while(!q.empty()){
+            Node* cur = q.front();
+            q.pop();
+
+            for(int i=0;i<ALPHABET_SIZE;i++){
+                Node* child = cur->children[i];
+                if(child){
+                    Node* fail = cur->fail;
+                    while(fail && fail->children[i] == nullptr){
+                        fail = fail->fail;
+                    }
+                    if(fail){
+                        child->fail = fail;
+                    }else{
+                        child->fail = root;
+                    }
+                    q.push(child);
+                }
+            }
+        }
+    }
+
+    // ac 自动机匹配
+    void query(string& text){
+        Node* cur = root;
+        for(int i=0;i<text.length();i++){
+            int idx = text[i] - 'a';
+            while(cur && cur->children[idx] == nullptr){
+                cur = cur->fail;
+            }
+            if(cur){
+                cur = cur->children[idx];
+            } else {
+                cur = root;
+            }
+
+            Node* p = cur;
+            while(p){
+                if(p->isEnd){
+                    std::cout << i + 1 - p->len << std::endl;
+                }
+                p = p->fail;
+            }
+        }
+    }
+};
+};
+
