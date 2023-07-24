@@ -222,6 +222,11 @@
 5. 位运算
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
       - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
+      - lowbit(x) = x & (-x)
+      - x |= (1 << i)
+      - (x & (1 << i)) == 0
+      - 异或运算: 0^0=1,0^1=1,1^1=0,
+      - x ^ (1 << i) = x
 
 ## 脑筋急转弯/趣味题
 - [1503. 所有蚂蚁掉下来前的最后一刻](https://leetcode.cn/problems/last-moment-before-all-ants-fall-out-of-a-plank/submissions/439537379/)
