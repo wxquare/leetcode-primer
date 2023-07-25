@@ -24,38 +24,32 @@ public:
     int cap;
     list<Node> lt;
     unordered_map<int,list<Node>::iterator> m;// key,node address.
-
-    LRUCache(int capacity) : cap(capacity){
-    }
+    LRUCache(int capacity) : cap(capacity){}
     int get(int key) {
         if(m.count(key) == 0) return -1;
         int val =  m[key]->val;
-        // auto p = m[key];
-        // lt.erase(p);
-        // lt.push_front(Node(key,val));
-        // m[key] = lt.begin();
         lt.splice(lt.begin(),lt,m[key]);
         return val;
     }
     void put(int key, int value) {
         if(m.count(key)){
-            lt.erase(m[key]);
-        } 
-
-        lt.push_front(Node(key,value));
-        m[key] = lt.begin();
-
-        if(m.size() > cap){
-            auto it = lt.rbegin();
-            m.erase(it->key);
-            lt.pop_back();
+            auto it = m[key];
+            it->val = value;
+            lt.splice(lt.begin(),lt,m[key]);
+        } else {
+            if(m.size() == cap){
+                auto it = lt.rbegin();
+                m.erase(it->key);
+                lt.pop_back();
+            }
+            lt.push_front(Node(key,value));
+            m[key] = lt.begin();
         }
     }
 };
 };
 
-
-namespace lru{
+namespace lfu{
 // 缓存的节点信息
 struct Node {
     int key, val, freq;
@@ -74,10 +68,8 @@ public:
     }
     
     int get(int key) {
-        if (capacity == 0) return -1;
-        auto it = key_table.find(key);
-        if (it == key_table.end()) return -1;
-        list<Node>::iterator node = it -> second;
+        if(key_table.count(key) == 0) return -1;
+        list<Node>::iterator node = key_table[key];;
         int val = node -> val, freq = node -> freq;
         freq_table[freq].erase(node);
         // 如果当前链表为空，我们需要在哈希表中删除，且更新minFreq
