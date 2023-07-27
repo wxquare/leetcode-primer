@@ -1,18 +1,3 @@
-
-
-BFS, Dijkstra, Bellman-Ford, and Floyd are all algorithms used to solve the shortest path problem, but they differ in their approach and performance characteristics.
-
-- BFS (Breadth First Search) is an algorithm that is used to traverse a graph or tree and visit all the vertices at the same level before proceeding to the next level. It is commonly used to find the shortest path in an unweighted graph. The time complexity of BFS is O(V+E), where V is the number of vertices and E is the number of edges.
-
-- Dijkstra's algorithm is a greedy algorithm used to find the shortest path between a starting node and all other nodes in a weighted graph. It maintains a priority queue of vertices based on their current distances from the source node, and at each step, it selects the vertex with the shortest distance and updates the distances of its neighboring vertices. The time complexity of Dijkstra's algorithm is O((V+E)logV), where V is the number of vertices and E is the number of edges.
-
-- Bellman-Ford algorithm is used to find the shortest path between a starting node and all other nodes in a weighted graph, even if the graph contains negative weight edges. It works by iterating over all the edges multiple times and relaxing them to update the distances. The time complexity of Bellman-Ford algorithm is O(VE), where V is the number of vertices and E is the number of edges.
-
-- Floyd's algorithm is a dynamic programming algorithm used to find the shortest path between all pairs of nodes in a weighted graph. It maintains a two-dimensional array to store the shortest distances between any two nodes in the graph. The time complexity of Floyd's algorithm is O(V^3), where V is the number of vertices.
-
-In summary, BFS is used to find the shortest path in an unweighted graph, while Dijkstra, Bellman-Ford, and Floyd are used to find the shortest path in a weighted graph. Dijkstra's algorithm is the fastest algorithm for finding the shortest path in a weighted graph with non-negative edge weights, while Bellman-Ford is suitable for graphs with negative weight edges. Floyd's algorithm is suitable for finding the shortest path between all pairs of nodes in a dense graph.
-
-```cpp
 #include <vector>
 #include <iostream>
 #include <unordered_map>
@@ -149,4 +134,3 @@ vector<vector<int>> floyd(vector<vector<int>>& edges,int n){
     }
     return dist;
 }
-```
