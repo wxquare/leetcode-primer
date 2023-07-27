@@ -127,10 +127,10 @@
 
 ## 图论
 1. [最短路径](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
-      - BFS
-      - Dijkstra
-      - Ballmanford
-      - Floyd
+      - BFS（单源，无权路，权值为1的最短路，）
+      - Dijkstra（单源，权值为正）
+      - Ballmanford （单源，n-1次松驰，,权值可正可负，可用于检测负环）
+      - Floyd（多源，任意两点的距离）
       - A*
             - [八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
       - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time/submissions/416407193/)
@@ -157,7 +157,6 @@
       - https://www.cnblogs.com/Jr1Preg/p/12300735.html
 10. 寻找符合条件的路径
       - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree/description/)
-      - 
 
 
 ## 复杂数据结构运用和设计问题
