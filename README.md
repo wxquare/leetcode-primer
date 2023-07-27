@@ -6,10 +6,6 @@
 - [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
 - [交换链表中的第K个节点和倒数第K个节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
 
-## 二叉树
-- [lowest common ancestor](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
-- [二叉树的前、中、后序遍历,非递归的实现](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_tree.cpp)（12.21）
-- [二叉搜索树的查找、插入和删除](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_search_tree.cpp)
 
 ## 滑动窗口/哈希表/双指针/快慢指针
 - [两数之和](https://leetcode-cn.com/problems/two-sum/)
@@ -125,7 +121,12 @@
 - [打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv/submissions/399760539/)
 
 
-## 图论
+## 树/图论
+1. 二叉树
+      - [lowest common ancestor](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+      - [二叉树的前、中、后序遍历,非递归的实现](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_tree.cpp)（12.21）
+      - [二叉搜索树的查找、插入和删除](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_search_tree.cpp)
+
 1. [最短路径](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
       - BFS（单源，无权路，权值为1的最短路，）
       - Dijkstra（单源，权值为正）
