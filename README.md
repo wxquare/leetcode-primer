@@ -1,4 +1,4 @@
-# online-algorithm-coding
+# leetcode-practice
 
 ## 链表
 - [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
@@ -6,10 +6,6 @@
 - [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
 - [交换链表中的第K个节点和倒数第K个节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
 
-## 二叉树
-- [lowest common ancestor](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
-- [二叉树的前、中、后序遍历,非递归的实现](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_tree.cpp)（12.21）
-- [二叉搜索树的查找、插入和删除](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_search_tree.cpp)
 
 ## 滑动窗口/哈希表/双指针/快慢指针
 - [两数之和](https://leetcode-cn.com/problems/two-sum/)
@@ -125,39 +121,41 @@
 - [打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv/submissions/399760539/)
 
 
-## 图论
-1. [最短路径](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
-      - BFS
-      - Dijkstra
-      - Ballmanford
-      - Floyd
+## 树/图论
+1. 二叉树
+      - [lowest common ancestor](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+      - [二叉树的前、中、后序遍历,非递归的实现](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_tree.cpp)（12.21）
+      - [二叉搜索树的查找、插入和删除](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_search_tree.cpp)
+2. [最短路径和K短问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
+      - BFS（单源，无权路，权值为1的最短路，）
+      - Dijkstra（单源，权值为正）
+      - Ballmanford （单源，n-1次松驰，,权值可正可负，可用于检测负环）
+      - Floyd（多源，任意两点的距离）
       - A*
             - [八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
       - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time/submissions/416407193/)
-2. K短路
       - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination/submissions/416029633/)
-4. [拓扑排序和度](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
+3. [拓扑排序和度](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
      - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
      - [210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)
      - [2603. 收集树中金币](https://leetcode.cn/problems/collect-coins-in-a-tree/submissions/418411707/)
-5. [并查集模版](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
+4. [并查集模版](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
      - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
      - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
      - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
-6. 最小生成树
+5. 最小生成树
       - [Kruskal](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
       - [1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/submissions/424543501/)
-7. 环问题，判断是否存在环，最短环
-8. 欧拉回路/通路
+6. 环问题，判断是否存在环，最短环
+7. 欧拉回路/通路
       - [Reconstruct Itinerary](https://leetcode.cn/problems/reconstruct-itinerary/submissions/417006045/)
-9. 连通量
+8. 连通量
       - [1489. 找到最小生成树里的关键边和伪关键边](https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/submissions/419266120/)
       - [tarjan 求有向图的连通分量](https://github.com/wxquare/online-algorithm-coding/blob/master/other/tarjan.cc)
       - [2685. 统计完全连通分量的数量](https://leetcode.cn/problems/count-the-number-of-complete-components/submissions/432982804/)
       - https://www.cnblogs.com/Jr1Preg/p/12300735.html
-10. 寻找符合条件的路径
+9. 寻找符合条件的路径
       - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree/description/)
-      - 
 
 
 ## 复杂数据结构运用和设计问题
