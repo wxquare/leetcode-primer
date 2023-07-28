@@ -1,5 +1,6 @@
 #include <unordered_map>
 #include <list>
+#include <vector>
 using namespace std;
 
 /*
@@ -115,3 +116,139 @@ public:
     }
 };
 };
+
+
+namespace hm{
+const int BUCKET_SIZE = 16;
+class MyHashMap{
+public:
+    vector<list<pair<int,int>>> data;
+
+    int bucket(int key){
+        return key % BUCKET_SIZE;
+    }
+
+    MyHashMap(){
+        data.resize(BUCKET_SIZE);
+    }
+
+    void put(int key,int val){
+        int idx = bucket(key);
+        for(auto it=data[idx].begin();it!=data[idx].end();it++){
+            if(it->first == key){
+                it->second = val;
+                return;
+            }
+        } 
+        data[idx].push_back(make_pair(key,val));
+        return;
+    }
+
+    int get(int key){
+        int idx = bucket(key);
+        for(auto it=data[idx].begin();it!=data[idx].end();it++){
+            if(it->first == key){
+                return it->second;
+            }
+        }
+        return -1;
+    }
+
+    void remove(int key){
+        int idx = bucket(key);
+        for(auto it=data[idx].begin();it!=data[idx].end();it++){
+            if(it->first == key){
+                data[idx].erase(it);
+                return;
+            }
+        }
+        return;
+    }
+};
+};
+
+
+namespace sl{
+
+const int MAX_LEVEL = 32;
+const int FACTOR = 2;
+
+struct SkipListNode{
+    int val;
+    int level; //当前节点的level
+    vector<SkipListNode*> forwards;
+    SkipListNode(int x,int _level = MAX_LEVEL) : val(x),level(_level),forwards(level,nullptr){}
+};
+
+class SkipList{
+public:
+    SkipListNode* root;
+    int curLevel; // 当前跳表最大level
+    SkipList(){
+        root = new SkipListNode(-1);
+        curLevel = 0;
+    }
+
+    int randomLevel(){
+        int lv = 1;
+        while(random() % FACTOR == 1){
+            lv++;
+        }
+        return min(lv,MAX_LEVEL);
+    }
+
+    void add(int num){
+        vector<SkipListNode*> update(MAX_LEVEL);
+        SkipListNode* cur = root;
+        for(int i=curLevel-1;i>=0;i--){
+            while(cur->forwards[i] && cur->forwards[i]->val < num){
+                cur = cur->forwards[i];
+            }
+            update[i] = cur;
+        }
+        int level = randomLevel();
+        this->curLevel = max(level,this->curLevel);
+        SkipListNode* newNode = new SkipListNode(num,level);
+        for(int i=level-1;i>=0;i--){
+            newNode->forwards[i] = update[i]->forwards[i];
+            update[i]->forwards[i] = newNode;
+        }
+    }
+
+    bool search(int target){
+        SkipListNode* cur = root;
+        for(int i=this->curLevel-1;i>=0;i--){
+            while(cur->forwards[i] && cur->forwards[i]->val < target){
+                cur = cur->forwards[i];
+            }
+        }
+        return cur->forwards[0] && cur->forwards[0]->val == target;
+    }
+
+    void erase(int num){
+        vector<SkipListNode*> update(this->curLevel);
+        SkipListNode* cur = root;
+        for(int i=curLevel-1;i>=0;i--){
+            while(cur->forwards[i] && cur->forwards[i]->val < num){
+                cur = cur->forwards[i];
+            }
+            update[i] = cur;
+        }
+        // 不存在num
+        if(cur->forwards[0] == nullptr || cur->forwards[0]->val != num) return;
+
+        for(int i=cur->forwards[0]->level-1;i>=0;i--){
+            update[i]->forwards[i] = update[i]->forwards[i]->forwards[i];
+        }
+        delete cur->forwards[0];
+        for(int i=curLevel-1;i<=0;i--){
+            if(cur->forwards[i] == nullptr){
+                curLevel--;
+            }
+        }
+        return;
+    }
+};
+};
+
+
