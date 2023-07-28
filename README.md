@@ -127,8 +127,8 @@
       - [二叉树的前、中、后序遍历,非递归的实现](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_tree.cpp)（12.21）
       - [二叉搜索树的查找、插入和删除](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_search_tree.cpp)
 2. [最短路径和K短问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
-      - BFS（单源，无权路，权值为1的最短路，）
-      - Dijkstra（单源，权值为正）
+      - BFS（单源，无权路，权值为1的最短路，O(n)）
+      - Dijkstra（单源，权值为正,O((E+V)logV))
       - Ballmanford （单源，n-1次松驰，,权值可正可负，可用于检测负环）
       - Floyd（多源，任意两点的距离）
       - A*
