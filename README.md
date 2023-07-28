@@ -128,7 +128,7 @@
       - [二叉搜索树的查找、插入和删除](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_search_tree.cpp)
 2. [最短路径和K短问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
       - BFS（单源，无权路，权值为1的最短路，O(n)）
-      - Dijkstra（单源，权值为正,O((E+V)logV))
+      - Dijkstra（单源，权值为正,O((E)logE))
       - Ballmanford （单源，n-1次松驰，,权值可正可负，可用于检测负环,O(V*E))
       - Floyd（多源，任意两点的距离，O(n^3))
       - A*
