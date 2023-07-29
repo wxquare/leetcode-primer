@@ -37,8 +37,10 @@ public:
     const int dirs[4][2] = {{-1,0},{1,0},{0,-1},{0,1}};
     int eightPuzzle(string start,string goal,int level){
         if(start == goal) return 0;
+
         priority_queue<Node> q;
         q.push({start,0,0});
+
         unordered_set<string> visited;
         int ans = -1;
         while(!q.empty()){
@@ -66,6 +68,7 @@ public:
                 string nextState = cur.state;
                 swap(nextState[idx],nextState[nx * level + ny]);
                 if(visited.count(nextState)) continue;
+
                 int h = getH(nextState,goal,level);
                 q.push({nextState,cur.g+1,h});
             }
@@ -73,7 +76,6 @@ public:
         return ans;
     }
 };
-
 
 int main() {
     std::cout << Solution().eightPuzzle("123456780","352610784",3) << std::endl;

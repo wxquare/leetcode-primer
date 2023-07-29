@@ -13,36 +13,41 @@ using namespace std;
 
 class UnionFind{
 public:
-    vector<int> pars,szs;
+    vector<int> parents;
+    vector<int> sizes;
+    int cnt;
 
     UnionFind(int n){
-        pars = vector<int>(n,0);
-        iota(pars.begin(),pars.end(),0);
-        szs = vector<int>(n,0);
+        parents = vector<int>(n,0);
+        iota(parents.begin(),parents.end(),0);
+        sizes = vector<int>(n,1);
     }
 
     int Find(int x){
-        return x == pars[x] ? x : pars[x] = Find(pars[x]);
+        return x == parents[x] ? x : parents[x] = Find(parents[x]);
     }
 
     void Union(int x,int y){
         int px = Find(x);
         int py = Find(y);
-        if(szs[py] < szs[px]){
+        if(px == py) return;
+
+        if(sizes[px] < sizes[py]){
             swap(px,py);
         }
-        pars[px] = py;
-        szs[px] += szs[py];
+        parents[py] = px;
+        sizes[px] += sizes[py];
+        cnt--;
     }    
 };
 
-vector<pair<int,int>> kruskal(vector<vector<int>>& graph,int n){
-    sort(graph.begin(),graph.end(),[](const vector<int>& v1,const vector<int>& v2){
-        return v1[2] < v2[2];
+vector<vector<int>> kruskal(vector<vector<int>>& edges,int n){
+    sort(edges.begin(),edges.end(),[](const vector<int>& e1,const vector<int>& e2){
+        return e1[2] < e2[2];
     });
     UnionFind uf(n);
-    vector<pair<int,int>> ans;
-    for(auto & e : graph){
+    vector<vector<int>> ans;
+    for(auto & e : edges){
         int u = e[0];
         int v = e[1];
         int w = e[2];
@@ -53,11 +58,3 @@ vector<pair<int,int>> kruskal(vector<vector<int>>& graph,int n){
     }
     return ans;
 }
-
-
-int main(int argc, char const *argv[])
-{
-    /* code */
-    return 0;
-}
-
