@@ -19,6 +19,8 @@
 - [1438. 绝对差不超过限制的最长连续子数组](https://leetcode-cn.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/)
 - [1052. 爱生气的书店老板](https://leetcode-cn.com/problems/grumpy-bookstore-owner/)
 - [1438. 绝对差不超过限制的最长连续子数组](https://leetcode-cn.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/)
+- [2799. 统计完全子数组的数目](https://leetcode.cn/problems/count-complete-subarrays-in-an-array/submissions/452022804/)
+  
 ## stack/单调stack/双stack/队列/单调队列/双端队列
 - [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
 - [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
