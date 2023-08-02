@@ -153,6 +153,7 @@
       - 判断图中是否存在环？图扑排序
       - [图中的最短环,BFS有向图和无向图都可以](https://leetcode.cn/problems/shortest-cycle-in-a-graph/submissions/)
       - 图中的最长环
+      - 内向基环图
 8. 欧拉回路/通路
       - [Reconstruct Itinerary](https://leetcode.cn/problems/reconstruct-itinerary/submissions/417006045/)
 9. 连通量
