@@ -19,6 +19,8 @@
 - [1438. 绝对差不超过限制的最长连续子数组](https://leetcode-cn.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/)
 - [1052. 爱生气的书店老板](https://leetcode-cn.com/problems/grumpy-bookstore-owner/)
 - [1438. 绝对差不超过限制的最长连续子数组](https://leetcode-cn.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/)
+- [2799. 统计完全子数组的数目](https://leetcode.cn/problems/count-complete-subarrays-in-an-array/submissions/452022804/)
+  
 ## stack/单调stack/双stack/队列/单调队列/双端队列
 - [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
 - [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
@@ -86,13 +88,14 @@
       - 旅行商问题
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
 6. 状态机 DP
-7. 数位 DP
+7. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
       - [统计整数的数量](https://leetcode.cn/problems/count-of-integers/submissions/437570070/)
       - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits/description/)
       - [233. 数字 1 的个数](https://leetcode.cn/problems/number-of-digit-one/submissions/437909738/)
       - [600. 不含连续1的非负整数](https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones/submissions/438160324/)
-      - [902. 最大为 N 的数字组合](https://leetcode.cn/problems/numbers-at-most-n-given-digit-set/submissions/438171960/)
-      - 数位DP模版
+      - [902. 最大为 N 的数字组合](https://leetcode.cn/problems/numbers-at-most-n-given-digit-set/submissions/452354134/)
+      - [2376. 统计特殊整数](https://leetcode.cn/problems/count-special-integers/submissions/452339066/)
+      - [2801. 统计范围内的步进数字数目](https://leetcode.cn/problems/count-stepping-numbers-in-range/submissions/452043045/)
 8. 树形 DP
       - 打家劫舍 III
       - 最小化旅行的价格总和
@@ -150,6 +153,7 @@
       - 判断图中是否存在环？图扑排序
       - [图中的最短环,BFS有向图和无向图都可以](https://leetcode.cn/problems/shortest-cycle-in-a-graph/submissions/)
       - 图中的最长环
+      - 内向基环图
 8. 欧拉回路/通路
       - [Reconstruct Itinerary](https://leetcode.cn/problems/reconstruct-itinerary/submissions/417006045/)
 9. 连通量
