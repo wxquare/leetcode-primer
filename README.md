@@ -151,7 +151,7 @@
       - [1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/submissions/424543501/)
 6. 基环树、内向树、外向数据
       - [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/submissions/453034664/)
-      - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph/)
+      - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph/submissions/453037901/)
 6. 环问题，判断是否存在环，最短环
       - 判断图中是否存在环？图扑排序
       - [图中的最短环,BFS有向图和无向图都可以](https://leetcode.cn/problems/shortest-cycle-in-a-graph/submissions/)
