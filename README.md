@@ -179,6 +179,9 @@
               - leetcode 1595.连通两组点的最小成本
               - https://leetcode.cn/problems/7rLGCR/description/（守卫城堡）
               - 517. 超级洗衣机
+                518. 1192. 查找集群内的关键连接
+                1193. 1489. 找到最小生成树里的关键边和伪关键边
+
 
 
 
