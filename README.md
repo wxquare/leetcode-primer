@@ -169,9 +169,8 @@
       - [染色分二分图判定是否存在基环，785. 判断二分图](https://leetcode.cn/problems/is-graph-bipartite/submissions/453421857/)
       - 二分图最大匹配，匈牙利增广路算法
 14. 网络流
-      - 最大流
+      - 最大流于dinic算法
       - 最小割
-      - 费用流
       - 1349. 参加考试的最大学生数
       - 1350. [787. K 站中转内最便宜的航班]
               - [788. 788. https://leetcode.cn/problems/possible-bipartition/description/]
