@@ -174,10 +174,12 @@
       - 费用流
       - 1349. 参加考试的最大学生数
       - 1350. [787. K 站中转内最便宜的航班]
-              [788. 788. https://leetcode.cn/problems/possible-bipartition/description/]
-              https://www.cnblogs.com/wenruo/p/12357543.html
-              leetcode 1595.连通两组点的最小成本
-              https://leetcode.cn/problems/7rLGCR/description/（守卫城堡）
+              - [788. 788. https://leetcode.cn/problems/possible-bipartition/description/]
+              - https://www.cnblogs.com/wenruo/p/12357543.html
+              - leetcode 1595.连通两组点的最小成本
+              - https://leetcode.cn/problems/7rLGCR/description/（守卫城堡）
+              - 517. 超级洗衣机
+
 
 
 
