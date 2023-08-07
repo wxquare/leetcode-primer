@@ -150,13 +150,12 @@
       - [Kruskal](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
       - [1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/submissions/424543501/)
 6. 基环树、内向树、外向数据
-      - [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/submissions/255003213/)
-      - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph/)
-6. 环问题，判断是否存在环，最短环
-      - 判断图中是否存在环？图扑排序
+      - [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/submissions/453034664/)
+      - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph/submissions/453037901/)
+6. 图的最大环最小环
       - [图中的最短环,BFS有向图和无向图都可以](https://leetcode.cn/problems/shortest-cycle-in-a-graph/submissions/)
-      - 图中的最长环
-      - 内向基环图
+      - 无向图枚举点做BFS
+      - 有向图枚举点做DFS
 8. 欧拉回路/通路
       - [Reconstruct Itinerary](https://leetcode.cn/problems/reconstruct-itinerary/submissions/417006045/)
 9. 连通量
@@ -166,6 +165,24 @@
       - https://www.cnblogs.com/Jr1Preg/p/12300735.html
 10. 寻找符合条件的路径
       - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree/description/)
+12. 二分图问题
+      - [染色分二分图判定是否存在基环，785. 判断二分图](https://leetcode.cn/problems/is-graph-bipartite/submissions/453421857/)
+      - 二分图最大匹配，匈牙利增广路算法
+14. 网络流
+      - 最大流于dinic算法
+      - 最小割
+      - 1349. 参加考试的最大学生数
+      - 1350. [787. K 站中转内最便宜的航班]
+              - [788. 788. https://leetcode.cn/problems/possible-bipartition/description/]
+              - https://www.cnblogs.com/wenruo/p/12357543.html
+              - leetcode 1595.连通两组点的最小成本
+              - https://leetcode.cn/problems/7rLGCR/description/（守卫城堡）
+              - 517. 超级洗衣机
+                518. 1192. 查找集群内的关键连接
+                1193. 1489. 找到最小生成树里的关键边和伪关键边
+
+
+
 
 
 ## 复杂数据结构运用和设计问题
