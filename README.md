@@ -6,6 +6,8 @@
 - [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
 - [交换链表中的第K个节点和倒数第K个节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
 
+## 循环数组
+- 2808. 使循环数组所有元素相等的最少秒数
 
 ## 滑动窗口/哈希表/双指针/快慢指针
 - [两数之和](https://leetcode-cn.com/problems/two-sum/)
