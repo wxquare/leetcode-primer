@@ -1,53 +1,120 @@
 # leetcode-practice
 
-## 单链表/双链表
-- [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
-- [面试题 02.05. 链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)
-- [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
-- [交换链表中的第K个节点和倒数第K个节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
 
-## 循环数组
-- 2808. 使循环数组所有元素相等的最少秒数
+## 数据结构
+1. 数组/数组
+	- 2808. 使循环数组所有元素相等的最少秒数
+2. 链表/单链表/双链表
+     - [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
+	- [面试题 02.05. 链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)
+	- [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
+	- [交换链表中的第K个节点和倒数第K个节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
+3. stack/单调stack/双stack/
+	- [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
+	- [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
+	- [556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
+	- [739. 每日温度](https://leetcode-cn.com/problems/daily-temperatures/)
+	- [基本计算器](https://leetcode-cn.com/problems/basic-calculator/)
+	- [基本计算器2](https://leetcode-cn.com/problems/basic-calculator-ii/)
+	- [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436392377/)
+4. queue/单调queue/双端deque
+	- [2810.  故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
+5. 优先队列和堆，任务调度
+	- [最大平均通过率](https://leetcode-cn.com/problems/maximum-average-pass-ratio/)
+	- [单线程 CPU](https://leetcode-cn.com/problems/single-threaded-cpu/)
+	- [Minimum Possible Integer After at Most K Adjacent Swaps On Digits](https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/)
+	- [Last Moment Before All Ants Fall Out of a Plank](https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/)
+	- [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
+6. 哈希unorderer_map/unordered_set
+7. 平衡二叉树map/multimap/set/multimap
 
-## 滑动窗口/哈希表/双指针/快慢指针
-- [两数之和](https://leetcode-cn.com/problems/two-sum/)
-- [三数之和](https://leetcode-cn.com/problems/3sum/)
-- [215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
-- [18. 四数之和](https://leetcode-cn.com/problems/4sum/)
-- [189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/),注意是否能使用额外的内存
-- [830. Positions of Large Groups](https://leetcode-cn.com/problems/positions-of-large-groups/)
-- [228. 汇总区间](https://leetcode-cn.com/problems/summary-ranges/)
-- [3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
-- [1438. 绝对差不超过限制的最长连续子数组](https://leetcode-cn.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/)
-- [1052. 爱生气的书店老板](https://leetcode-cn.com/problems/grumpy-bookstore-owner/)
-- [1438. 绝对差不超过限制的最长连续子数组](https://leetcode-cn.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/)
-- [2799. 统计完全子数组的数目](https://leetcode.cn/problems/count-complete-subarrays-in-an-array/submissions/452022804/)
-  
-## stack/单调stack/双stack/队列/单调队列/双端队列
-- [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
-- [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
-- [556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
-- [739. 每日温度](https://leetcode-cn.com/problems/daily-temperatures/)
-- [基本计算器](https://leetcode-cn.com/problems/basic-calculator/)
-- [基本计算器2](https://leetcode-cn.com/problems/basic-calculator-ii/)
-- [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436392377/)
-- [2810. 故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
 
-## 二分搜索/二分答案
-- [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
-- [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
+## 数据结构实现
+-   [LRU](https://leetcode-cn.com/problems/lru-cache/)
+-   [LFU](https://leetcode-cn.com/problems/lfu-cache/)
+-   [HashSet](https://leetcode-cn.com/problems/design-hashset/)
+-   [HashMap](https://leetcode-cn.com/problems/design-hashmap/)
+-   跳表
+-   trie树
 
-## 排序/top k/select kth
-- Sum of Elements (medium)
-- Rearrange String (hard)
-- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
+## 数学
+1. 数论问题
+      - [判断是否是素数（质数）](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+      - [求1-n之间的所有素数，素数筛选法](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+      - 分解质因数  
+      - [求多个数的公共质因子](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+      - [两数、多数最大公约数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+      - [两数、多数最小公倍数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+      - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
+      - [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
+      - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
+2. 快速幂
+      - [50. Pow(x, n)](https://leetcode.cn/problems/powx-n/submissions/448492142/)
+      - [372. 超级次方](https://leetcode.cn/problems/super-pow/submissions/245597022/) （快速幂和模运算）
+3. 模运算
+      - (a + b) mod c = ((a mod c) + (b mod c)) mod c
+      - (a * b) mod c =  ((a mod c) * (b mod c)) mod c
+2. 拒绝抽样(rejection sampling)
+      - [用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7/solutions/978527/yong-rand7-shi-xian-rand10-by-leetcode-s-qbmd/)
+3. 水塘抽样
+      - [382. 链表随机节点](https://leetcode.cn/problems/linked-list-random-node/description/)
+      - [398. 随机数索引](https://leetcode.cn/problems/random-pick-index/submissions/305425474/)
+      - [reservoirSampling](https://github.com/wxquare/online-algorithm-coding/blob/master/other/math.cc)
+4. 洗牌算法
+      - [384. 打乱数组](https://leetcode.cn/problems/shuffle-an-array/submissions/)
+5. 位运算
+      - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
+      - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
+      - lowbit(x) = x & (-x)
+      - x |= (1 << i)
+      - (x & (1 << i)) == 0
+      - 异或运算: 0^0=1,0^1=1,1^1=0,
+      - x ^ (1 << i) = x
 
-## 贪心/优先队列/任务调度问题
-- [最大平均通过率](https://leetcode-cn.com/problems/maximum-average-pass-ratio/)
-- [单线程 CPU](https://leetcode-cn.com/problems/single-threaded-cpu/)
-- [Minimum Possible Integer After at Most K Adjacent Swaps On Digits](https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/)
-- [Last Moment Before All Ants Fall Out of a Plank](https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/)
-- [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
+
+## 基础算法
+1. 排序算法
+2. 二分算法
+	 - [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
+	- [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
+3. top k，select kth
+	- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
+4. 贪心
+5. 模拟
+6. kmp算法
+7. ac状态算法
+8. 洗牌算法
+
+
+
+## 字符串匹配问题Trie Tree/kmp/ac状态
+- [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+- [Implement Magic Dictionary](https://leetcode.com/problems/implement-magic-dictionary/)
+- [统计异或值在范围内的数对有多少](https://leetcode-cn.com/problems/count-pairs-with-xor-in-a-range/)
+- [kmp](https://github.com/wxquare/online-algorithm-coding/blob/master/other/kmp.cc)
+- [最长合法子字符串的长度 ac 自动机](https://leetcode.cn/submissions/detail/448173370/)
+
+## 区间问题/前缀/后缀/差分/树状数组/线段树
+1. 前缀和prefixSum,后缀和suffixSum
+2. 差分数组 （区间同时加减一个数，求最终单点的值）
+      - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings/submissions/213589517/)
+3. 树状数组 (单点修改，前缀和和区间和）（lowbit 函数会求出一个二进制的最低位1代表的数字， x & -x，树状树组index从1开始）
+      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
+      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436429471/)
+4. 线段树 （区间修改，将一个区间的数据修改为某个相同的值，求区间合、最值，区间内可以聚合的值）
+      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
+      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436608727/)
+      - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
+5. 离线问题
+      - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/submissions/444263284/)
+      - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query/submissions/444281304/)
+      - 1938. 查询最大基因差
+      - 2070. 每一个查询的最大美丽值
+      - 2343. 裁剪数字后查询第 K 小的数字
+      - 2503. 矩阵查询可获得的最大分数
+      - 2736. 最大和查询
+
+
 
 ## 搜索问题 DFS/剪枝/回溯与状态恢复/记忆化搜索/状态压缩记忆化/选与不选/分割问题）
 1. DFS 深度搜索 （树、图）
@@ -176,87 +243,18 @@
       - 最小割
       - 1349. 参加考试的最大学生数
       - 1350. [787. K 站中转内最便宜的航班]
-              - [788. 788. https://leetcode.cn/problems/possible-bipartition/description/]
-              - https://www.cnblogs.com/wenruo/p/12357543.html
-              - leetcode 1595.连通两组点的最小成本
-              - https://leetcode.cn/problems/7rLGCR/description/（守卫城堡）
-              - 517. 超级洗衣机
-                518. 1192. 查找集群内的关键连接
-                1193. 1489. 找到最小生成树里的关键边和伪关键边
+      - [788. https://leetcode.cn/problems/possible-bipartition/description/]
+      - https://www.cnblogs.com/wenruo/p/12357543.html
+      - leetcode 1595.连通两组点的最小成
+      - https://leetcode.cn/problems/7rLGCR/description/（守卫城堡）
+      - 超级洗衣机
+      - 查找集群内的关键连接
+      - 找到最小生成树里的关键边和伪关键边
 
 
 
 
-
-## 复杂数据结构运用和设计问题
-- [LRU](https://leetcode-cn.com/problems/lru-cache/)
-- [LFU](https://leetcode-cn.com/problems/lfu-cache/)
-- [HashSet](https://leetcode-cn.com/problems/design-hashset/)
-- [HashMap](https://leetcode-cn.com/problems/design-hashmap/)
-- 跳表
-
-## 字符串匹配问题Trie Tree/kmp/ac状态
-- [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
-- [Implement Magic Dictionary](https://leetcode.com/problems/implement-magic-dictionary/)
-- [统计异或值在范围内的数对有多少](https://leetcode-cn.com/problems/count-pairs-with-xor-in-a-range/)
-- [kmp](https://github.com/wxquare/online-algorithm-coding/blob/master/other/kmp.cc)
-- [最长合法子字符串的长度 ac 自动机](https://leetcode.cn/submissions/detail/448173370/)
-
-## 区间问题/前缀/后缀/差分/树状数组/线段树
-1. 前缀和prefixSum,后缀和suffixSum
-2. 差分数组 （区间同时加减一个数，求最终单点的值）
-      - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings/submissions/213589517/)
-3. 树状数组 (单点修改，前缀和和区间和）（lowbit 函数会求出一个二进制的最低位1代表的数字， x & -x，树状树组index从1开始）
-      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
-      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436429471/)
-4. 线段树 （区间修改，将一个区间的数据修改为某个相同的值，求区间合、最值，区间内可以聚合的值）
-      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
-      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436608727/)
-      - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
-5. 离线问题
-      - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/submissions/444263284/)
-      - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query/submissions/444281304/)
-      - 1938. 查询最大基因差
-      - 2070. 每一个查询的最大美丽值
-      - 2343. 裁剪数字后查询第 K 小的数字
-      - 2503. 矩阵查询可获得的最大分数
-      - 2736. 最大和查询
-
-## 数学
-1. 数论问题
-      - [判断是否是素数（质数）](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-      - [求1-n之间的所有素数，素数筛选法](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-      - 分解质因数  
-      - [求多个数的公共质因子](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-      - [两数、多数最大公约数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-      - [两数、多数最小公倍数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-      - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
-      - [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
-      - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
-2. 快速幂
-      - [50. Pow(x, n)](https://leetcode.cn/problems/powx-n/submissions/448492142/)
-      - [372. 超级次方](https://leetcode.cn/problems/super-pow/submissions/245597022/) （快速幂和模运算）
-3. 模运算
-      - (a + b) mod c = ((a mod c) + (b mod c)) mod c
-      - (a * b) mod c =  ((a mod c) * (b mod c)) mod c
-2. 拒绝抽样(rejection sampling)
-      - [用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7/solutions/978527/yong-rand7-shi-xian-rand10-by-leetcode-s-qbmd/)
-3. 水塘抽样
-      - [382. 链表随机节点](https://leetcode.cn/problems/linked-list-random-node/description/)
-      - [398. 随机数索引](https://leetcode.cn/problems/random-pick-index/submissions/305425474/)
-      - [reservoirSampling](https://github.com/wxquare/online-algorithm-coding/blob/master/other/math.cc)
-4. 洗牌算法
-      - [384. 打乱数组](https://leetcode.cn/problems/shuffle-an-array/submissions/)
-5. 位运算
-      - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
-      - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
-      - lowbit(x) = x & (-x)
-      - x |= (1 << i)
-      - (x & (1 << i)) == 0
-      - 异或运算: 0^0=1,0^1=1,1^1=0,
-      - x ^ (1 << i) = x
-
-## 脑筋急转弯/趣味题
+## 其它
 - [1503. 所有蚂蚁掉下来前的最后一刻](https://leetcode.cn/problems/last-moment-before-all-ants-fall-out-of-a-plank/submissions/439537379/)
 - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots/submissions/439535180/))
 
