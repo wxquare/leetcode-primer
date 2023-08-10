@@ -1,6 +1,6 @@
 # leetcode-practice
 
-## 链表
+## 单链表/双链表
 - [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
 - [面试题 02.05. 链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)
 - [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
@@ -31,6 +31,7 @@
 - [基本计算器](https://leetcode-cn.com/problems/basic-calculator/)
 - [基本计算器2](https://leetcode-cn.com/problems/basic-calculator-ii/)
 - [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436392377/)
+- [2810. 故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
 
 ## 二分搜索/二分答案
 - [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
