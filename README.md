@@ -3,7 +3,7 @@
 
 ## 数据结构
 1. 数组/数组
-	- 2808. 使循环数组所有元素相等的最少秒数
+	- 使循环数组所有元素相等的最少秒数
 2. 链表/单链表/双链表
      - [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
 	- [面试题 02.05. 链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)
