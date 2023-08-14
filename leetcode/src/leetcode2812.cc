@@ -1,65 +1,68 @@
 #include <vector>
 #include <queue>
+#include <numeric>
 using namespace std;
 
+
+static constexpr int dirs[4][2] = {{1,0},{-1,0},{0,-1},{0,1}};
+
+/*
+    多源BFS
+*/
 class Solution{
 public:
-    vector<vector<int>> dirs = {{1,0},{-1,0},{0,-1},{0,1}};
     int maximumSafenessFactor(vector<vector<int>>& grid){
+        
         int n = grid.size();
-        bool ban[n][n];
-        bool vis[n][n];
-
-        function<bool(int)> check = [&](int x)->bool {
-            memset(ban,false,sizeof(ban));
-            queue<pair<int,int>> q;
-            for(int i=0;i<n;i++){
-                for(int j=0;j<n;j++){
-                    q.push({i,j});
-                    ban[i][j] = true;
+        vector<vector<pair<int,int>>> groups;
+        vector<pair<int,int>> q;
+        
+        int dis[n][n];
+        memset(dis,-1,sizeof(dis));
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(grid[i][j] == 1){
+                    q.emplace_back(i,j);
+                    dis[i][j] = 0;
                 }
             }
-            while(!q.empty() && x--> 0){
-                int size = q.size();
-                for(int i=0;i<size;i++){
-                    int j = q.front().first;
-                    int k = q.front().second;
-                    q.pop();
-                    for(auto d : dirs){
-                        int nj = j + d[0];
-                        int nk = j + d[1];
-                        if(nj < 0 || nj >= n || nk < 0 || nj >=n) continue;
-                        if(ban[nj][nk] == true) continue;
-                        q.push({nj,nk});
-                        ban[nj][nk] = true;
-                    }
-                }
-            }
-            memset(vis,false,sizeof(vis));
-            function<bool(int,int)> dfs = [&](int i,int j)->bool {
-                if(ban[i][j]) return false;
-                if(i == n-1 && j == n-1) return true;
-                vis[i][j] = true;
+        }
+        vector<pair<int,int>> nq;
+        while(q.size() > 0){
+            vector<pair<int,int>> nq;
+            for(auto [i,j] : q){
                 for(auto d : dirs){
                     int ni = i + d[0];
                     int nj = j + d[1];
-                    if(ni < 0 || ni >= n || nj < 0 || nj >=n) continue;
-                    if(vis[ni][nj]) continue;
-                    if(ban[ni][nj]) continue;
-                    if(dfs(ni,nj)) return true; 
+                    if(ni < 0 || ni > n || nj < 0 || nj > n) continue;
+                    if(dis[ni][nj] != -1) continue;
+                    nq.emplace_back(ni,nj);
+                    dis[ni][nj] = dis[i][j] + 1;
                 }
-                return false;
-            };
-            return dfs(0,0);
+            }
+            groups.push_back(q);
+            q = move(nq);
+        }
+
+        vector<int> fa(n*n);
+        iota(fa.begin(),fa.end(),0);
+        function<int(int)> find = [&](int x){
+            return x == fa[x] ? x : fa[x] = find(fa[x]);
         };
-        int left = 1,right = n,ans = 0;
-        while(left <= right){
-            int mid = left + (right - left) / 2;
-            if(check(mid)){
-                ans = max(ans,mid);
-                left = mid + 1;
-            } else {
-                right = mid - 1;
+
+        int ans = 0;
+        for(int k=groups.size()-2;k>0;k++){
+            for(auto [i,j] : groups[k]){
+                for(auto d : dirs){
+                    int ni = i + d[0];
+                    int nj = j + d[1];
+                    if(ni < 0 || ni > n || nj < 0 || nj > n) continue;
+                    fa[find(i*n+j)] = fa[find(ni*n+j)];
+                }
+            }
+            if(find(0) == find(n*n-1)) {
+                ans = k;
+                return ans;
             }
         }
         return ans;
