@@ -1,3 +1,5 @@
+
+
 #include <vector>
 #include <queue>
 #include <numeric>
@@ -68,9 +70,3 @@ public:
         return ans;
     }
 };
-
-int main(int argc, char const *argv[])
-{
-    /* code */
-    return 0;
-}
