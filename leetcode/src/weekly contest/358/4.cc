@@ -26,8 +26,6 @@ public:
 
 
     int maximumScore(vector<int>& nums,int k){
-
-        std::cout << primes[14858] << std::endl;
         int n = nums.size();
         vector<int> left(n,-1);
         vector<int> right(n,n);
