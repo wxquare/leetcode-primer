@@ -9,7 +9,7 @@
 	- [面试题 02.05. 链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)
 	- [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
 	- [交换链表中的第K个节点和倒数第K个节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
-3. stack/单调stack/双stack/
+3. stack/单调stack/双stack/（单调栈，找左边或者右边比它大的下表）
 	- [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
 	- [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
 	- [556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
