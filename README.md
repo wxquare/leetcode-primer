@@ -17,6 +17,7 @@
 	- [基本计算器](https://leetcode-cn.com/problems/basic-calculator/)
 	- [基本计算器2](https://leetcode-cn.com/problems/basic-calculator-ii/)
 	- [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436392377/)
+	- [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score/submissions/456747016/)
 4. queue/单调queue/双端deque
 	- [2810.  故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
 5. 优先队列和堆，任务调度
