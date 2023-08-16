@@ -12,10 +12,7 @@
 3. stack/单调stack/双stack/（单调栈，找左边或者右边比它大的下表）
 	- [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
 	- [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
-	- [556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
-	- [739. 每日温度](https://leetcode-cn.com/problems/daily-temperatures/)
-	- [基本计算器](https://leetcode-cn.com/problems/basic-calculator/)
-	- [基本计算器2](https://leetcode-cn.com/problems/basic-calculator-ii/)
+	- [739. 每日温度](https://leetcode.cn/problems/daily-temperatures/submissions/457081358/)
 	- [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436392377/)
 	- [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score/submissions/456747016/)
 4. queue/单调queue/双端deque
@@ -73,6 +70,7 @@
       - x ^ (1 << i) = x
 6. 排列
      - [31. 下一个排列](https://leetcode.cn/problems/next-permutation/)
+     - [556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
 7. 组合
 
 
