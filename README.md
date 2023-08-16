@@ -76,7 +76,7 @@
 
 ## 基础算法
 1. 排序算法
-2. 二分算法
+2. 二分算法 (lower_bound,map.lower_bound,check 二分答案）
 	 - [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
 	- [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
 3. top k，select kth
