@@ -13,7 +13,7 @@
 	- [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
 	- [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
 	- [739. 每日温度](https://leetcode.cn/problems/daily-temperatures/submissions/457081358/)
-	- [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436392377/)
+	- [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/457085863/)
 	- [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score/submissions/456747016/)
 4. queue/单调queue/双端deque
 	- [2810.  故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
