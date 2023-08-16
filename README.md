@@ -71,6 +71,9 @@
       - (x & (1 << i)) == 0
       - 异或运算: 0^0=1,0^1=1,1^1=0,
       - x ^ (1 << i) = x
+6. 排列
+     - [31. 下一个排列](https://leetcode.cn/problems/next-permutation/)
+7. 组合
 
 
 ## 基础算法
