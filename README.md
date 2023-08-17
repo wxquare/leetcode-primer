@@ -1,4 +1,4 @@
-# leetcode-practice
+# leetcode-primer
 
 
 ## 数据结构
