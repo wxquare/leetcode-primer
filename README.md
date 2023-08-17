@@ -9,16 +9,16 @@
 	- [面试题 02.05. 链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)
 	- [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
 	- [交换链表中的第K个节点和倒数第K个节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
-3. stack/单调stack/双stack/（单调栈，找左边或者右边比它大的下表）
+3. stack/单调stack/双stack/（在线性时间内找到每个元素的上一个或者下一个更大或更小元素）
 	- [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
 	- [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
 	- [739. 每日温度](https://leetcode.cn/problems/daily-temperatures/submissions/457081358/)
 	- [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/457085863/)
 	- [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score/submissions/456747016/)
-4. queue/单调queue/双端deque
-	- [2810.  故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
+4. queue/双端deque/单调deque（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
 	- [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/submissions/457105531/)
-        - [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/submissions/457422626/) 
+        - [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/submissions/457422626/)
+        - [2810.  故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
 5. 优先队列和堆，任务调度
 	- [最大平均通过率](https://leetcode-cn.com/problems/maximum-average-pass-ratio/)
 	- [单线程 CPU](https://leetcode-cn.com/problems/single-threaded-cpu/)
