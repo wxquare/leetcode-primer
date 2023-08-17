@@ -36,6 +36,7 @@
 -   [HashMap](https://leetcode-cn.com/problems/design-hashmap/)
 -   跳表
 -   trie树
+-   [剑指 Offer 59 - II. 队列的最大值](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof/submissions/457437191/)
 
 ## 数学
 1. 数论问题
