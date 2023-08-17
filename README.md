@@ -17,8 +17,8 @@
 	- [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score/submissions/456747016/)
 4. queue/双端deque/单调deque（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
 	- [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/submissions/457105531/)
-        - [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/submissions/457422626/)
-        - [2810.  故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
+ 	- [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/submissions/457422626/)
+  	- [2810.  故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
 5. 优先队列和堆，任务调度
 	- [最大平均通过率](https://leetcode-cn.com/problems/maximum-average-pass-ratio/)
 	- [单线程 CPU](https://leetcode-cn.com/problems/single-threaded-cpu/)
