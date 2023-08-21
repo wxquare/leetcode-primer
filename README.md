@@ -120,8 +120,6 @@
       - 2503. 矩阵查询可获得的最大分数
       - 2736. 最大和查询
 
-
-
 ## 搜索问题 DFS/剪枝/回溯与状态恢复/记忆化搜索/状态压缩记忆化/选与不选/分割问题）
 1. DFS 深度搜索 （树、图）
 2. BFS/多源BFS/双向BFS
@@ -145,7 +143,7 @@
 
 ## DP问题（递推类DP）
 1. 线性 DP （包括状态机DP，序列DP）
-   1. 线性DP 
+	- 线性DP
 	      - [斐波那契数列](https://leetcode.cn/problems/fibonacci-number/submissions/431236355/)
 	      - [数字三角形](https://leetcode.cn/problems/triangle/submissions/431243125/)
 	      - [跳跃游戏](https://leetcode.cn/problems/jump-game/submissions/431244632/)
@@ -154,10 +152,10 @@
 	      - [跳跃游戏4](https://leetcode.cn/problems/jump-game-iv/submissions/431789470/)
 	      - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group/submissions/436302364/)
 	      - [销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/submissions/458598692/)
-   2. 状态机 DP（关键是设置状态）
+	- 状态机DP
 		- [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups/submissions/458601624/)
 		- 股票问题
-   3. 序列 DP
+	- 序列DP
 	      - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
 	      - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
 	      - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
