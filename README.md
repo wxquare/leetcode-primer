@@ -156,7 +156,7 @@
       - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group/submissions/436302364/)
       - [销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/submissions/458598692/)
 2. 状态机 DP
-	- 将三个数组的排序
+	- [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups/submissions/458601624/)
 4. 背包 DP
       - 01背包
       - 完全背包
