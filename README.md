@@ -154,21 +154,23 @@
       - [跳跃游戏3](https://leetcode.cn/problems/jump-game-iii/submissions/431516086/)
       - [跳跃游戏4](https://leetcode.cn/problems/jump-game-iv/submissions/431789470/)
       - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group/submissions/436302364/)
-2. 背包 DP
+      - 销售利润最大化
+2. 状态机 DP
+	- 将三个数组的排序
+4. 背包 DP
       - 01背包
       - 完全背包
       - 多重背包，多重背包二进制优化
-3. 序列 DP
+5. 序列 DP
       - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
       - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
-4. 区间 DP
+6. 区间 DP
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
-5. 状压 DP
+7. 状压 DP
       - 旅行商问题
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
-6. 状态机 DP
-7. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
+8. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
       - [统计整数的数量](https://leetcode.cn/problems/count-of-integers/submissions/437570070/)
       - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits/description/)
       - [233. 数字 1 的个数](https://leetcode.cn/problems/number-of-digit-one/submissions/437909738/)
@@ -176,32 +178,12 @@
       - [902. 最大为 N 的数字组合](https://leetcode.cn/problems/numbers-at-most-n-given-digit-set/submissions/452354134/)
       - [2376. 统计特殊整数](https://leetcode.cn/problems/count-special-integers/submissions/452339066/)
       - [2801. 统计范围内的步进数字数目](https://leetcode.cn/problems/count-stepping-numbers-in-range/submissions/452043045/)
-8. 树形 DP
+9. 树形 DP
       - 打家劫舍 III
       - 最小化旅行的价格总和
-9. 数据结构优化DP
+10. 数据结构优化DP
       -  [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix/submissions/436001561/)
       -  [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
-
-- [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)，最多买卖一次
-- [122. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)，可以买卖任意次数
-- [123. 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)，最多可以买卖两次
-- [188. 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)，最多可以买卖K次
-- [309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
-- [714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
-- [完成所有工作的最短时间](https://leetcode-cn.com/problems/find-minimum-time-to-finish-all-jobs/)，状态压缩DP或者dfs加剪枝
-- [回文字符串分割IV](https://leetcode-cn.com/problems/palindrome-partitioning-iv)
-- [354. 俄罗斯套娃信封问题](https://leetcode-cn.com/problems/russian-doll-envelopes/)
-- [131. 分割回文串](https://leetcode-cn.com/problems/palindrome-partitioning/)
-- [分割回文串 II](https://leetcode-cn.com/problems/palindrome-partitioning-ii/)
-- [115. 不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/)
-- [5. 最长回文子串](https://leetcode-cn.com/problems/distinct-subsequences/)
-- [198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/)
-- [87. 扰乱字符串](https://leetcode-cn.com/problems/scramble-string/)
-- [198.打家劫舍](https://leetcode.cn/problems/house-robber/submissions/426232067/)
-- [213.打家劫舍 II](https://leetcode.cn/problems/house-robber-ii/submissions/426239633/)
-- [337.打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/submissions/426327228/)
-- [打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv/submissions/399760539/)
 
 
 ## 树/图论
