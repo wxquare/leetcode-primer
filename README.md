@@ -178,6 +178,7 @@
       - [902. 最大为 N 的数字组合](https://leetcode.cn/problems/numbers-at-most-n-given-digit-set/submissions/452354134/)
       - [2376. 统计特殊整数](https://leetcode.cn/problems/count-special-integers/submissions/452339066/)
       - [2801. 统计范围内的步进数字数目](https://leetcode.cn/problems/count-stepping-numbers-in-range/submissions/452043045/)
+      - [2827. 范围中美丽整数的数目](https://leetcode.cn/problems/number-of-beautiful-integers-in-the-range/submissions/458609134/)
 9. 树形 DP
       - 打家劫舍 III
       - 最小化旅行的价格总和
