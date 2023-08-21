@@ -154,20 +154,20 @@
       - [跳跃游戏3](https://leetcode.cn/problems/jump-game-iii/submissions/431516086/)
       - [跳跃游戏4](https://leetcode.cn/problems/jump-game-iv/submissions/431789470/)
       - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group/submissions/436302364/)
-2. 背包 DP
+2. 状态机 DP
+3. 背包 DP
       - 01背包
       - 完全背包
       - 多重背包，多重背包二进制优化
-3. 序列 DP
+4. 序列 DP
       - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
       - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
-4. 区间 DP
+5. 区间 DP
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
-5. 状压 DP
+6. 状压 DP
       - 旅行商问题
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
-6. 状态机 DP
 7. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
       - [统计整数的数量](https://leetcode.cn/problems/count-of-integers/submissions/437570070/)
       - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits/description/)
