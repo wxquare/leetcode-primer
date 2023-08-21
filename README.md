@@ -144,7 +144,7 @@
       - [2812. 找出最安全路径](https://leetcode.cn/problems/find-the-safest-path-in-a-grid/submissions/455237953/) 
 
 ## DP问题（递推类DP）
-1. 线性 DP
+1. 线性 DP （包括状态机DP，序列DP）
       - [斐波那契数列](https://leetcode.cn/problems/fibonacci-number/submissions/431236355/)
       - [数字三角形](https://leetcode.cn/problems/triangle/submissions/431243125/)
       - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
@@ -155,25 +155,27 @@
       - [跳跃游戏4](https://leetcode.cn/problems/jump-game-iv/submissions/431789470/)
       - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group/submissions/436302364/)
       - [销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/submissions/458598692/)
-2. 状态机 DP
+   2. 状态机 DP（关键是设置状态）
 	- [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups/submissions/458601624/)
-4. 背包 DP
+   5. 序列 DP
+      - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
+      - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
+2. 背包 DP
       - 01背包
       - 完全背包
       - 多重背包，多重背包二进制优化
       - [494. 目标和](https://leetcode.cn/problems/target-sum/)
       - [322. 零钱兑换](https://leetcode.cn/problems/coin-change/)
-      - 
-5. 序列 DP
-      - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
-      - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
-6. 区间 DP
+3. 区间 DP
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
-7. 状压 DP
+3. 状压 DP
       - 旅行商问题
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
-8. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
+5. 树形 DP
+      - 打家劫舍 III
+      - 最小化旅行的价格总和
+6. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
       - [统计整数的数量](https://leetcode.cn/problems/count-of-integers/submissions/437570070/)
       - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits/description/)
       - [233. 数字 1 的个数](https://leetcode.cn/problems/number-of-digit-one/submissions/437909738/)
@@ -182,10 +184,7 @@
       - [2376. 统计特殊整数](https://leetcode.cn/problems/count-special-integers/submissions/452339066/)
       - [2801. 统计范围内的步进数字数目](https://leetcode.cn/problems/count-stepping-numbers-in-range/submissions/452043045/)
       - [2827. 范围中美丽整数的数目](https://leetcode.cn/problems/number-of-beautiful-integers-in-the-range/submissions/458609134/)
-9. 树形 DP
-      - 打家劫舍 III
-      - 最小化旅行的价格总和
-10. 数据结构优化DP
+7. 数据结构优化DP
       -  [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix/submissions/436001561/)
       -  [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
 
