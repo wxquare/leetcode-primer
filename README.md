@@ -164,7 +164,7 @@
       - 01背包
       - 完全背包
       - 多重背包
-      - [494. 目标和](https://leetcode.cn/problems/target-sum/)
+      - [494. 目标和](https://leetcode.cn/problems/target-sum/](https://leetcode.cn/problems/target-sum/submissions/458957015/)
       - [322. 零钱兑换](https://leetcode.cn/problems/coin-change/)
       - [518. 零钱兑换 II](https://leetcode.cn/problems/coin-change-ii/submissions/458945557/)
 3. 区间 DP
