@@ -1,8 +1,6 @@
-#include <vector>
-using namespace std;
 class Solution{
 public:
-    int maximumTheProfit(int n,vector<vector<int>>& offers){
+    int maximizeTheProfit(int n,vector<vector<int>>& offers){
         /*
             1. 最大化利润（贪心、二分、dp或搜索）
             2. dp[i] 表式0-i的最大利润
@@ -21,7 +19,3 @@ public:
         return dp[n];
     }
 };
-
-int main(){
-
-}
