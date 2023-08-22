@@ -163,7 +163,7 @@
 2. 背包 DP
       - 01背包
       - 完全背包
-      - 多重背包，多重背包二进制优化
+      - 多重背包
       - [494. 目标和](https://leetcode.cn/problems/target-sum/)
       - [322. 零钱兑换](https://leetcode.cn/problems/coin-change/)
 3. 区间 DP
