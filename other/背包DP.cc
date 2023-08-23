@@ -71,9 +71,9 @@ int multiplePack(vector<int>& w,vector<int>& v,vector<int>& s,int c) {
     int n = v.size();
     for(int i=0;i<n;i++){
         for(int j=c;j>=0;j--){
-            for(int k=0;i<=s[i];i++){
-                if(j - v[i] > 0) break;
-                dp[j] = max(dp[j],dp[j-w[i]*k]+k*v[i]);
+            for(int k=0;k<=s[i];k++){
+                if(j - k*w[i] < 0) break;
+                dp[j] = max(dp[j],dp[j-k*w[i]]+k*v[i]);
             }
         }
     }
