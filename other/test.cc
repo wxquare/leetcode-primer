@@ -141,3 +141,113 @@ public:
 };
 
 
+
+class Solution{
+public:
+    int maxProfit(vector<int>& prices,int k){
+        /*
+            1. 最多允许k次交易的最大利润
+            dp[i][j][0]:前i天，最大交易次数为j，且手里有股票最大利润
+            dp[i][j][1]:前i天，最大交易次数为j，且手里没有股票最大利润
+        */
+
+        int n = prices.size();
+        vector<vector<vector<int>>> dp(n,vector<vector<int>>(k+1,vector<int>(2,0)));
+
+        for(int j=0;j<=k;j++){
+            dp[0][j][0] = 0;
+            dp[0][j][1] = -prices[0];
+        }
+
+        for(int i=1;i<n;i++){
+            dp[i][0][0] = 0;
+            dp[i][0][1] = max(-prices[i],dp[i-1][0][1]);
+        }
+
+        // 状态转移
+        for(int i=0;i<n;i++){
+            for(int j=0;j<=k;j++){
+                dp[i][j][0] = max(dp[i-1][j][0],dp[i-1][j-1][1] + prices[i]);
+                dp[i][j][1] = max(dp[i-1][j][1],dp[i-1][j][0] - prices[i]);
+            }
+        }
+        return dp[n-1][k][0];
+    }
+};
+
+
+class Solution{
+public:
+    int maxProfit(vector<int>& prices){
+        /*
+            1. 包含冷冻期1天，卖出股票后需要隔一天才能买入
+            2. 不包含冷冻期时
+
+            1，3，2，1，4
+            1. 有股票  == 0 
+            2. 没有股票且(这一天刚卖） == 1
+            3. 没有股票且(且不是刚卖股票） ==2
+        */
+        int n = prices.size();
+        vector<vector<int>> dp(n,vector<int>(3,0));
+        dp[0][0] = -prices[0];
+        for(int i=1;i<n;i++){
+            dp[i][0] = max(dp[i-1][0],dp[i-1][2] - prices[i]);
+            dp[i][1] = dp[i-1][0]+prices[i];
+            dp[i][2] = max(dp[i-1][2],dp[i-1][1]);
+        }
+        return max(dp[n][1],dp[n][2]);
+    }
+};
+
+
+class Solution {
+public:
+    int maxProfit(vector<int>& prices){
+        /*
+            1. 包含冷冻期1天，卖出股票后需要隔一天才能买入
+            2. 不包含冷冻期时
+
+            1，3，2，1，4
+            1. 有股票  == 0 
+            2. 没有股票且(这一天刚卖） == 1
+            3. 没有股票且(且不是刚卖股票） ==2
+        */
+        int n = prices.size();
+        vector<vector<int>> dp(n,vector<int>(3,0));
+        dp[0][0] = -prices[0];
+        for(int i=1;i<n;i++){
+            dp[i][0] = max(dp[i-1][0],dp[i-1][2] - prices[i]);
+            dp[i][1] = dp[i-1][0]+prices[i];
+            dp[i][2] = max(dp[i-1][2],dp[i-1][1]);
+        }
+        return max(dp[n][1],dp[n][2]);
+    }
+};
+
+
+class Solution {
+public:
+    int maxProfit(vector<int>& prices,int fee){
+        /*
+            1. 包含手续费
+            1，3，4，3，8，8，4，9
+            2，，6，5
+
+            dp[i][0]: 表示i且没有股票的最大利润
+            dp[1][1]: 表示i且有股票的最大利润
+        */
+        int n = prices.size();
+
+        vector<vector<int>> dp(n,vector<int>(2,0));
+        dp[0][0] = 0;
+        dp[0][1] = -prices[0];
+        for(int i=1;i<n;i++){
+            dp[i][0] = max(dp[i-1][0],dp[i-1][1] + prices[i] - fee);
+            dp[i][1] = max(dp[i-1][1],dp[i-1][0] - prices[i]);
+        }
+        return dp[n-1][0];
+    }
+}
+
+
