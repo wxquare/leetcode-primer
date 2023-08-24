@@ -154,7 +154,7 @@
 	      - [销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/submissions/458598692/)
 	2. 状态机DP
 		- [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups/submissions/458601624/)
-		- 股票问题
+		- 买卖股票的最大利润（最多一次买卖、最多两次、最多K次、无限次买卖、冷冻期1天、手续费）
 	3. 序列DP
 	      - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
 	      - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
