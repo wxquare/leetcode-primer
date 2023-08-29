@@ -167,9 +167,12 @@
 3. 区间 DP
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
-4. 状压 DP
+4. 状压 和 状态压缩DP
       - 旅行商问题
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
+5. 倍增和倍增优化DP
+      - [2836. 在传球游戏中最大化函数值](https://leetcode.cn/problems/maximize-value-of-function-in-a-ball-passing-game/submissions/461089653/)
+      - [1483. 树节点的第 K 个祖先](https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/submissions/461103416/)
 5. 树形 DP
       - 打家劫舍 III
       - 最小化旅行的价格总和
