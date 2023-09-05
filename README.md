@@ -179,7 +179,7 @@
       - [2836. 在传球游戏中最大化函数值](https://leetcode.cn/problems/maximize-value-of-function-in-a-ball-passing-game/submissions/461089653/)
       - [1483. 树节点的第 K 个祖先](https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/submissions/461103416/)
       - lca
-      - 
+      - [2846. 边权重均等查询](https://leetcode.cn/problems/minimum-edge-weight-equilibrium-queries-in-a-tree/submissions/463012152/)
 5. 树形 DP
       - 打家劫舍 III
       - 最小化旅行的价格总和
