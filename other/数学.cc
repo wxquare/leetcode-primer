@@ -1,32 +1,43 @@
-
 #include <vector>
-#include <random>
-#include <iostream>
 using namespace std;
 
 
-bool isPrime(int n){
-    if(n < 2) return false;
-    for(int i=2;i*i<=n;i++){
-        if(n % i == 0){
+// 判断一个数是否是否为素数/质数
+bool isPrime(int x){
+    if(x < 2) return false;
+    for(int i=2;i*i<=x;i++){
+        if(x % 2 == 0){
             return false;
         }
     }
     return true;
 }
 
+// 求1-n之间的所有素数
+vector<int> getPrimes(int n){
+    vector<int> isPrime(n+1,true);
+    vector<int> primes;
+    for(int i=2;i<=n;i++){
+        if(isPrime[i]){
+            primes.push_back(i);
+            for(long long j=2*i;j<=n;j+=i){
+                isPrime[j] = false;
+            }
+        }
+    }
+    return primes;
+}
 
 
-// 求一个范围内的prime number.
+// 求解1- MX之间有哪些素数
 const int MX = 10000;
 vector<int> primes;
-int init = [](){
-    vector<bool> isPrime(MX+1,true);
+int init = [&](){
+    vector<int> isPrime(MX+1,true);
     for(int i=2;i<=MX;i++){
         if(isPrime[i]){
             primes.push_back(i);
-            // j may out of bounds.
-            for(long long j=i*i;j<=MX;j+=i){
+            for(long long j=2*i;j<=MX;j+=i){
                 isPrime[j] = false;
             }
         }
@@ -34,147 +45,132 @@ int init = [](){
     return 0;
 }();
 
-/*
-    埃氏筛法求素数
-    求[1,n] 之间包含哪些素数
-*/
-vector<int> getPrimes(int n){
-    vector<bool> isPrimes(n+1,true);
-    vector<int> primes;
-    for(int i=2;i<=n;i++){
-        if(isPrimes[i]){
-            primes.push_back(i);
-            for(int j=i*i;j<=n;j+=i){
-                isPrimes[j] = false;
-            }
-        }
-    }
-    return primes;
-}   
 
-/*
-    1. 1 - n 之间每个数包含哪些素数
-    2. n表示上限
-*/
-vector<vector<int>> getSomePrimes(int n){
-    vector<vector<int>> primes(n+1);
-    for(int i=2;i<=n;i++){
-        if(primes[i].empty()){
-            for(int j=i;j<n;j+=i){
-                primes[i].push_back(i);
-            }
-        }
-    }
-    return primes;
-}
-
-
-
-// 质因子
-vector<int> getCommonPrimes(vector<int>& nums){
-    int n = *max_element(nums.begin(),nums.end());
-    vector<int> primes = getPrimes(n);  
+// 计算某个数有哪些质因子
+vector<int> getFactors(int x){
     vector<int> ans;
-    for(auto p : primes){
-        bool f = true;
-        for(int num : nums){
-            if(num % f){
-                f = false;
-            }
+    for(int i=2;i*i<=x;i++){
+        if((x % i) == 0){
+            ans.push_back(i);
+            ans.push_back(x / i);
         }
-        if(f) ans.push_back(p);
     }
     return ans;
 }
 
-/*
 
-    对于 C++14，我们可以使用自带的 __gcd(a,b) 函数来求最大公约数。
-    而对于 C++ 17，我们可以使用 <numeric> 头中的 std::gcd 与 std::lcm 来求最大公约数和最小公倍数。
-    1. 最大公约数 (Greatest Common Divisor),Least Common Multiple, LCM
-    2. O(log min(a, b))
-
-
-    100 12
-    12,100%12= 4;
-*/
-int gcd(int x,int y){
-    if(y == 0) return x;
-    return gcd(y,x % y);
-}
-
-int lcm(int x,int y){
-    return x / gcd(x,y) * y;
-}
-
-int gcdMultiple(vector<int>& nums){
-    int res = nums[0];
-    for(int i=1;i<nums.size();i++){
-        res = gcd(res,nums[i]);
+// 计算一些数的公共质因子
+vector<int> getCommonFactor(vector<int>& nums){
+    int mn = *min_element(nums.begin(),nums.end());
+    vector<int> ans;
+    vector<int> primes = getPrimes(mn);
+    for(int p : primes){
+        int flag = true;
+        for(int num : nums){
+            if(num % p != 0){
+                flag = false;
+                break;
+            }
+        }
+        if(flag) ans.push_back(p);
     }
-    return res;
+    return ans;
 }
 
-int lcmMultiple(vector<int>& nums){
-    // 注意可能超过数的表示范围
-    int m = gcdMultiple(nums);
-    int res = 1;
-    for(int i=0;i<nums.size();i++){
-        res = nums[i] / m * res;
+
+// 最大公约数
+int gcd(int a,int b){
+    return b == 0 ? a : gcd(b,a%b);
+}
+
+// 最小公倍数
+int lcm(int a,int b){
+    return a * b / gcd(a,b);
+}
+
+
+// 扩展欧基里德算法
+// 乘法逆元
+// gcd(a,b) = 1，可以求得乘法逆元
+int exgcd(int a,int b,int &x,int &y){
+    if(b == 0){
+        x = 1;
+        y = 0;
+        return a;
     }
-    return res * m;
+    int r = exgcd(b,a%b,x,y);
+    int t = y;
+    y = x - (a/b)*y;
+    x = y;
+    return r;
 }
 
+// 根据 费马小定理，快速幂
+// 如果 MOD 是一个素数，且 a 是不可被 MOD 整除的整数，
+const int MOD = 1e9 + 7;  
+int combination_mod(long long n,long long k){
+    long long numerator = 1;
+    long long denominator = 1;
+
+    for(long long i=0;i<k;i++){
+        numerator = numerator * (n - i) % MOD;
+        denominator = denominator * (i+1) % MOD;
+    }
+    return numerator * pow_mod(denominator,MOD-2) % MOD;
+}
+
+// 快速幂
+int pow_mod(int x, long long e){
+    int e = e % MOD;
+    
+    long long ans = 1;
+    while(e){
+        if((e & 1) != 0){
+            ans = ans * e % MOD;
+        }
+        x = x * x % MOD;
+        e = e / 2;
+    }
+    return ans;
+}
+
+
+// 如果mod为素数，且y不能为MOD整除
+int division_MOD(long long x,long long y){
+    return x * pow_mod(y,MOD-2) % MOD;
+}
+
+// 拒绝采样
+// 用rand7(),实现rand10()
+// rand7 产生1-7的随机数
+int rejectSampling(){
+    int ans;
+    while(1){
+        int x = (rand7()-1) * 7 + (rand7() - 1);
+        if(x >= 40) continue;
+        ans = x % 10 + 1;
+    }
+    return ans;
+}
 
 // 水塘抽样
-vector<int> reservoirSampling(vector<int>& data,int k){
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    int n = data.size();
-    vector<int> reservoir;
-    for(int i=0;i<n;i++){
+vector<int> reservoirSampling(vector<int>& nums,int k){
+    vector<int> ans;
+    for(int i=0;i<nums.size();i++){
         if(i < k){
-            reservoir.push_back(data[i]);
+            ans.push_back(nums[i]);
         } else {
-            // 生成一个0到i-1的随机数
-            std::uniform_int_distribution<> dis(0, i);//[0,i]
-            int j = dis(gen);
-            if(j < k) reservoir[j] = data[i];
+            int j = rand() % i;
+            if(j < k) ans[j] = nums[i];
         }
     }
-    return reservoir;
+    return ans;
 }
 
 // 洗牌算法
-void shuffle(vector<int>& nums){
-    random_device rd;
-    mt19937 gen(rd());
-    int n = nums.size();
-    for (int i = nums.size() - 1; i > 0; --i) {
-        std::uniform_int_distribution<> dis(0, i);
-        int j = dis(gen);
-        std::swap(nums[i], nums[j]);
-    }
-}
-
-
-// 分解质因数
-vector<int> primeFactorization(int n){
-    vector<int> ans;
-    for(int i=2;i*i<=n;i++){
-        if((n  % i) == 0){
-            ans.push_back(i);
-            while(n % i == 0){
-                n /= i;
-            }
-        }
-    }
-    return ans;
-}
-
-int main(){
-    vector<int> ans = primeFactorization(600);
-    for(auto f : ans){
-        std::cout << f << std::endl;
+void shuffle(vector<int>& cards){
+    for(int i=0;i<cards.size();i++){
+        int j = rand() % i;
+        swap(cards[i],cards[j]);
     }
 }

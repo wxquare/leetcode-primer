@@ -1,6 +1,7 @@
 #include <vector>
 #include <stack>
 #include <queue>
+#include <iostream>
 using namespace std;
 
 
@@ -124,4 +125,49 @@ vector<int> levelOrder(TreeNode* root){
         }
     }
     return res;
+}
+
+
+// 二叉树公共祖先
+TreeNode* lowestCommonAncestor(TreeNode* root,TreeNode* p,TreeNode* q){
+    if(root == nullptr || root == p || root == q) return root;
+    TreeNode* left = lowestCommonAncestor(root->left,p,q);
+    TreeNode* right = lowestCommonAncestor(root->right,p,q);
+    if(left && right) return root;
+    return left ? left : right;
+}
+
+void traverseInOrder(TreeNode* root){
+    stack<TreeNode*> st;
+    TreeNode* cur = root;
+    while(cur || !st.empty()){
+        while(cur){
+            st.push(cur);
+            cur = cur->left;
+        }
+        if(!st.empty()){
+            cur = st.top();
+            st.pop();
+            std::cout << cur->val << std::endl;
+            cur = cur->right;
+        }
+    }
+}
+
+void traversePreOrder(TreeNode* root){
+    stack<TreeNode*> st;
+    TreeNode* cur = root;
+    while(cur || !st.empty()){
+        while(cur){
+            std::cout << cur->val << std::endl;
+            st.push(cur);
+            cur = cur->left;
+        }
+        if(st.empty()){
+            cur = st.top();
+            st.pop();
+            cur = cur->right;
+        }
+
+    }
 }
