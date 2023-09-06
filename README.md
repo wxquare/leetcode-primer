@@ -56,6 +56,11 @@
 3. 模运算
       - (a + b) mod c = ((a mod c) + (b mod c)) mod c
       - (a * b) mod c =  ((a mod c) * (b mod c)) mod c
+      - (a / b) mod c =  (a * (b^(-1))) mod c，其中 b^(-1) 是 b 的乘法逆元。如果 c 是一个素数，且 b 是不可被 c 整除的整数，那么 b 的乘法逆元（b模c的逆元）可以通过以下方式计算：
+	b^(-1) ≡ b^(c-2) (mod c)
+      - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty/submissions/463360552/)
+      - 乘法逆元，扩展欧几里得算法
+      - 费马定理
 2. 拒绝抽样(rejection sampling)
       - [用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7/solutions/978527/yong-rand7-shi-xian-rand10-by-leetcode-s-qbmd/)
 3. 水塘抽样
@@ -72,10 +77,12 @@
       - (x & (1 << i)) == 0
       - 异或运算: 0^0=1,0^1=1,1^1=0,
       - x ^ (1 << i) = x
+      - __builtin_clz,__builtin_ctz,__builtin_popcount
 6. 排列
      - [31. 下一个排列](https://leetcode.cn/problems/next-permutation/)
      - [556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
-7. 组合
+7. 组合和带取模的组合
+   - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty/submissions/463360552/)
 
 
 ## 基础算法
@@ -173,6 +180,8 @@
 5. 倍增和倍增优化DP
       - [2836. 在传球游戏中最大化函数值](https://leetcode.cn/problems/maximize-value-of-function-in-a-ball-passing-game/submissions/461089653/)
       - [1483. 树节点的第 K 个祖先](https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/submissions/461103416/)
+      - lca
+      - [2846. 边权重均等查询](https://leetcode.cn/problems/minimum-edge-weight-equilibrium-queries-in-a-tree/submissions/463012152/)
 5. 树形 DP
       - 打家劫舍 III
       - 最小化旅行的价格总和
