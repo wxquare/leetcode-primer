@@ -233,11 +233,14 @@
       - 有向图枚举点做DFS
 8. 欧拉回路/通路
       - [Reconstruct Itinerary](https://leetcode.cn/problems/reconstruct-itinerary/submissions/417006045/)
-9. 连通量
+9. 图的连通性
       - [1489. 找到最小生成树里的关键边和伪关键边](https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/submissions/419266120/)
       - [tarjan 求有向图的连通分量](https://github.com/wxquare/online-algorithm-coding/blob/master/other/tarjan.cc)
       - [2685. 统计完全连通分量的数量](https://leetcode.cn/problems/count-the-number-of-complete-components/submissions/432982804/)
       - https://www.cnblogs.com/Jr1Preg/p/12300735.html
+      - 查找集群内的关键连接
+      - 割点
+      - 割边（桥）
 10. 寻找符合条件的路径
       - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree/description/)
 12. 二分图问题
