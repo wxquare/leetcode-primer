@@ -241,6 +241,9 @@
       - 查找集群内的关键连接
       - 割点
       - 割边（桥）
+      - tarjan 求强连通分量
+      - tarjan 求割点
+      - tartan 求割边
 10. 寻找符合条件的路径
       - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree/description/)
 12. 二分图问题
