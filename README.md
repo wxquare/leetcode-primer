@@ -235,15 +235,11 @@
       - [Reconstruct Itinerary](https://leetcode.cn/problems/reconstruct-itinerary/submissions/417006045/)
 9. 图的连通性
       - [1489. 找到最小生成树里的关键边和伪关键边](https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/submissions/419266120/)
-      - [tarjan 求有向图的连通分量](https://github.com/wxquare/online-algorithm-coding/blob/master/other/tarjan.cc)
       - [2685. 统计完全连通分量的数量](https://leetcode.cn/problems/count-the-number-of-complete-components/submissions/432982804/)
-      - https://www.cnblogs.com/Jr1Preg/p/12300735.html
-      - 查找集群内的关键连接
-      - 割点
-      - 割边（桥）
-      - tarjan 求强连通分量
-      - tarjan 求割点
-      - tartan 求割边
+      - [查找集群内的关键连接](https://leetcode.cn/problems/critical-connections-in-a-network/submissions/464145062/)
+      - tarjan 求强连通分量 模版
+      - tarjan 求割点 模版
+      - tartan 求割边 模版
 10. 寻找符合条件的路径
       - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree/description/)
 12. 二分图问题
@@ -258,9 +254,6 @@
       - https://www.cnblogs.com/wenruo/p/12357543.html
       - leetcode 1595.连通两组点的最小成
       - https://leetcode.cn/problems/7rLGCR/description/（守卫城堡）
-      - 超级洗衣机
-      - 查找集群内的关键连接
-      - 找到最小生成树里的关键边和伪关键边
 
 ## 参考
 - [leetcode](https://leetcode.cn/)
