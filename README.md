@@ -217,10 +217,11 @@
      - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
      - [210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)
      - [2603. 收集树中金币](https://leetcode.cn/problems/collect-coins-in-a-tree/submissions/418411707/)
-4. [并查集模版](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
+4. [并查集](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
      - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
      - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
      - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
+     - [冗余连接](https://leetcode.cn/problems/redundant-connection/submissions/)
 5. 最小生成树
       - [Kruskal](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
       - [1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/submissions/424543501/)
@@ -233,11 +234,13 @@
       - 有向图枚举点做DFS
 8. 欧拉回路/通路
       - [Reconstruct Itinerary](https://leetcode.cn/problems/reconstruct-itinerary/submissions/417006045/)
-9. 连通量
+9. 图的连通性
       - [1489. 找到最小生成树里的关键边和伪关键边](https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/submissions/419266120/)
-      - [tarjan 求有向图的连通分量](https://github.com/wxquare/online-algorithm-coding/blob/master/other/tarjan.cc)
       - [2685. 统计完全连通分量的数量](https://leetcode.cn/problems/count-the-number-of-complete-components/submissions/432982804/)
-      - https://www.cnblogs.com/Jr1Preg/p/12300735.html
+      - [查找集群内的关键连接](https://leetcode.cn/problems/critical-connections-in-a-network/submissions/464145062/)
+      - tarjan 求强连通分量 模版
+      - tarjan 求割点 模版
+      - tartan 求割边 模版
 10. 寻找符合条件的路径
       - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree/description/)
 12. 二分图问题
@@ -252,13 +255,6 @@
       - https://www.cnblogs.com/wenruo/p/12357543.html
       - leetcode 1595.连通两组点的最小成
       - https://leetcode.cn/problems/7rLGCR/description/（守卫城堡）
-      - 超级洗衣机
-      - 查找集群内的关键连接
-      - 找到最小生成树里的关键边和伪关键边
-
-## 其它
-- [1503. 所有蚂蚁掉下来前的最后一刻](https://leetcode.cn/problems/last-moment-before-all-ants-fall-out-of-a-plank/submissions/439537379/)
-- [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots/submissions/439535180/))
 
 ## 参考
 - [leetcode](https://leetcode.cn/)
