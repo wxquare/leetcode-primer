@@ -211,7 +211,7 @@
       - Ballmanford （单源，n-1次松驰，,权值可正可负，可用于检测负环,O(V*E))
       - Floyd（动态规划，多源，任意两点的距离，O(n^3))
       - A*
-            - [八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
+            - [八数码问题](https://github.com/wxquare/leetcode-primer/blob/master/other/%E5%9B%BE%E8%AE%BA%E5%90%AF%E5%8F%91%E5%BC%8F%E6%90%9C%E7%B4%A2%E5%85%AB%E6%95%B0%E7%A0%81%E9%97%AE%E9%A2%98.cc)
       - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time/submissions/416407193/)
       - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination/submissions/416029633/)
 2. [拓扑排序和度](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
