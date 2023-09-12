@@ -209,7 +209,7 @@
       - BFS（单源，无权路，权值为1的最短路，O(n)）
       - Dijkstra（单源，权值为正,O((E)logE))
       - Ballmanford （单源，n-1次松驰，,权值可正可负，可用于检测负环,O(V*E))
-      - Floyd（多源，任意两点的距离，O(n^3))
+      - Floyd（动态规划，多源，任意两点的距离，O(n^3))
       - A*
             - [八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
       - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time/submissions/416407193/)
