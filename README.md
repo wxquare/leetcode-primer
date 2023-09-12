@@ -99,6 +99,11 @@
 8. 洗牌算法
 
 
+## 贪心
+1. 超级洗衣机
+2. [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii/submissions/465271665/)
+
+
 
 ## 字符串匹配问题Trie Tree/kmp/ac状态
 - [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
@@ -149,7 +154,7 @@
       - [2812. 找出最安全路径](https://leetcode.cn/problems/find-the-safest-path-in-a-grid/submissions/455237953/) 
 
 ## DP问题（递推类DP）
-1. 线性 DP （包括状态机DP，序列DP）
+1. 线性 DP （包括状态机DP，序列DP,子问题有一个端点是固定不变的）
 	1. 线性DP
 	      - [斐波那契数列](https://leetcode.cn/problems/fibonacci-number/submissions/431236355/)
 	      - [数字三角形](https://leetcode.cn/problems/triangle/submissions/431243125/)
@@ -171,10 +176,10 @@
       - [494. 目标和](https://leetcode.cn/problems/target-sum/submissions/458957015/)
       - [322. 零钱兑换](https://leetcode.cn/problems/coin-change/)
       - [518. 零钱兑换 II](https://leetcode.cn/problems/coin-change-ii/submissions/458945557/)
-3. 区间 DP
+3. 区间 DP （子问题向内缩小，两端都会向内移动）
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
-4. 状压 和 状态压缩DP
+4. 状压 和 状态压缩DP （把集合用二进制表示）
       - 旅行商问题
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
 5. 倍增和倍增优化DP
@@ -182,7 +187,7 @@
       - [1483. 树节点的第 K 个祖先](https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/submissions/461103416/)
       - lca
       - [2846. 边权重均等查询](https://leetcode.cn/problems/minimum-edge-weight-equilibrium-queries-in-a-tree/submissions/463012152/)
-5. 树形 DP
+5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的）
       - 打家劫舍 III
       - 最小化旅行的价格总和
 6. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
@@ -195,8 +200,10 @@
       - [2801. 统计范围内的步进数字数目](https://leetcode.cn/problems/count-stepping-numbers-in-range/submissions/452043045/)
       - [2827. 范围中美丽整数的数目](https://leetcode.cn/problems/number-of-beautiful-integers-in-the-range/submissions/458609134/)
 7. 数据结构优化DP
-      -  [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix/submissions/436001561/)
-      -  [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
+      - [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix/submissions/436001561/)
+      - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
+8. 矩阵快速幂优化DP
+      - [2851. 字符串转换](https://leetcode.cn/problems/string-transformation/submissions465291899/)
 
 
 ## 树/二叉树
