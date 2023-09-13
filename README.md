@@ -133,25 +133,23 @@
       - 2736. 最大和查询
 
 ## 搜索问题 DFS/剪枝/回溯与状态恢复/记忆化搜索/状态压缩记忆化/选与不选/分割问题）
-1. DFS 深度搜索 （树、图）
-2. BFS/多源BFS/双向BFS
+1. BFS/多源BFS/双向BFS
       - [2812. 找出最安全路径](https://leetcode.cn/problems/find-the-safest-path-in-a-grid/submissions/455237953/) 
-4. 回溯（深度搜索+限制条件+限制搜索路径）
+2. DFS/剪枝/回溯（深度搜索+限制条件+限制搜索路径）
       - [2698. 求一个整数的惩罚数，预处理+回溯](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
       - [131. 切割回文串131，切割+保存状态路径]
-5. 记忆化搜索 （动态规划，状态优化）
+      - [面试题 08.12. 八皇后 n皇后问题](https://leetcode.cn/problems/eight-queens-lcci/submissions/465946635/)
+3. 记忆化搜索 （动态规划，状态优化）
       - [2742. 给墙壁刷油漆，状态优化](https://leetcode.cn/problems/painting-the-walls/submissions/440997959/)
       - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string/submissions/436332452/)
       - [132. 切割回文串132]
       - [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets/submissions/415822742/)
       - [2811. 判断是否能拆分数组](https://leetcode.cn/problems/check-if-it-is-possible-to-split-array/description/)
-6. 状态压缩记忆化搜索 （状态压缩动态规划）
       - [996. 正方形数组的数目，预处理/重复数字全排列](https://leetcode.cn/problems/number-of-squareful-arrays/submissions/441000077/)
       - [2741. 特别的排列，全排列/剪枝](https://leetcode.cn/problems/special-permutations/submissions/440660237/)
-7. 分支限界搜索
-8. 启发式搜索
-9. 平面格子问题
-      - [2812. 找出最安全路径](https://leetcode.cn/problems/find-the-safest-path-in-a-grid/submissions/455237953/) 
+4. 启发式搜索
+      - 八数码问题
+
 
 ## DP问题（递推类DP）
 1. 线性 DP （包括状态机DP，序列DP,子问题有一个端点是固定不变的）
