@@ -139,7 +139,6 @@
 3. 记忆化搜索 （动态规划，状态优化）
       - [2742. 给墙壁刷油漆，状态优化](https://leetcode.cn/problems/painting-the-walls/submissions/440997959/)
       - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string/submissions/436332452/)
-      - [132. 切割回文串132]
       - [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets/submissions/415822742/)
       - [2811. 判断是否能拆分数组](https://leetcode.cn/problems/check-if-it-is-possible-to-split-array/description/)
       - [996. 正方形数组的数目，预处理/重复数字全排列](https://leetcode.cn/problems/number-of-squareful-arrays/submissions/441000077/)
@@ -176,7 +175,6 @@
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
 4. 状压 和 状态压缩DP （把集合用二进制表示）
-      - 旅行商问题
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
 5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的）
       - 打家劫舍 III
