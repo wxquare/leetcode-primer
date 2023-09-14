@@ -91,17 +91,14 @@
 	- [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
 3. top k，select kth
 	- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
-4. 贪心
 5. 模拟
 6. kmp算法
 7. ac状态算法
 8. 洗牌算法
 
-
 ## 贪心
 1. 超级洗衣机
 2. [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii/submissions/465271665/)
-
 
 
 ## 字符串匹配问题Trie Tree/kmp/ac状态
@@ -132,17 +129,16 @@
       - 2736. 最大和查询
 
 ## 搜索问题
-1. BFS/多源BFS/双向BFS
-      - [2812. 找出最安全路径](https://leetcode.cn/problems/find-the-safest-path-in-a-grid/submissions/455237953/) 
+1. BFS/多源BFS（源点为多个）/双向BFS
+      - [2812. 找出最安全路径，多源BFS](https://leetcode.cn/problems/find-the-safest-path-in-a-grid/submissions/455237953/) 
 2. DFS/剪枝/回溯（深度搜索+限制条件+限制搜索路径）
-      - [2698. 求一个整数的惩罚数，预处理+回溯](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
       - [LCR 086. 分割回文串](https://leetcode.cn/problems/M99OJA/submissions/465972869/)
       - [面试题 08.12. 八皇后 n皇后问题](https://leetcode.cn/problems/eight-queens-lcci/submissions/465946635/)
       - [2850. 将石头分散到网格图的最少移动次数](https://leetcode.cn/problems/minimum-moves-to-spread-stones-over-grid/submissions/465962967/)
+      - [2698. 求一个整数的惩罚数，预处理+回溯](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
 3. 记忆化搜索 （动态规划，状态优化）
       - [2742. 给墙壁刷油漆，状态优化](https://leetcode.cn/problems/painting-the-walls/submissions/440997959/)
       - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string/submissions/436332452/)
-      - [132. 切割回文串132]
       - [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets/submissions/415822742/)
       - [2811. 判断是否能拆分数组](https://leetcode.cn/problems/check-if-it-is-possible-to-split-array/description/)
       - [996. 正方形数组的数目，预处理/重复数字全排列](https://leetcode.cn/problems/number-of-squareful-arrays/submissions/441000077/)
@@ -167,6 +163,7 @@
 	      - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
 	      - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
 	      - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence/submissions/430898547/)
+              - [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
 2. 背包 DP
       - 01背包
       - 完全背包
@@ -177,14 +174,8 @@
 3. 区间 DP （子问题向内缩小，两端都会向内移动）
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
-4. 状压 和 状态压缩DP （把集合用二进制表示）
-      - 旅行商问题
+4. 状压 和 状态压缩DP （把集合用二进制表示,二进制mask 1<<n）
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
-5. 倍增和倍增优化DP
-      - [2836. 在传球游戏中最大化函数值](https://leetcode.cn/problems/maximize-value-of-function-in-a-ball-passing-game/submissions/461089653/)
-      - [1483. 树节点的第 K 个祖先](https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/submissions/461103416/)
-      - lca
-      - [2846. 边权重均等查询](https://leetcode.cn/problems/minimum-edge-weight-equilibrium-queries-in-a-tree/submissions/463012152/)
 5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的）
       - 打家劫舍 III
       - 最小化旅行的价格总和
@@ -200,8 +191,14 @@
 7. 数据结构优化DP
       - [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix/submissions/436001561/)
       - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
-8. 矩阵快速幂优化DP
+8. 倍增和倍增优化DP
+      - [2836. 在传球游戏中最大化函数值](https://leetcode.cn/problems/maximize-value-of-function-in-a-ball-passing-game/submissions/461089653/)
+      - [1483. 树节点的第 K 个祖先](https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/submissions/461103416/)
+      - lca
+      - [2846. 边权重均等查询](https://leetcode.cn/problems/minimum-edge-weight-equilibrium-queries-in-a-tree/submissions/463012152/)
+9. 矩阵快速幂优化DP
       - [2851. 字符串K次转换等于目标串的方案数量](https://leetcode.cn/problems/string-transformation/submissions465291899/)
+        
 
 
 ## 树/图论
