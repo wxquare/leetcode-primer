@@ -162,8 +162,7 @@
 	      - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
 	      - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
 	      - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
-	      - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence/submissions/430898547/)
-       - - [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
+	      - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence/submissions/430898547/)- [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
 2. 背包 DP
       - 01背包
       - 完全背包
