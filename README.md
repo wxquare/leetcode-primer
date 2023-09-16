@@ -1,32 +1,32 @@
 # leetcode-primer
 
 ## 数据结构
-1. 数组/数组
-	- 使循环数组所有元素相等的最少秒数
-2. 链表/单链表/双链表
-     - [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
+1. 链表/单链表/双链表
+      - [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
 	- [面试题 02.05. 链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)
 	- [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
 	- [交换链表中的第K个节点和倒数第K个节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
-3. stack/单调stack/双stack/（在线性时间内找到每个元素的上一个或者下一个更大或更小元素）
+2. stack/单调stack/双stack/（在线性时间内找到每个元素的上一个或者下一个更大或更小元素）
 	- [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
 	- [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
 	- [739. 每日温度](https://leetcode.cn/problems/daily-temperatures/submissions/457081358/)
 	- [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/457085863/)
 	- [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score/submissions/456747016/)
-4. queue/双端deque/单调deque（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
+3. queue/双端deque/单调deque（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
 	- [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/submissions/457105531/)
  	- [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/submissions/457422626/)
 	- [2810.  故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
 	- [918. 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray/submissions/457447563/)
-5. 优先队列和堆，任务调度
+4. 优先队列和堆，任务调度
 	- [最大平均通过率](https://leetcode-cn.com/problems/maximum-average-pass-ratio/)
 	- [单线程 CPU](https://leetcode-cn.com/problems/single-threaded-cpu/)
 	- [Minimum Possible Integer After at Most K Adjacent Swaps On Digits](https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/)
 	- [Last Moment Before All Ants Fall Out of a Plank](https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/)
 	- [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
-6. 哈希unorderer_map/unordered_set
-7. 平衡二叉树map/multimap/set/multimap
+4. 哈希unorderer_map/unordered_set
+6. 平衡二叉树map/multimap/set/multimap
+7. 循环数组和循环字符串
+	- 使循环数组所有元素相等的最少秒数
 
 
 ## 数据结构实现
@@ -84,20 +84,16 @@
    - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty/submissions/463360552/)
 
 
-## 基础算法
-1. 排序算法
+## 二分答案
 2. 二分算法 (lower_bound,map.lower_bound,check 二分答案）
-	 - [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
+	- [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
 	- [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
+      - [打家劫舍VI，小偷的最大能力最小，二分+DP](https://leetcode.cn/problems/house-robber-iv/submissions/466693294/)
 3. top k，select kth
 	- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
-5. 模拟
-6. kmp算法
-7. ac状态算法
-8. 洗牌算法
 
-## 贪心
-1. 超级洗衣机
+## 贪心 + 基础算法
+1. [超级洗衣机](https://leetcode.cn/problems/super-washing-machines/submissions/464025796/)
 2. [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii/submissions/465271665/)
 
 
@@ -156,6 +152,7 @@
 	      - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group/submissions/436302364/)
 	      - [销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/submissions/458598692/)
 	2. 状态机DP（关键是设计状态以及状态转移方程，之后在处理边界条件）
+            - 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
 		- [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups/submissions/458601624/)
 		- 买卖股票的最大利润（最多一次买卖、最多两次、最多K次、无限次买卖、冷冻期1天、手续费）
 	3. 序列DP
@@ -176,7 +173,7 @@
 4. 状压 和 状态压缩DP （把集合用二进制表示,二进制mask 1<<n）
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
 5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的）
-      - 打家劫舍 III
+      - [打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/submissions/466687291/)
       - 最小化旅行的价格总和
 6. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
       - [统计整数的数量](https://leetcode.cn/problems/count-of-integers/submissions/437570070/)
@@ -198,7 +195,6 @@
 9. 矩阵快速幂优化DP
       - [2851. 字符串K次转换等于目标串的方案数量](https://leetcode.cn/problems/string-transformation/submissions465291899/)
         
-
 
 ## 树/图论
 1. 树/二叉树
