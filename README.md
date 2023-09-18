@@ -174,7 +174,9 @@
 5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的，记忆化搜索，递归）
       - [打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/submissions/466687291/)
       - [2858. 可以到达每一个节点的最少边反转次数,换根DP](https://leetcode.cn/problems/minimum-edge-reversals-so-every-node-is-reachable/submissions/467513545/)
+      - [834. 树中距离之和](https://leetcode.cn/problems/sum-of-distances-in-tree/submissions/467525870/)
       - 最小化旅行的价格总和
+      - 2581. 统计可能的树根数目
 6. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
       - [统计整数的数量](https://leetcode.cn/problems/count-of-integers/submissions/437570070/)
       - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits/description/)
