@@ -171,7 +171,7 @@
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
 4. 状压 和 状态压缩DP （把集合用二进制表示,二进制mask 1<<n）
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
-5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的）
+5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的，记忆化搜索，递归）
       - [打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/submissions/466687291/)
       - [2858. 可以到达每一个节点的最少边反转次数,换根DP](https://leetcode.cn/problems/minimum-edge-reversals-so-every-node-is-reachable/submissions/467513545/)
       - 最小化旅行的价格总和
