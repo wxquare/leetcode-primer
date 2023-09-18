@@ -44,7 +44,7 @@ vector<int> dijkstra(int n,vector<vector<int>>& edges,int start){
     priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq;
     vector<int> vis(n,false);
     pq.push({0,start});
-    while(pq.empty()){
+    while(!pq.empty()){
         auto [_,u] = pq.top();
         pq.pop();
         if(vis[u]) continue;
