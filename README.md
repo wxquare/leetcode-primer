@@ -152,10 +152,10 @@
 	      - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group/submissions/436302364/)
 	      - [销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/submissions/458598692/)
 	2. 状态机DP（关键是设计状态以及状态转移方程，之后在处理边界条件）
-            - 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
+ 		- 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
 		- [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups/submissions/458601624/)
 		- 买卖股票的最大利润（最多一次买卖、最多两次、最多K次、无限次买卖、冷冻期1天、手续费）
-	3. 序列DP
+	4. 序列DP
 	      - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
 	      - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
 	      - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
