@@ -169,7 +169,7 @@
 3. 区间 DP （子问题向内缩小，两端都会向内移动）
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
-4. bitmask，状压 和 状态压缩DP （把集合用二进制表示,二进制mask 1<<n）
+4. bitmask，状压 和 状态压缩DP,bitmask vs map+vector （把集合用二进制表示,二进制mask 1<<n）
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
       - [638. 大礼包](https://leetcode.cn/problems/shopping-offers/submissions/467843620/)
 5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的，记忆化搜索，递归）
