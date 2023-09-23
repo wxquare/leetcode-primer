@@ -173,7 +173,7 @@
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
       - [638. 大礼包](https://leetcode.cn/problems/shopping-offers/submissions/467843620/)
       - [691. 贴纸拼词](https://leetcode.cn/problems/stickers-to-spell-word/submissions/468199760/)
-5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的，记忆化搜索，递归）
+5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的，记忆化搜索，递归。就是我们已经知道以uuu为根的答案，想要通过u−>v的父子关系把答案传递给）
       - [打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/submissions/466687291/)
       - [最小化旅行的价格总和](https://leetcode.cn/problems/minimize-the-total-price-of-the-trips/submissions/467832597/)
       - [2858. 可以到达每一个节点的最少边反转次数,换根DP](https://leetcode.cn/problems/minimum-edge-reversals-so-every-node-is-reachable/submissions/467513545/)
