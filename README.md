@@ -12,6 +12,7 @@
 	- [739. 每日温度](https://leetcode.cn/problems/daily-temperatures/submissions/457081358/)
 	- [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/457085863/)
 	- [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score/submissions/456747016/)
+	- [901. 股票价格跨度](https://leetcode.cn/problems/online-stock-span/submissions/472058521/)
 3. queue/双端deque/单调deque（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
 	- [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/submissions/457105531/)
  	- [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/submissions/457422626/)
@@ -88,7 +89,7 @@
 2. 二分算法 (lower_bound,map.lower_bound,check 二分答案）
 	- [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
 	- [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
-      - [打家劫舍VI，小偷的最大能力最小，二分+DP](https://leetcode.cn/problems/house-robber-iv/submissions/466693294/)
+  	- [打家劫舍VI，小偷的最大能力最小，二分+DP](https://leetcode.cn/problems/house-robber-iv/submissions/466693294/)
 3. top k，select kth
 	- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
 
@@ -152,11 +153,10 @@
 	      - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group/submissions/436302364/)
 	      - [销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/submissions/458598692/)
 	2. 状态机DP（关键是设计状态以及状态转移方程，之后在处理边界条件）
-            - 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
+ 		- 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
 		- [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups/submissions/458601624/)
 		- 买卖股票的最大利润（最多一次买卖、最多两次、最多K次、无限次买卖、冷冻期1天、手续费）
-	3. 序列DP
-	      - 序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等。
+	4. 序列DP (序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等)
 	      - [最长上升子序列问题](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
 	      - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
 	      - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence/submissions/430898547/)- [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
@@ -170,11 +170,16 @@
 3. 区间 DP （子问题向内缩小，两端都会向内移动）
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
-4. 状压 和 状态压缩DP （把集合用二进制表示,二进制mask 1<<n）
+4. bitmask，状压 和 状态压缩DP,bitmask vs map+vector （把集合用二进制表示,二进制mask 1<<n）
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
-5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的）
+      - [638. 大礼包](https://leetcode.cn/problems/shopping-offers/submissions/467843620/)
+      - [691. 贴纸拼词](https://leetcode.cn/problems/stickers-to-spell-word/submissions/468199760/)
+5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的，记忆化搜索，递归。就是我们已经知道以uuu为根的答案，想要通过u−>v的父子关系把答案传递给）
       - [打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/submissions/466687291/)
-      - 最小化旅行的价格总和
+      - [最小化旅行的价格总和](https://leetcode.cn/problems/minimize-the-total-price-of-the-trips/submissions/467832597/)
+      - [2858. 可以到达每一个节点的最少边反转次数,换根DP](https://leetcode.cn/problems/minimum-edge-reversals-so-every-node-is-reachable/submissions/467513545/)
+      - [834. 树中距离之和](https://leetcode.cn/problems/sum-of-distances-in-tree/submissions/467525870/)
+      - [2581. 统计可能的树根数目](https://leetcode.cn/problems/count-number-of-possible-root-nodes/submissions/467531744/)
 6. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
       - [统计整数的数量](https://leetcode.cn/problems/count-of-integers/submissions/437570070/)
       - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits/description/)

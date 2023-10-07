@@ -26,6 +26,8 @@ int maxFlow(int n,vector<vector<int>>& edges,int s,int t){
         g[e[0]].push_back({e[1],e[2]});
     }
 
+    
+
 }
 
 
