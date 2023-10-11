@@ -30,6 +30,34 @@
 	- 使循环数组所有元素相等的最少秒数
 
 
+## 基本算法
+1. 二分算法 (lower_bound,map.lower_bound,check 二分答案）
+	- [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
+	- [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
+  	- [打家劫舍VI，小偷的最大能力最小，二分+DP](https://leetcode.cn/problems/house-robber-iv/submissions/466693294/)
+2. top k，select kth
+	- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
+      - [2512.奖励最顶尖的 K 名学生](https://leetcode.cn/problems/reward-top-k-students/submissions/473327675/)
+3. 位运算
+      - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
+      - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
+      - lowbit(x) = x & (-x)
+      - x |= (1 << i)
+      - (x & (1 << i)) == 0
+      - 异或运算: 0^0=1,0^1=1,1^1=0,
+      - x ^ (1 << i) = x
+      - __builtin_clz,__builtin_ctz,__builtin_popcount
+      - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares/submissions/473022397/)
+4. 脑筋急转弯、技巧类
+      - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots/submissions/473011278/)
+
+
+
+## 贪心算法
+1. [超级洗衣机](https://leetcode.cn/problems/super-washing-machines/submissions/464025796/)
+2. [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii/submissions/465271665/)
+
+
 ## 数据结构实现
 -   [LRU](https://leetcode-cn.com/problems/lru-cache/)
 -   [LFU](https://leetcode-cn.com/problems/lfu-cache/)
@@ -85,19 +113,6 @@
    - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty/submissions/463360552/)
 
 
-## 二分答案
-2. 二分算法 (lower_bound,map.lower_bound,check 二分答案）
-	- [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
-	- [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
-  	- [打家劫舍VI，小偷的最大能力最小，二分+DP](https://leetcode.cn/problems/house-robber-iv/submissions/466693294/)
-3. top k，select kth
-	- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
-
-## 贪心 + 基础算法
-1. [超级洗衣机](https://leetcode.cn/problems/super-washing-machines/submissions/464025796/)
-2. [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii/submissions/465271665/)
-
-
 ## 字符串匹配问题Trie Tree/kmp/ac状态
 - [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
 - [Implement Magic Dictionary](https://leetcode.com/problems/implement-magic-dictionary/)
@@ -140,6 +155,7 @@
       - [2811. 判断是否能拆分数组](https://leetcode.cn/problems/check-if-it-is-possible-to-split-array/description/)
       - [996. 正方形数组的数目，预处理/重复数字全排列](https://leetcode.cn/problems/number-of-squareful-arrays/submissions/441000077/)
       - [2741. 特别的排列，全排列/剪枝](https://leetcode.cn/problems/special-permutations/submissions/440660237/)
+      - [2896. 执行操作使两个字符串相等](https://leetcode.cn/problems/apply-operations-to-make-two-strings-equal/submissions/472717555/)
 4. 启发式搜索
       - 八数码问题
 
@@ -202,10 +218,12 @@
         
 
 ## 树/图论
-1. 树/二叉树
+1. 二叉树、树和图的深搜和宽搜
       - [lowest common ancestor](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
       - [二叉树的前、中、后序遍历,非递归的实现](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_tree.cpp)（12.21）
       - [二叉搜索树的查找、插入和删除](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_search_tree.cpp)
+      - [2872. 可以被 K 整除连通块的最大数目](https://leetcode.cn/problems/maximum-number-of-k-divisible-components/submissions/472078651/)
+
 2. [最短路径和K短问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
       - BFS（单源，无权路，权值为1的最短路，O(n)）
       - Dijkstra（单源，权值为正,O((E)logE))
@@ -227,9 +245,10 @@
 5. 最小生成树
       - [Kruskal](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
       - [1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/submissions/424543501/)
-6. 基环树、内向树、外向数据
+6. 基环树、内向树、外向树
       - [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/submissions/453034664/)
       - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph/submissions/453037901/)
+      - [2876. 有向图访问计数](https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph/submissions/)
 6. 图的最大环最小环
       - [图中的最短环,BFS有向图和无向图都可以](https://leetcode.cn/problems/shortest-cycle-in-a-graph/submissions/)
       - 无向图枚举点做BFS
