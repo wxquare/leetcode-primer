@@ -49,6 +49,8 @@
       - x ^ (1 << i) = x
       - __builtin_clz,__builtin_ctz,__builtin_popcount
       - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares/submissions/473022397/)
+      - [260. 只出现一次的数字 I、II、III](https://leetcode.cn/problems/single-number-iii/description/?envType=daily-question&envId=2023-10-16)
+]
 4. 脑筋急转弯、技巧类
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots/submissions/473011278/)
 
