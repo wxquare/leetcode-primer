@@ -29,6 +29,29 @@
 6. 平衡二叉树map/multimap/set/multimap
 7. 循环数组和循环字符串
 	- 使循环数组所有元素相等的最少秒数
+8. 树状数组 (单点修改，前缀和和区间和）（lowbit 函数会求出一个二进制的最低位1代表的数字， x & -x，树状树组index从1开始）
+      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
+      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436429471/)
+9. 线段树 （区间修改，将一个区间的数据修改为某个相同的值，求区间合、最值，区间内可以聚合的值）
+      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
+      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436608727/)
+      - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
+      - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/submissions/444263284/)
+      - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query/submissions/444281304/)
+10. 跳表
+11. trie树
+      - [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+      - [Implement Magic Dictionary](https://leetcode.com/problems/implement-magic-dictionary/)
+      - [统计异或值在范围内的数对有多少](https://leetcode-cn.com/problems/count-pairs-with-xor-in-a-range/)
+12. 字符串匹配 
+      - [kmp](https://github.com/wxquare/online-algorithm-coding/blob/master/other/kmp.cc)
+      - [最长合法子字符串的长度 ac 自动机](https://leetcode.cn/submissions/detail/448173370/)
+13. 高级数据结构实现
+      - [LRU](https://leetcode-cn.com/problems/lru-cache/)
+      - [LFU](https://leetcode-cn.com/problems/lfu-cache/)
+      - [HashSet](https://leetcode-cn.com/problems/design-hashset/)
+      - [HashMap](https://leetcode-cn.com/problems/design-hashmap/)
+      - [剑指 Offer 59 - II. 队列的最大值](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof/submissions/457437191/)
 
 
 ## 基本算法
@@ -53,22 +76,9 @@
 ]
 4. 脑筋急转弯、技巧类
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots/submissions/473011278/)
-
-
-
-## 贪心算法
-1. [超级洗衣机](https://leetcode.cn/problems/super-washing-machines/submissions/464025796/)
-2. [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii/submissions/465271665/)
-
-
-## 数据结构实现
--   [LRU](https://leetcode-cn.com/problems/lru-cache/)
--   [LFU](https://leetcode-cn.com/problems/lfu-cache/)
--   [HashSet](https://leetcode-cn.com/problems/design-hashset/)
--   [HashMap](https://leetcode-cn.com/problems/design-hashmap/)
--   跳表
--   trie树
--   [剑指 Offer 59 - II. 队列的最大值](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof/submissions/457437191/)
+5. 前缀和后缀
+6. 差分
+      - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings/submissions/213589517/)
 
 ## 数学
 1. 数论问题
@@ -116,32 +126,9 @@
    - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty/submissions/463360552/)
 
 
-## 字符串匹配问题Trie Tree/kmp/ac状态
-- [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
-- [Implement Magic Dictionary](https://leetcode.com/problems/implement-magic-dictionary/)
-- [统计异或值在范围内的数对有多少](https://leetcode-cn.com/problems/count-pairs-with-xor-in-a-range/)
-- [kmp](https://github.com/wxquare/online-algorithm-coding/blob/master/other/kmp.cc)
-- [最长合法子字符串的长度 ac 自动机](https://leetcode.cn/submissions/detail/448173370/)
-
-## 区间问题/前缀/后缀/差分/树状数组/线段树
-1. 前缀和prefixSum,后缀和suffixSum
-2. 差分数组 （区间同时加减一个数，求最终单点的值）
-      - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings/submissions/213589517/)
-3. 树状数组 (单点修改，前缀和和区间和）（lowbit 函数会求出一个二进制的最低位1代表的数字， x & -x，树状树组index从1开始）
-      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
-      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436429471/)
-4. 线段树 （区间修改，将一个区间的数据修改为某个相同的值，求区间合、最值，区间内可以聚合的值）
-      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
-      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436608727/)
-      - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
-5. 离线问题
-      - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/submissions/444263284/)
-      - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query/submissions/444281304/)
-      - 1938. 查询最大基因差
-      - 2070. 每一个查询的最大美丽值
-      - 2343. 裁剪数字后查询第 K 小的数字
-      - 2503. 矩阵查询可获得的最大分数
-      - 2736. 最大和查询
+## 贪心算法
+1. [超级洗衣机](https://leetcode.cn/problems/super-washing-machines/submissions/464025796/)
+2. [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii/submissions/465271665/)
 
 ## 搜索问题
 1. BFS/多源BFS（源点为多个）/双向BFS
@@ -162,7 +149,6 @@
 4. 启发式搜索
       - 八数码问题
 
-
 ## DP问题（递推类DP）
 1. 线性 DP （包括状态机DP，序列DP,子问题有一个端点是固定不变的）
 	1. 线性DP
@@ -178,8 +164,8 @@
 	4. 序列DP (序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等)
 	      - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
 	      - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence/submissions/430898547/)
-              - [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
-              - [2901. 最长相邻不相等子序列 II](https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii/description/)
+            - [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
+            - [2901. 最长相邻不相等子序列 II](https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii/description/)
 2. 背包 DP
       - 01背包
       - 完全背包
