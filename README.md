@@ -33,20 +33,21 @@
       - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
       - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436429471/)
 9. 线段树 （区间修改，将一个区间的数据修改为某个相同的值，求区间合、最值，区间内可以聚合的值）
+      - 手撕线段树，支持区间update和区间聚合值（最大，最小、和）等
       - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
       - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436608727/)
       - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
       - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/submissions/444263284/)
       - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query/submissions/444281304/)
-10. 跳表
-11. trie树
+11. 跳表
+12. trie树
       - [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
       - [Implement Magic Dictionary](https://leetcode.com/problems/implement-magic-dictionary/)
       - [统计异或值在范围内的数对有多少](https://leetcode-cn.com/problems/count-pairs-with-xor-in-a-range/)
-12. 字符串匹配 
+13. 字符串匹配 
       - [kmp](https://github.com/wxquare/online-algorithm-coding/blob/master/other/kmp.cc)
       - [最长合法子字符串的长度 ac 自动机](https://leetcode.cn/submissions/detail/448173370/)
-13. 高级数据结构实现
+14. 高级数据结构实现
       - [LRU](https://leetcode-cn.com/problems/lru-cache/)
       - [LFU](https://leetcode-cn.com/problems/lfu-cache/)
       - [HashSet](https://leetcode-cn.com/problems/design-hashset/)
