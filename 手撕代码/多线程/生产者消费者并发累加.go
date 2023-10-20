@@ -15,6 +15,23 @@ var QSize int32 = 10
 
 var sum int32
 
+func consumer(Q chan int32, sumChan chan int32) {
+	var wg sync.WaitGroup
+	for i := 0; i < int(consumerLimit); i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			var sum int32
+			for a := range Q {
+				sum += a
+			}
+			sumChan <- sum
+		}()
+	}
+	wg.Wait()
+	close(sumChan)
+}
+
 func producer(Q chan int32) {
 	var wg sync.WaitGroup
 	a := count / producerLimit
@@ -37,23 +54,6 @@ func producer(Q chan int32) {
 	}
 	wg.Wait()
 	close(Q)
-}
-
-func consumer(Q chan int32, sumChan chan int32) {
-	var wg sync.WaitGroup
-	for i := 0; i < int(consumerLimit); i++ {
-		wg.Add(1)
-		go func() {
-			defer wg.Done()
-			var sum int32
-			for a := range Q {
-				sum += a
-			}
-			sumChan <- sum
-		}()
-	}
-	wg.Wait()
-	close(sumChan)
 }
 
 func main() {

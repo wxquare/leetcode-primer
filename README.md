@@ -46,13 +46,18 @@
 12. 字符串匹配 
       - [kmp](https://github.com/wxquare/online-algorithm-coding/blob/master/other/kmp.cc)
       - [最长合法子字符串的长度 ac 自动机](https://leetcode.cn/submissions/detail/448173370/)
-13. 高级数据结构实现
+13. 并查集
+      - [并查集](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
+      - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
+      - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
+      - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
+      - [冗余连接](https://leetcode.cn/problems/redundant-connection/submissions/)
+14. 数据结构设计和实现
       - [LRU](https://leetcode-cn.com/problems/lru-cache/)
       - [LFU](https://leetcode-cn.com/problems/lfu-cache/)
       - [HashSet](https://leetcode-cn.com/problems/design-hashset/)
       - [HashMap](https://leetcode-cn.com/problems/design-hashmap/)
       - [剑指 Offer 59 - II. 队列的最大值](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof/submissions/457437191/)
-
 
 ## 基本算法
 1. 二分算法 (lower_bound,map.lower_bound,check 二分答案）
@@ -73,7 +78,6 @@
       - __builtin_clz,__builtin_ctz,__builtin_popcount
       - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares/submissions/473022397/)
       - [260. 只出现一次的数字 I、II、III](https://leetcode.cn/problems/single-number-iii/description/?envType=daily-question&envId=2023-10-16)
-]
 4. 脑筋急转弯、技巧类
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots/submissions/473011278/)
 5. 前缀和后缀

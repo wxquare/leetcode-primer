@@ -1,43 +1,42 @@
-#include <vector>
 #include <string>
+#include <vector>
+#include <iostream>
 using namespace std;
 
-struct TrieNode{
+struct TrieNode {
     vector<TrieNode*> children;
-    bool isEnd;
-    TrieNode():isEnd(false),children(26,nullptr){}
+    bool end;
+    TrieNode():end(false),children(26,nullptr){}
 };
-
 
 class Trie {
 public:
     TrieNode* root;
-    Trie() {
+    Trie(){
         root = new TrieNode();
     }
-    
-    void insert(string word) {
+    void insert(string& word){
         TrieNode* p = root;
-        for(char & c : word){
+        for(char c : word){
             if(p->children[c - 'a'] == nullptr){
                 p->children[c - 'a'] = new TrieNode();
             }
             p = p->children[c - 'a'];
         }
-        p->isEnd = true;
+        p->end = true;
     }
-    
-    bool search(string word) {
+
+    bool search(string&  word){
         TrieNode* p = root;
-        for(char & c : word){
+        for(char c : word){
             if(p->children[c - 'a'] == nullptr){
                 return false;
             }
             p = p->children[c - 'a'];
         }
-        return p->isEnd;
+        return p->end;
     }
-    
+
     bool startsWith(string prefix) {
         TrieNode* p = root;
         for(char & c : prefix){
@@ -50,13 +49,11 @@ public:
     }
 };
 
-
-int main(int argc, char const *argv[])
-{
-    Trie *root = new Trie();
-    vector<string> words = {"abc","cbd","dfajakfdjk"};
-    for(string &  w : words){
-        root->insert(w);
-    }
-    return 0;
+int main(){
+    Trie* rt = new Trie();
+    string s1 = "abcd";
+    string s2 = "ab";
+    rt->insert(s1);
+    rt->insert(s2);
+    std::cout << rt->search(s2) << std::endl;
 }
