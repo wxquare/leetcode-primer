@@ -6,33 +6,39 @@
 	- [面试题 02.05. 链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)
 	- [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
 	- [交换链表中的第K个节点和倒数第K个节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
-2. stack/单调stack/双stack/（在线性时间内找到每个元素的上一个或者下一个更大或更小元素）
+
+2. 二叉树
+      - [lowest common ancestor](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+      - [二叉树的前、中、后序遍历,非递归的实现](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_tree.cpp)（12.21）
+      - [二叉搜索树的查找、插入和删除](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_search_tree.cpp)
+      - [2872. 可以被 K 整除连通块的最大数目](https://leetcode.cn/problems/maximum-number-of-k-divisible-components/submissions/472078651/)
+
+3. stack/单调stack/双stack/（在线性时间内找到每个元素的上一个或者下一个更大或更小元素）
 	- [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
 	- [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
 	- [739. 每日温度](https://leetcode.cn/problems/daily-temperatures/submissions/457081358/)
 	- [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/457085863/)
 	- [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score/submissions/456747016/)
 	- [901. 股票价格跨度](https://leetcode.cn/problems/online-stock-span/submissions/472058521/)
-      
-3. queue/双端deque/单调deque（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
+4. queue/双端deque/单调deque（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
 	- [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/submissions/457105531/)
  	- [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/submissions/457422626/)
 	- [2810.  故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
 	- [918. 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray/submissions/457447563/)
-4. 优先队列和堆，任务调度
+5. 优先队列和堆，任务调度
 	- [最大平均通过率](https://leetcode-cn.com/problems/maximum-average-pass-ratio/)
 	- [单线程 CPU](https://leetcode-cn.com/problems/single-threaded-cpu/)
 	- [Minimum Possible Integer After at Most K Adjacent Swaps On Digits](https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/)
 	- [Last Moment Before All Ants Fall Out of a Plank](https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/)
 	- [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
-4. 哈希unorderer_map/unordered_set
-6. 平衡二叉树map/multimap/set/multimap
-7. 循环数组和循环字符串
+6. 哈希unorderer_map/unordered_set
+7. 平衡二叉树map/multimap/set/multimap
+8. 循环数组和循环字符串
 	- 使循环数组所有元素相等的最少秒数
-8. 树状数组 (单点修改，前缀和和区间和）（lowbit 函数会求出一个二进制的最低位1代表的数字， x & -x，树状树组index从1开始）
+9. 树状数组 (单点修改，前缀和和区间和）（lowbit 函数会求出一个二进制的最低位1代表的数字， x & -x，树状树组index从1开始）
       - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
       - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436429471/)
-9. 线段树 （区间修改，将一个区间的数据修改为某个相同的值，求区间合、最值，区间内可以聚合的值）
+10. 线段树 （区间修改，将一个区间的数据修改为某个相同的值，求区间合、最值，区间内可以聚合的值）
       - 手撕线段树，支持区间update和区间聚合值（最大，最小、和）等
       - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
       - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436608727/)
@@ -54,7 +60,6 @@
       - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
       - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
       - [冗余连接](https://leetcode.cn/problems/redundant-connection/submissions/)
-
 14. 高级数据结构实现
       - [LRU](https://leetcode-cn.com/problems/lru-cache/)
       - [LFU](https://leetcode-cn.com/problems/lfu-cache/)
@@ -126,7 +131,7 @@
       - 异或运算: 0^0=1,0^1=1,1^1=0,
       - x ^ (1 << i) = x
       - __builtin_clz,__builtin_ctz,__builtin_popcount
-6. 排列
+6. 排列组合
      - [31. 下一个排列](https://leetcode.cn/problems/next-permutation/)
      - [556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
 7. 组合和带取模的组合
@@ -168,9 +173,9 @@
  		- 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
 		- [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups/submissions/458601624/)
 		- 买卖股票的最大利润（最多一次买卖、最多两次、最多K次、无限次买卖、冷冻期1天、手续费）
-	4. 序列DP (序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等)
-	      - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
-	      - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence/submissions/430898547/)
+      3. 序列DP (序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等)
+            - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/430135553/)
+            - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence/submissions/430898547/)
             - [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
             - [2901. 最长相邻不相等子序列 II](https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii/description/)
 2. 背包 DP
@@ -215,12 +220,6 @@
         
 
 ## 树/图论
-1. 二叉树、树和图的深搜和宽搜
-      - [lowest common ancestor](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
-      - [二叉树的前、中、后序遍历,非递归的实现](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_tree.cpp)（12.21）
-      - [二叉搜索树的查找、插入和删除](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_search_tree.cpp)
-      - [2872. 可以被 K 整除连通块的最大数目](https://leetcode.cn/problems/maximum-number-of-k-divisible-components/submissions/472078651/)
-
 2. [最短路径和K短问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
       - BFS（单源，无权路，权值为1的最短路，O(n)）
       - Dijkstra（单源，权值为正,O((E)logE))
