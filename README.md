@@ -3,9 +3,10 @@
 ## 数据结构
 1. 链表/单链表/双链表
       - [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
-	- [面试题 02.05. 链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)
-	- [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
-	- [交换链表中的第K个节点和倒数第K个节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
+      - [面试题 02.05. 链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)
+      - [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
+      - [交换链表中的第K个节点和倒数第K个节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
+
 2. 二叉树
       - [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/description/)
       - [94. 二叉树的中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal/description/)
@@ -59,6 +60,7 @@
       - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
       - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
       - [冗余连接](https://leetcode.cn/problems/redundant-connection/submissions/)
+        
 14. 高级数据结构实现
       - [LRU](https://leetcode-cn.com/problems/lru-cache/)
       - [LFU](https://leetcode-cn.com/problems/lfu-cache/)
@@ -187,6 +189,8 @@
       - [494. 目标和](https://leetcode.cn/problems/target-sum/submissions/458957015/)
       - [322. 零钱兑换](https://leetcode.cn/problems/coin-change/)
       - [518. 零钱兑换 II](https://leetcode.cn/problems/coin-change-ii/submissions/458945557/)
+      - [1155. 掷骰子等于目标和的方法数](https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum/description/?envType=daily-question&envId=2023-10-24)
+
 3. 区间 DP （子问题向内缩小，两端都会向内移动）
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
