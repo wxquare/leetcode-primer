@@ -6,13 +6,12 @@
 	- [面试题 02.05. 链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)
 	- [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
 	- [交换链表中的第K个节点和倒数第K个节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
-
 2. 二叉树
-      - [lowest common ancestor](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
-      - [二叉树的前、中、后序遍历,非递归的实现](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_tree.cpp)（12.21）
-      - [二叉搜索树的查找、插入和删除](https://github.com/wxquare/programming/blob/master/oj/datastruct-algorithm/binary_search_tree.cpp)
+      - [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/description/)
+      - [94. 二叉树的中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal/description/)
+      - [145. 二叉树的后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/submissions/476965847/)
+      - [236. 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/description/)
       - [2872. 可以被 K 整除连通块的最大数目](https://leetcode.cn/problems/maximum-number-of-k-divisible-components/submissions/472078651/)
-
 3. stack/单调stack/双stack/（在线性时间内找到每个元素的上一个或者下一个更大或更小元素）
 	- [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
 	- [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
@@ -169,6 +168,7 @@
 	      - [跳跃游戏1，2，3，4](https://leetcode.cn/problems/jump-game/submissions/431244632/)
 	      - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group/submissions/436302364/)
 	      - [销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/submissions/458598692/)
+            - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/description/)
 	2. 状态机DP（关键是设计状态以及状态转移方程，之后在处理边界条件）
  		- 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
 		- [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups/submissions/458601624/)
@@ -178,6 +178,8 @@
             - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence/submissions/430898547/)
             - [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
             - [2901. 最长相邻不相等子序列 II](https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii/description/)
+            - [最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
+            - 
 2. 背包 DP
       - 01背包
       - 完全背包
