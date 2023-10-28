@@ -144,8 +144,9 @@
 2. [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii/submissions/465271665/)
 
 ## 搜索问题
-1. BFS/多源BFS（源点为多个）/双向BFS
+1. BFS/多源BFS（源点为多个）/双向BFS/ BFS + 优先队列
       - [2812. 找出最安全路径，多源BFS](https://leetcode.cn/problems/find-the-safest-path-in-a-grid/submissions/455237953/) 
+      - [407. 接雨水 II)(https://leetcode.cn/problems/trapping-rain-water-ii/description/)
 2. DFS/剪枝/回溯（深度搜索+限制条件+限制搜索路径）
       - [LCR 086. 分割回文串](https://leetcode.cn/problems/M99OJA/submissions/465972869/)
       - [面试题 08.12. 八皇后 n皇后问题](https://leetcode.cn/problems/eight-queens-lcci/submissions/465946635/)
@@ -181,7 +182,6 @@
             - [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
             - [2901. 最长相邻不相等子序列 II](https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii/description/)
             - [最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
-            - 
 2. 背包 DP
       - 01背包
       - 完全背包
@@ -190,8 +190,8 @@
       - [322. 零钱兑换](https://leetcode.cn/problems/coin-change/)
       - [518. 零钱兑换 II](https://leetcode.cn/problems/coin-change-ii/submissions/458945557/)
       - [1155. 掷骰子等于目标和的方法数](https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum/description/?envType=daily-question&envId=2023-10-24)
-
 3. 区间 DP （子问题向内缩小，两端都会向内移动）
+      - [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
 4. bitmask，状压 和 状态压缩DP,bitmask vs map+vector （把集合用二进制表示,二进制mask 1<<n）

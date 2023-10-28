@@ -46,7 +46,7 @@ int init = [&](){
 }();
 
 
-// 计算某个数有哪些质因子
+// 计算某个数有哪些因子
 vector<int> getFactors(int x){
     vector<int> ans;
     for(int i=2;i*i<=x;i++){
@@ -126,7 +126,7 @@ int pow_mod(int x, long long e){
     long long ans = 1;
     while(e){
         if((e & 1) != 0){
-            ans = ans * e % MOD;
+            ans = ans * x % MOD;
         }
         x = x * x % MOD;
         e = e / 2;
