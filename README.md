@@ -146,7 +146,7 @@
 ## 搜索问题
 1. BFS/多源BFS（源点为多个）/双向BFS/ BFS + 优先队列
       - [2812. 找出最安全路径，多源BFS](https://leetcode.cn/problems/find-the-safest-path-in-a-grid/submissions/455237953/) 
-      - [407. 接雨水 II)(https://leetcode.cn/problems/trapping-rain-water-ii/description/)
+      - [407. 接雨水 II](https://leetcode.cn/problems/trapping-rain-water-ii/description/)
 2. DFS/剪枝/回溯（深度搜索+限制条件+限制搜索路径）
       - [LCR 086. 分割回文串](https://leetcode.cn/problems/M99OJA/submissions/465972869/)
       - [面试题 08.12. 八皇后 n皇后问题](https://leetcode.cn/problems/eight-queens-lcci/submissions/465946635/)
