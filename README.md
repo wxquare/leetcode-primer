@@ -12,7 +12,8 @@
       - [94. 二叉树的中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal/description/)
       - [145. 二叉树的后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/submissions/476965847/)
       - [236. 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/description/)
-      - [2872. 可以被 K 整除连通块的最大数目](https://leetcode.cn/problems/maximum-number-of-k-divisible-components/submissions/472078651/)
+      - [2872. 可以被 K 整除连通块的最大数目](https://leetcode.cn/problems/maximum-number-of-k-divisible-components)
+
 3. stack/单调stack/双stack/（在线性时间内找到每个元素的上一个或者下一个更大或更小元素）
 	- [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
 	- [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
@@ -38,18 +39,22 @@
 9. 树状数组 (单点修改，前缀和和区间和）（lowbit 函数会求出一个二进制的最低位1代表的数字， x & -x，树状树组index从1开始）
       - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
       - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436429471/)
-10. 线段树 （区间修改，将一个区间的数据修改为某个相同的值，求区间合、最值，区间内可以聚合的值）
+10. 线段树(区间修改/区间add，求区间合、最值，区间内可以聚合的值）
       - 手撕线段树，支持区间update和区间聚合值（最大，最小、和）等
       - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
       - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436608727/)
       - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
       - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/submissions/444263284/)
-      - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query/submissions/444281304/)
+      - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query)
+      - [2916. 子数组不同元素数目的平方和 II](https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii)
+
 11. 跳表
+
 12. trie树
       - [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
       - [Implement Magic Dictionary](https://leetcode.com/problems/implement-magic-dictionary/)
       - [统计异或值在范围内的数对有多少](https://leetcode-cn.com/problems/count-pairs-with-xor-in-a-range/)
+
 13. 字符串匹配 
       - [kmp](https://github.com/wxquare/online-algorithm-coding/blob/master/other/kmp.cc)
       - [最长合法子字符串的长度 ac 自动机](https://leetcode.cn/submissions/detail/448173370/)
@@ -68,11 +73,13 @@
       - [HashMap](https://leetcode-cn.com/problems/design-hashmap/)
       - [剑指 Offer 59 - II. 队列的最大值](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof/submissions/457437191/)
 
+
 ## 基本算法
 1. 二分算法 (lower_bound,map.lower_bound,check 二分答案）
 	- [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
 	- [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
   	- [打家劫舍VI，小偷的最大能力最小，二分+DP](https://leetcode.cn/problems/house-robber-iv/submissions/466693294/)
+      - [274. H 指数](https://leetcode.cn/problems/h-index/submissions/)
 2. top k，select kth
 	- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
       - [2512.奖励最顶尖的 K 名学生](https://leetcode.cn/problems/reward-top-k-students/submissions/473327675/)
@@ -143,16 +150,18 @@
 1. [超级洗衣机](https://leetcode.cn/problems/super-washing-machines/submissions/464025796/)
 2. [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii/submissions/465271665/)
 
-## 搜索问题
-1. BFS/多源BFS（源点为多个）/双向BFS/ BFS + 优先队列
+## 搜索问题()
+1. 数组字符串线性搜索，一维、二维搜索
+2. 树形图的非线性搜索
+3. BFS/多源BFS（源点为多个）/双向BFS/ BFS + 优先队列
       - [2812. 找出最安全路径，多源BFS](https://leetcode.cn/problems/find-the-safest-path-in-a-grid/submissions/455237953/) 
       - [407. 接雨水 II](https://leetcode.cn/problems/trapping-rain-water-ii/description/)
-2. DFS/剪枝/回溯（深度搜索+限制条件+限制搜索路径）
+4. DFS/剪枝/回溯（深度搜索+限制条件+限制搜索路径）
       - [LCR 086. 分割回文串](https://leetcode.cn/problems/M99OJA/submissions/465972869/)
       - [面试题 08.12. 八皇后 n皇后问题](https://leetcode.cn/problems/eight-queens-lcci/submissions/465946635/)
       - [2850. 将石头分散到网格图的最少移动次数](https://leetcode.cn/problems/minimum-moves-to-spread-stones-over-grid/submissions/465962967/)
       - [2698. 求一个整数的惩罚数，预处理+回溯](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
-3. 记忆化搜索 （动态规划，状态优化）
+5. 记忆化搜索 （动态规划，状态优化）
       - [2742. 给墙壁刷油漆，状态优化](https://leetcode.cn/problems/painting-the-walls/submissions/440997959/)
       - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string/submissions/436332452/)
       - [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets/submissions/415822742/)
@@ -160,8 +169,11 @@
       - [996. 正方形数组的数目，预处理/重复数字全排列](https://leetcode.cn/problems/number-of-squareful-arrays/submissions/441000077/)
       - [2741. 特别的排列，全排列/剪枝](https://leetcode.cn/problems/special-permutations/submissions/440660237/)
       - [2896. 执行操作使两个字符串相等](https://leetcode.cn/problems/apply-operations-to-make-two-strings-equal/submissions/472717555/)
-4. 启发式搜索
+      - [2003. 每棵子树内缺失的最小基因值](https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/description/)
+      - [72. 编辑距离](https://leetcode.cn/problems/edit-distance/description/)
+5. 启发式搜索
       - 八数码问题
+
 
 ## DP问题（递推类DP）
 1. 线性 DP （包括状态机DP，序列DP,子问题有一个端点是固定不变的）
@@ -204,6 +216,7 @@
       - [2858. 可以到达每一个节点的最少边反转次数,换根DP](https://leetcode.cn/problems/minimum-edge-reversals-so-every-node-is-reachable/submissions/467513545/)
       - [834. 树中距离之和](https://leetcode.cn/problems/sum-of-distances-in-tree/submissions/467525870/)
       - [2581. 统计可能的树根数目](https://leetcode.cn/problems/count-number-of-possible-root-nodes/submissions/467531744/)
+      - [2920. 收集所有金币可获得的最大积分](https://leetcode.cn/problems/maximum-points-after-collecting-coins-from-all-nodes/)
 6. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
       - [统计整数的数量](https://leetcode.cn/problems/count-of-integers/submissions/437570070/)
       - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits/description/)
@@ -239,6 +252,7 @@
      - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
      - [210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)
      - [2603. 收集树中金币](https://leetcode.cn/problems/collect-coins-in-a-tree/submissions/418411707/)
+     - [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/submissions/453034664/)
 4. [并查集](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
      - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
      - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
