@@ -1,113 +1,70 @@
 #include <iostream>
 #include <algorithm>
+#include <string>
+#include <vector>
 using namespace std;
 
-// 线段树,动态开点
-struct SegNode {
-    int l,r; // 节点表示的范围 [left,right]
-    SegNode *leftChild,*rightChild; // 左右孩子节点
-    int aggregate;// 区间聚合值,比如区间和，区间最大值
-    int lazy;
 
-    SegNode(int l,int r) : l(l),r(r){
-        lazy = -1;
-        aggregate = -1;
-    }
 
-    SegNode* getLeftChild(){
-        if(leftChild) return leftChild;
-        if(l == r) return nullptr; // 叶子节点
-        int mid = l + (r - l) / 2;
-        leftChild = new SegNode(l,mid); 
-        return leftChild;
-    }
+int minDistance(string s1,string s2){
 
-    SegNode* getRightChild(){
-        if(rightChild) return rightChild;
-        if(l == r) return nullptr; //叶子节点
-        int mid = l + (r - l) / 2;
-        rightChild = new SegNode(mid+1,r);
-        return rightChild;
-    }
-};
+    /*
+        a,b,c
+        b,c
+    */
+    int n1 = s1.length();
+    int n2 = s2.length();
+    int memo[n1][n2];
+    memset(memo,-1,sizeof(memo));
+    function<int(int,int)> dfs = [&](int i,int j)->int{
+        if(i >= n1) return n2 - j;
+        if(j >= n2) return n1 - i;
 
-class SegTree{
-private:
-    void pushDown(SegNode* rt){
-        if(rt->lazy == -1) return; // 没有需要pushdown的lazy值
-        SegNode* ll = rt->getLeftChild();
-        if(ll){
-            ll->lazy = rt->lazy;
-            ll->aggregate = rt->lazy; // 聚合值为最大值
+        if(memo[i][j] != -1){
+            return memo[i][j];
         }
-        SegNode* rr = rt->getRightChild();
-        if(rr){
-            rr->lazy = rt->lazy;
-            rr->aggregate = rt->lazy; // 聚合值为最大值
+        int ans = max(n1-i,n2-j);
+        if(s1[i] == s2[j]){
+            ans = min(ans,dfs(i+1,j+1));
+        }else{
+            ans = min(min(dfs(i+1,j),dfs(i,j+1)),dfs(i+1,j+1)) + 1;
         }
-        rt->lazy = -1;
-    }
+        memo[i][j] = ans;
+        return ans;
+    };
+    return dfs(0,0);
+}
 
-    void pushUp(SegNode* rt){
-        if(rt->getLeftChild()){
-            rt->aggregate = max(rt->getLeftChild()->aggregate,rt->aggregate);
-        }
 
-        if(rt->getRightChild()){
-            rt->aggregate = max(rt->getRightChild()->aggregate,rt->aggregate);
+int miniDistance_DP(string& s1,string& s2){
+    int n1 = s1.length();
+    int n2 = s2.length();
+    vector<vector<int>> dp(n1+1,vector<int>(n2+1));
+    // 处理边界条件
+    for(int i=0;i<=n2;i++){
+        dp[n1][i] = n2 - i;
+    }
+    for(int i=0;i<=n1;i++){
+        dp[i][n2] = n1 - i;
+    }
+    for(int i=n1-1;i>=0;i--){
+        for(int j=n2-1;j>=0;j--){
+            dp[i][j] = max(n1-i,n2-j);
+            if(s1[i] == s2[j]){
+                dp[i][j] = max(dp[i][j],dp[i+1][j+1]);
+            } else {
+                dp[i][j] = max(dp[i+1][j+1]+1,dp[i][j]);// 改一个字符
+                dp[i][j] = max(dp[i+1][j]+1,dp[i][j]);
+                dp[i][j] = max(dp[i][j+1]+1,dp[i][j]);
+            }
         }
     }
+    return dp[0][0];
+}
 
-    void update(SegNode* rt,int l,int r,int v){
-        // 不包含
-        if(max(rt->l,l) > min(rt->r,r)) return;
-        // 全包含
-        if(rt->l >= l && rt->r <=r){
-            rt->lazy = v;
-            rt->aggregate = v; // 区间最大值
-        }
-        pushDown(rt);
-        if(rt->getLeftChild()){
-            update(rt->getLeftChild(),l,r,v);
-        }
-        if(rt->getRightChild()){
-            update(rt->getRightChild(),l,r,v);
-        }
-        pushUp(rt);
-    }
 
-    int query(SegNode* rt,int l,int r){
-        if(rt == nullptr) return -1;
-        // 不包含
-        if(max(rt->l,l) > min(rt->r,r)) return -1;
 
-        // 全包含
-        if(rt->l >= l && rt->r <= r){
-            return rt->aggregate;
-        }
-        return max(query(rt->getLeftChild(),l,r),query(rt->getRightChild(),l,r));
-    }
-public:
-    SegNode* root;
-
-    SegTree(int l,int r){
-        root = new SegNode(l,r);
-    }
-    // 区间更新
-    void Update(int l,int r,int v){
-        update(root,l,r,v);
-    }
-    // 区间查询
-    int Query(int l,int r){
-        return query(root,l,r);
-    }
-};
 
 int main(){
-    SegTree* st = new SegTree(1,10);
-    st->Update(2,4,2);
-    st->Update(3,4,5);
-    st->Update(4,4,1);
-    std::cout << st->Query(1,3) << std::endl;
-    return 0;
+    std::cout << minDistance("abc","ab") << std::endl;
 }
