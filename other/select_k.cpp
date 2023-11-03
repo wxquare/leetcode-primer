@@ -2,6 +2,7 @@
 #include <cassert>
 using namespace std;
 
+// nlogk
 int selectKth(int a[],int start,int end,int k){
     assert(start <= end && k <= end+1);
     int left = start;

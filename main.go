@@ -2,44 +2,74 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"sync"
 )
-var c1 chan int 
-var c2 chan int
 
-func foo(wg *sync.WaitGroup) {
-	wg.Add(1)
-	defer wg.Done()
-	for i := 0; i < 5; i++ {
-		<-c1
-		fmt.Println("foo()")
-		if i == 4{
-			close(c2)
-		} else {
-			c2 <- 1
-		}
-	}
+// 10000 个数累计和
+const count int32 = 10000
+
+const producerCount int32 = 3
+const consumerCount int32 = 4
+
+var dataChan chan int32
+
+var resChan chan int32
+
+func init() {
+	dataChan = make(chan int32, 10)
+	resChan = make(chan int32, 2)
 }
-func bar(wg *sync.WaitGroup) {
-	wg.Add(1)
-	defer wg.Done()
-	for i := 0; i < 5; i++ {
-		<-c2
-		fmt.Println("bar()")
-		if i == 4{
-			close(c1)
-		} else {
-			c1 <- 1
+
+func produce() {
+	var wg sync.WaitGroup
+	a := count / producerCount
+	b := count % producerCount
+	for i := 0; i < int(producerCount); i++ {
+		batch := a
+		if i < int(b) {
+			batch += 1
 		}
+		wg.Add(1)
+		go func(x int32) {
+			defer wg.Done()
+			for j := 0; j < int(x); j++ {
+				v := rand.Intn(10)
+				dataChan <- int32(v)
+			}
+		}(batch)
 	}
+	wg.Wait()
+	close(dataChan)
+}
+
+func consumer() {
+	var wg sync.WaitGroup
+	for i := 0; i < int(consumerCount); i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			var sum int32 = 0
+			for {
+				if d, ok := <-dataChan; ok {
+					sum = sum + d
+				} else {
+					break
+				}
+			}
+			resChan <- sum
+		}()
+	}
+	wg.Wait()
+	close(resChan)
 }
 
 func main() {
-	var wg sync.WaitGroup
-	c1 = make(chan int)
-	c2 = make(chan int)
-	go foo(&wg)
-	c1<-1
-	go bar(&wg)
-	wg.Wait()
+	go produce()
+	go consumer()
+	var ans int32 = 0
+	for s := range resChan {
+		ans = ans + s
+	}
+	fmt.Println(ans)
 }

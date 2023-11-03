@@ -13,6 +13,7 @@
       - [145. 二叉树的后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/submissions/476965847/)
       - [236. 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/description/)
       - [2872. 可以被 K 整除连通块的最大数目](https://leetcode.cn/problems/maximum-number-of-k-divisible-components/submissions/472078651/)
+
 3. stack/单调stack/双stack/（在线性时间内找到每个元素的上一个或者下一个更大或更小元素）
 	- [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
 	- [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
@@ -20,17 +21,20 @@
 	- [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/457085863/)
 	- [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score/submissions/456747016/)
 	- [901. 股票价格跨度](https://leetcode.cn/problems/online-stock-span/submissions/472058521/)
+
 4. queue/双端deque/单调deque（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
 	- [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/submissions/457105531/)
- 	- [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/submissions/457422626/)
+ 	- [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/submissions)
 	- [2810.  故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
 	- [918. 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray/submissions/457447563/)
+
 5. 优先队列和堆，任务调度
 	- [最大平均通过率](https://leetcode-cn.com/problems/maximum-average-pass-ratio/)
 	- [单线程 CPU](https://leetcode-cn.com/problems/single-threaded-cpu/)
 	- [Minimum Possible Integer After at Most K Adjacent Swaps On Digits](https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/)
 	- [Last Moment Before All Ants Fall Out of a Plank](https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/)
 	- [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
+
 6. 哈希unorderer_map/unordered_set
 7. 平衡二叉树map/multimap/set/multimap
 8. 循环数组和循环字符串
@@ -73,10 +77,14 @@
 	- [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
 	- [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
   	- [打家劫舍VI，小偷的最大能力最小，二分+DP](https://leetcode.cn/problems/house-robber-iv/submissions/466693294/)
-2. top k，select kth
+2. 滑动窗口/双指针
+      - 3. 无重复字符的最长字符串
+      - [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum)
+      - [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k)
+3. top k，select kth
 	- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
       - [2512.奖励最顶尖的 K 名学生](https://leetcode.cn/problems/reward-top-k-students/submissions/473327675/)
-3. 位运算
+4. 位运算
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
       - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
       - lowbit(x) = x & (-x)
@@ -87,10 +95,10 @@
       - __builtin_clz,__builtin_ctz,__builtin_popcount
       - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares/submissions/473022397/)
       - [260. 只出现一次的数字 I、II、III](https://leetcode.cn/problems/single-number-iii/description/?envType=daily-question&envId=2023-10-16)
-4. 脑筋急转弯、技巧类
+5. 脑筋急转弯、技巧类
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots/submissions/473011278/)
-5. 前缀和后缀
-6. 差分
+6. 前缀和后缀
+7. 差分
       - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings/submissions/213589517/)
 
 ## 数学
@@ -224,9 +232,9 @@
 9. 矩阵快速幂优化DP
       - [2851. 字符串K次转换等于目标串的方案数量](https://leetcode.cn/problems/string-transformation/submissions465291899/)
         
-
+        
 ## 树/图论
-2. [最短路径和K短问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
+1. [最短路径和K短问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
       - BFS（单源，无权路，权值为1的最短路，O(n)）
       - Dijkstra（单源，权值为正,O((E)logE))
       - Ballmanford （单源，n-1次松驰，,权值可正可负，可用于检测负环,O(V*E))
@@ -235,41 +243,42 @@
             - [八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
       - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time/submissions/416407193/)
       - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination/submissions/416029633/)
-3. [拓扑排序和度](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
+2. [拓扑排序和度](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
      - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
      - [210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)
      - [2603. 收集树中金币](https://leetcode.cn/problems/collect-coins-in-a-tree/submissions/418411707/)
-4. [并查集](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
-     - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
-     - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
-     - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
-     - [冗余连接](https://leetcode.cn/problems/redundant-connection/submissions/)
-5. 最小生成树
+
+3. 最小生成树
       - [Kruskal](https://github.com/wxquare/online-algorithm-coding/blob/master/other/minimum_spanning_tree.cc)
       - [1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/submissions/424543501/)
-6. 基环树、内向树、外向树
+
+4. 基环树、内向树、外向树
       - [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting/submissions/453034664/)
       - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph/submissions/453037901/)
       - [2876. 有向图访问计数](https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph/submissions/)
-6. 图的最大环最小环
+
+5. 图的最大环最小环
       - [图中的最短环,BFS有向图和无向图都可以](https://leetcode.cn/problems/shortest-cycle-in-a-graph/submissions/)
       - 无向图枚举点做BFS
       - 有向图枚举点做DFS
-8. 欧拉回路/通路
+6. 欧拉回路/通路
       - [Reconstruct Itinerary](https://leetcode.cn/problems/reconstruct-itinerary/submissions/417006045/)
-9. 图的连通性
+
+7. 图的连通性
       - [1489. 找到最小生成树里的关键边和伪关键边](https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/submissions/419266120/)
       - [2685. 统计完全连通分量的数量](https://leetcode.cn/problems/count-the-number-of-complete-components/submissions/432982804/)
       - [查找集群内的关键连接](https://leetcode.cn/problems/critical-connections-in-a-network/submissions/464145062/)
       - tarjan 求强连通分量 模版
       - tarjan 求割点 模版
       - tartan 求割边 模版
-10. 寻找符合条件的路径
+8. 寻找符合条件的路径
       - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree/description/)
-12. 二分图问题
+
+9. 二分图问题
       - [染色分二分图判定是否存在基环，785. 判断二分图](https://leetcode.cn/problems/is-graph-bipartite/submissions/453421857/)
       - 二分图最大匹配，匈牙利增广路算法
-14. 网络流
+
+10. 网络流
       - 最大流dinic算法
       - 最小割
       - 1349. 参加考试的最大学生数
