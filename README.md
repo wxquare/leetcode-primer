@@ -83,7 +83,7 @@
 	- [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
 	- [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
   	- [打家劫舍VI，小偷的最大能力最小，二分+DP](https://leetcode.cn/problems/house-robber-iv/submissions/466693294/)
-      
+
 2. 滑动窗口/双指针
       - 3. 无重复字符的最长字符串
       - [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum)
@@ -143,6 +143,7 @@
       - [384. 打乱数组](https://leetcode.cn/problems/shuffle-an-array/submissions/)
 5. 位运算
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
+      - [318. 最大单词长度乘积](https://leetcode.cn/problems/maximum-product-of-word-lengths/description/)
       - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
       - lowbit(x) = x & (-x)
       - x |= (1 << i)
@@ -154,7 +155,7 @@
      - [31. 下一个排列](https://leetcode.cn/problems/next-permutation/)
      - [556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
 7. 组合和带取模的组合
-   - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty/submissions/463360552/)
+   - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty)
 
 
 ## 贪心算法
