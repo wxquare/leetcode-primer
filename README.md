@@ -83,10 +83,13 @@
 	- [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
 	- [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
   	- [打家劫舍VI，小偷的最大能力最小，二分+DP](https://leetcode.cn/problems/house-robber-iv/submissions/466693294/)
+      
 2. 滑动窗口/双指针
       - 3. 无重复字符的最长字符串
       - [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum)
       - [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k)
+      - [30. 串联所有单词的子串](https://leetcode.cn/problems/substring-with-concatenation-of-all-words)
+
 3. top k，select kth
 	- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
       - [2512.奖励最顶尖的 K 名学生](https://leetcode.cn/problems/reward-top-k-students/submissions/473327675/)
@@ -100,7 +103,8 @@
       - x ^ (1 << i) = x
       - __builtin_clz,__builtin_ctz,__builtin_popcount
       - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares/submissions/473022397/)
-      - [260. 只出现一次的数字 I、II、III](https://leetcode.cn/problems/single-number-iii/description/?envType=daily-question&envId=2023-10-16)
+      - [260. 只出现一次的数字 I、II、III](https://leetcode.cn/problems/single-number-iii)
+      - [421. 数组中两个数的最大异或值](https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array)
 5. 脑筋急转弯、技巧类
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots/submissions/473011278/)
 6. 前缀和后缀
