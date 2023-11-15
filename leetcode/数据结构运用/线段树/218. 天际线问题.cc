@@ -1,9 +1,3 @@
-#include <vector>
-#include <queue>
-
-using namespace std;
-
-
 struct SegNode {
     int left,right;
     SegNode *leftChild,*rightChild;
@@ -89,7 +83,6 @@ public:
             if(max(cur->left,l) > min(cur->right,r)){
                 return 0;
             }
-
             // 全包含
             if(cur->left >= l && cur->right <= r){
                 return cur->maxVal;
@@ -102,7 +95,6 @@ public:
 };
 
 
-
 class Solution {
 public:
     vector<vector<int>> getSkyline(vector<vector<int>>& buildings) {
@@ -112,13 +104,11 @@ public:
             boundaries.emplace_back(building[1]);
         }
         sort(boundaries.begin(), boundaries.end());
-
         SegTree* root = new SegTree(boundaries[0],boundaries.back());
         for(auto b : buildings){
             root->update(b[0],b[1]-1,b[2]);
         }
         vector<vector<int>> ret;
-        int n = buildings.size(), idx = 0;
         for (auto& boundary : boundaries) {
             int maxn = root->query(boundary,boundary);
             if (ret.size() == 0 || maxn != ret.back()[1]) {
@@ -127,4 +117,4 @@ public:
         }
         return ret;
     }
-}
+};

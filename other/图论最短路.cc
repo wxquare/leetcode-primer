@@ -89,7 +89,7 @@ vector<int> bellmanFord(int n,vector<vector<int>>& edges,int start){
 
 
 vector<vector<int>> floyd(int n,vector<vector<int>>& edges){
-    vector<vector<int>> dis(n,vector<int>(INT_MAX));
+    vector<vector<int>> dis(n,vector<int>(n,INT_MAX));
     for(auto e : edges){
         int u = e[0],v = e[1], d = e[2];
         dis[u][v] = min(dis[u][v],d);

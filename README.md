@@ -35,20 +35,20 @@
 	- [Minimum Possible Integer After at Most K Adjacent Swaps On Digits](https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/)
 	- [Last Moment Before All Ants Fall Out of a Plank](https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/)
 	- [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
+      - 
 
 6. 哈希unorderer_map/unordered_set
 7. 平衡二叉树map/multimap/set/multimap
 8. 循环数组和循环字符串
 	- 使循环数组所有元素相等的最少秒数
-9. 树状数组 (单点修改，前缀和和区间和）（lowbit 函数会求出一个二进制的最低位1代表的数字， x & -x，树状树组index从1开始）
-      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413938101/)
-      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436429471/)
-10. 线段树(区间修改/区间add，求区间合、最值，区间内可以聚合的值）
+
+9. 线段树/树状数组(区间修改/区间add，求区间合、最值，区间内可以聚合的值）
       - 手撕线段树，支持区间update和区间聚合值（最大，最小、和）等
-      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable/submissions/413762232/)
+      - [218. 天际线问题,区间更新，单点查询](https://leetcode.cn/problems/the-skyline-problem/submissions/480772357/)
+      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable)
       - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/436608727/)
-      - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
-      - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/submissions/444263284/)
+      - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii)
+      - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/)
       - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query)
       - [2916. 子数组不同元素数目的平方和 II](https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii)
 
@@ -105,7 +105,8 @@
       - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares/submissions/473022397/)
       - [260. 只出现一次的数字 I、II、III](https://leetcode.cn/problems/single-number-iii)
       - [421. 数组中两个数的最大异或值](https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array)
-      - [318. 最大单词长度乘积]如何判断两个字符串是否包含相同字母
+      - [318. 最大单词长度乘积] 如何判断两个字符串是否包含相同字母
+
 5. 脑筋急转弯、技巧类
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots/submissions/473011278/)
 6. 前缀和后缀
@@ -120,8 +121,8 @@
       - [求多个数的公共质因子](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
       - [两数、多数最大公约数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
       - [两数、多数最小公倍数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
-      - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal/submissions/436245155/)
-      - [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer/submissions/435214562/)
+      - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal)
+      - [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer)
       - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
 2. 快速幂
       - [50. Pow(x, n)](https://leetcode.cn/problems/powx-n/submissions/448492142/)
@@ -134,14 +135,18 @@
       - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty/submissions/463360552/)
       - 乘法逆元，扩展欧几里得算法
       - 费马定理
+
 2. 拒绝抽样(rejection sampling)
-      - [用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7/solutions/978527/yong-rand7-shi-xian-rand10-by-leetcode-s-qbmd/)
+      - [用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7)
+
 3. 水塘抽样
       - [382. 链表随机节点](https://leetcode.cn/problems/linked-list-random-node/description/)
       - [398. 随机数索引](https://leetcode.cn/problems/random-pick-index/submissions/305425474/)
       - [reservoirSampling](https://github.com/wxquare/online-algorithm-coding/blob/master/other/math.cc)
+
 4. 洗牌算法
       - [384. 打乱数组](https://leetcode.cn/problems/shuffle-an-array/submissions/)
+
 5. 位运算
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
       - [318. 最大单词长度乘积](https://leetcode.cn/problems/maximum-product-of-word-lengths/description/)
@@ -152,11 +157,15 @@
       - 异或运算: 0^0=1,0^1=1,1^1=0,
       - x ^ (1 << i) = x
       - __builtin_clz,__builtin_ctz,__builtin_popcount
-6. 排列组合
+
+6. 排列组合数学取模
      - [31. 下一个排列](https://leetcode.cn/problems/next-permutation/)
      - [556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
-7. 组合和带取模的组合
-   - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty)
+     - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty)
+     - [2930. 重新排列后包含指定子字符串的字符串数目](https://leetcode.cn/problems/number-of-strings-which-can-be-rearranged-to-contain-substring/)
+     - 正着困难反着求（容斥原理）
+
+7. 容斥原理
 
 
 ## 贪心算法
@@ -169,6 +178,8 @@
 3. BFS/多源BFS（源点为多个）/双向BFS/ BFS + 优先队列
       - [2812. 找出最安全路径，多源BFS](https://leetcode.cn/problems/find-the-safest-path-in-a-grid/submissions/455237953/) 
       - [407. 接雨水 II](https://leetcode.cn/problems/trapping-rain-water-ii/description/)
+      - [2258. 逃离火灾](https://leetcode.cn/problems/escape-the-spreading-fire/)
+
 4. DFS/剪枝/回溯（深度搜索+限制条件+限制搜索路径）
       - [LCR 086. 分割回文串](https://leetcode.cn/problems/M99OJA/submissions/465972869/)
       - [面试题 08.12. 八皇后 n皇后问题](https://leetcode.cn/problems/eight-queens-lcci/submissions/465946635/)
@@ -192,6 +203,7 @@
 1. 线性 DP （包括状态机DP，序列DP,子问题有一个端点是固定不变的）
 	1. 线性DP
 	      - [斐波那契数列](https://leetcode.cn/problems/fibonacci-number/submissions/431236355/)
+            - [LCR 168. 第n个丑数](https://leetcode.cn/problems/chou-shu-lcof/description/)
 	      - [数字三角形](https://leetcode.cn/problems/triangle/submissions/431243125/)
 	      - [跳跃游戏1，2，3，4](https://leetcode.cn/problems/jump-game/submissions/431244632/)
 	      - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group/submissions/436302364/)
@@ -214,7 +226,8 @@
       - [494. 目标和](https://leetcode.cn/problems/target-sum/submissions/458957015/)
       - [322. 零钱兑换](https://leetcode.cn/problems/coin-change/)
       - [518. 零钱兑换 II](https://leetcode.cn/problems/coin-change-ii/submissions/458945557/)
-      - [1155. 掷骰子等于目标和的方法数](https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum/description/?envType=daily-question&envId=2023-10-24)
+      - [1155. 掷骰子等于目标和的方法数](https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum)
+
 3. 区间 DP （子问题向内缩小，两端都会向内移动）
       - [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
@@ -261,12 +274,16 @@
 1. [最短路径和K短问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
       - BFS（单源，无权路，权值为1的最短路，O(n)）
       - Dijkstra（单源，权值为正,O((E)logE))
+      - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)
       - Ballmanford （单源，n-1次松驰，,权值可正可负，可用于检测负环,O(V*E))
+      - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)
       - Floyd（多源，任意两点的距离，O(n^3))
+      - [1334. 阈值距离内邻居最少的城市](https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance)
       - A*
             - [八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
-      - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time/submissions/416407193/)
-      - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination/submissions/416029633/)
+      - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)
+      - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination)
+
 2. [拓扑排序和度](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
      - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
      - [210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/)
@@ -285,6 +302,7 @@
       - [图中的最短环,BFS有向图和无向图都可以](https://leetcode.cn/problems/shortest-cycle-in-a-graph/submissions/)
       - 无向图枚举点做BFS
       - 有向图枚举点做DFS
+      
 6. 欧拉回路/通路
       - [Reconstruct Itinerary](https://leetcode.cn/problems/reconstruct-itinerary/submissions/417006045/)
 
