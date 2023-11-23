@@ -22,6 +22,9 @@
 	- [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/submissions/457085863/)
 	- [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score/submissions/456747016/)
 	- [901. 股票价格跨度](https://leetcode.cn/problems/online-stock-span/submissions/472058521/)
+      - [2216. 美化数组的最少删除数](https://leetcode.cn/problems/minimum-deletions-to-make-array-beautifu)
+      - [84. 柱状图中最大的矩形](https://leetcode.cn/problems/largest-rectangle-in-histogram)
+      - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water)
 
 4. queue/双端deque/单调deque（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
 	- [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/submissions/457105531/)
@@ -35,7 +38,6 @@
 	- [Minimum Possible Integer After at Most K Adjacent Swaps On Digits](https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/)
 	- [Last Moment Before All Ants Fall Out of a Plank](https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/)
 	- [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
-      - 
 
 6. 哈希unorderer_map/unordered_set
 7. 平衡二叉树map/multimap/set/multimap
@@ -89,11 +91,9 @@
       - [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum)
       - [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k)
       - [30. 串联所有单词的子串](https://leetcode.cn/problems/substring-with-concatenation-of-all-words)
+      - [2938. 区分黑球与白球](https://leetcode.cn/problems/separate-black-and-white-balls)
 
-3. top k，select kth
-	- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
-      - [2512.奖励最顶尖的 K 名学生](https://leetcode.cn/problems/reward-top-k-students/submissions/473327675/)
-4. 位运算
+3. 位运算
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
       - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
       - lowbit(x) = x & (-x)
@@ -107,11 +107,22 @@
       - [421. 数组中两个数的最大异或值](https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array)
       - [318. 最大单词长度乘积] 如何判断两个字符串是否包含相同字母
 
+3. top k，select kth
+	- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
+      - [2512.奖励最顶尖的 K 名学生](https://leetcode.cn/problems/reward-top-k-students/submissions/473327675/)
+
 5. 脑筋急转弯、技巧类
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots/submissions/473011278/)
 6. 前缀和后缀
 7. 差分
       - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings/submissions/213589517/)
+8. 分组循环[按照题目要求，数组会被分割成若干组，且每一组的判断/处理逻辑是一样的](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold/solutions/2528771/jiao-ni-yi-ci-xing-ba-dai-ma-xie-dui-on-zuspx/)
+
+9. 离线query(预处理+数据结构应用)
+      - [2940. 找到 Alice 和 Bob 可以相遇的建筑](https://leetcode.cn/problems/find-building-where-alice-and-bob-can-meet)
+      
+10. 简单但易错题：
+      - [2760. 最长奇偶子数组](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold)
 
 ## 数学
 1. 数论问题
@@ -124,10 +135,8 @@
       - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal)
       - [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer)
       - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
-2. 快速幂
-      - [50. Pow(x, n)](https://leetcode.cn/problems/powx-n/submissions/448492142/)
-      - [372. 超级次方](https://leetcode.cn/problems/super-pow/submissions/245597022/) （快速幂和模运算）
-3. 模运算
+
+2. 模运算
       - (a + b) mod c = ((a mod c) + (b mod c)) mod c
       - (a * b) mod c =  ((a mod c) * (b mod c)) mod c
       - (a / b) mod c =  (a * (b^(-1))) mod c，其中 b^(-1) 是 b 的乘法逆元。如果 c 是一个素数，且 b 是不可被 c 整除的整数，那么 b 的乘法逆元（b模c的逆元）可以通过以下方式计算：
@@ -136,20 +145,10 @@
       - 乘法逆元，扩展欧几里得算法
       - 费马定理
 
-2. 拒绝抽样(rejection sampling)
-      - [用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7)
-
-3. 水塘抽样
-      - [382. 链表随机节点](https://leetcode.cn/problems/linked-list-random-node/description/)
-      - [398. 随机数索引](https://leetcode.cn/problems/random-pick-index/submissions/305425474/)
-      - [reservoirSampling](https://github.com/wxquare/online-algorithm-coding/blob/master/other/math.cc)
-
-4. 洗牌算法
-      - [384. 打乱数组](https://leetcode.cn/problems/shuffle-an-array/submissions/)
-
-5. 位运算
+3. 位运算
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
       - [318. 最大单词长度乘积](https://leetcode.cn/problems/maximum-product-of-word-lengths/description/)
+      - [2939. 最大异或乘积](https://leetcode.cn/problems/maximum-xor-product)
       - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
       - lowbit(x) = x & (-x)
       - x |= (1 << i)
@@ -158,7 +157,22 @@
       - x ^ (1 << i) = x
       - __builtin_clz,__builtin_ctz,__builtin_popcount
 
-6. 排列组合数学取模
+3. 拒绝抽样(rejection sampling)
+      - [用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7)
+
+4. 水塘抽样
+      - [382. 链表随机节点](https://leetcode.cn/problems/linked-list-random-node/description/)
+      - [398. 随机数索引](https://leetcode.cn/problems/random-pick-index/submissions/305425474/)
+      - [reservoirSampling](https://github.com/wxquare/online-algorithm-coding/blob/master/other/math.cc)
+
+5. 洗牌算法
+      - [384. 打乱数组](https://leetcode.cn/problems/shuffle-an-array)
+
+6. 快速幂
+      - [50. Pow(x, n)](https://leetcode.cn/problems/powx-n)
+      - [372. 超级次方](https://leetcode.cn/problems/super-pow/submissions/245597022/) （快速幂和模运算）
+
+7. 排列组合数学取模(大数取模)
      - [31. 下一个排列](https://leetcode.cn/problems/next-permutation/)
      - [556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
      - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty)
@@ -209,6 +223,7 @@
 	      - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group/submissions/436302364/)
 	      - [销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman/submissions/458598692/)
             - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/description/)
+            - [53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray)
 	2. 状态机DP（关键是设计状态以及状态转移方程，之后在处理边界条件）
  		- 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
 		- [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups/submissions/458601624/)
@@ -219,6 +234,10 @@
             - [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
             - [2901. 最长相邻不相等子序列 II](https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii/description/)
             - [最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
+      4. DP回溯 (很多时候只是求DP最值，但有时需要回溯DP的过程)
+            - [689. 三个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays)
+      5. 网格，矩阵DP
+            - [221. 最大正方形](https://leetcode.cn/problems/maximal-square)
 2. 背包 DP
       - 01背包
       - 完全背包
@@ -232,6 +251,7 @@
       - [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
       - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence/submissions/430171478/)
       - [石子游戏](https://leetcode.cn/problems/stone-game/submissions/430220611/)
+
 4. bitmask，状压 和 状态压缩DP,bitmask vs map+vector （把集合用二进制表示,二进制mask 1<<n）
       - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement/submissions/430278600/)
       - [638. 大礼包](https://leetcode.cn/problems/shopping-offers/submissions/467843620/)
@@ -257,8 +277,8 @@
       - [2827. 范围中美丽整数的数目](https://leetcode.cn/problems/number-of-beautiful-integers-in-the-range)
 
 7. 数据结构优化DP
-      - [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix/submissions/436001561/)
-      - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions/436945876/)
+      - [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix)
+      - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions)
       - [2926. 平衡子序列的最大和](https://leetcode.cn/problems/maximum-balanced-subsequence-sum/)
 
 8. 倍增和倍增优化DP
@@ -302,7 +322,7 @@
       - [图中的最短环,BFS有向图和无向图都可以](https://leetcode.cn/problems/shortest-cycle-in-a-graph/submissions/)
       - 无向图枚举点做BFS
       - 有向图枚举点做DFS
-      
+
 6. 欧拉回路/通路
       - [Reconstruct Itinerary](https://leetcode.cn/problems/reconstruct-itinerary/submissions/417006045/)
 
