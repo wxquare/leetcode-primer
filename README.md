@@ -1,10 +1,9 @@
 # leetcode-primer
 
 ## 数据结构
-1. 链表/单链表/双链表
-      - [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
-      - [面试题 02.05. 链表求和](https://leetcode-cn.com/problems/sum-lists-lcci/)
+1. 链表/单链表/双链表(快慢指针)
       - [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
+      - [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
       - [交换链表中的第K个节点和倒数第K个节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
       - [147. 对链表进行插入排序](https://leetcode.cn/problems/insertion-sort-list)
       - [148. 链表归并排序](https://leetcode.cn/problems/sort-list)
@@ -111,12 +110,18 @@
 	- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
       - [2512.奖励最顶尖的 K 名学生](https://leetcode.cn/problems/reward-top-k-students)
       - [912. 排序数组，快速排序和归并排序](https://leetcode.cn/problems/sort-an-array)
+      - [147. 对链表进行插入排序](https://leetcode.cn/problems/insertion-sort-list)
+      - [148. 链表归并排序](https://leetcode.cn/problems/sort-list)
 
 5. 脑筋急转弯、技巧类
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots)
 6. 前缀和后缀
+      - [1423. 可获得的最大点数](https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards)
+
 7. 差分
       - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings)
+      - [1094. 拼车](https://leetcode.cn/problems/car-pooling/)
+
 8. 分组循环
       - [按照题目要求，数组会被分割成若干组，且每一组的判断/处理逻辑是一样的](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold/solutions/2528771/jiao-ni-yi-ci-xing-ba-dai-ma-xie-dui-on-zuspx/)
 
@@ -179,6 +184,7 @@
      - [556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
      - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty)
      - [2930. 重新排列后包含指定子字符串的字符串数目](https://leetcode.cn/problems/number-of-strings-which-can-be-rearranged-to-contain-substring/)
+     - [统计感冒序列的数目](https://leetcode.cn/problems/count-the-number-of-infection-sequences)
      - 正着困难反着求（容斥原理）
 
 7. 容斥原理
