@@ -9,10 +9,10 @@
       - [148. 链表归并排序](https://leetcode.cn/problems/sort-list)
 
 2. 二叉树
-      - [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/description/)
-      - [94. 二叉树的中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal/description/)
+      - [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal)
+      - [94. 二叉树的中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal)
       - [145. 二叉树的后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal)
-      - [236. 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/description/)
+      - [236. 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree)
       - [117. 填充每个节点的下一个右侧节点指针 II](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii)
       - [2872. 可以被 K 整除连通块的最大数目](https://leetcode.cn/problems/maximum-number-of-k-divisible-components)
 
@@ -53,6 +53,7 @@
       - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/)
       - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query)
       - [2916. 子数组不同元素数目的平方和 II](https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii)
+      - [1094. 拼车，可以用差分](https://leetcode.cn/problems/car-pooling/)
 
 11. 跳表
 
@@ -115,6 +116,7 @@
 
 5. 脑筋急转弯、技巧类
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots)
+
 6. 前缀和后缀
       - [1423. 可获得的最大点数](https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards)
 
@@ -194,9 +196,10 @@
 1. [超级洗衣机](https://leetcode.cn/problems/super-washing-machines)
 2. [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii)
 
-## 搜索问题()
+## 搜索问题
 1. 数组字符串线性搜索，一维、二维搜索
 2. 树形图的非线性搜索
+      - [2477. 到达首都的最少油耗](https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital)
 3. BFS/多源BFS（源点为多个）/双向BFS/ BFS + 优先队列
       - [2812. 找出最安全路径，多源BFS](https://leetcode.cn/problems/find-the-safest-path-in-a-grid) 
       - [407. 接雨水 II](https://leetcode.cn/problems/trapping-rain-water-ii/description/)
@@ -207,6 +210,7 @@
       - [面试题 08.12. 八皇后 n皇后问题](https://leetcode.cn/problems/eight-queens-lcci)
       - [2850. 将石头分散到网格图的最少移动次数](https://leetcode.cn/problems/minimum-moves-to-spread-stones-over-grid)
       - [2698. 求一个整数的惩罚数，预处理+回溯](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer)
+
 5. 记忆化搜索 （动态规划，状态优化）
       - [2742. 给墙壁刷油漆，状态优化](https://leetcode.cn/problems/painting-the-walls)
       - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string)
