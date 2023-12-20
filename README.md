@@ -57,6 +57,7 @@
       - [2916. 子数组不同元素数目的平方和 II](https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii)
       - [1094. 拼车，可以用差分](https://leetcode.cn/problems/car-pooling/)
       - [统计好分割方案的数目](https://leetcode.cn/problems/count-the-number-of-good-partitions)
+      - [2276. 统计区间中的整数数目](https://leetcode.cn/problems/count-integers-in-intervals)
 
 11. 跳表
 
@@ -90,6 +91,8 @@
 	- [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
 	- [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
   	- [打家劫舍VI，小偷的最大能力最小，二分+DP](https://leetcode.cn/problems/house-robber-iv)
+      - [1901. 寻找峰值 II](https://leetcode.cn/problems/find-a-peak-element-ii)
+      - [162. 寻找峰值](https://leetcode.cn/problems/find-peak-element)
 
 2. 滑动窗口/双指针
       - 3. 无重复字符的最长字符串
