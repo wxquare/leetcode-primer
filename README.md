@@ -27,6 +27,7 @@
       - [84. 柱状图中最大的矩形](https://leetcode.cn/problems/largest-rectangle-in-histogram)
       - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water)
       - [907. 子数组的最小值之和](https://leetcode.cn/problems/sum-of-subarray-minimums)
+      - [2866. 美丽塔 II](https://leetcode.cn/problems/beautiful-towers-ii)
 
 4. queue/双端deque/单调deque（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
 	- [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum)
