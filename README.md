@@ -69,6 +69,7 @@
 
 13. 字符串匹配 
       - [kmp](https://github.com/wxquare/online-algorithm-coding/blob/master/other/kmp.cc)
+      - [28. 找出字符串中第一个匹配项的下标](https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string)
       - [最长合法子字符串的长度 ac 自动机](https://leetcode.cn173370/)
 
 13. 并查集
@@ -127,9 +128,11 @@
 5. 脑筋急转弯、技巧类
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots)
 
-6. 前缀和
+6. 前缀、后缀、左边和右边、一维和二维
       - [1423. 可获得的最大点数](https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards)
       - [2132. 用邮票贴满网格图](https://leetcode.cn/problems/stamping-the-grid/description/)(二维前缀和)
+      - [1671. 得到山形数组的最少删除次数](https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array)
+
       
 7. 差分
       - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings)
