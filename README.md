@@ -28,6 +28,7 @@
       - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water)
       - [907. 子数组的最小值之和](https://leetcode.cn/problems/sum-of-subarray-minimums)
       - [2866. 美丽塔 II](https://leetcode.cn/problems/beautiful-towers-ii)
+      
 
 4. queue/双端deque/单调deque（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
 	- [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum)
@@ -44,8 +45,6 @@
 
 7. 平衡二叉树map/multimap/set/multimap
 
-8. 循环数组和循环字符串
-	- 使循环数组所有元素相等的最少秒数
 
 9. 线段树/树状数组(区间修改/区间add，求区间合、最值，区间内可以聚合的值）
       - 手撕线段树，支持区间update和区间聚合值（最大，最小、和）等
@@ -68,8 +67,8 @@
       - [统计异或值在范围内的数对有多少](https://leetcode-cn.com/problems/count-pairs-with-xor-in-a-range/)
 
 13. 字符串匹配 
-      - [kmp](https://github.com/wxquare/online-algorithm-coding/blob/master/other/kmp.cc)
       - [28. 找出字符串中第一个匹配项的下标](https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string)
+      - [3006. 找出数组中的美丽下标 I](https://leetcode.cn/problems/find-beautiful-indices-in-the-given-array-i)
       - [最长合法子字符串的长度 ac 自动机](https://leetcode.cn173370/)
 
 13. 并查集
@@ -95,6 +94,7 @@
   	- [打家劫舍VI，小偷的最大能力最小，二分+DP](https://leetcode.cn/problems/house-robber-iv)
       - [1901. 寻找峰值 II](https://leetcode.cn/problems/find-a-peak-element-ii)
       - [162. 寻找峰值](https://leetcode.cn/problems/find-peak-element)
+      - [3007. 价值和小于等于 K 的最大数字](https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k)
 
 2. 滑动窗口/双指针
       - 3. 无重复字符的最长字符串
@@ -139,14 +139,22 @@
       - [1094. 拼车](https://leetcode.cn/problems/car-pooling/)
       - [2132. 用邮票贴满网格图](https://leetcode.cn/problems/stamping-the-grid/description/)（二维差分）
 
-8. 分组循环
+8. 分组/循环
       - [按照题目要求，数组会被分割成若干组，且每一组的判断/处理逻辑是一样的](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold/solutions/2528771/jiao-ni-yi-ci-xing-ba-dai-ma-xie-dui-on-zuspx/)
+	- 使循环数组所有元素相等的最少秒数
+      - [466. 统计重复个数](https://leetcode.cn/problems/count-the-repetitions)
+
+9. 分组
 
 9. 离线query(预处理+数据结构应用)
       - [2940. 找到 Alice 和 Bob 可以相遇的建筑](https://leetcode.cn/problems/find-building-where-alice-and-bob-can-meet)
       
 10. 简单但易错题：
       - [2760. 最长奇偶子数组](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold)
+
+11. 枚举
+      - [2735. 收集巧克力](https://leetcode.cn/problems/collecting-chocolates)
+
 
 ## 数学
 1. 数论问题
@@ -169,10 +177,11 @@
       - 乘法逆元，扩展欧几里得算法
       - 费马定理
 
-3. 位运算
+3. 二进位运算
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
       - [318. 最大单词长度乘积](https://leetcode.cn/problems/maximum-product-of-word-lengths/description/)
       - [2939. 最大异或乘积](https://leetcode.cn/problems/maximum-xor-product)
+      - [2397. 被列覆盖的最多行数](https://leetcode.cn/problems/maximum-rows-covered-by-columns)
       - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
       - lowbit(x) = x & (-x)
       - x |= (1 << i)
@@ -288,6 +297,7 @@
       - [638. 大礼包](https://leetcode.cn/problems/shopping-offers)
       - [691. 贴纸拼词](https://leetcode.cn/problems/stickers-to-spell-word)
 
+
 5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的，记忆化搜索，递归。就是我们已经知道以uuu为根的答案，想要通过u−>v的父子关系把答案传递）
       - [打家劫舍 III](https://leetcode.cn/problems/house-robber-iii)
       - [最小化旅行的价格总和](https://leetcode.cn/problems/minimize-the-total-price-of-the-trips)
@@ -297,15 +307,16 @@
       - [2920. 收集所有金币可获得的最大积分](https://leetcode.cn/problems/maximum-points-after-collecting-coins-from-all-nodes/)
       - [2925. 在树上执行操作以后得到的最大分数](https://leetcode.cn/problems/maximum-score-after-applying-operations-on-a-tree)
 
+
 6. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
-      - [统计整数的数量](https://leetcode.cn/problems/count-of-integers)
-      - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits/description/)
+      - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits)
       - [233. 数字 1 的个数](https://leetcode.cn/problems/number-of-digit-one)
       - [600. 不含连续1的非负整数](https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones)
       - [902. 最大为 N 的数字组合](https://leetcode.cn/problems/numbers-at-most-n-given-digit-set)
       - [2376. 统计特殊整数](https://leetcode.cn/problems/count-special-integers)
       - [2801. 统计范围内的步进数字数目](https://leetcode.cn/problems/count-stepping-numbers-in-range)
       - [2827. 范围中美丽整数的数目](https://leetcode.cn/problems/number-of-beautiful-integers-in-the-range)
+      - [2719. 统计整数数目](https://leetcode.cn/problems/count-of-integers/)
 
 7. 数据结构优化DP
       - [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix)
