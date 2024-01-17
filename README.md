@@ -17,34 +17,33 @@
       - [2872. 可以被 K 整除连通块的最大数目](https://leetcode.cn/problems/maximum-number-of-k-divisible-components)
 
 3. stack/单调stack/双stack/（在线性时间内找到每个元素的上一个或者下一个更大或更小元素）
-	- [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
-	- [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
-	- [739. 每日温度](https://leetcode.cn/problems/daily-temperatures)
-	- [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence)
-	- [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score)
-	- [901. 股票价格跨度](https://leetcode.cn/problems/online-stock-span)
-	- [2216. 美化数组的最少删除数](https://leetcode.cn/problems/minimum-deletions-to-make-array-beautifu)
-        - [84. 柱状图中最大的矩形](https://leetcode.cn/problems/largest-rectangle-in-histogram)
-        - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water)
-        - [907. 子数组的最小值之和](https://leetcode.cn/problems/sum-of-subarray-minimums)
-        - [2866. 美丽塔 II](https://leetcode.cn/problems/beautiful-towers-ii)
+      - [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
+      - [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
+      - [739. 每日温度](https://leetcode.cn/problems/daily-temperatures)
+      - [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence)
+      - [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score)
+      - [901. 股票价格跨度](https://leetcode.cn/problems/online-stock-span)
+      - [2216. 美化数组的最少删除数](https://leetcode.cn/problems/minimum-deletions-to-make-array-beautifu)
+      - [84. 柱状图中最大的矩形](https://leetcode.cn/problems/largest-rectangle-in-histogram)
+      - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water)
+      - [907. 子数组的最小值之和](https://leetcode.cn/problems/sum-of-subarray-minimums)
+      - [2866. 美丽塔 II](https://leetcode.cn/problems/beautiful-towers-ii)
       
 
 4. queue/双端deque/单调deque（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
-	- [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum)
- 	- [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k)
-	- [2810.  故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
-	- [918. 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray)
+      - [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum)
+      - [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k)
+      - [2810.  故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
+      - [918. 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray)
 
 5. 优先队列和堆，任务调度
-	- [最大平均通过率](https://leetcode-cn.com/problems/maximum-average-pass-ratio/)
-	- [单线程 CPU](https://leetcode-cn.com/problems/single-threaded-cpu/)
-	- [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
+      - [最大平均通过率](https://leetcode-cn.com/problems/maximum-average-pass-ratio/)
+      - [单线程 CPU](https://leetcode-cn.com/problems/single-threaded-cpu/)
+      - [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
 
 6. 哈希unorderer_map/unordered_set
 
 7. 平衡二叉树map/multimap/set/multimap
-
 
 9. 线段树/树状数组(区间修改/区间add，求区间合、最值，区间内可以聚合的值）
       - 手撕线段树，支持区间update和区间聚合值（最大，最小、和）等
@@ -89,12 +88,12 @@
 
 ## 基本算法
 1. 二分算法 (lower_bound,map.lower_bound,check 二分答案）
-	- [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
-	- [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
-  	- [打家劫舍VI，小偷的最大能力最小，二分+DP](https://leetcode.cn/problems/house-robber-iv)
-        - [1901. 寻找峰值 II](https://leetcode.cn/problems/find-a-peak-element-ii)
-        - [162. 寻找峰值](https://leetcode.cn/problems/find-peak-element)
-        - [3007. 价值和小于等于 K 的最大数字](https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k)
+      - [有界数组中指定下标处的最大值](https://leetcode-cn.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
+      - [1482. 制作 m 束花所需的最少天数](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/)
+      - [打家劫舍VI，小偷的最大能力最小，二分+DP](https://leetcode.cn/problems/house-robber-iv)
+      - [1901. 寻找峰值 II](https://leetcode.cn/problems/find-a-peak-element-ii)
+      - [162. 寻找峰值](https://leetcode.cn/problems/find-peak-element)
+      - [3007. 价值和小于等于 K 的最大数字](https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k)
 
 2. 滑动窗口/双指针
       - 3. 无重复字符的最长字符串
@@ -119,11 +118,11 @@
       - [318. 最大单词长度乘积] 如何判断两个字符串是否包含相同字母
 
 3. top k，select kth
-	- [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
-        - [2512.奖励最顶尖的 K 名学生](https://leetcode.cn/problems/reward-top-k-students)
-        - [912. 排序数组，快速排序和归并排序](https://leetcode.cn/problems/sort-an-array)
-        - [147. 对链表进行插入排序](https://leetcode.cn/problems/insertion-sort-list)
-        - [148. 链表归并排序](https://leetcode.cn/problems/sort-list)
+      - [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
+      - [2512.奖励最顶尖的 K 名学生](https://leetcode.cn/problems/reward-top-k-students)
+      - [912. 排序数组，快速排序和归并排序](https://leetcode.cn/problems/sort-an-array)
+      - [147. 对链表进行插入排序](https://leetcode.cn/problems/insertion-sort-list)
+      - [148. 链表归并排序](https://leetcode.cn/problems/sort-list)
 
 5. 脑筋急转弯、技巧类
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots)
@@ -141,8 +140,8 @@
 
 8. 分组/循环
     	- [按照题目要求，数组会被分割成若干组，且每一组的判断/处理逻辑是一样的](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold/solutions/2528771/jiao-ni-yi-ci-xing-ba-dai-ma-xie-dui-on-zuspx/)
-	- 使循环数组所有元素相等的最少秒数
-        - [466. 统计重复个数](https://leetcode.cn/problems/count-the-repetitions)
+      - 使循环数组所有元素相等的最少秒数
+      - [466. 统计重复个数](https://leetcode.cn/problems/count-the-repetitions)
 
 9. 分组
 
@@ -171,8 +170,7 @@
 2. 模运算
       - (a + b) mod c = ((a mod c) + (b mod c)) mod c
       - (a * b) mod c =  ((a mod c) * (b mod c)) mod c
-      - (a / b) mod c =  (a * (b^(-1))) mod c，其中 b^(-1) 是 b 的乘法逆元。如果 c 是一个素数，且 b 是不可被 c 整除的整数，那么 b 的乘法逆元（b模c的逆元）可以通过以下方式计算：
-	b^(-1) ≡ b^(c-2) (mod c)
+      - (a / b) mod c =  (a * (b^(-1))) mod c，其中 b^(-1) 是 b 的乘法逆元。如果 c 是一个素数，且 b 是不可被 c 整除的整数，那么 b 的乘法逆元（b模c的逆元）可以通过以下方式计算：b^(-1) ≡ b^(c-2) (mod c)
       - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty)
       - 乘法逆元，扩展欧几里得算法
       - 费马定理
@@ -254,19 +252,19 @@
 
 ## DP问题（递推类DP）
 1. 线性 DP （包括状态机DP，序列DP,子问题有一个端点是固定不变的）
-	1. 线性DP
-		- [斐波那契数列](https://leetcode.cn/problems/fibonacci-number)
-        - [LCR 168. 第n个丑数](https://leetcode.cn/problems/chou-shu-lcof/description/)
-	    - [数字三角形](https://leetcode.cn/problems/triangle)
-	   	- [跳跃游戏1，2，3，4](https://leetcode.cn/problems/jump-game)
-	   	- [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group)
-	   	- [销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman)
-        - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/description/)
-        - [53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray)
-	2. 状态机DP（关键是设计状态以及状态转移方程，之后在处理边界条件）
- 		- 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
-		- [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups)
-		- 买卖股票的最大利润（最多一次买卖、最多两次、最多K次、无限次买卖、冷冻期1天、手续费）
+      1. 线性DP
+            - [斐波那契数列](https://leetcode.cn/problems/fibonacci-number)
+            - [LCR 168. 第n个丑数](https://leetcode.cn/problems/chou-shu-lcof/description/)
+            - [数字三角形](https://leetcode.cn/problems/triangle)
+            - [跳跃游戏1，2，3，4](https://leetcode.cn/problems/jump-game)
+            - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group)
+            - [销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman)
+            - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/description/)
+            - [53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray)
+      2. 状态机DP（关键是设计状态以及状态转移方程，之后在处理边界条件）
+            - 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
+            - [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups)
+            - 买卖股票的最大利润（最多一次买卖、最多两次、最多K次、无限次买卖、冷冻期1天、手续费）
       3. 序列DP (序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等)
             - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence)
             - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence)
