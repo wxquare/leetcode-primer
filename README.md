@@ -270,7 +270,7 @@
             - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence)
             - [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
             - [2901. 最长相邻不相等子序列 II](https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii)
-            - [最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
+            - [5.最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
       4. DP回溯 (很多时候只是求DP最值，但有时需要回溯DP的过程)
             - [689. 三个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays)
       5. 网格，矩阵DP
