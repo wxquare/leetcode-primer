@@ -215,9 +215,10 @@
 7. 容斥原理
 
 
-## 贪心算法
+## 贪心
 1. [超级洗衣机](https://leetcode.cn/problems/super-washing-machines)
 2. [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii)
+3. [2171 拿出最少数目的魔法豆](https://leetcode.cn/problems/removing-minimum-number-of-magic-beans)
 
 ## 搜索问题
 1. 数组字符串线性搜索，一维、二维搜索
