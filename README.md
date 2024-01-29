@@ -165,7 +165,7 @@
       - [两数、多数最小公倍数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
       - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal)
       - [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer)
-      - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
+      - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array)
 
 2. 模运算
       - (a + b) mod c = ((a mod c) + (b mod c)) mod c
@@ -177,7 +177,7 @@
 
 3. 二进位运算
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
-      - [318. 最大单词长度乘积](https://leetcode.cn/problems/maximum-product-of-word-lengths/description/)
+      - [318. 最大单词长度乘积](https://leetcode.cn/problems/maximum-product-of-word-lengths)
       - [2939. 最大异或乘积](https://leetcode.cn/problems/maximum-xor-product)
       - [2397. 被列覆盖的最多行数](https://leetcode.cn/problems/maximum-rows-covered-by-columns)
       - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
