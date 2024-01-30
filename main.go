@@ -65,11 +65,16 @@ func consumer() {
 }
 
 func main() {
-	go produce()
-	go consumer()
-	var ans int32 = 0
-	for s := range resChan {
-		ans = ans + s
-	}
-	fmt.Println(ans)
+
+	var a int = 10
+	var b int = 3
+
+	fmt.Printf("%d\n",a / b)
+	// go produce()
+	// go consumer()
+	// var ans int32 = 0
+	// for s := range resChan {
+	// 	ans = ans + s
+	// }
+	// fmt.Println(ans)
 }

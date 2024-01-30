@@ -28,15 +28,13 @@
       - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water)
       - [907. 子数组的最小值之和](https://leetcode.cn/problems/sum-of-subarray-minimums)
       - [2866. 美丽塔 II](https://leetcode.cn/problems/beautiful-towers-ii)
+      - [2865. 美丽塔 I](https://leetcode.cn/problems/beautiful-towers-i)
       
-
-4. queue/双端deque/单调deque（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
+4. queue/双端deque/单调deque/priority_queue（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
       - [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum)
       - [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k)
       - [2810.  故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
       - [918. 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray)
-
-5. 优先队列和堆，任务调度
       - [最大平均通过率](https://leetcode-cn.com/problems/maximum-average-pass-ratio/)
       - [单线程 CPU](https://leetcode-cn.com/problems/single-threaded-cpu/)
       - [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
@@ -44,6 +42,7 @@
 6. 哈希unorderer_map/unordered_set
 
 7. 平衡二叉树map/multimap/set/multimap
+
 
 9. 线段树/树状数组(区间修改/区间add，求区间合、最值，区间内可以聚合的值）
       - 手撕线段树，支持区间update和区间聚合值（最大，最小、和）等
@@ -77,7 +76,6 @@
       - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
       - [冗余连接](https://leetcode.cn/problems/redundant-conn
 
-
 14. 高级数据结构实现
       - [LRU](https://leetcode-cn.com/problems/lru-cache/)
       - [LFU](https://leetcode-cn.com/problems/lfu-cache/)
@@ -103,26 +101,16 @@
       - [2938. 区分黑球与白球](https://leetcode.cn/problems/separate-black-and-white-balls)
       - [统计最大元素出现至少 K 次的子数组](https://leetcode.cn/problems/count-subarrays-where-max-element-appears-at-least-k-times)
 
-3. 位运算
-      - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
-      - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
-      - lowbit(x) = x & (-x)
-      - x |= (1 << i)
-      - (x & (1 << i)) == 0
-      - 异或运算: 0^0=1,0^1=1,1^1=0,
-      - x ^ (1 << i) = x
-      - __builtin_clz,__builtin_ctz,__builtin_popcount
-      - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares)
-      - [260. 只出现一次的数字 I、II、III](https://leetcode.cn/problems/single-number-iii)
-      - [421. 数组中两个数的最大异或值](https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array)
-      - [318. 最大单词长度乘积] 如何判断两个字符串是否包含相同字母
-
-3. top k，select kth
+4. 排序算法/top k/select kth
       - [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
       - [2512.奖励最顶尖的 K 名学生](https://leetcode.cn/problems/reward-top-k-students)
       - [912. 排序数组，快速排序和归并排序](https://leetcode.cn/problems/sort-an-array)
       - [147. 对链表进行插入排序](https://leetcode.cn/problems/insertion-sort-list)
       - [148. 链表归并排序](https://leetcode.cn/problems/sort-list)
+
+5. 枚举
+      - [2735. 收集巧克力](https://leetcode.cn/problems/collecting-chocolates)
+
 
 5. 脑筋急转弯、技巧类
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots)
@@ -132,16 +120,16 @@
       - [2132. 用邮票贴满网格图](https://leetcode.cn/problems/stamping-the-grid/description/)(二维前缀和)
       - [1671. 得到山形数组的最少删除次数](https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array)
 
-      
 7. 差分
       - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings)
       - [1094. 拼车](https://leetcode.cn/problems/car-pooling/)
       - [2132. 用邮票贴满网格图](https://leetcode.cn/problems/stamping-the-grid/description/)（二维差分）
 
-8. 分组/循环
+8. 分组/循环 (group/cycle arrray)
     	- [按照题目要求，数组会被分割成若干组，且每一组的判断/处理逻辑是一样的](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold/solutions/2528771/jiao-ni-yi-ci-xing-ba-dai-ma-xie-dui-on-zuspx/)
       - 使循环数组所有元素相等的最少秒数
       - [466. 统计重复个数](https://leetcode.cn/problems/count-the-repetitions)
+      - [2808. 使循环数组所有元素相等的最少秒数](https://leetcode.cn/problems/minimum-seconds-to-equalize-a-circular-array)
 
 9. 分组
 
@@ -151,9 +139,10 @@
 10. 简单但易错题：
       - [2760. 最长奇偶子数组](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold)
 
-11. 枚举
-      - [2735. 收集巧克力](https://leetcode.cn/problems/collecting-chocolates)
-
+11. 贪心
+      - [超级洗衣机](https://leetcode.cn/problems/super-washing-machines)
+      - [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii)
+      - [2171 拿出最少数目的魔法豆](https://leetcode.cn/problems/removing-minimum-number-of-magic-beans)
 
 ## 数学
 1. 数论问题
@@ -187,6 +176,9 @@
       - 异或运算: 0^0=1,0^1=1,1^1=0,
       - x ^ (1 << i) = x
       - __builtin_clz,__builtin_ctz,__builtin_popcount
+      - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares)
+      - [260. 只出现一次的数字 I、II、III](https://leetcode.cn/problems/single-number-iii)
+      - [421. 数组中两个数的最大异或值](https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array)
 
 3. 拒绝抽样(rejection sampling)
       - [用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7)
@@ -214,11 +206,6 @@
 
 7. 容斥原理
 
-
-## 贪心
-1. [超级洗衣机](https://leetcode.cn/problems/super-washing-machines)
-2. [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii)
-3. [2171 拿出最少数目的魔法豆](https://leetcode.cn/problems/removing-minimum-number-of-magic-beans)
 
 ## 搜索问题
 1. 数组字符串线性搜索，一维、二维搜索
