@@ -1,10 +1,3 @@
-/*
- * testmain.cpp
- *
- *  Created on: 2017年7月16日
- *      Author: Administrator
- */
-
 #include <utility>
 #include <algorithm>
 #include <cstring>
@@ -257,6 +250,95 @@ void printArray(int a[],int length){
 }
 
 
+
+
+// 简单版本的快排
+void quickSort1(vector<int>& nums){
+    function<void(int,int)> quickSort = [&](int left,int right){
+        if(left >= right) return;
+        int l = left;
+        int r = right;
+        int pos = left + rand() % (right - left + 1);
+        swap(nums[left],nums[pos]);
+        int pivot = nums[left];
+        while(l < r){
+            while(l < r && nums[r] >= pivot){
+                r--;
+            }
+            nums[l] = nums[r];
+            while(l < r && nums[l] <= pivot){
+                l++;
+            }
+            nums[r] = nums[l];
+        }
+        nums[l] = pivot;
+        quickSort(left,l-1);
+        quickSort(l+1,right);
+    };
+    quickSort(0,nums.size() - 1);
+}
+
+void quickSort2(vector<int>& nums){
+    function<void(int,int)> quickSort = [&](int left,int right){
+        if(left >= right) return;
+        int pos = left + rand() % (right - left + 1);
+        swap(nums[pos],nums[left]);
+        int pivot = nums[left];
+        int less = left;
+        int more = right + 1;
+        int i = left + 1;
+        while(i < more){
+            if(nums[i] < pivot){
+                less++;
+                swap(nums[i],nums[less]);
+                i++;
+            } else if(nums[i] == pivot){
+                i++;
+            } else if(nums[i] > pivot){
+                more--;
+                swap(nums[i],nums[more]);
+            }
+        }
+        swap(nums[left],nums[less]);
+        quickSort(left,less-1);
+        quickSort(more,right);
+    };
+    quickSort(0,nums.size() - 1);
+}
+
+
+void mergeSort(vector<int>& nums){
+    int n = nums.size();
+    vector<int> tmp(n,0);
+    function<void(int,int)> mergeSort = [&](int left,int right){
+        if(left >= right) return;
+        int mid = left + (right - left) / 2;
+        mergeSort(left,mid);
+        mergeSort(mid+1,right);        
+        int p = left;
+        int q = mid + 1;
+        int start = left;
+        while(p <= mid && q <= right){
+            if(nums[p] <= nums[q]){
+                tmp[start++] = nums[p++];
+            } else {
+                tmp[start++] = nums[q++];
+            }
+        }
+        while(p <= mid){
+            tmp[start++] = nums[p++];
+        }
+        while(q <= right){
+            tmp[start++] = nums[q++];
+        }
+        start = left;
+        while(start <= right){
+            nums[start] = tmp[start];
+            start++;
+        }
+    };
+    mergeSort(0,nums.size()-1);
+}
 
 
 int main() {
