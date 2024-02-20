@@ -15,12 +15,13 @@
       - [236. 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree)
       - [117. 填充每个节点的下一个右侧节点指针 II](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii)
       - [2872. 可以被 K 整除连通块的最大数目](https://leetcode.cn/problems/maximum-number-of-k-divisible-components)
+      - [105. 从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal)
 
 3. stack/单调stack/双stack/（在线性时间内找到每个元素的上一个或者下一个更大或更小元素）
-      - [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
       - [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
+      - [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii/)
       - [739. 每日温度](https://leetcode.cn/problems/daily-temperatures)
-      - [最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence)
+      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence)
       - [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score)
       - [901. 股票价格跨度](https://leetcode.cn/problems/online-stock-span)
       - [2216. 美化数组的最少删除数](https://leetcode.cn/problems/minimum-deletions-to-make-array-beautifu)
