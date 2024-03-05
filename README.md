@@ -17,6 +17,7 @@
       - [2872. 可以被 K 整除连通块的最大数目](https://leetcode.cn/problems/maximum-number-of-k-divisible-components)
       - [105. 从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal)
       - [106. 从中序与后序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal)
+      - [2673. 使二叉树所有路径值相等的最小代价](https://leetcode.cn/problems/make-costs-of-paths-equal-in-a-binary-tree)
 
 3. stack/单调stack/双stack/（在线性时间内找到每个元素的上一个或者下一个更大或更小元素）
       - [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i/)
@@ -333,6 +334,7 @@
             - [八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
       - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)
       - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination)
+      - [1976. 到达目的地的方案数](https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination)
 
 2. [拓扑排序和度](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
      - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
