@@ -348,8 +348,8 @@
 4. 基环树、内向树、外向树
       - [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting)
       - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph)
-      - [2876. 有向图访问计数](https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph环最小环
-      - [图中的最短环,BFS有向图和无向图都可以](https://leetcode.cn/problems/shortest-cycle-in-a-无向图枚举点做BFS
+      - [2876. 有向图访问计数](https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph环最小环)
+      - [图中的最短环,BFS有向图和无向图都可以](https://leetcode.cn/problems/shortest-cycle-in-a-无向图枚举点做BFS)
       - 有向图枚举点做DFS
 
 6. 欧拉回路/通路
@@ -362,6 +362,7 @@
       - tarjan 求强连通分量 模版
       - tarjan 求割点 模版
       - tartan 求割边 模版
+
 8. 寻找符合条件的路径
       - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree)
 
