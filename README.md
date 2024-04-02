@@ -36,11 +36,10 @@
 4. queue/双端deque/单调deque/priority_queue（单调队列通常用于解决滑动窗口问题，其中我们需要在滑动窗口内找到最大值或最小值）
       - [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum)
       - [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k)
-      - [2810.  故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
+      - [2810. 故障键盘](https://leetcode.cn/problems/faulty-keyboard/)
       - [918. 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray)
       - [最大平均通过率](https://leetcode-cn.com/problems/maximum-average-pass-ratio/)
       - [单线程 CPU](https://leetcode-cn.com/problems/single-threaded-cpu/)
-      - [好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
 
 6. 哈希unorderer_map/unordered_set
 
@@ -103,6 +102,7 @@
       - [30. 串联所有单词的子串](https://leetcode.cn/problems/substring-with-concatenation-of-all-words)
       - [2938. 区分黑球与白球](https://leetcode.cn/problems/separate-black-and-white-balls)
       - [统计最大元素出现至少 K 次的子数组](https://leetcode.cn/problems/count-subarrays-where-max-element-appears-at-least-k-times)
+      - [1793.好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
 
 4. 排序算法/top k/select kth
       - [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
@@ -167,7 +167,7 @@
       - 乘法逆元，扩展欧几里得算法
       - 费马定理
 
-3. 二进位运算
+3. 位运算
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
       - [318. 最大单词长度乘积](https://leetcode.cn/problems/maximum-product-of-word-lengths)
       - [2939. 最大异或乘积](https://leetcode.cn/problems/maximum-xor-product)
@@ -207,27 +207,32 @@
      - [统计感冒序列的数目](https://leetcode.cn/problems/count-the-number-of-infection-sequences)
      - 正着困难反着求（容斥原理）
 
-7. 容斥原理
+8. 容斥原理
+
+9. 区间合并
+      - [56. 合并区间](https://leetcode.cn/problems/merge-intervals)
+      - [2580. 统计将重叠区间合并成组的方案数](https://leetcode.cn/problems/count-ways-to-group-overlapping-ranges)
+
 
 
 ## 搜索问题
-1. 数组字符串线性搜索，一维、二维搜索
+1. 数组字符串线性搜索，一维
 2. 树形图的非线性搜索
       - [2477. 到达首都的最少油耗](https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital)
-
-3. BFS/多源BFS（源点为多个）/双向BFS/ BFS + 优先队列
+3. 网格搜索
+4. BFS/多源BFS（源点为多个）/双向BFS/ BFS + 优先队列
       - [2812. 找出最安全路径，多源BFS](https://leetcode.cn/problems/find-the-safest-path-in-a-grid) 
       - [407. 接雨水 II](https://leetcode.cn/problems/trapping-rain-water-ii/description/)
       - [2258. 逃离火灾](https://leetcode.cn/problems/escape-the-spreading-fire/)
 
-4. DFS/剪枝/回溯（深度搜索+限制条件+限制搜索路径）
+5. DFS/剪枝/回溯（深度搜索+限制条件+限制搜索路径）
       - [LCR 086. 分割回文串](https://leetcode.cn/problems/M99OJA)
       - [面试题 08.12. 八皇后 n皇后问题](https://leetcode.cn/problems/eight-queens-lcci)
       - [2850. 将石头分散到网格图的最少移动次数](https://leetcode.cn/problems/minimum-moves-to-spread-stones-over-grid)
       - [2698. 求一个整数的惩罚数，预处理+回溯](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer)
       - [113. 路径总和 II](https://leetcode.cn/problems/path-sum-ii)(回溯模版题)
 
-5. 记忆化搜索 （动态规划，状态优化，求方案数量）
+6. 记忆化搜索 （动态规划，状态优化，求方案数量）
       - [2742. 给墙壁刷油漆，状态优化](https://leetcode.cn/problems/painting-the-walls)
       - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string)
       - [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets)
@@ -237,7 +242,7 @@
       - [2896. 执行操作使两个字符串相等](https://leetcode.cn/problems/apply-operations-to-make-two-strings-equal)
       - [2003. 每棵子树内缺失的最小基因值](https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/)
       - [72. 编辑距离](https://leetcode.cn/problems/edit-distance)
-5. 启发式搜索
+7. 启发式搜索
       - 八数码问题
 
 
@@ -252,6 +257,7 @@
             - [销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman)
             - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/description/)
             - [53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray)
+            - [1997. 访问完所有房间的第一天](https://leetcode.cn/problems/first-day-where-you-have-been-in-all-the-rooms)
       2. 状态机DP（关键是设计状态以及状态转移方程，之后在处理边界条件）
             - 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
             - [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups)
@@ -268,12 +274,14 @@
             - [221. 最大正方形](https://leetcode.cn/problems/maximal-square)
 2. 背包 DP
       - 01背包
-      - 完全背包
-      - 多重背包
       - [494. 目标和](https://leetcode.cn/problems/target-sum)
+      - 完全背包
       - [322. 零钱兑换](https://leetcode.cn/problems/coin-change/)
       - [518. 零钱兑换 II](https://leetcode.cn/problems/coin-change-ii)
+      - 多重背包
       - [1155. 掷骰子等于目标和的方法数](https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum)
+      - 分组背包
+
 
 3. 区间 DP （子问题向内缩小，两端都会向内移动）
       - [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
@@ -294,7 +302,7 @@
       - [2581. 统计可能的树根数目](https://leetcode.cn/problems/count-number-of-possible-root-nodes)
       - [2920. 收集所有金币可获得的最大积分](https://leetcode.cn/problems/maximum-points-after-collecting-coins-from-all-nodes/)
       - [2925. 在树上执行操作以后得到的最大分数](https://leetcode.cn/problems/maximum-score-after-applying-operations-on-a-tree)
-
+      - [894. 所有可能的真二叉树](https://leetcode.cn/problems/all-possible-full-binary-trees)
 
 6. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
       - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits)
@@ -335,6 +343,7 @@
       - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)
       - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination)
       - [1976. 到达目的地的方案数](https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination)
+      - [2642. 设计可以求最短路径的图类](https://leetcode.cn/problems/design-graph-with-shortest-path-calculator)
 
 2. [拓扑排序和度](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
      - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
