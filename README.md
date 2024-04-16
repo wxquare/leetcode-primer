@@ -76,13 +76,14 @@
       - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
       - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal)
       - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
-      - [冗余连接](https://leetcode.cn/problems/redundant-conn
+      - [冗余连接](https://leetcode.cn/problems/redundant-conn)
+      - [924. 尽量减少恶意软件的传播](https://leetcode.cn/problems/minimize-malware-spread)
 
 14. 高级数据结构实现
       - [LRU](https://leetcode-cn.com/problems/lru-cache/)
       - [LFU](https://leetcode-cn.com/problems/lfu-cache/)
-      - [HashSet](https://leetcode-cn.com/problems/design-hashset/)
-      - [HashMap](https://leetcode-cn.com/problems/design-hashmap/)
+      - [HashSet 链地址法](https://leetcode-cn.com/problems/design-hashset/)
+      - [HashMap 链地址法](https://leetcode-cn.com/problems/design-hashmap/)
       - [剑指 Offer 59 - II. 队列的最大值](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof)
 
 
