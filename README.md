@@ -114,6 +114,7 @@
       - [912. 排序数组，快速排序和归并排序](https://leetcode.cn/problems/sort-an-array)
       - [147. 对链表进行插入排序](https://leetcode.cn/problems/insertion-sort-list)
       - [148. 链表归并排序](https://leetcode.cn/problems/sort-list)
+      - [1329. 将矩阵按对角线排序](https://leetcode.cn/problems/sort-the-matrix-diagonally)
 
 5. 枚举
       - [2735. 收集巧克力](https://leetcode.cn/problems/collecting-chocolates)
@@ -207,12 +208,14 @@
       - [双模幂运算](https://leetcode.cn/problems/double-modular-exponentiation)
 
 7. 排列组合数学取模(大数取模)
+     - 求c(n,k),大数c(n,k,mod)
      - [31. 下一个排列](https://leetcode.cn/problems/next-permutation/)
      - [556. 下一个更大元素 III](https://leetcode-cn.com/problems/next-greater-element-iii/)
      - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty)
      - [2930. 重新排列后包含指定子字符串的字符串数目](https://leetcode.cn/problems/number-of-strings-which-can-be-rearranged-to-contain-substring/)
      - [统计感冒序列的数目](https://leetcode.cn/problems/count-the-number-of-infection-sequences)
      - 正着困难反着求（容斥原理）
+     - [3154. 到达第 K 级台阶的方案数](https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair/)
 
 8. 容斥原理
 
@@ -251,6 +254,7 @@
       - [2896. 执行操作使两个字符串相等](https://leetcode.cn/problems/apply-operations-to-make-two-strings-equal)
       - [2003. 每棵子树内缺失的最小基因值](https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/)
       - [72. 编辑距离](https://leetcode.cn/problems/edit-distance)
+      - [3154. 到达第 K 级台阶的方案数](https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair/)
 7. 启发式搜索
       - 八数码问题
 

@@ -174,3 +174,32 @@ void shuffle(vector<int>& cards){
         swap(cards[i],cards[j]);
     }
 }
+
+
+// Function to calculate combination C(n, k)
+long long combination(int n, int k) {
+    if (k > n) return 0;
+    if (k == 0 || k == n) return 1;
+
+    k = min(k, n - k); // Take advantage of symmetry property C(n, k) == C(n, n-k)
+    long long result = 1;
+    for (int i = 0; i < k; ++i) {
+        result *= (n - i);
+        result /= (i + 1);
+    }
+    return result;
+}
+
+vector<vector<int>> binomialCoefficient(int n,int k){
+    vector<vector<int>> res(n+1,vector<int>(k+1,0));
+    for(int i=0;i<=n;i++){
+        for(int j=0;j<=min(i,k);j++){
+            if(i == 0 || j == 0){
+                res[i][j] = 1;
+            } else {
+                res[i][j] = res[i-1][j-1] + res[i-1][j];
+            }
+        }
+    }
+    return res;
+}
