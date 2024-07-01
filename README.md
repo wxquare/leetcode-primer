@@ -302,9 +302,10 @@
       - [石子游戏](https://leetcode.cn/problems/stone-game)
 
 4. bitmask，状压 和 状态压缩DP,bitmask vs map+vector （把集合用二进制表示,二进制mask 1<<n）
-      - [优美的排列](https://leetcode.cn/problems/beautiful-arrangement)
+      - [526.优美的排列](https://leetcode.cn/problems/beautiful-arrangement)
       - [638. 大礼包](https://leetcode.cn/problems/shopping-offers)
       - [691. 贴纸拼词](https://leetcode.cn/problems/stickers-to-spell-word)
+      - [2741. 特别的排列](https://leetcode.cn/problems/special-permutations)
 
 
 5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的，记忆化搜索，递归。就是我们已经知道以uuu为根的答案，想要通过u−>v的父子关系把答案传递）
@@ -316,6 +317,11 @@
       - [2920. 收集所有金币可获得的最大积分](https://leetcode.cn/problems/maximum-points-after-collecting-coins-from-all-nodes/)
       - [2925. 在树上执行操作以后得到的最大分数](https://leetcode.cn/problems/maximum-score-after-applying-operations-on-a-tree)
       - [894. 所有可能的真二叉树](https://leetcode.cn/problems/all-possible-full-binary-trees)
+      - 树的直径和路径问题
+      - [3203. 合并两棵树后的最小直径](https://leetcode.cn/problems/find-minimum-diameter-after-merging-two-trees)
+      - [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/description/)
+      - [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum)
+
 
 6. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
       - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits)
@@ -357,6 +363,7 @@
       - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination)
       - [1976. 到达目的地的方案数](https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination)
       - [2642. 设计可以求最短路径的图类](https://leetcode.cn/problems/design-graph-with-shortest-path-calculator)
+      - [2065. 最大化一张图中的路径价值](https://leetcode.cn/problems/maximum-path-quality-of-a-graph/description/)
 
 2. [拓扑排序和度](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
      - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
@@ -401,6 +408,9 @@
       - https://www.cnblogs.com/wenruo/p/12357543.html
       - leetcode 1595.连通两组点的最小成
       - https://leetcode.cn/problems/7rLGCR/description/（守卫城堡）
+
+## TODO
+- 526. 优美的排列
 
 ## 参考
 - [leetcode](https://leetcode.cn/)
