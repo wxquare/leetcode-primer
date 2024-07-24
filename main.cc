@@ -128,3 +128,52 @@ public:
         return ret;
     }
 }
+
+
+class Solution {
+public:
+    int maximumLength(vector<int>& nums, int k) {
+        
+        
+        int n = nums.size();
+ 
+        int memo[n][n][k+1];
+        memset(memo,-1,sizeof(memo));
+        function<int(int,int,int)> dfs = [&](int i,int pre,int r) {
+            if(i == nums.size()){
+                return 0;
+            }
+            if(pre != -1 && r != -1 && memo[i][pre][r] != -1){
+                return memo[i][pre][r];
+            }
+
+            int res = 0;
+            int res1 = dfs(i+1,pre,r);
+            int res2 = 0;
+
+            if(pre == -1){
+                res2 = 1 + dfs(i+1,i,r);
+            } else if(r == -1){
+                res2 = 1 + dfs(i+1,i,(nums[i] + nums[pre]) % k);
+            } else {
+                if((nums[i] + nums[pre]) % k == r){
+                    res2 = 1 + dfs(i+1,i,r);
+                }
+            }
+            if(pre == -1 || (nums[i] + nums[pre]) % k == r){
+                res2 = 1 + dfs(i+1,i,r);
+            }
+
+            res = max(res1,res2);
+            if(pre != -1 && r != -1){
+                memo[i][pre][r] = res;
+            }
+            return res;
+        };
+            
+        int ans = dfs(0,-1,-1);
+        
+        return ans;
+        
+    }
+};

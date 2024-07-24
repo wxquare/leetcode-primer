@@ -90,11 +90,13 @@ vector<int> bellmanFord(int n,vector<vector<int>>& edges,int start){
 
 vector<vector<int>> floyd(int n,vector<vector<int>>& edges){
     vector<vector<int>> dis(n,vector<int>(n,INT_MAX));
+    for(int i=0;i<n;i++){
+        dis[i][i] = 0;
+    }
     for(auto e : edges){
         int u = e[0],v = e[1], d = e[2];
         dis[u][v] = min(dis[u][v],d);
     }
-
     for(int k=0;k<n;k++){
         // 允许经过[0,k],dis[i][j]的最短距离
         for(int i=0;i<n;i++){

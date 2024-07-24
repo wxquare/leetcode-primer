@@ -1,10 +1,15 @@
 # leetcode-primer
 
+<p align="center">
+  <img src="/images/mind.png" width=600 height=800>
+</p>
+
+
 ## 数据结构
-1. 链表/单链表/双链表(快慢指针)
+1. 单链表/双链表(快慢指针)
       - [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
       - [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
-      - [交换链表中的第K个节点和倒数第K个节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
+      - [1721. 交换链表中的节点](https://leetcode-cn.com/problems/swapping-nodes-in-a-linked-list/)
       - [147. 对链表进行插入排序](https://leetcode.cn/problems/insertion-sort-list)
       - [148. 链表归并排序](https://leetcode.cn/problems/sort-list)
 
@@ -47,6 +52,19 @@
 7. 平衡二叉树map/multimap/set/multimap
 
 
+8. 前缀、后缀、左边和右边、一维和二维
+      - [1423. 可获得的最大点数](https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards)
+      - [2132. 用邮票贴满网格图](https://leetcode.cn/problems/stamping-the-grid/description/)(二维前缀和)
+      - [1671. 得到山形数组的最少删除次数](https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array)
+      - [3212. 统计 X 和 Y 频数相等的子矩阵数量](https://leetcode.cn/problems/count-submatrices-with-equal-frequency-of-x-and-y/description/)(二维)
+
+9. 差分
+      - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings)
+      - [1094. 拼车](https://leetcode.cn/problems/car-pooling/)
+      - [2132. 用邮票贴满网格图](https://leetcode.cn/problems/stamping-the-grid/description/)（二维差分）
+      - [使数组等于目标数组所需的最少操作次数]()
+
+
 9. 线段树/树状数组(区间修改/区间add，求区间合、最值，区间内可以聚合的值）
       - 手撕线段树，支持区间update和区间聚合值（最大，最小、和）等
       - [218. 天际线问题,区间更新，单点查询](https://leetcode.cn/problems/the-skyline-problem)
@@ -62,6 +80,7 @@
 
 11. 跳表
 
+
 12. trie树
       - [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
       - [Implement Magic Dictionary](https://leetcode.com/problems/implement-magic-dictionary/)
@@ -75,10 +94,11 @@
 13. 并查集
       - [并查集](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
       - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
-      - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal)
-      - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array/description/)
-      - [冗余连接](https://leetcode.cn/problems/redundant-conn)
+      - [684.冗余连接](https://leetcode.cn/problems/redundant-connection)
+      - [721. 账户合并](https://leetcode.cn/problems/accounts-merge)
       - [924. 尽量减少恶意软件的传播](https://leetcode.cn/problems/minimize-malware-spread)
+      - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array)
+      - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal)
 
 14. 高级数据结构实现
       - [LRU](https://leetcode-cn.com/problems/lru-cache/)
@@ -86,6 +106,7 @@
       - [HashSet 链地址法](https://leetcode-cn.com/problems/design-hashset/)
       - [HashMap 链地址法](https://leetcode-cn.com/problems/design-hashmap/)
       - [剑指 Offer 59 - II. 队列的最大值](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof)
+
 
 
 ## 基本算法
@@ -98,7 +119,6 @@
       - [3007. 价值和小于等于 K 的最大数字](https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k)
 
 2. 滑动窗口/双指针
-      - [分享丨【题单】滑动窗口（定长/不定长/多指针）](https://leetcode.cn/circle/discuss/0viNMK/)
       - 3. 无重复字符的最长字符串
       - [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum)
       - [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k)
@@ -107,6 +127,7 @@
       - [统计最大元素出现至少 K 次的子数组](https://leetcode.cn/problems/count-subarrays-where-max-element-appears-at-least-k-times)
       - [1793.好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
       - [1052. 爱生气的书店老板](https://leetcode.cn/problems/grumpy-bookstore-owner)
+      - [2970. 统计移除递增子数组的数目 I](https://leetcode.cn/problems/count-the-number-of-incremovable-subarrays-i)
 
 4. 排序算法/top k/select kth
       - [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
@@ -123,19 +144,10 @@
 5. 脑筋急转弯、技巧类
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots)
 
-6. 前缀、后缀、左边和右边、一维和二维
-      - [1423. 可获得的最大点数](https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards)
-      - [2132. 用邮票贴满网格图](https://leetcode.cn/problems/stamping-the-grid/description/)(二维前缀和)
-      - [1671. 得到山形数组的最少删除次数](https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array)
 
-7. 差分
-      - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings)
-      - [1094. 拼车](https://leetcode.cn/problems/car-pooling/)
-      - [2132. 用邮票贴满网格图](https://leetcode.cn/problems/stamping-the-grid/description/)（二维差分）
 
 8. 分组/循环 (group/cycle arrray)
     	- [按照题目要求，数组会被分割成若干组，且每一组的判断/处理逻辑是一样的](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold/solutions/2528771/jiao-ni-yi-ci-xing-ba-dai-ma-xie-dui-on-zuspx/)
-      - 使循环数组所有元素相等的最少秒数
       - [466. 统计重复个数](https://leetcode.cn/problems/count-the-repetitions)
       - [2808. 使循环数组所有元素相等的最少秒数](https://leetcode.cn/problems/minimum-seconds-to-equalize-a-circular-array)
 
@@ -223,39 +235,36 @@
       - [56. 合并区间](https://leetcode.cn/problems/merge-intervals)
       - [2580. 统计将重叠区间合并成组的方案数](https://leetcode.cn/problems/count-ways-to-group-overlapping-ranges)
 
+10. 几何运算（距离：距离、欧式距离、曼哈顿距离、切比雪夫距离）
+      - 曼哈顿距离和切比雪夫距离变换 d(A,B) = max(|x1-y1 - (x2-y2)|,|x1+y1-(x2+y2)|)
+      - [3102. 最小化曼哈顿距离](https://leetcode.cn/problems/minimize-manhattan-distances)
+
+11. tu
 
 
 ## 搜索问题
-1. 数组字符串线性搜索，一维
-2. 树形图的非线性搜索
-      - [2477. 到达首都的最少油耗](https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital)
-3. 网格搜索
-4. BFS/多源BFS（源点为多个）/双向BFS/ BFS + 优先队列
+1. BFS
+      - 一维、二维网格、树、图
+      - BFS/多源BFS（源点为多个）/双向BFS/ BFS + 优先队列
       - [2812. 找出最安全路径，多源BFS](https://leetcode.cn/problems/find-the-safest-path-in-a-grid) 
       - [407. 接雨水 II](https://leetcode.cn/problems/trapping-rain-water-ii/description/)
       - [2258. 逃离火灾](https://leetcode.cn/problems/escape-the-spreading-fire/)
+      - [2477. 到达首都的最少油耗](https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital)
 
-5. DFS/剪枝/回溯（深度搜索+限制条件+限制搜索路径）
+
+2. DFS/剪枝/回溯（深度搜索+限制条件+限制搜索路径）
+      - 一维、二维网格、树、图
+      - [39. 组合总和](https://leetcode.cn/problems/combination-sum)
+      - [113. 路径总和 II](https://leetcode.cn/problems/path-sum-ii)(回溯模版题)
       - [LCR 086. 分割回文串](https://leetcode.cn/problems/M99OJA)
       - [面试题 08.12. 八皇后 n皇后问题](https://leetcode.cn/problems/eight-queens-lcci)
+      - [928. 尽量减少恶意软件的传播 II](https://leetcode.cn/problems/minimize-malware-spread-ii)
       - [2850. 将石头分散到网格图的最少移动次数](https://leetcode.cn/problems/minimum-moves-to-spread-stones-over-grid)
       - [2698. 求一个整数的惩罚数，预处理+回溯](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer)
-      - [113. 路径总和 II](https://leetcode.cn/problems/path-sum-ii)(回溯模版题)
-      - [928. 尽量减少恶意软件的传播 II](https://leetcode.cn/problems/minimize-malware-spread-ii)
-      - [39. 组合总和](https://leetcode.cn/problems/combination-sum)
+      - [3211. 生成不含相邻零的二进制字符串](https://leetcode.cn/problems/generate-binary-strings-without-adjacent-zeros)
+      - [2101. 引爆最多的炸弹](https://leetcode.cn/problems/detonate-the-maximum-bombs)
 
-6. 记忆化搜索 （动态规划，状态优化，求方案数量）
-      - [2742. 给墙壁刷油漆，状态优化](https://leetcode.cn/problems/painting-the-walls)
-      - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string)
-      - [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets)
-      - [2811. 判断是否能拆分数组](https://leetcode.cn/problems/check-if-it-is-possible-to-split-array/description/)
-      - [996. 正方形数组的数目，预处理/重复数字全排列](https://leetcode.cn/problems/number-of-squareful-arrays)
-      - [2741. 特别的排列，全排列/剪枝](https://leetcode.cn/problems/special-permutations)
-      - [2896. 执行操作使两个字符串相等](https://leetcode.cn/problems/apply-operations-to-make-two-strings-equal)
-      - [2003. 每棵子树内缺失的最小基因值](https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/)
-      - [72. 编辑距离](https://leetcode.cn/problems/edit-distance)
-      - [3154. 到达第 K 级台阶的方案数](https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair/)
-7. 启发式搜索
+3. 启发式搜索
       - 八数码问题
 
 
@@ -322,7 +331,6 @@
       - [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/description/)
       - [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum)
 
-
 6. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
       - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits)
       - [233. 数字 1 的个数](https://leetcode.cn/problems/number-of-digit-one)
@@ -346,24 +354,34 @@
 
 9. 矩阵快速幂优化DP
       - [2851. 字符串K次转换等于目标串的方案数量](https://leetcode.cn/problems/string-transformation/submissions465291899/)
+
+6. 记忆化搜索 （动态规划，状态优化，求方案数量）
+      - [2742. 给墙壁刷油漆，状态优化](https://leetcode.cn/problems/painting-the-walls)
+      - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string)
+      - [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets)
+      - [2811. 判断是否能拆分数组](https://leetcode.cn/problems/check-if-it-is-possible-to-split-array/description/)
+      - [996. 正方形数组的数目，预处理/重复数字全排列](https://leetcode.cn/problems/number-of-squareful-arrays)
+      - [2741. 特别的排列，全排列/剪枝](https://leetcode.cn/problems/special-permutations)
+      - [2896. 执行操作使两个字符串相等](https://leetcode.cn/problems/apply-operations-to-make-two-strings-equal)
+      - [2003. 每棵子树内缺失的最小基因值](https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/)
+      - [72. 编辑距离](https://leetcode.cn/problems/edit-distance)
+      - [3154. 到达第 K 级台阶的方案数](https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair/)
         
 ## 树/图论
 1. [最短路径和K短问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
       - BFS（单源，无权路，权值为1的最短路，O(n)）
       - Dijkstra（单源，权值为正,O((E)logE))
-      - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)
       - Ballmanford （单源，n-1次松驰，,权值可正可负，可用于检测负环,O(V*E))
-      - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)
       - Floyd（多源，任意两点的距离，O(n^3))
-      - [1334. 阈值距离内邻居最少的城市](https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance)
-      - [关闭分部的可行集合数目](https://leetcode.cn/problems/number-of-possible-sets-of-closing-branche)
-      - A*
-            - [八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
       - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)
+      - [1334. 阈值距离内邻居最少的城市](https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance)
+      - [A* 八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
       - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination)
       - [1976. 到达目的地的方案数](https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination)
       - [2642. 设计可以求最短路径的图类](https://leetcode.cn/problems/design-graph-with-shortest-path-calculator)
       - [2065. 最大化一张图中的路径价值](https://leetcode.cn/problems/maximum-path-quality-of-a-graph/description/)
+      - [2959.关闭分部的可行集合数目](https://leetcode.cn/problems/number-of-possible-sets-of-closing-branche)
+      - [3112. 访问消失节点的最少时间](https://leetcode.cn/problems/minimum-time-to-visit-disappearing-nodes)
 
 2. [拓扑排序和度](https://github.com/wxquare/online-algorithm-coding/blob/master/other/topological.cc)
      - [207. 课程表](https://leetcode-cn.com/problems/course-schedule/)
