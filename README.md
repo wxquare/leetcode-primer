@@ -67,8 +67,7 @@
 
 9. 线段树/树状数组(区间修改/区间add，求区间合、最值，区间内可以聚合的值）
       - 手撕线段树，支持区间update和区间聚合值（最大，最小、和）等
-      - [218. 天际线问题,区间更新，单点查询](https://leetcode.cn/problems/the-skyline-problem)
-      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable)
+      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable)【单点加法，求区间和，树状数组】
       - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence)
       - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii)
       - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/)
@@ -77,6 +76,8 @@
       - [1094. 拼车，可以用差分](https://leetcode.cn/problems/car-pooling/)
       - [统计好分割方案的数目](https://leetcode.cn/problems/count-the-number-of-good-partitions)
       - [2276. 统计区间中的整数数目](https://leetcode.cn/problems/count-integers-in-intervals)
+      - [699. 掉落的方块](https://leetcode.cn/problems/falling-squares)【区间更新，查询区间最大值】
+      - [218. 天际线问题,区间更新，单点查询](https://leetcode.cn/problems/the-skyline-problem) 【区间更新，查询单点的值】
 
 11. 跳表
 
@@ -217,7 +218,7 @@
 6. 快速幂
       - [50. Pow(x, n)](https://leetcode.cn/problems/powx-n)
       - [372. 超级次方](https://leetcode.cn/problems/super-pow) （快速幂和模运算）
-      - [双模幂运算](https://leetcode.cn/problems/double-modular-exponentiation)
+      - [2961.双模幂运算](https://leetcode.cn/problems/double-modular-exponentiation)
 
 7. 排列组合数学取模(大数取模)
      - 求c(n,k),大数c(n,k,mod)
@@ -290,6 +291,10 @@
             - [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
             - [2901. 最长相邻不相等子序列 II](https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii)
             - [5.最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
+            - [2915. 和为目标值的最长子序列的长度](https://leetcode.cn/problems/length-of-the-longest-subsequence-that-sums-to-target)
+            - [3098. 求出所有子序列的能量和](https://leetcode.cn/problems/find-the-sum-of-subsequence-powers)
+            - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence)
+            - [72. 编辑距离](https://leetcode.cn/problems/edit-distance/)
       4. DP回溯 (很多时候只是求DP最值，但有时需要回溯DP的过程)
             - [689. 三个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays)
       5. 网格，矩阵DP
