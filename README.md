@@ -51,7 +51,6 @@
 
 7. 平衡二叉树map/multimap/set/multimap
 
-
 8. 前缀、后缀、左边和右边、一维和二维
       - [1423. 可获得的最大点数](https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards)
       - [2132. 用邮票贴满网格图](https://leetcode.cn/problems/stamping-the-grid/description/)(二维前缀和)
@@ -62,25 +61,17 @@
       - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings)
       - [1094. 拼车](https://leetcode.cn/problems/car-pooling/)
       - [2132. 用邮票贴满网格图](https://leetcode.cn/problems/stamping-the-grid/description/)（二维差分）
-      - [使数组等于目标数组所需的最少操作次数]()
 
+10. 树状数组
+      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable)【单点加法（更新），求区间和】
 
-9. 线段树/树状数组(区间修改/区间add，求区间合、最值，区间内可以聚合的值）
+11. 线段树(区间修改/区间add，求区间合、最值，区间内可以聚合的值）
       - 手撕线段树，支持区间update和区间聚合值（最大，最小、和）等
-      - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable)【单点加法，求区间和，树状数组】
-      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence)
-      - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii)
-      - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/)
-      - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query)
-      - [2916. 子数组不同元素数目的平方和 II](https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii)
-      - [1094. 拼车，可以用差分](https://leetcode.cn/problems/car-pooling/)
-      - [统计好分割方案的数目](https://leetcode.cn/problems/count-the-number-of-good-partitions)
-      - [2276. 统计区间中的整数数目](https://leetcode.cn/problems/count-integers-in-intervals)
+      - [2276. 统计区间中的整数数目](https://leetcode.cn/problems/count-integers-in-intervals)【线段树】
       - [699. 掉落的方块](https://leetcode.cn/problems/falling-squares)【区间更新，查询区间最大值】
-      - [218. 天际线问题,区间更新，单点查询](https://leetcode.cn/problems/the-skyline-problem) 【区间更新，查询单点的值】
-
-11. 跳表
-
+      - [218. 天际线问题,区间更新，单点查询](https://leetcode.cn/problems/the-skyline-problem) 【区间更新、查询单点的值】
+      - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii)【DP、线段树优化、 单点更新、区间最大值
+      - [2916. 子数组不同元素数目的平方和 II](https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii)【线段树】
 
 12. trie树
       - [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
@@ -107,7 +98,11 @@
       - [HashSet 链地址法](https://leetcode-cn.com/problems/design-hashset/)
       - [HashMap 链地址法](https://leetcode-cn.com/problems/design-hashmap/)
       - [剑指 Offer 59 - II. 队列的最大值](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof)
+      - 跳表
 
+15. 离线query
+      - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/)
+      - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query)
 
 
 ## 基本算法
@@ -167,6 +162,7 @@
       - [2009. 使数组连续的最少操作数](https://leetcode.cn/problems/minimum-number-of-operations-to-make-array-continuous)
       - [1702. 修改后的最大二进制字符串](https://leetcode.cn/problems/maximum-binary-string-after-change)
       - [2007. 从双倍数组中还原原数组](https://leetcode.cn/problems/find-original-array-from-doubled-array)
+      - [3111. 覆盖所有点的最少矩形数目](https://leetcode.cn/problems/minimum-rectangles-to-cover-points)【排序+贪心】
 
 ## 数学
 1. 数论问题
@@ -240,9 +236,6 @@
       - 曼哈顿距离和切比雪夫距离变换 d(A,B) = max(|x1-y1 - (x2-y2)|,|x1+y1-(x2+y2)|)
       - [3102. 最小化曼哈顿距离](https://leetcode.cn/problems/minimize-manhattan-distances)
 
-11. tu
-
-
 ## 搜索问题
 1. BFS
       - 一维、二维网格、树、图
@@ -286,7 +279,7 @@
             - [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups)
             - 买卖股票的最大利润（最多一次买卖、最多两次、最多K次、无限次买卖、冷冻期1天、手续费）
       3. 序列DP (序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等)
-            - [最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence)
+            - [300. 最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence)
             - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence)
             - [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
             - [2901. 最长相邻不相等子序列 II](https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii)
