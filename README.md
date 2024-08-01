@@ -155,7 +155,7 @@
       - [2007. 从双倍数组中还原原数组](https://leetcode.cn/problems/find-original-array-from-doubled-array)
       - [3111. 覆盖所有点的最少矩形数目](https://leetcode.cn/problems/minimum-rectangles-to-cover-points)【排序+贪心】
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots)
-      - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares)[平方和贪心，和的平方>=平方和]
+      - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares)【平方和贪心，和的平方>=平方和】
 
 ## 数学
 1. 数论问题
