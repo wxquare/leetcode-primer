@@ -103,6 +103,7 @@
 15. 离线query
       - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/)
       - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query)
+      - [2940. 找到 Alice 和 Bob 可以相遇的建筑](https://leetcode.cn/problems/find-building-where-alice-and-bob-can-meet)
 
 
 ## 基本算法
@@ -115,7 +116,6 @@
       - [3007. 价值和小于等于 K 的最大数字](https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k)
 
 2. 滑动窗口/双指针
-      - 3. 无重复字符的最长字符串
       - [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum)
       - [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k)
       - [30. 串联所有单词的子串](https://leetcode.cn/problems/substring-with-concatenation-of-all-words)
@@ -136,21 +136,12 @@
 5. 枚举
       - [2735. 收集巧克力](https://leetcode.cn/problems/collecting-chocolates)
 
-
-5. 脑筋急转弯、技巧类
-      - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots)
-
-
-
 8. 分组/循环 (group/cycle arrray)
     	- [按照题目要求，数组会被分割成若干组，且每一组的判断/处理逻辑是一样的](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold/solutions/2528771/jiao-ni-yi-ci-xing-ba-dai-ma-xie-dui-on-zuspx/)
       - [466. 统计重复个数](https://leetcode.cn/problems/count-the-repetitions)
       - [2808. 使循环数组所有元素相等的最少秒数](https://leetcode.cn/problems/minimum-seconds-to-equalize-a-circular-array)
 
 9. 分组
-
-9. 离线query(预处理+数据结构应用)
-      - [2940. 找到 Alice 和 Bob 可以相遇的建筑](https://leetcode.cn/problems/find-building-where-alice-and-bob-can-meet)
       
 10. 简单但易错题：
       - [2760. 最长奇偶子数组](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold)
@@ -163,6 +154,8 @@
       - [1702. 修改后的最大二进制字符串](https://leetcode.cn/problems/maximum-binary-string-after-change)
       - [2007. 从双倍数组中还原原数组](https://leetcode.cn/problems/find-original-array-from-doubled-array)
       - [3111. 覆盖所有点的最少矩形数目](https://leetcode.cn/problems/minimum-rectangles-to-cover-points)【排序+贪心】
+      - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots)
+      - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares)[平方和贪心，和的平方>=平方和]
 
 ## 数学
 1. 数论问题
@@ -185,20 +178,20 @@
       - 费马定理
 
 3. 位运算
+      - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
+      - lowbit(x) = x & (-x),快速获取最右侧1的位置的树，例如lowbit(6) = (110) = 2,lowbit(12) = (1100) = 4 
+      - (x & (1 << i)) == 0
+      - 异或运算: 0^0=0,0^1=1,1^1=0,
+      - __builtin_clz, count leading zero
+      - __builtin_ctz, count trainling zero
+      - __builtin_popcount, population count
+      - [260. 只出现一次的数字 I、II、III](https://leetcode.cn/problems/single-number-iii)
+      - [421. 数组中两个数的最大异或值](https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array)
       - [所有数对按位与结果的异或和](https://leetcode-cn.com/problems/find-xor-sum-of-all-pairs-bitwise-and/)
       - [318. 最大单词长度乘积](https://leetcode.cn/problems/maximum-product-of-word-lengths)
       - [2939. 最大异或乘积](https://leetcode.cn/problems/maximum-xor-product)
       - [2397. 被列覆盖的最多行数](https://leetcode.cn/problems/maximum-rows-covered-by-columns)
-      - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
-      - lowbit(x) = x & (-x)
-      - x |= (1 << i)
-      - (x & (1 << i)) == 0
-      - 异或运算: 0^0=1,0^1=1,1^1=0,
-      - x ^ (1 << i) = x
-      - __builtin_clz,__builtin_ctz,__builtin_popcount
-      - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares)
-      - [260. 只出现一次的数字 I、II、III](https://leetcode.cn/problems/single-number-iii)
-      - [421. 数组中两个数的最大异或值](https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array)
+      - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares)[操作题、位运算、贪心]
 
 3. 拒绝抽样(rejection sampling)
       - [用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7)
@@ -424,9 +417,6 @@
       - https://www.cnblogs.com/wenruo/p/12357543.html
       - leetcode 1595.连通两组点的最小成
       - https://leetcode.cn/problems/7rLGCR/description/（守卫城堡）
-
-## TODO
-- 526. 优美的排列
 
 ## 参考
 - [leetcode](https://leetcode.cn/)
