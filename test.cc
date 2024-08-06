@@ -1,27 +1,43 @@
-#include <iostream>
-#include <random>
+const int MOD = 1e9 + 7;
 
-int generateRandomNumber(int lower, int upper) {
-    // random_device is a uniformly-distributed integer random number generator
-    std::random_device rd;
+class Solution {
+public:
 
-    // Use the random_device to seed a random number generator
-    std::mt19937 gen(rd());
+    int numberOfStableArrays(int zero, int one, int limit) {
 
-    // Define the range
-    std::uniform_int_distribution<> dis(lower, upper);
+        int memo[zero+1][one+1][2*limit+1];
+        memset(memo,-1,sizeof(memo));
 
-    // Generate the random number
-    return dis(gen);
-}
+        function<int(int,int,int)> dfs = [&](int z,int o,int l)->int{
+            if(z == 0 && o == 0){
+                return 1;
+            }
 
-int main() {
-    int lower = 1;
-    int upper = 418;
+            if(memo[z][o][l] != -1){
+                return memo[z][o][l];
+            }
 
-    // Generate a random number in the range [lower, upper]
-    int random_number = generateRandomNumber(lower, upper);
-    std::cout << "Random number between " << lower << " and " << upper << ": " << random_number << std::endl;
+            long long res = 0;
+            // 取1
+            if(o > 0 && l + 1 <= 2*limit){
+                if(l < limit){
+                    res += dfs(z,o-1,limit+1);
+                } else {
+                    res += dfs(z,o-1,l + 1);
+                }
+            }
 
-    return 0;
-}
+            if(z > 0 && l - 1 >= 0){
+                if(l < limit){
+                    res += dfs(z-1,o,l-1);
+                } else {
+                    res += dfs(z-1,o,limit - 1);
+                }
+            }
+            memo[z][o][l] = res % MOD;
+            return memo[z][o][l];
+        };
+
+        return dfs(zero,one,limit);
+    }
+};
