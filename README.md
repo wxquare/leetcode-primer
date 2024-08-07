@@ -282,6 +282,9 @@
             - [3098. 求出所有子序列的能量和](https://leetcode.cn/problems/find-the-sum-of-subsequence-powers)
             - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence)
             - [72. 编辑距离](https://leetcode.cn/problems/edit-distance/)
+      4. 数组DP dp[i][j]
+            - [3130. 找出所有稳定的二进制数组 II](https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-ii)dp[i][j][2] 以0或者1结尾的方案数
+
       4. DP回溯 (很多时候只是求DP最值，但有时需要回溯DP的过程)
             - [689. 三个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays)
       5. 网格，矩阵DP
@@ -327,7 +330,7 @@
       - [233. 数字 1 的个数](https://leetcode.cn/problems/number-of-digit-one)【dfs = [&](int i,int cnt,int is_limit)】
       - [600. 二进制不含连续1的非负整数](https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones)【数位DP】
       - [902. 最大为 N 的数字组合](https://leetcode.cn/problems/numbers-at-most-n-given-digit-set)【dfs = [&](int i,bool is_limit,bool is_num)】
-      - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits)
+      - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits)【dfs = [&](int i,int mask,bool is_limit,bool is_num)】
       - [2376. 统计特殊整数](https://leetcode.cn/problems/count-special-integers)
       - [2801. 统计范围内的步进数字数目](https://leetcode.cn/problems/count-stepping-numbers-in-range)
       - [2827. 范围中美丽整数的数目](https://leetcode.cn/problems/number-of-beautiful-integers-in-the-range)
