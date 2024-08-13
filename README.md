@@ -57,6 +57,7 @@
       - [2132. 用邮票贴满网格图](https://leetcode.cn/problems/stamping-the-grid/description/)(二维前缀和)
       - [1671. 得到山形数组的最少删除次数](https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array)
       - [3212. 统计 X 和 Y 频数相等的子矩阵数量](https://leetcode.cn/problems/count-submatrices-with-equal-frequency-of-x-and-y/description/)(二维)
+      - [3152. 特殊数组 II](https://leetcode.cn/problems/special-array-ii)【prefix sum array】
 
 9. 差分
       - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings)
@@ -75,8 +76,8 @@
       - [2916. 子数组不同元素数目的平方和 II](https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii)【线段树】
 
 12. trie树
-      - [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
-      - [Implement Magic Dictionary](https://leetcode.com/problems/implement-magic-dictionary/)
+      - [Implement Trie (Prefix Tree)](https://leetcode.cn/problems/implement-trie-prefix-tree/)
+      - [Implement Magic Dictionary](https://leetcode.cn/problems/implement-magic-dictionary)
       - [统计异或值在范围内的数对有多少](https://leetcode-cn.com/problems/count-pairs-with-xor-in-a-range/)
 
 13. 字符串匹配 
@@ -125,6 +126,7 @@
       - [1793.好子数组的最大分数](https://leetcode-cn.com/problems/maximum-score-of-a-good-subarray/)
       - [1052. 爱生气的书店老板](https://leetcode.cn/problems/grumpy-bookstore-owner)
       - [2970. 统计移除递增子数组的数目 I](https://leetcode.cn/problems/count-the-number-of-incremovable-subarrays-i)
+      - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water)【双指针接雨水，木桶效应】
 
 4. 排序算法/top k/select kth
       - [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
@@ -282,8 +284,9 @@
             - [3098. 求出所有子序列的能量和](https://leetcode.cn/problems/find-the-sum-of-subsequence-powers)
             - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence)
             - [72. 编辑距离](https://leetcode.cn/problems/edit-distance/)
-      4. 数组DP dp[i][j]
-            - [3130. 找出所有稳定的二进制数组 II](https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-ii)dp[i][j][2] 以0或者1结尾的方案数
+      4. 数组DP dp[i][j] 
+            - [3130. 找出所有稳定的二进制数组 II](https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-ii)【dp[i][j][2] 以0或者1结尾的方案数】
+            - [3251. 单调数组对的数目 II](https://leetcode.cn/problems/find-the-count-of-monotonic-pairs-ii)【dp[i][j],前i个数，以j结尾的方案数】
 
       4. DP回溯 (很多时候只是求DP最值，但有时需要回溯DP的过程)
             - [689. 三个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays)
