@@ -334,7 +334,7 @@
       - [600. 二进制不含连续1的非负整数](https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones)【数位DP】
       - [902. 最大为 N 的数字组合](https://leetcode.cn/problems/numbers-at-most-n-given-digit-set)【dfs = [&](int i,bool is_limit,bool is_num)】
       - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits)【dfs = [&](int i,int mask,bool is_limit,bool is_num)】
-      - [2376. 统计特殊整数](https://leetcode.cn/problems/count-special-integers)
+      - [2376. 统计特殊整数](https://leetcode.cn/problems/count-special-integers)【dfs = [&](int i,int mask,bool is_limit,bool is_num)】
       - [2801. 统计范围内的步进数字数目](https://leetcode.cn/problems/count-stepping-numbers-in-range)【dfs = [&](int i,int pre,bool is_limit,bool is_num)->int】
       - [2827. 范围中美丽整数的数目](https://leetcode.cn/problems/number-of-beautiful-integers-in-the-range)
       - [2719. 统计整数数目](https://leetcode.cn/problems/count-of-integers/)
@@ -434,3 +434,4 @@
 - https://oi-wiki.org/
 - https://zerotrac.github.io/leetcode_problem_rating/
 - https://cp-algorithms.com/
+- https://leetcode.cn/circle/discuss/tXLS3i/
