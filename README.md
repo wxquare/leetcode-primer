@@ -326,8 +326,14 @@
       - [894. 所有可能的真二叉树](https://leetcode.cn/problems/all-possible-full-binary-trees)
       - 树的直径和路径问题
       - [3203. 合并两棵树后的最小直径](https://leetcode.cn/problems/find-minimum-diameter-after-merging-two-trees)
-      - [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/description/)
-      - [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum)
+
+      1. 定根DP，一次扫描
+            - [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/description/)
+            - [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum)
+            - [687. 最长同值路径](https://leetcode.cn/problems/longest-univalue-path)
+            - [2246. 相邻字符不同的最长路径](https://leetcode.cn/problems/longest-path-with-different-adjacent-characters)
+      2. 换根DP，二次扫描法
+            - [834. 树中距离之和](https://leetcode.cn/problems/sum-of-distances-in-tree)
 
 6. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
       - [233. 数字 1 的个数](https://leetcode.cn/problems/number-of-digit-one)【dfs = [&](int i,int cnt,int is_limit)】
