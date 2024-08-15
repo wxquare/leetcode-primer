@@ -290,8 +290,11 @@
 
       4. DP回溯 (很多时候只是求DP最值，但有时需要回溯DP的过程)
             - [689. 三个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays)
+     
       5. 网格，矩阵DP
             - [221. 最大正方形](https://leetcode.cn/problems/maximal-square)
+            - [3148. 矩阵中的最大得分](https://leetcode.cn/problems/maximum-difference-score-in-a-grid)
+
 2. 背包 DP
       - 01背包
       - [494. 目标和](https://leetcode.cn/problems/target-sum)
@@ -318,15 +321,11 @@
 5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的，记忆化搜索，递归。就是我们已经知道以uuu为根的答案，想要通过u−>v的父子关系把答案传递）
       - [打家劫舍 III](https://leetcode.cn/problems/house-robber-iii)
       - [最小化旅行的价格总和](https://leetcode.cn/problems/minimize-the-total-price-of-the-trips)
-      - [2858. 可以到达每一个节点的最少边反转次数,换根DP](https://leetcode.cn/problems/minimum-edge-reversals-so-every-node-is-reachable)
-      - [834. 树中距离之和](https://leetcode.cn/problems/sum-of-distances-in-tree)
-      - [2581. 统计可能的树根数目](https://leetcode.cn/problems/count-number-of-possible-root-nodes)
       - [2920. 收集所有金币可获得的最大积分](https://leetcode.cn/problems/maximum-points-after-collecting-coins-from-all-nodes/)
       - [2925. 在树上执行操作以后得到的最大分数](https://leetcode.cn/problems/maximum-score-after-applying-operations-on-a-tree)
       - [894. 所有可能的真二叉树](https://leetcode.cn/problems/all-possible-full-binary-trees)
       - 树的直径和路径问题
       - [3203. 合并两棵树后的最小直径](https://leetcode.cn/problems/find-minimum-diameter-after-merging-two-trees)
-
       1. 定根DP，一次扫描
             - [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/description/)
             - [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum)
@@ -334,6 +333,10 @@
             - [2246. 相邻字符不同的最长路径](https://leetcode.cn/problems/longest-path-with-different-adjacent-characters)
       2. 换根DP，二次扫描法
             - [834. 树中距离之和](https://leetcode.cn/problems/sum-of-distances-in-tree)
+            - [2581. 统计可能的树根数目](https://leetcode.cn/problems/count-number-of-possible-root-nodes)
+            - [2858. 可以到达每一个节点的最少边反转次数](https://leetcode.cn/problems/minimum-edge-reversals-so-every-node-is-reachable)
+            - [3241. 标记所有节点需要的时间](https://leetcode.cn/problems/time-taken-to-mark-all-nodes)
+
 
 6. 数位 DP (dfs(int i,int state,bool is_limit,bool is_num)
       - [233. 数字 1 的个数](https://leetcode.cn/problems/number-of-digit-one)【dfs = [&](int i,int cnt,int is_limit)】
