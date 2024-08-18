@@ -274,6 +274,7 @@
             - 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
             - [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups)
             - 买卖股票的最大利润（最多一次买卖、最多两次、最多K次、无限次买卖、冷冻期1天、手续费）
+            - [552. 学生出勤记录 II](https://leetcode.cn/problems/student-attendance-record-ii)【三维】
       3. 序列DP (序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等)
             - [300. 最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence)
             - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence)
@@ -319,8 +320,11 @@
 
 
 5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的，记忆化搜索，递归。就是我们已经知道以uuu为根的答案，想要通过u−>v的父子关系把答案传递）
-      - [打家劫舍 III](https://leetcode.cn/problems/house-robber-iii)
-      - [最小化旅行的价格总和](https://leetcode.cn/problems/minimize-the-total-price-of-the-trips)
+
+      1. 树上最大独立集 (不选相连的节点)
+            - [337. 打家劫舍 III](https://leetcode.cn/problems/house-robber-iii)
+            - [2646. 最小化旅行的价格总和](https://leetcode.cn/problems/minimize-the-total-price-of-the-trips)
+
       - [2920. 收集所有金币可获得的最大积分](https://leetcode.cn/problems/maximum-points-after-collecting-coins-from-all-nodes/)
       - [2925. 在树上执行操作以后得到的最大分数](https://leetcode.cn/problems/maximum-score-after-applying-operations-on-a-tree)
       - [894. 所有可能的真二叉树](https://leetcode.cn/problems/all-possible-full-binary-trees)
