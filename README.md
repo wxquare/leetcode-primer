@@ -116,6 +116,7 @@
       - [1901. 寻找峰值 II](https://leetcode.cn/problems/find-a-peak-element-ii)
       - [162. 寻找峰值](https://leetcode.cn/problems/find-peak-element)
       - [3007. 价值和小于等于 K 的最大数字](https://leetcode.cn/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k)
+      - [3134. 找出唯一性数组的中位数](https://leetcode.cn/problems/find-the-median-of-the-uniqueness-array)
 
 2. 滑动窗口/双指针
       - [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum)
@@ -260,8 +261,9 @@
 
 ## DP问题（递推类DP）
 1. 线性 DP （包括状态机DP，序列DP,子问题有一个端点是固定不变的）
-      1. 线性DP
+      1. 线性DP（一维 O(n))
             - [斐波那契数列](https://leetcode.cn/problems/fibonacci-number)
+            - [3154. 到达第 K 级台阶的方案数]
             - [LCR 168. 第n个丑数](https://leetcode.cn/problems/chou-shu-lcof/description/)
             - [数字三角形](https://leetcode.cn/problems/triangle)
             - [跳跃游戏1，2，3，4](https://leetcode.cn/problems/jump-game)
@@ -270,6 +272,7 @@
             - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/description/)
             - [53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray)
             - [1997. 访问完所有房间的第一天](https://leetcode.cn/problems/first-day-where-you-have-been-in-all-the-rooms)
+            - [3144. 分割字符频率相等的最少子字符串](https://leetcode.cn/problems/minimum-substring-partition-of-equal-character-frequenc)【一维，O(n^2),和之前的每个状态都有关系】
       2. 状态机DP（关键是设计状态以及状态转移方程，之后在处理边界条件）
             - 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
             - [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups)
