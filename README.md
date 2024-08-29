@@ -260,7 +260,7 @@
 
 
 ## DP问题（递推类DP）
-1. 线性 DP （包括状态机DP，序列DP,子问题有一个端点是固定不变的）
+1. 线性 DP 和 状态机 DB （包括状态机DP，序列DP,子问题有一个端点是固定不变的）
       1. 线性DP（一维 O(n))
             - [斐波那契数列](https://leetcode.cn/problems/fibonacci-number)
             - [3154. 到达第 K 级台阶的方案数]
@@ -381,6 +381,7 @@
       - [72. 编辑距离](https://leetcode.cn/problems/edit-distance)
       - [3154. 到达第 K 级台阶的方案数](https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair/)
       - [3129. 找出所有稳定的二进制数组 I](https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-i)
+      - [3154. 到达第 K 级台阶的方案数](https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair)(转移方程[0,i-1]以及i+1有关，不方便迭代，状态稀疏，logk * logk, 使用哈希表 + mask 方式做状态压缩)
         
 ## 树/图论
 1. [最短路径和K短问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
