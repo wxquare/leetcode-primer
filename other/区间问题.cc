@@ -37,7 +37,7 @@ void difference(){
     vector<int> ans(n,0);
     ans[0] = diff[0];
     for(int i=1;i<n;i++){
-        ans[i] = diff[i] + diff[i-1];
+        ans[i] = diff[i] + ans[i-1];
     }
 }
 

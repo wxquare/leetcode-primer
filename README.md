@@ -58,11 +58,13 @@
       - [1671. 得到山形数组的最少删除次数](https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array)
       - [3212. 统计 X 和 Y 频数相等的子矩阵数量](https://leetcode.cn/problems/count-submatrices-with-equal-frequency-of-x-and-y/description/)(二维)
       - [3152. 特殊数组 II](https://leetcode.cn/problems/special-array-ii)【prefix sum array】
+      - [3127. 构造相同颜色的正方形](https://leetcode.cn/problems/make-a-square-with-the-same-color)【二维区间和】
 
-9. 差分
+9. 差分 (连续区间同时加上或者减去一个数，数组还原)
       - [1109. Corporate Flight Bookings](https://leetcode.cn/problems/corporate-flight-bookings)
       - [1094. 拼车](https://leetcode.cn/problems/car-pooling/)
       - [2132. 用邮票贴满网格图](https://leetcode.cn/problems/stamping-the-grid/description/)（二维差分）
+      - [995. K 连续位的最小翻转次数](https://leetcode.cn/problems/minimum-number-of-k-consecutive-bit-flips)
 
 10. 树状数组
       - [307. Range Sum Query - Mutable](https://leetcode.cn/problems/range-sum-query-mutable)【单点加法（更新），求区间和】
@@ -128,6 +130,9 @@
       - [1052. 爱生气的书店老板](https://leetcode.cn/problems/grumpy-bookstore-owner)
       - [2970. 统计移除递增子数组的数目 I](https://leetcode.cn/problems/count-the-number-of-incremovable-subarrays-i)
       - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water)【双指针接雨水，木桶效应】
+      - [2024. 考试的最大困扰度](https://leetcode.cn/problems/maximize-the-confusion-of-an-exam)(【不定长滑动窗口个】))
+      - [统计重新排列后包含另一个字符串的子字符串数目 II](https://leetcode.cn/contest/weekly-contest-416/problems/count-substrings-that-can-be-rearranged-to-contain-a-string-ii)(【不定长滑动窗口统计 满足需求的子串的数量】)
+
 
 4. 排序算法/top k/select kth
       - [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci/) 三指针，优先队列
@@ -139,18 +144,16 @@
 
 5. 枚举
       - [2735. 收集巧克力](https://leetcode.cn/problems/collecting-chocolates)
+      - [2555. 两个线段获得的最多奖品](https://leetcode.cn/problems/maximize-win-from-two-segments)【维护左边，枚举右边】
 
-8. 分组/循环 (group/cycle arrray)
+6. 分组/循环 (group/cycle arrray/模拟/易错)
     	- [按照题目要求，数组会被分割成若干组，且每一组的判断/处理逻辑是一样的](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold/solutions/2528771/jiao-ni-yi-ci-xing-ba-dai-ma-xie-dui-on-zuspx/)
       - [466. 统计重复个数](https://leetcode.cn/problems/count-the-repetitions)
       - [2808. 使循环数组所有元素相等的最少秒数](https://leetcode.cn/problems/minimum-seconds-to-equalize-a-circular-array)
-
-9. 分组
-      
-10. 简单但易错题：
+      - [2332. 坐上公交的最晚时间](https://leetcode.cn/problems/the-latest-time-to-catch-a-bus)【双指针-易错模拟题】
       - [2760. 最长奇偶子数组](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold)
 
-11. 贪心
+7. 贪心
       - [超级洗衣机](https://leetcode.cn/problems/super-washing-machines)
       - [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii)
       - [2171 拿出最少数目的魔法豆](https://leetcode.cn/problems/removing-minimum-number-of-magic-beans)
@@ -160,6 +163,7 @@
       - [3111. 覆盖所有点的最少矩形数目](https://leetcode.cn/problems/minimum-rectangles-to-cover-points)【排序+贪心】
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots)
       - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares)【平方和贪心，和的平方>=平方和】
+      - [2576. 求出最多标记下标](https://leetcode.cn/problems/find-the-maximum-number-of-marked-indices)
 
 ## 数学
 1. 数论问题
@@ -261,24 +265,33 @@
 
 ## DP问题（递推类DP）
 1. 线性 DP 和 状态机 DB （包括状态机DP，序列DP,子问题有一个端点是固定不变的）
-      1. 线性DP（一维 O(n))
-            - [斐波那契数列](https://leetcode.cn/problems/fibonacci-number)
-            - [3154. 到达第 K 级台阶的方案数]
-            - [LCR 168. 第n个丑数](https://leetcode.cn/problems/chou-shu-lcof/description/)
-            - [数字三角形](https://leetcode.cn/problems/triangle)
+      1. 线性DP（一维 O(n),dp[i] 只与之前的某个几个状态有关系)
+            - [509. 斐波那契数](https://leetcode.cn/problems/fibonacci-number)
+            - [264. 丑数 II](https://leetcode.cn/problems/ugly-number-ii)
             - [跳跃游戏1，2，3，4](https://leetcode.cn/problems/jump-game)
             - [2708. 一个小组的最大实力值](https://leetcode.cn/problems/maximum-strength-of-a-group)
+            - [152. 乘积最大子数组](https://leetcode.cn/problems/maximum-product-subarray)
             - [销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman)
             - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/description/)
             - [53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray)
             - [1997. 访问完所有房间的第一天](https://leetcode.cn/problems/first-day-where-you-have-been-in-all-the-rooms)
+            - [3291. 形成目标字符串需要的最少字符串数 I](https://leetcode.cn/problems/minimum-number-of-valid-strings-to-form-target-i)【字典树+一维线性DP，向后更新】
+      2. 线性DP（一维O(n^2),dp[i],和之前的每个状态有关系）
             - [3144. 分割字符频率相等的最少子字符串](https://leetcode.cn/problems/minimum-substring-partition-of-equal-character-frequenc)【一维，O(n^2),和之前的每个状态都有关系】
-      2. 状态机DP（关键是设计状态以及状态转移方程，之后在处理边界条件）
+      3. 线性DP (dp[i][k],dp[i]有k个状态，一维+k个状态,状态机DP（关键是设计状态以及状态转移方程，之后在处理边界条件）)
+            - [689. 三个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays)【回溯DP的过程】
+            - [3251. 单调数组对的数目 II](https://leetcode.cn/problems/find-the-count-of-monotonic-pairs-ii)【dp[i][j],前i个数，以j结尾的方案数
             - 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
             - [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups)
             - 买卖股票的最大利润（最多一次买卖、最多两次、最多K次、无限次买卖、冷冻期1天、手续费）
             - [552. 学生出勤记录 II](https://leetcode.cn/problems/student-attendance-record-ii)【三维】
-      3. 序列DP (序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等)
+      5. 网格，矩阵DP（二维 dp[i][j])
+            - [221. 最大正方形](https://leetcode.cn/problems/maximal-square)
+            - [3148. 矩阵中的最大得分](https://leetcode.cn/problems/maximum-difference-score-in-a-grid)
+            - [120. 三角形最小路径和](https://leetcode.cn/problems/triangle) 
+      6. 网格，矩阵DP（二维 dp[i][j][k],二维+k个状态)
+            - [552. 学生出勤记录 II](https://leetcode.cn/problems/student-attendance-record-ii)【三维】
+      7. 序列DP (序列DP是动态规划中的一种常见形式，通常用于解决一些关于序列的问题，比如最长递增子序列、编辑距离等)
             - [300. 最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence)
             - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence)
             - [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
@@ -288,16 +301,8 @@
             - [3098. 求出所有子序列的能量和](https://leetcode.cn/problems/find-the-sum-of-subsequence-powers)
             - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence)
             - [72. 编辑距离](https://leetcode.cn/problems/edit-distance/)
-      4. 数组DP dp[i][j] 
+      8. 数组DP dp[i][j] 
             - [3130. 找出所有稳定的二进制数组 II](https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-ii)【dp[i][j][2] 以0或者1结尾的方案数】
-            - [3251. 单调数组对的数目 II](https://leetcode.cn/problems/find-the-count-of-monotonic-pairs-ii)【dp[i][j],前i个数，以j结尾的方案数】
-
-      4. DP回溯 (很多时候只是求DP最值，但有时需要回溯DP的过程)
-            - [689. 三个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays)
-     
-      5. 网格，矩阵DP
-            - [221. 最大正方形](https://leetcode.cn/problems/maximal-square)
-            - [3148. 矩阵中的最大得分](https://leetcode.cn/problems/maximum-difference-score-in-a-grid)
 
 2. 背包 DP
       - 01背包
@@ -308,7 +313,6 @@
       - 多重背包
       - [1155. 掷骰子等于目标和的方法数](https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum)
       - 分组背包
-
 
 3. 区间 DP （子问题向内缩小，两端都会向内移动）
       - [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
@@ -323,11 +327,9 @@
 
 
 5. 树形 DP （子树天然地形成子问题，需要考虑dp的信息是怎么从子树传给上面的子树的，记忆化搜索，递归。就是我们已经知道以uuu为根的答案，想要通过u−>v的父子关系把答案传递）
-
       1. 树上最大独立集 (不选相连的节点)
             - [337. 打家劫舍 III](https://leetcode.cn/problems/house-robber-iii)
             - [2646. 最小化旅行的价格总和](https://leetcode.cn/problems/minimize-the-total-price-of-the-trips)
-
       - [2920. 收集所有金币可获得的最大积分](https://leetcode.cn/problems/maximum-points-after-collecting-coins-from-all-nodes/)
       - [2925. 在树上执行操作以后得到的最大分数](https://leetcode.cn/problems/maximum-score-after-applying-operations-on-a-tree)
       - [894. 所有可能的真二叉树](https://leetcode.cn/problems/all-possible-full-binary-trees)
@@ -369,7 +371,7 @@
 9. 矩阵快速幂优化DP
       - [2851. 字符串K次转换等于目标串的方案数量](https://leetcode.cn/problems/string-transformation/submissions465291899/)
 
-6. 记忆化搜索 （动态规划，状态优化，求方案数量）
+10. 记忆化搜索 （动态规划，状态优化，求方案数量，离散化）
       - [2742. 给墙壁刷油漆，状态优化](https://leetcode.cn/problems/painting-the-walls)
       - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string)
       - [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets)
@@ -382,6 +384,20 @@
       - [3154. 到达第 K 级台阶的方案数](https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair/)
       - [3129. 找出所有稳定的二进制数组 I](https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-i)
       - [3154. 到达第 K 级台阶的方案数](https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair)(转移方程[0,i-1]以及i+1有关，不方便迭代，状态稀疏，logk * logk, 使用哈希表 + mask 方式做状态压缩)
+11. 博弈DP
+      - [3283. 吃掉所有兵需要的最多移动次数](https://leetcode.cn/problems/maximum-number-of-moves-to-kill-all-pawns)
+      - 1025. 除数博弈 1435 有数学做法
+      - 877. 石子游戏 1590 有数学做法
+      - 486. 预测赢家
+      - 1510. 石子游戏 IV 1787
+      - 1690. 石子游戏 VII 1951
+      - 1406. 石子游戏 III 2027
+      - 1140. 石子游戏 II 2035
+      - 1563. 石子游戏 V 2087
+      - 464. 我能赢吗
+      - 1872. 石子游戏 VIII 2440
+      - 913. 猫和老鼠 2567
+
         
 ## 树/图论
 1. [最短路径和K短问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
