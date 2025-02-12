@@ -145,6 +145,7 @@
 5. 枚举
       - [2735. 收集巧克力](https://leetcode.cn/problems/collecting-chocolates)
       - [2555. 两个线段获得的最多奖品](https://leetcode.cn/problems/maximize-win-from-two-segments)【维护左边，枚举右边】
+      - [3404. 统计特殊子序列的数目](https://leetcode.cn/problems/count-special-subsequences)
 
 6. 分组/循环 (group/cycle arrray/模拟/易错)
     	- [按照题目要求，数组会被分割成若干组，且每一组的判断/处理逻辑是一样的](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold/solutions/2528771/jiao-ni-yi-ci-xing-ba-dai-ma-xie-dui-on-zuspx/)
@@ -164,11 +165,15 @@
       - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots)
       - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares)【平方和贪心，和的平方>=平方和】
       - [2576. 求出最多标记下标](https://leetcode.cn/problems/find-the-maximum-number-of-marked-indices)
+      - [910. 最小差值 II](https://leetcode.cn/problems/smallest-range-ii)
 
 ## 数学
+- https://leetcode.cn/circle/discuss/IYT3ss/
 1. 数论问题
-      - [判断是否是素数（质数）](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+      - [判断是否是素数（质数）](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)【判断一个数是否是质数）
       - [求1-n之间的所有素数，素数筛选法](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
+      - [204. 计数质数](https://leetcode.cn/problems/count-primes/)【埃氏筛选质数，素数】
+      - 
       - 分解质因数  
       - [求多个数的公共质因子](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
       - [两数、多数最大公约数](https://github.com/wxquare/online-algorithm-coding/blob/master/other/primes.cc)
@@ -226,6 +231,7 @@
      - [统计感冒序列的数目](https://leetcode.cn/problems/count-the-number-of-infection-sequences)
      - 正着困难反着求（容斥原理）
      - [3154. 到达第 K 级台阶的方案数](https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair/)
+     - [3405. 统计恰好有 K 个相等相邻元素的数组数目](https://leetcode.cn/problems/count-the-number-of-arrays-with-k-matching-adjacent-elements)
 
 8. 容斥原理
 
@@ -252,12 +258,12 @@
       - [39. 组合总和](https://leetcode.cn/problems/combination-sum)
       - [113. 路径总和 II](https://leetcode.cn/problems/path-sum-ii)(回溯模版题)
       - [LCR 086. 分割回文串](https://leetcode.cn/problems/M99OJA)
-      - [面试题 08.12. 八皇后 n皇后问题](https://leetcode.cn/problems/eight-queens-lcci)
       - [928. 尽量减少恶意软件的传播 II](https://leetcode.cn/problems/minimize-malware-spread-ii)
       - [2850. 将石头分散到网格图的最少移动次数](https://leetcode.cn/problems/minimum-moves-to-spread-stones-over-grid)
       - [2698. 求一个整数的惩罚数，预处理+回溯](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer)
       - [3211. 生成不含相邻零的二进制字符串](https://leetcode.cn/problems/generate-binary-strings-without-adjacent-zeros)
       - [2101. 引爆最多的炸弹](https://leetcode.cn/problems/detonate-the-maximum-bombs)
+      - [51. N 皇后](https://leetcode.cn/problems/n-queens)【回溯】
 
 3. 启发式搜索
       - 八数码问题
@@ -400,12 +406,17 @@
 
         
 ## 树/图论
+1. 树
+      - [3373. 连接两棵树后最大目标节点数目 II](https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-ii)
+      - 
+
 1. [最短路径和K短问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
       - BFS（单源，无权路，权值为1的最短路，O(n)）
       - Dijkstra（单源，权值为正,O((E)logE))
       - Ballmanford （单源，n-1次松驰，,权值可正可负，可用于检测负环,O(V*E))
       - Floyd（多源，任意两点的距离，O(n^3))
       - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)
+      - [2642. 设计可以求最短路径的图类](https://leetcode.cn/problems/design-graph-with-shortest-path-calculator)
       - [1334. 阈值距离内邻居最少的城市](https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance)
       - [A* 八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
       - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination)
