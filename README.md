@@ -187,7 +187,7 @@
       - (a * b) mod c =  ((a mod c) * (b mod c)) mod c
       - **(a / b) mod c =  (a * (b^(-1))) mod c，其中 b^(-1) 是 b 的乘法逆元。如果 c 是一个素数，且 b 是不可被 c 整除的整数，那么 b 的乘法逆元（b模c的逆元）可以通过以下方式计算：b^(-1) ≡ b^(c-2) (mod c)**
       - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty)
-      - \[C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}\]
+      - [C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}]
       - 乘法逆元，扩展欧几里得算法
       - 费马定理
 
