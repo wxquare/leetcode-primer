@@ -71,11 +71,11 @@
 
 11. 线段树(区间修改/区间add，求区间合、最值，区间内可以聚合的值）
       - 手撕线段树，支持区间update和区间聚合值（最大，最小、和）等
-      - [2276. 统计区间中的整数数目](https://leetcode.cn/problems/count-integers-in-intervals)【线段树】
-      - [699. 掉落的方块](https://leetcode.cn/problems/falling-squares)【区间更新，查询区间最大值】
-      - [218. 天际线问题,区间更新，单点查询](https://leetcode.cn/problems/the-skyline-problem) 【区间更新、查询单点的值】
-      - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii)【DP、线段树优化、 单点更新、区间最大值
+      - [218. 天际线问题,区间更新，单点查询](https://leetcode.cn/problems/the-skyline-problem) 【区间更新（lazy)、区间范围大且稀疏（动态开点，查询单点的值】
+      - [699. 掉落的方块](https://leetcode.cn/problems/falling-squares)【查询区间最大值，区间更新（lazy），数据范围很大，需要动态开点，】
+      - [2276. 统计区间中的整数数目](https://leetcode.cn/problems/count-integers-in-intervals)【区间更新(lazy),区间范围很大（动态开点）线段树】
       - [2916. 子数组不同元素数目的平方和 II](https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii)【线段树】
+      - [3479. 将水果装入篮子 III](https://leetcode.cn/problems/fruits-into-baskets-iii/description/)【线段树，无序数组找第一个大于某个树的index,单点更新，区间最大值】
 
 12. trie树
       - [Implement Trie (Prefix Tree)](https://leetcode.cn/problems/implement-trie-prefix-tree/)
@@ -191,6 +191,8 @@
       - 乘法逆元，扩展欧几里得算法
       - 费马定理
       - $C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}$
+
+      - [3463. 判断操作后字符串中的数字是否相等 II](https://leetcode.cn/problems/check-if-digits-are-equal-in-string-after-operations-ii)【组合数学取模，模不是质数】
 
 3. 位运算
       - 利用了 num & (num - 1) 的性质，可以快速消除 num 二进制表示中最右边的1
@@ -367,7 +369,7 @@
 
 7. 数据结构优化DP
       - [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix)
-      - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions)
+      - [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions)【线段树优化，区间最大值】
       - [2926. 平衡子序列的最大和](https://leetcode.cn/problems/maximum-balanced-subsequence-sum/)
 
 8. 倍增和倍增优化DP

@@ -1,101 +1,66 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <algorithm>
 using namespace std;
-
 class Solution {
 public:
-    vector<int> validSequence(string word1, string word2) {
-
-        /*
-
-                vbcca
-
-                abc
-
-        */
-        unordered_map<char,vector<int>> m;
-        for(int i=0;i<word1.size();i++){
-            m[word1[i]].push_back(i);
-        }
-        vector<int> pos(26,0);
-
-
-        int n = word2.size();
-        vector<vector<int>> dp(n,vector<int>(2,INT_MAX));
-
-
-        if(m.count(word2[0])){
-            dp[0][0] = m[word2[0]][0];
-            pos[word2[0] - 'a']++;
-        } else {
-            dp[0][0] = word1.size();
-        }
-        dp[0][1] = 0;
-
-        std::cout << "=====" << dp[0][0] << '\t' << dp[0][1] << std::endl;
-        for(int i=1;i<word2.size();i++){
-            if(dp[i-1][0] == word1.size()){
-                dp[i][0] = word1.size();
-            } else {
-                // dp[i][0] 
-                char pre = word2[i-1];
-                char c = word2[i];
-                for(int p = pos[c - 'a'];p < m[c].size();p++){
-                    if(m[c][p] <= dp[i-1][0]){
-                        continue;
-                    } else {
-                        dp[i][0] = p;
-                        pos[c - 'a'] = p + 1;
-                    }
-                }
-                if(dp[i][0] == INT_MAX){
-                    dp[i][0] = n;
-                }
-            }
-
-            if(dp[i-1][0] != word1.size()){
-                dp[i][1] = dp[i-1][0] + 1;
-            } else {
-                char c = word2[i];
-                for(int p = pos[c - 'a'];p < m[c].size();p++){
-                    if(m[c][p] <= dp[i-1][1]){
-                        continue;
-                    } else {
-                        dp[i][1] = p;
-                        pos[c] = p + 1;
-                    }
-                }
-                if(dp[i][1] == INT_MAX){
-                    return {};
-                }
-            }
-            std::cout << "====" << i << std::endl;
-            std::cout << dp[i][0] << '\t' << dp[i][1] << std::endl;
+    vector<int> permute(int n, long long k) {
+            // fac[i]：i 的阶乘
+        long long fac[n + 1];
+        fac[0] = 1;
+        for (int i = 1; i <= n; i++) {
+            fac[i] = min(fac[i - 1] * i, k + 1);
         }
 
-        std::cout << dp[n-1][0] << '\t' << dp[n-1][1] << std::endl;
-
-        bool replace = false;
+        bool used[n + 1];
+        memset(used, 0, sizeof(used));
+        // now：现在该填偶数还是奇数，-1 表示还不确定（n 为偶数时，第一位可以填任意数）
+        int now = (n & 1 ? 1 : -1);
         vector<int> ans;
-        for(int i=word2.size()-1;i--;i>=0){
-            if(replace){
-                ans.push_back(dp[i][0]);
-                continue;
+        for (int i = 1; i <= n; i++) {
+            int rem = n - i;
+            // 计算剩下 n - i 个数任意组合，能产生几种方案
+            __int128 t;
+            if (rem & 1) {
+                t = __int128(1) * fac[(rem + 1) / 2] * fac[rem / 2];
+            } else {
+                t =  __int128(1) * fac[rem / 2] * fac[rem / 2];
             }
-            int j = min(dp[i][0],dp[i][1]);
-            ans.push_back(j);
-            if(word1[j] != word2[i]){
-                replace = true;
-            } 
+            // 我们需要填第 x 小的数
+            long long x = (k + t - 1) / t;
+            // 第 i 位填第 x 小的数，也就是说我们跳过了 t(x - 1) 种方案，
+            // 那么要算出剩下的 n - i 位中，第 k - t(x - 1) 大的方案
+            k -= t * (x - 1); // 
+            // 通过枚举找出第 x 小的能填的数
+            for (int j = 1; j <= n; j++) {
+                if (!used[j] && (now == -1 || j % 2 == now)) {
+                    x--;
+                    if (x == 0) {
+                        used[j] = true;
+                        // 下一位的奇偶性和这一位相反
+                        now = 1 - (j % 2);
+                        ans.push_back(j);
+                        break;
+                    }
+                }
+            }
+            // 找不到第 x 小的数，无解
+            if (x > 0) {
+                return {};
+            }
         }
-        reverse(ans.begin(),ans.end());
         return ans;
     }
 };
 
+
 int main(){
-    string word1 = "vbcca";
-    string word2 = "abc";
-    Solution().validSequence(word1,word2);
+    // cbaabc
+    // 2,3 1,4
+
+    // std::cout << hasSameDigits() << std::endl;
+
+    // 9223372036854775807
+    std::cout << LONG_MAX << std::endl;
 }
