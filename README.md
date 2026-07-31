@@ -30,6 +30,8 @@
       - [228. 汇总区间](https://leetcode.cn/problems/summary-ranges)【模式：分组循环 / 双指针；核心：通过 `nums[j+1] != nums[j]+1` 识别连续区间断点】
       - [134. 加油站](https://leetcode.cn/problems/gas-station)【模式：贪心；记录总收益与局部余量判断起点】
       - [135. 分发糖果](https://leetcode.cn/problems/candy/)【模式：双向遍历；确保同时满足左右邻居约束】
+      - 55.跳跃游戏
+      - 45.跳跃游戏2
 
     #### D. 前缀和与子数组 (处理区间和/积)
       - [560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k)【模式：前缀和 + 哈希表；转化为 `count(PrefixSum - K)`】
