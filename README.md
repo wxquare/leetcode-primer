@@ -730,48 +730,73 @@
 ## 树与图论 (Tree & Graph - 核心模式归类)
 
 #### A. 树的基础与进阶 (Tree)
-      - [3373. 连接两棵树后最大目标节点数目 II](https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-ii)
-      - [3786. 树组的交互代价总和](https://leetcode.cn/problems/total-sum-of-interaction-cost-in-tree-groups)【边贡献法，auto lamda dfs写法，避免使用function】
+  - [3373. 连接两棵树后最大目标节点数目 II](https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-ii)
+  - [3786. 树组的交互代价总和](https://leetcode.cn/problems/total-sum-of-interaction-cost-in-tree-groups)【边贡献法，auto lamda dfs写法，避免使用function】
 
 #### B. 网格搜索与连通性 (DFS/BFS)
   - [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands)【模式：DFS/BFS；核心：原地修改标记（沉岛）实现 $O(1)$ 空间】
   - [130. 被围绕的区域](https://leetcode.cn/problems/surrounded-regions)【模式：逆向思维；从边界 `'O'` 开始标记，未被标记的内部 `'O'` 均需填充】
   - [133. 克隆图](https://leetcode.cn/problems/clone-graph)【模式：哈希表 + DFS/BFS；核心：利用 Map 存储 `[原节点 -> 新节点]` 防止死循环】
   - [399. 除法求值](https://leetcode.cn/problems/evaluate-division)【模式：带权图搜索；将变量视为节点，比值视为边权，通过 DFS 或并查集求解】
-
-#### C. 拓扑排序 (有向无环图 DAG)
-  - [207. 课程表](https://leetcode.cn/problems/course-schedule)【模式：入度统计；判断图中是否存在环】
-  - [210. 课程表 II](https://leetcode.cn/problems/course-schedule-ii)【模式：BFS 拓扑序列；核心：记录入度为 0 的节点弹出顺序】
-  - [2603. 收集树中金币](https://leetcode.cn/problems/collect-coins-in-a-tree)【模式：剥层法；通过度数反复删除叶子节点】
-
-#### D. 广度优先搜索进阶 (最短路径/步数)
   - [909. 蛇梯棋](https://leetcode.cn/problems/snakes-and-ladders)【模式：BFS；核心：一维坐标与二维矩阵的映射转换】
   - [433. 最小基因变化](https://leetcode.cn/problems/minimum-genetic-mutation)【模式：单向/双向 BFS；寻找状态空间的最短路径】
   - [127. 单词接龙](https://leetcode.cn/problems/word-ladder)【模式：双向 BFS；核心：利用中间态（如 `h*t`）优化状态转移搜索】
 
+#### C. 拓扑排序 (有向无环图 DAG)
+  - [207. 课程表](https://leetcode.cn/problems/course-schedule)【模式：入度统计；判断图中是否存在环】
+  - [210. 课程表 II](https://leetcode.cn/problems/course-schedule-ii)【模式：BFS 拓扑序列；核心：记录入度为 0 的节点弹出顺序】
+  - [2603. 收集树中金币](https://leetcode.cn/problems/collect-coins-in-a-tree)【模式：剥层法；通过度数反复删除叶子节点】¥¥
+
+#### D. 最小生成树
+在带权无向图中，寻找一棵连接所有节点的树，使得所有边的权重之和最小，常用Kruskal或Prim算法。
+  - 1584. 连接所有点的最小费用 (Min Cost to Connect All Points)
+  - 1135. 连接所有城市的最低成本 (Connecting Cities With Minimum Cost)
+  - 1168. 水资源分配优化 (Optimize Water Distribution in a Village)
+   
 #### E. 最短路径算法 (Dijkstra/Floyd/Bellman)
   - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)【Dijkstra 模板】
   - [2642. 设计可以求最短路径的图类](https://leetcode.cn/problems/design-graph-with-shortest-path-calculator)【Dijkstra 封装】
   - [1334. 阈值距离内邻居最少的城市](https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance)【Floyd 多源最短路】
-      - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination)
+  - 2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination)
   - [1976. 到达目的地的方案数](https://leetcode.cn/number-of-ways-to-arrive-at-destination)
-      - [2065. 最大化一张图中的路径价值](https://leetcode.cn/problems/maximum-path-quality-of-a-graph/description/)
-      - [2959.关闭分部的可行集合数目](https://leetcode.cn/problems/number-of-possible-sets-of-closing-branche)
-      - [3112. 访问消失节点的最少时间](https://leetcode.cn/problems/minimum-time-to-visit-disappearing-nodes)
+  - [2065. 最大化一张图中的路径价值](https://leetcode.cn/problems/maximum-path-quality-of-a-graph/description/)
+  - [2959.关闭分部的可行集合数目](https://leetcode.cn/problems/number-of-possible-sets-of-closing-branche)
+  - [3112. 访问消失节点的最少时间](https://leetcode.cn/problems/minimum-time-to-visit-disappearing-nodes)
   - [最短路径和K短问题汇总](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
   - [A* 八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
 
-#### F. 高级图论与连通性 (并查集/基环树/网络流)
+判断一个图是否可以被分成两个独立的集合，且所有边都连接两个集合中的节点。常通过染色法（DFS/BFS）解决。
+#### F. 二分图 (Bipartite Graph)
+  - 785. 判断二分图 (Is Graph Bipartite?)
+  - 886. 可能的二分法 (Possible Bipartition)
+  - LCP 04. 覆盖 (Broken Board Dominoes) - 需使用匈牙利算法
+
+#### G. 欧拉路径/回路 (Eulerian Path/Circuit)
+寻找一条经过图中每条边恰好一次的路径（欧拉路径）或回路（欧拉回路），常用Hierholzer算法。
+  - 332. 重新安排行程 (Reconstruct Itinerary)
+  - 753. 破解保险箱 (Cracking the Safe)
+   
+#### H. 强连通分量 (Strongly Connected Components)
+在有向图中，寻找一些特殊的节点集合，集合内任意两点都互相可达，常用Tarjan或Kosaraju算法。
+  - 1192. 查找集群内的关键连接 (Critical Connections in a Network)
+   
+#### I. 基环树 (Functional Graph / Pseudoforest)
+一种特殊的图，每个节点有且只有一条出边（有向）或拥有恰好一个环的结构。
+- 2359. 找到离给定两个节点最近的节点 (Find Closest Node to Given Two Nodes)
+- 2360. 图中的最长环 (Longest Cycle in a Graph)
+- 2127. 参加会议的最多员工数 (Maximum Employees to Be Invited to a Meeting)
+
+#### J. 高级图论与连通性 (并查集/基环树/网络流)
   - [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting)【基环树内向树】
-      - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph)
+  - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph)
   - [2876. 有向图访问计数](https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph)
   - [1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points)【最小生成树 Kruskal】
   - [785. 判断二分图](https://leetcode.cn/problems/is-graph-bipartite)【染色法】
   - [7rLGCR. 守卫城堡](https://leetcode.cn/problems/7rLGCR/)【网络流/最小割】
-      - [1489. 找到最小生成树里的关键边和伪关键边](https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree)
-      - [2685. 统计完全连通分量的数量](https://leetcode.cn/problems/count-the-number-of-complete-components)
-      - [查找集群内的关键连接](https://leetcode.cn/problems/critical-connections-in-a-network)
-      - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree)
+  - [1489. 找到最小生成树里的关键边和伪关键边](https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree)
+  - [2685. 统计完全连通分量的数量](https://leetcode.cn/problems/count-the-number-of-complete-components)
+  - [查找集群内的关键连接](https://leetcode.cn/problems/critical-connections-in-a-network)
+  - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree)
   - [并查集 (Union Find) 模板与应用](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
 
 
