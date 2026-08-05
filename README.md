@@ -749,9 +749,9 @@
 
 #### D. 最小生成树
 在带权无向图中，寻找一棵连接所有节点的树，使得所有边的权重之和最小，常用Kruskal或Prim算法。
-  - 1584. 连接所有点的最小费用 (Min Cost to Connect All Points)
-  - 1135. 连接所有城市的最低成本 (Connecting Cities With Minimum Cost)
-  - 1168. 水资源分配优化 (Optimize Water Distribution in a Village)
+  - 1584\. 连接所有点的最小费用 (Min Cost to Connect All Points)
+  - 1135\. 连接所有城市的最低成本 (Connecting Cities With Minimum Cost)
+  - 1168\. 水资源分配优化 (Optimize Water Distribution in a Village)
    
 #### E. 最短路径算法 (Dijkstra/Floyd/Bellman)
   - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)【Dijkstra 模板】
@@ -765,26 +765,26 @@
   - [最短路径和K短问题汇总](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
   - [A* 八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
 
-判断一个图是否可以被分成两个独立的集合，且所有边都连接两个集合中的节点。常通过染色法（DFS/BFS）解决。
 #### F. 二分图 (Bipartite Graph)
-  - 785. 判断二分图 (Is Graph Bipartite?)
-  - 886. 可能的二分法 (Possible Bipartition)
+判断一个图是否可以被分成两个独立的集合，且所有边都连接两个集合中的节点。常通过染色法（DFS/BFS）解决。
+  - 785\. 判断二分图 (Is Graph Bipartite?)
+  - 886\. 可能的二分法 (Possible Bipartition)
   - LCP 04. 覆盖 (Broken Board Dominoes) - 需使用匈牙利算法
 
 #### G. 欧拉路径/回路 (Eulerian Path/Circuit)
 寻找一条经过图中每条边恰好一次的路径（欧拉路径）或回路（欧拉回路），常用Hierholzer算法。
-  - 332. 重新安排行程 (Reconstruct Itinerary)
-  - 753. 破解保险箱 (Cracking the Safe)
+  - 332\. 重新安排行程 (Reconstruct Itinerary)
+  - 753\. 破解保险箱 (Cracking the Safe)
    
 #### H. 强连通分量 (Strongly Connected Components)
 在有向图中，寻找一些特殊的节点集合，集合内任意两点都互相可达，常用Tarjan或Kosaraju算法。
-  - 1192. 查找集群内的关键连接 (Critical Connections in a Network)
+  - 1192\. 查找集群内的关键连接 (Critical Connections in a Network)
    
 #### I. 基环树 (Functional Graph / Pseudoforest)
 一种特殊的图，每个节点有且只有一条出边（有向）或拥有恰好一个环的结构。
-- 2359. 找到离给定两个节点最近的节点 (Find Closest Node to Given Two Nodes)
-- 2360. 图中的最长环 (Longest Cycle in a Graph)
-- 2127. 参加会议的最多员工数 (Maximum Employees to Be Invited to a Meeting)
+- 2359\. 找到离给定两个节点最近的节点 (Find Closest Node to Given Two Nodes)
+- 2360\. 图中的最长环 (Longest Cycle in a Graph)
+- 2127\. 参加会议的最多员工数 (Maximum Employees to Be Invited to a Meeting)
 
 #### J. 高级图论与连通性 (并查集/基环树/网络流)
   - [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting)【基环树内向树】
@@ -850,6 +850,4 @@ while (ss >> word) {
 - **求所有方案 / 排列组合**：首选 **DFS + 回溯**（全量枚举状态空间）。
 - **在单调 / 有序空间找最优值**：首选 **二分答案**（将最优化问题转化为判定问题 `check(mid)`）。
 - **状态空间爆炸**：优先考虑 **双向 BFS**（极大减小搜索树规模）或 **记忆化搜索**（DFS + Memo，避免重复计算）。
-
-
 
