@@ -745,7 +745,7 @@
 #### C. 拓扑排序 (有向无环图 DAG)
   - [207. 课程表](https://leetcode.cn/problems/course-schedule)【模式：入度统计；判断图中是否存在环】
   - [210. 课程表 II](https://leetcode.cn/problems/course-schedule-ii)【模式：BFS 拓扑序列；核心：记录入度为 0 的节点弹出顺序】
-  - [2603. 收集树中金币](https://leetcode.cn/problems/collect-coins-in-a-tree)【模式：剥层法；通过度数反复删除叶子节点】¥¥
+  - [2603. 收集树中金币](https://leetcode.cn/problems/collect-coins-in-a-tree)【模式：剥层法；通过度数反复删除叶子节点】
 
 #### D. 最小生成树
 在带权无向图中，寻找一棵连接所有节点的树，使得所有边的权重之和最小，常用Kruskal或Prim算法。
@@ -757,7 +757,7 @@
   - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)【Dijkstra 模板】
   - [2642. 设计可以求最短路径的图类](https://leetcode.cn/problems/design-graph-with-shortest-path-calculator)【Dijkstra 封装】
   - [1334. 阈值距离内邻居最少的城市](https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance)【Floyd 多源最短路】
-  - 2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination)
+  - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination)
   - [1976. 到达目的地的方案数](https://leetcode.cn/number-of-ways-to-arrive-at-destination)
   - [2065. 最大化一张图中的路径价值](https://leetcode.cn/problems/maximum-path-quality-of-a-graph/description/)
   - [2959.关闭分部的可行集合数目](https://leetcode.cn/problems/number-of-possible-sets-of-closing-branche)
@@ -850,7 +850,6 @@ while (ss >> word) {
 - **求所有方案 / 排列组合**：首选 **DFS + 回溯**（全量枚举状态空间）。
 - **在单调 / 有序空间找最优值**：首选 **二分答案**（将最优化问题转化为判定问题 `check(mid)`）。
 - **状态空间爆炸**：优先考虑 **双向 BFS**（极大减小搜索树规模）或 **记忆化搜索**（DFS + Memo，避免重复计算）。
-
 
 
 
