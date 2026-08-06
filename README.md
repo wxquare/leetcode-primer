@@ -749,7 +749,8 @@
 
 #### D. 最小生成树
 在带权无向图中，寻找一棵连接所有节点的树，使得所有边的权重之和最小，常用Kruskal或Prim算法。
-  - 1584\. 连接所有点的最小费用 (Min Cost to Connect All Points)
+  - 1584\. 连接所有点的最小费用 (Min Cost to Connect All Points) [Prim, 贪心选择距离生成树最近的节点 + n 次松弛]
+  - 1584\. 连接所有点的最小费用 (Min Cost to Connect All Points) [Kruskal，贪心选择不相交的两点的边， 需要配合并查集]
   - 1135\. 连接所有城市的最低成本 (Connecting Cities With Minimum Cost)
   - 1168\. 水资源分配优化 (Optimize Water Distribution in a Village)
    
