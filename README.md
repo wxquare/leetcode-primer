@@ -179,52 +179,6 @@
       - [LCR 193. 二叉搜索树的最近公共祖先](https://leetcode.cn/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof)【模式：数值比较；核心：利用 `root->val` 与 `p, q` 的大小关系快速剪枝】
       - [2673. 使二叉树所有路径值相等的最小代价](https://leetcode.cn/problems/make-costs-of-paths-equal-in-a-binary-tree)【模式：贪心/树形 DP；核心：自底向上平衡左右子树代价】
 
-6. 树与图论 (Tree & Graph - 核心模式归类)
-
-    #### A. 树的基础与进阶 (Tree)
-      - [3373. 连接两棵树后最大目标节点数目 II](https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-ii)
-      - [3786. 树组的交互代价总和](https://leetcode.cn/problems/total-sum-of-interaction-cost-in-tree-groups)【边贡献法，auto lamda dfs写法，避免使用function】
-
-    #### B. 网格搜索与连通性 (DFS/BFS)
-      - [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands)【模式：DFS/BFS；核心：原地修改标记（沉岛）实现 $O(1)$ 空间】
-      - [305. 岛屿数量 II](https://leetcode.cn/problems/number-of-islands-ii)【模式：并查集 (Union-Find)；核心：动态维护连通分量，将“陆地化”转化为“集合合并”】
-      - [130. 被围绕的区域](https://leetcode.cn/problems/surrounded-regions)【模式：逆向思维；从边界 `'O'` 开始标记，未被标记的内部 `'O'` 均需填充】
-      - [133. 克隆图](https://leetcode.cn/problems/clone-graph)【模式：哈希表 + DFS/BFS；核心：利用 Map 存储 `[原节点 -> 新节点]` 防止死循环】
-      - [399. 除法求值](https://leetcode.cn/problems/evaluate-division)【模式：带权图搜索；将变量视为节点，比值视为边权，通过 DFS 或并查集求解】
-
-    #### C. 拓扑排序 (有向无环图 DAG)
-      - [207. 课程表](https://leetcode.cn/problems/course-schedule)【模式：入度统计；判断图中是否存在环】
-      - [210. 课程表 II](https://leetcode.cn/problems/course-schedule-ii)【模式：BFS 拓扑序列；核心：记录入度为 0 的节点弹出顺序】
-      - [2603. 收集树中金币](https://leetcode.cn/problems/collect-coins-in-a-tree)【模式：剥层法；通过度数反复删除叶子节点】
-
-    #### D. 广度优先搜索进阶 (最短路径/步数)
-      - [909. 蛇梯棋](https://leetcode.cn/problems/snakes-and-ladders)【模式：BFS；核心：一维坐标与二维矩阵的映射转换】
-      - [433. 最小基因变化](https://leetcode.cn/problems/minimum-genetic-mutation)【模式：单向/双向 BFS；寻找状态空间的最短路径】
-      - [127. 单词接龙](https://leetcode.cn/problems/word-ladder)【模式：双向 BFS；核心：利用中间态（如 `h*t`）优化状态转移搜索】
-
-    #### E. 最短路径算法 (Dijkstra/Floyd/Bellman)
-      - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)【Dijkstra 模板】
-      - [2642. 设计可以求最短路径的图类](https://leetcode.cn/problems/design-graph-with-shortest-path-calculator)【Dijkstra 封装】
-      - [1334. 阈值距离内邻居最少的城市](https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance)【Floyd 多源最短路】
-      - [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination)
-      - [1976. 到达目的地的方案数](https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination)
-      - [2065. 最大化一张图中的路径价值](https://leetcode.cn/problems/maximum-path-quality-of-a-graph/description/)
-      - [2959.关闭分部的可行集合数目](https://leetcode.cn/problems/number-of-possible-sets-of-closing-branche)
-      - [3112. 访问消失节点的最少时间](https://leetcode.cn/problems/minimum-time-to-visit-disappearing-nodes)
-      - [最短路径和K短问题汇总](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
-
-    #### F. 高级图论与连通性 (并查集/基环树/网络流)
-      - [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting)【基环树内向树】
-      - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph)
-      - [2876. 有向图访问计数](https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph)
-      - [1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points)【最小生成树 Kruskal】
-      - [785. 判断二分图](https://leetcode.cn/problems/is-graph-bipartite)【染色法】
-      - [7rLGCR. 守卫城堡](https://leetcode.cn/problems/7rLGCR/)【网络流/最小割】
-      - [1489. 找到最小生成树里的关键边和伪关键边](https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree)
-      - [2685. 统计完全连通分量的数量](https://leetcode.cn/problems/count-the-number-of-complete-components)
-      - [查找集群内的关键连接](https://leetcode.cn/problems/critical-connections-in-a-network)
-      - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree)
-
 7. 平衡二叉搜索树 (std::map/set)
 
 8. 前缀和、后缀和与区间求和
@@ -267,16 +221,6 @@
       - [28. 找出字符串中第一个匹配项的下标](https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string)【KMP】
       - [3006. 找出数组中的美丽下标 I](https://leetcode.cn/problems/find-beautiful-indices-in-the-given-array-i)
       - [最长合法子字符串的长度 ac 自动机](https://leetcode.cn173370/)
-
-14. 并查集 (Union Find)
-      - [并查集](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
-      - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
-      - [684.冗余连接](https://leetcode.cn/problems/redundant-connection)
-      - [721. 账户合并](https://leetcode.cn/problems/accounts-merge)
-      - [924. 尽量减少恶意软件的传播](https://leetcode.cn/problems/minimize-malware-spread)
-      - [928. 尽量减少恶意软件的传播 II](https://leetcode.cn/problems/minimize-malware-spread-ii)
-      - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array)
-      - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal)
 
 15. 数据结构设计与实现 (Consolidated)
 
@@ -729,12 +673,19 @@
         
 ## 树与图论 (Tree & Graph - 核心模式归类)
 
-#### A. 树的基础与进阶 (Tree)
-  - [3373. 连接两棵树后最大目标节点数目 II](https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-ii)
-  - [3786. 树组的交互代价总和](https://leetcode.cn/problems/total-sum-of-interaction-cost-in-tree-groups)【边贡献法，auto lamda dfs写法，避免使用function】
+#### A. 并查集 (Union Find)
+  - [并查集 (Union Find) 模板与应用](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
+  - [547. 省份的数量](https://leetcode-cn.com/problems/number-of-provinces/)
+  - [684. 冗余连接](https://leetcode.cn/problems/redundant-connection)
+  - [721. 账户合并](https://leetcode.cn/problems/accounts-merge)
+  - [924. 尽量减少恶意软件的传播](https://leetcode.cn/problems/minimize-malware-spread)
+  - [928. 尽量减少恶意软件的传播 II](https://leetcode.cn/problems/minimize-malware-spread-ii)
+  - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array)
+  - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal)
 
 #### B. 网格搜索与连通性 (DFS/BFS)
   - [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands)【模式：DFS/BFS；核心：原地修改标记（沉岛）实现 $O(1)$ 空间】
+  - [305. 岛屿数量 II](https://leetcode.cn/problems/number-of-islands-ii)【模式：并查集 (Union-Find)；核心：动态维护连通分量，将“陆地化”转化为“集合合并”】
   - [130. 被围绕的区域](https://leetcode.cn/problems/surrounded-regions)【模式：逆向思维；从边界 `'O'` 开始标记，未被标记的内部 `'O'` 均需填充】
   - [133. 克隆图](https://leetcode.cn/problems/clone-graph)【模式：哈希表 + DFS/BFS；核心：利用 Map 存储 `[原节点 -> 新节点]` 防止死循环】
   - [399. 除法求值](https://leetcode.cn/problems/evaluate-division)【模式：带权图搜索；将变量视为节点，比值视为边权，通过 DFS 或并查集求解】
@@ -768,6 +719,7 @@
 
 #### F. 二分图 (Bipartite Graph)
 判断一个图是否可以被分成两个独立的集合，且所有边都连接两个集合中的节点。常通过染色法（DFS/BFS）解决。
+  - [3373. 连接两棵树后最大目标节点数目 II](https://leetcode.cn/problems/maximize-the-number-of-target-nodes-after-connecting-trees-ii)【树的奇偶距离对应二分染色；统计两类节点数量】
   - [785. 判断二分图 (Is Graph Bipartite?](https://leetcode.cn/problems/is-graph-bipartite)
   - 886\. 可能的二分法 (Possible Bipartition)
   - LCP 04. 覆盖 (Broken Board Dominoes) - 需使用匈牙利算法
@@ -787,7 +739,8 @@
 - 2360\. 图中的最长环 (Longest Cycle in a Graph)
 - 2127\. 参加会议的最多员工数 (Maximum Employees to Be Invited to a Meeting)
 
-#### J. 高级图论与连通性 (并查集/基环树/网络流)
+#### J. 高级图论与连通性 (基环树/网络流)
+  - [3786. 树组的交互代价总和](https://leetcode.cn/problems/total-sum-of-interaction-cost-in-tree-groups)【树上边贡献法；后序 DFS 统计各组子树数量】
   - [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting)【基环树内向树】
   - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph)
   - [2876. 有向图访问计数](https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph)
@@ -798,28 +751,7 @@
   - [2685. 统计完全连通分量的数量](https://leetcode.cn/problems/count-the-number-of-complete-components)
   - [查找集群内的关键连接](https://leetcode.cn/problems/critical-connections-in-a-network)
   - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree)
-  - [并查集 (Union Find) 模板与应用](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)
 
-
-## 参考
-- [leetcode](https://leetcode.cn/)
-- [灵茶山艾府](https://leetcode.cn/u/endlesscheng/)
-- [宫水三叶](https://github.com/SharingSource/LogicStack-LeetCode)
-- [代码随想录](https://github.com/youngyangyang04/leetcode-master)
-- https://oi-wiki.org/
-- https://zerotrac.github.io/leetcode_problem_rating/
-- https://cp-algorithms.com/
-- https://leetcode.cn/circle/discuss/tXLS3i/
-- https://leetcode.Studyplan/selected-coding-interview/
-
-```
-函数名	检查内容	对应你的描述
-isdigit(c)	检查是否为 数字 (0-9)	数字字符
-isalpha(c)	检查是否为 字母 (a-z, A-Z)	纯字符/字母
-isalnum(c)	检查是否为 字母或数字	字母数字混合
-tolower(c)
-toupper(c)
-```
 
 ## 工程小技巧 (Engineering Tips)
 
@@ -845,10 +777,32 @@ while (ss >> word) {
 ```
 - **优势**：逻辑极简，代码鲁棒性极强，是面试中处理字符串解析的首选方案。
 
-### 3. 搜索策略选择指南
+### 3. 字符分类与大小写转换
+
+| 函数名 | 检查内容 | 对应描述 |
+| --- | --- | --- |
+| `isdigit(c)` | 是否为数字（0–9） | 数字字符 |
+| `isalpha(c)` | 是否为字母（a-z、A-Z） | 纯字符/字母 |
+| `isalnum(c)` | 是否为字母或数字 | 字母数字混合 |
+| `tolower(c)` | 转换为小写 | 小写转换 |
+| `toupper(c)` | 转换为大写 | 大写转换 |
+
+### 4. 搜索策略选择指南
 在算法竞赛或面试中，面对复杂的搜索问题，快速判断技术路线是节省时间的关键：
 - **求最短路径 / 最小步数**：首选 **BFS**（利用其层级遍历的天然最短性）。
 - **求所有方案 / 排列组合**：首选 **DFS + 回溯**（全量枚举状态空间）。
 - **在单调 / 有序空间找最优值**：首选 **二分答案**（将最优化问题转化为判定问题 `check(mid)`）。
 - **状态空间爆炸**：优先考虑 **双向 BFS**（极大减小搜索树规模）或 **记忆化搜索**（DFS + Memo，避免重复计算）。
 
+
+
+## 参考
+- [leetcode](https://leetcode.cn/)
+- [灵茶山艾府](https://leetcode.cn/u/endlesscheng/)
+- [宫水三叶](https://github.com/SharingSource/LogicStack-LeetCode)
+- [代码随想录](https://github.com/youngyangyang04/leetcode-master)
+- https://oi-wiki.org/
+- https://zerotrac.github.io/leetcode_problem_rating/
+- https://cp-algorithms.com/
+- https://leetcode.cn/circle/discuss/tXLS3i/
+- https://leetcode.Studyplan/selected-coding-interview/
