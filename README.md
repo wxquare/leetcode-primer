@@ -774,7 +774,7 @@
 
 #### G. 欧拉路径/回路 (Eulerian Path/Circuit)
 寻找一条经过图中每条边恰好一次的路径（欧拉路径）或回路（欧拉回路），常用Hierholzer算法。
-  - 332\. 重新安排行程 (Reconstruct Itinerary)
+  - [332. 重新安排行程 (Reconstruct Itinerary)](https://leetcode.cn/problems/reconstruct-itinerary/)
   - 753\. 破解保险箱 (Cracking the Safe)
    
 #### H. 强连通分量 (Strongly Connected Components)
