@@ -25,7 +25,6 @@
     #### C. 双指针、贪心与接雨水 (处理单调性或边界)
       - [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water)【模式：对撞指针；每次移动较短边以求更大容积】
       - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/)【模式：双指针/单调栈；核心是“木桶原理”，高度由短板决定】
-      - [407. 接雨水 II](https://leetcode.cn/problems/trapping-rain-water-ii)【模式：BFS + 优先队列；从外向内收缩 3D 边界】
       - [283. 移动零](https://leetcode.cn/problems/move-zeroes)【模式：快慢指针；一个负责遍历，一个负责存放非零值】
       - [228. 汇总区间](https://leetcode.cn/problems/summary-ranges)【模式：分组循环 / 双指针；核心：通过 `nums[j+1] != nums[j]+1` 识别连续区间断点】
       - [134. 加油站](https://leetcode.cn/problems/gas-station)【模式：贪心；记录总收益与局部余量判断起点】
@@ -162,7 +161,6 @@
       - [129. 求根节点到叶节点数字之和](https://leetcode.cn/problems/sum-root-to-leaf-numbers)【模式：DFS 路径累加；核心：利用 `x * 10 + node->val` 传递路径状态，推荐“结果上传”的纯函数写法】
       - [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum)【模式：树形 DP / 贡献度；核心：区分“节点作为转折点”与“节点作为贡献者”两种状态，利用 `max(0, gain)` 过滤负贡献】
       - [114. 二叉树展开为链表](https://leetcode.cn/flatten-binary-tree-to-linked-list)【模式：递归/前驱节点；核心：将左子树插入右侧，注意清空左指针以防成环】
-      - [2385. 感染二叉树需要的总时间](https://leetcode.cn/problems/amount-of-time-for-binary-tree-to-be-infected)【模式：图论转化；核心：建图后 BFS 或 DFS 求最长路径】
       - [572. 另一棵树的子树](https://leetcode.cn/problems/subtree-of-another-tree)【模式：双重递归；核心：对每个节点调用 `isSameTree`】
 
     #### C. 构造、变换与序列化
@@ -242,11 +240,9 @@
       - [208. 实现 Trie (前缀树)](https://leetcode.cn/problems/implement-trie-prefix-tree/)【模式：多叉树；用于高效字符串检索与前缀匹配】
       - [211. 添加与搜索单词](https://leetcode.cn/problems/design-add-and-search-words-data-structure)【模式：Trie + DFS；核心：利用递归处理 `.` 通配符的模糊匹配】
       - [676. 设计神奇字典](https://leetcode.cn/problems/implement-magic-dictionary)【模式：Trie + DFS；支持模糊匹配】
-      - [并查集 (Union Find)](https://github.com/wxquare/online-algorithm-coding/blob/master/other/union_find.cc)【模式：路径压缩 + 按秩合并；处理连通性问题】
       - [手撕线段树 (Segment Tree)](https://leetcode.cn/problems/range-sum-query-mutable)【模式：二叉树递归；支持区间修改与 $O(\log n)$ 聚合查询】
       - [树状数组 (Fenwick Tree)](https://leetcode.cn/problems/range-sum-query-mutable)【模式：位运算 (lowbit)；极简实现的区间和维护】
       - [跳表 (SkipList)](https://leetcode.cn/problems/design-skiplist/)【模式：多级索引链表；Redis 核心数据结构，替代平衡树】
-      - [2642. 设计可以求最短路径的图类](https://leetcode.cn/problems/design-graph-with-shortest-path-calculator)【模式：图论封装；动态增边并维护 Dijkstra 最短路】
 
 16. 离线query
       - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers/)
@@ -448,14 +444,11 @@
       - [909. 蛇梯棋](https://leetcode.cn/problems/snakes-and-ladders)【模式：状态转移模拟】
       - [45. 跳跃游戏 II](https://leetcode.cn/problems/jump-game-ii)
     - **多源 BFS (Multi-source BFS)**
-      - [2812. 找出最安全路径](https://leetcode.cn/problems/find-the-safest-path-in-a-grid) 【模式：预处理所有起点距离】
-      - [2258. 逃离火灾](https://leetcode.cn/problems/escape-the-spreading-fire/)
       - [2477. 到达首都的最少油耗](https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital)
     - **双向 BFS (Bi-directional BFS)**
       - [127. 单词接龙](https://leetcode.cn/problems/word-ladder) 【模式：极大减小搜索树规模】
       - [433. 最小基因变化](https://leetcode.cn/problems/minimum-genetic-mutation)
     - **优先队列 BFS (Dijkstra 思想)**
-      - [407. 接雨水 II](https://leetcode.cn/problems/trapping-rain-water-ii/description/) 【模式：3D 边界收缩】
 
 3. DFS 与回溯：全量枚举与约束满足 (DFS & Backtracking)
 
@@ -495,7 +488,6 @@
       - [113. 路径总和 II](https://leetcode.cn/problems/path-sum-ii)
       - [437. 路径总和 III](https://leetcode.cn/problems/path-sum-iii/)
       - [133. 克隆图](https://leetcode.cn/problems/clone-graph) 【模式：哈希表防止死循环】
-      - [2101. 引爆最多的炸弹](https://leetcode.cn/problems/detonate-the-maximum-bombs)
 
       
     - **复杂约束与剪枝**
@@ -687,8 +679,11 @@
   - [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands)【模式：DFS/BFS；核心：原地修改标记（沉岛）实现 $O(1)$ 空间】
   - [305. 岛屿数量 II](https://leetcode.cn/problems/number-of-islands-ii)【模式：并查集 (Union-Find)；核心：动态维护连通分量，将“陆地化”转化为“集合合并”】
   - [130. 被围绕的区域](https://leetcode.cn/problems/surrounded-regions)【模式：逆向思维；从边界 `'O'` 开始标记，未被标记的内部 `'O'` 均需填充】
+  - [2258. 逃离火灾](https://leetcode.cn/problems/escape-the-spreading-fire/)【多源 BFS 预处理火势扩散；二分等待时间】
   - [133. 克隆图](https://leetcode.cn/problems/clone-graph)【模式：哈希表 + DFS/BFS；核心：利用 Map 存储 `[原节点 -> 新节点]` 防止死循环】
   - [399. 除法求值](https://leetcode.cn/problems/evaluate-division)【模式：带权图搜索；将变量视为节点，比值视为边权，通过 DFS 或并查集求解】
+  - [2385. 感染二叉树需要的总时间](https://leetcode.cn/problems/amount-of-time-for-binary-tree-to-be-infected)【树转无向图；BFS 求最远距离】
+  - [2101. 引爆最多的炸弹](https://leetcode.cn/problems/detonate-the-maximum-bombs)【建有向图；从每个起点 DFS/BFS 统计可达节点】
   - [909. 蛇梯棋](https://leetcode.cn/problems/snakes-and-ladders)【模式：BFS；核心：一维坐标与二维矩阵的映射转换】
   - [433. 最小基因变化](https://leetcode.cn/problems/minimum-genetic-mutation)【模式：单向/双向 BFS；寻找状态空间的最短路径】
   - [127. 单词接龙](https://leetcode.cn/problems/word-ladder)【模式：双向 BFS；核心：利用中间态（如 `h*t`）优化状态转移搜索】
@@ -706,6 +701,7 @@
   - 1168\. 水资源分配优化 (Optimize Water Distribution in a Village)
    
 #### E. 最短路径算法 (Dijkstra/Floyd/Bellman)
+  - [407. 接雨水 II](https://leetcode.cn/problems/trapping-rain-water-ii)【优先队列 BFS；从边界向内扩展的最短路思想】
   - [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)【Dijkstra 模板】
   - [2642. 设计可以求最短路径的图类](https://leetcode.cn/problems/design-graph-with-shortest-path-calculator)【Dijkstra 封装】
   - [1334. 阈值距离内邻居最少的城市](https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance)【Floyd 多源最短路】
@@ -714,6 +710,7 @@
   - [2065. 最大化一张图中的路径价值](https://leetcode.cn/problems/maximum-path-quality-of-a-graph/description/)
   - [2959.关闭分部的可行集合数目](https://leetcode.cn/problems/number-of-possible-sets-of-closing-branche)
   - [3112. 访问消失节点的最少时间](https://leetcode.cn/problems/minimum-time-to-visit-disappearing-nodes)
+  - [2812. 找出最安全路径](https://leetcode.cn/problems/find-the-safest-path-in-a-grid)【多源 BFS 预处理距离；二分或最短路判定】
   - [最短路径和K短问题汇总](https://github.com/wxquare/online-algorithm-coding/blob/master/other/graph_short_path.cc)
   - [A* 八数码问题](https://github.com/wxquare/online-algorithm-coding/blob/master/other/8-puzzle.cc)
 
