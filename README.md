@@ -768,7 +768,7 @@
 
 #### F. 二分图 (Bipartite Graph)
 判断一个图是否可以被分成两个独立的集合，且所有边都连接两个集合中的节点。常通过染色法（DFS/BFS）解决。
-  - 785\. 判断二分图 (Is Graph Bipartite?)
+  - [785. 判断二分图 (Is Graph Bipartite?](https://leetcode.cn/problems/is-graph-bipartite)
   - 886\. 可能的二分法 (Possible Bipartition)
   - LCP 04. 覆盖 (Broken Board Dominoes) - 需使用匈牙利算法
 
