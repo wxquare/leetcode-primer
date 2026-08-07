@@ -648,6 +648,7 @@
 #### 10. 记忆化搜索 （动态规划，状态优化，求方案数量，离散化）
 - [72. 编辑距离](https://leetcode.cn/problems/edit-distance)
 - [10. 正则表达式匹配](https://leetcode.cn/problems/regular-expression-matching)【记忆化搜索，*如何处理】
+- 44. 通配符匹配 【贪心】
 - [2742. 给墙壁刷油漆，状态优化](https://leetcode.cn/problems/painting-the-walls)
 - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string)
 - [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets)
