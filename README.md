@@ -734,6 +734,7 @@
 一种特殊的图，每个节点有且只有一条出边（有向）或拥有恰好一个环的结构。（拓扑排序 + 环的处理）
 - [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting)【基环树内向树，基环森林】
 - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph) 【拓扑排序 + 环的处理 或者 时间戳DFS】
+- [684. 冗余连接](https://leetcode.cn/problems/redundant-connection)【无向基环树 + 并查集合】
 - 2359\. 找到离给定两个节点最近的节点 (Find Closest Node to Given Two Nodes)
 
 #### J. 高级图论与连通性 (基环树/网络流)
