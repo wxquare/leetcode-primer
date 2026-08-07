@@ -735,6 +735,7 @@
 - [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting)【基环树内向树，基环森林】
 - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph) 【拓扑排序 + 环的处理 或者 时间戳DFS】
 - [684. 冗余连接](https://leetcode.cn/problems/redundant-connection)【无向基环树 + 并查集合】
+- 685\. 冗余连接 II
 - 2359\. 找到离给定两个节点最近的节点 (Find Closest Node to Given Two Nodes)
 
 #### J. 高级图论与连通性 (基环树/网络流)
