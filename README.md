@@ -1,10 +1,5 @@
 # leetcode-primer
 
-<p align="center">
-  <img src="/images/mind.png" width=600 height=800>
-</p>
-
-
 ## 数据结构
 
 1. 数组与矩阵 (核心模式归类)
@@ -418,7 +413,7 @@
       - 曼哈顿距离和切比雪夫距离变换 d(A,B) = max(|x1-y1 - (x2-y2)|,|x1+y1-(x2+y2)|)
       - [3102. 最小化曼哈顿距离](https://leetcode.cn/problems/minimize-manhattan-distances)
 
-## 搜索问题核心分类与总结 (Search Strategies)
+## 搜索问题
 
 1. 二分搜索：从“查找”到“答案空间”的跨越 (Binary Search)
     - **基础查找与边界**
