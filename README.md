@@ -471,12 +471,32 @@
     > - **括号**看余额：左括号不超标，右括号不透支。
     > - **矩阵**靠沉岛：先占位再递归，事后记得还原。
 
-    #### 组合、排列与路径
+    #### 组合与排列
+
+    ##### 组合枚举与子集选择（Combination）
       - [17. 电话号码的字母组合](https://leetcode.cn/problems/letter-combinations-of-a-phone-number) 【模式：基础回溯；核心：递归深度控制数字索引，for 循环遍历字母映射】
       - [77. 组合](https://leetcode.cn/problems/combine) 【模式：组合回溯；核心：【口诀】组合靠 `start`：不回头看，一路向右】
       - [39. 组合总和](https://leetcode.cn/problems/combination-sum) 【模式：重复选组合；核心：【原理】传递当前索引 `i` 而非 `i+1` 实现元素可重复选取】
+      - [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets)【子集枚举 + 回溯】
+      - [494. 目标和](https://leetcode.cn/problems/target-sum)【子集选择；0/1 背包组合计数】
+      - [3098. 求出所有子序列的能量和](https://leetcode.cn/problems/find-the-sum-of-subsequence-powers)【子序列选取 + 动态规划】
+
+    ##### 组合数学与计数（Combinatorics）
+      - [2580. 统计将重叠区间合并成组的方案数](https://leetcode.cn/problems/count-ways-to-group-overlapping-ranges)【合并分组 + 组合计数】
+      - [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score)【质因数分解 + 组合计数】
+      - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-with-maximum-beauty)【组合数学】
+      - [3463. 判断操作后字符串中的数字是否相等 II](https://leetcode.cn/problems/check-if-digits-are-equal-in-string-after-operations-ii)【组合数学取模】
+
+    ##### 排列（Permutation）
+      - [31. 下一个排列](https://leetcode.cn/problems/next-permutation)【模式：标准算法；找 pivot -> 找更大数 -> 交换并反转】
       - [46. 全排列](https://leetcode.cn/problems/permutations) 【模式：排列回溯；核心：【口诀】排列靠 `used`：全员参与，位掩码标记】
       - [47. 全排列 II](https://leetcode.cn/problems/permutations-ii) 【模式：有重排列；核心：【原理】重复靠排序：前人未用，后人莫入（`!used[i-1]`）】
+      - [526. 优美的排列](https://leetcode.cn/problems/beautiful-arrangement)
+      - [556. 下一个更大元素 III](https://leetcode.cn/problems/next-greater-element-iii/)
+      - [996. 正方形数组的数目](https://leetcode.cn/problems/number-of-squareful-arrays)【预处理/重复数字全排列】
+      - [2741. 特别的排列](https://leetcode.cn/problems/special-permutations)【全排列/剪枝】
+
+    ##### 路径与其他回溯
       - [52. N 皇后 II](https://leetcode.cn/problems/n-queens-ii) 【模式：棋盘回溯；核心：【口诀】棋盘靠标记：列号、和、差，三位一体定乾坤】
       - [22. 括号生成](https://leetcode.cn/problems/generate-parentheses) 【模式：配对回溯；核心：【口诀】括号看余额：左括号不超标，右括号不透支】
       - [79. 单词搜索](https://leetcode.cn/problems/word-search) 【模式：矩阵回溯；核心：【口诀】矩阵靠沉岛：先占位再递归，事后记得还原】
