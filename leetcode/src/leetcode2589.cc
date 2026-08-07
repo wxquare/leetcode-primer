@@ -167,14 +167,8 @@ public:
 };
 
 int main(int argc, char const *argv[]){
-<<<<<<< HEAD
-    vector<int> nums = {1,3,5,7};
-    std::cout << Solution().findSmallestInteger(nums,2) << std::endl;
-=======
-    /* code */
     Solution* so = new Solution();
     vector<vector<int>> tasks = {{1,2000,2000}};
     std::cout << so->findMinimumTime(tasks) << std::endl;
->>>>>>> c85ee50fb7b94e663304b58b9851f33b989dc56c
     return 0;
 }
