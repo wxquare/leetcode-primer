@@ -728,25 +728,20 @@
    
 #### H. 强连通分量 (Strongly Connected Components)
 在有向图中，寻找一些特殊的节点集合，集合内任意两点都互相可达，常用Tarjan或Kosaraju算法。
-  - 1192\. 查找集群内的关键连接 (Critical Connections in a Network)
+  - [1192. 查找集群内的关键连接 (Critical Connections in a Network)](https://leetcode.cn/problems/critical-connections-in-a-network)
    
 #### I. 基环树 (Functional Graph / Pseudoforest)
-一种特殊的图，每个节点有且只有一条出边（有向）或拥有恰好一个环的结构。
+一种特殊的图，每个节点有且只有一条出边（有向）或拥有恰好一个环的结构。（拓扑排序 + 环的处理）
+- [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting)【基环树内向树，基环森林】
+- [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph) 【拓扑排序 + 环的处理 或者 时间戳DFS】
 - 2359\. 找到离给定两个节点最近的节点 (Find Closest Node to Given Two Nodes)
-- 2360\. 图中的最长环 (Longest Cycle in a Graph)
-- 2127\. 参加会议的最多员工数 (Maximum Employees to Be Invited to a Meeting)
 
 #### J. 高级图论与连通性 (基环树/网络流)
   - [3786. 树组的交互代价总和](https://leetcode.cn/problems/total-sum-of-interaction-cost-in-tree-groups)【树上边贡献法；后序 DFS 统计各组子树数量】
-  - [2127. 参加会议的最多员工数](https://leetcode.cn/problems/maximum-employees-to-be-invited-to-a-meeting)【基环树内向树】
-  - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph)
   - [2876. 有向图访问计数](https://leetcode.cn/problems/count-visited-nodes-in-a-directed-graph)
-  - [1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points)【最小生成树 Kruskal】
-  - [785. 判断二分图](https://leetcode.cn/problems/is-graph-bipartite)【染色法】
   - [7rLGCR. 守卫城堡](https://leetcode.cn/problems/7rLGCR/)【网络流/最小割】
   - [1489. 找到最小生成树里的关键边和伪关键边](https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree)
   - [2685. 统计完全连通分量的数量](https://leetcode.cn/problems/count-the-number-of-complete-components)
-  - [查找集群内的关键连接](https://leetcode.cn/problems/critical-connections-in-a-network)
   - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree)
 
 
