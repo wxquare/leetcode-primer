@@ -133,6 +133,58 @@
       - [LCR 086. 分割回文串](https://leetcode.cn/problems/M99OJA)【回溯枚举 + 回文判定】
       - [LCR 094. 少回文分割](https://leetcode.cn/problems/omKAoA)【回文预处理 + 动态规划】
       - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree)【位掩码记录字符奇偶性】
+
+    #### J. 字符串
+      - [3. 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters)【滑动窗口 + 哈希表】
+      - [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring)【中心扩展或 Manacher】
+      - [20. 有效的括号](https://leetcode.cn/problems/valid-parentheses)【栈匹配】
+      - [22. 括号生成](https://leetcode.cn/problems/generate-parentheses)【回溯 + 括号余额】
+      - [28. 找出字符串中第一个匹配项的下标](https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string)【KMP】
+      - [30. 串联所有单词的子串](https://leetcode.cn/problems/substring-with-concatenation-of-all-words)【分组滑动窗口 + 词频统计】
+      - [49. 字母异位词分组](https://leetcode.cn/problems/group-anagrams)【排序或频次作为哈希键】
+      - [65. 有效数字](https://leetcode.cn/problems/valid-number)【有限状态模拟】
+      - [71. 简化路径](https://leetcode.cn/problems/simplify-path)【栈 + 字符串分割】
+      - [76. 最小覆盖子串](https://leetcode.cn/problems/minimum-window-substring)【滑动窗口 + 频次计数】
+      - [127. 单词接龙](https://leetcode.cn/problems/word-ladder)【双向 BFS + 中间状态】
+      - [151. 反转字符串中的单词](https://leetcode.cn/problems/reverse-words-in-a-string)【双指针 + 局部翻转】
+      - [205. 同构字符串](https://leetcode.cn/problems/isomorphic-strings)【双向字符映射】
+      - [208. 实现 Trie（前缀树）](https://leetcode.cn/problems/implement-trie-prefix-tree)【前缀树】
+      - [211. 添加与搜索单词](https://leetcode.cn/problems/design-add-and-search-words-data-structure)【Trie + DFS】
+      - [212. 单词搜索 II](https://leetcode.cn/problems/word-search-ii)【Trie + 网格回溯】
+      - [242. 有效的字母异位词](https://leetcode.cn/problems/valid-anagram)【字符频次计数】
+      - [266. 判断一个字符串是否是回文排列](https://leetcode.cn/problems/palindrome-permutation)【统计奇数频次】
+      - [290. 单词规律](https://leetcode.cn/problems/word-pattern)【单词与字符双向映射】
+      - [383. 赎金信](https://leetcode.cn/problems/ransom-note)【字符频次计数】
+      - [387. 字符串中的第一个唯一字符](https://leetcode.cn/problems/first-unique-character-in-a-string)【频次统计 + 二次遍历】
+      - [392. 判断子序列](https://leetcode.cn/problems/is-subsequence)【双指针】
+      - [394. 字符串解码](https://leetcode.cn/problems/decode-string)【栈模拟嵌套结构】
+      - [409. 最长回文串](https://leetcode.cn/problems/longest-palindrome)【字符频次 + 贪心】
+      - [415. 字符串相加](https://leetcode.cn/problems/add-strings)【模拟竖式加法】
+      - [516. 最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence)【区间动态规划】
+      - [1702. 修改后的最大二进制字符串](https://leetcode.cn/problems/maximum-binary-string-after-change)【贪心构造】
+      - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string)【动态规划】
+      - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-of-a-string-with-maximum-beauty)【组合数学 + 频次】
+      - [2851. 字符串 K 次转换等于目标串的方案数量](https://leetcode.cn/problems/string-transformation)【KMP + 矩阵快速幂】
+      - [2896. 执行操作使两个字符串相等](https://leetcode.cn/problems/apply-operations-to-make-two-strings-equal)【动态规划】
+      - [2930. 重新排列后包含指定子字符串的字符串数目](https://leetcode.cn/problems/number-of-strings-which-can-be-rearranged-to-contain-substring)【组合计数】
+      - [3144. 分割字符频率相等的最少子字符串](https://leetcode.cn/problems/minimum-substring-partition-of-equal-frequency)【动态规划】
+      - [3211. 生成不含相邻零的二进制字符串](https://leetcode.cn/problems/generate-binary-strings-without-adjacent-zeros)【回溯】
+      - [3291. 形成目标字符串需要的最少字符串数 I](https://leetcode.cn/problems/minimum-number-of-valid-strings-to-form-target-i)【Trie + 动态规划】
+      - [3463. 判断操作后字符串中的数字是否相等 II](https://leetcode.cn/problems/check-if-digits-are-equal-in-string-after-operations-ii)【组合数学 + 模运算】
+      - [LCR 086. 分割回文串](https://leetcode.cn/problems/M99OJA)【回溯 + 回文判定】
+      - [LCR 094. 少回文分割](https://leetcode.cn/problems/omKAoA)【动态规划】
+
+    #### K. 两数之和与 K 数之和
+      - [1. 两数之和](https://leetcode.cn/problems/two-sum)【哈希表记录已遍历元素】
+      - [15. 三数之和](https://leetcode.cn/problems/3sum)【排序 + 固定一数 + 双指针去重】
+      - [16. 最接近的三数之和](https://leetcode.cn/problems/3sum-closest)【排序 + 双指针维护最小差值】
+      - [18. 四数之和](https://leetcode.cn/problems/4sum)【排序 + 两层枚举 + 双指针去重】
+      - [167. 两数之和 II - 输入有序数组](https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted)【有序数组对撞双指针】
+      - [454. 四数相加 II](https://leetcode.cn/problems/4sum-ii)【两两配对和 + 哈希表】
+      - [653. 两数之和 IV - 输入 BST](https://leetcode.cn/problems/two-sum-iv-input-is-a-bst)【遍历 BST + 哈希集合】
+      - [923. 三数之和的多种可能](https://leetcode.cn/problems/3sum-with-multiplicity)【排序/计数 + 组合计数】
+      - [1679. K 和数对的最大数目](https://leetcode.cn/problems/max-number-of-k-sum-pairs)【哈希计数或排序双指针】
+      - [2824. 统计和小于目标的下标对数目](https://leetcode.cn/problems/count-pairs-whose-sum-is-less-than-target)【排序 + 双指针计数】
   
 
 
