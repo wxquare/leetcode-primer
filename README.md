@@ -610,6 +610,18 @@
     #### 组合与排列
 
     ##### 组合枚举与子集选择（Combination）
+
+    **选数求和题型对照**
+
+    | 题目 | 核心问题 | 元素可重复用？ | 顺序是否重要？ | 数量限制？ | 推荐解法 |
+    | --- | --- | --- | --- | --- | --- |
+    | [77. 组合](https://leetcode.cn/problems/combinations) | 从 `[1, n]` 中选 `k` 个数 | 否 | 不重要 | 固定 `k` 个 | 回溯（DFS） |
+    | [216. 组合总和 III](https://leetcode.cn/problems/combination-sum-iii) | 从 `[1, 9]` 中选 `k` 个数，和为 `n` | 否 | 不重要 | 固定 `k` 个 | 回溯（DFS） |
+    | [39. 组合总和](https://leetcode.cn/problems/combination-sum) | 从数组中选数，和为 `target`，求所有具体组合 | 是，无限次 | 不重要 | 无固定数量 | 回溯（DFS） |
+    | [40. 组合总和 II](https://leetcode.cn/problems/combination-sum-ii) | 从数组中选数，和为 `target`，每个元素只能用一次 | 否 | 不重要 | 无固定数量 | 回溯（DFS）+ 去重 |
+    | [518. 零钱兑换 II](https://leetcode.cn/problems/coin-change-ii) | 从数组中选数，和为 `amount`，求组合数 | 是，无限次 | 不重要（组合数） | 无固定数量 | 动态规划（先物品后容量） |
+    | [377. 组合总和 IV](https://leetcode.cn/problems/combination-sum-iv) | 从数组中选数，和为 `target`，求排列数 | 是，无限次 | 重要（排列数） | 无固定数量 | 动态规划（先容量后物品） |
+
       - [17. 电话号码的字母组合](https://leetcode.cn/problems/letter-combinations-of-a-phone-number) 【模式：基础回溯；核心：递归深度控制数字索引，for 循环遍历字母映射】
       - [77. 组合](https://leetcode.cn/problems/combine) 【模式：组合回溯；核心：【口诀】组合靠 `start`：不回头看，一路向右】
       - [39. 组合总和](https://leetcode.cn/problems/combination-sum) 【模式：重复选组合；核心：【原理】传递当前索引 `i` 而非 `i+1` 实现元素可重复选取】
