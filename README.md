@@ -609,9 +609,26 @@
 
     #### 组合与排列
 
-    ##### 组合枚举与子集选择（Combination）
+    ##### 从集合选取元素（组合模型）
 
-    **选数求和题型对照**
+    **共同特征：从候选集合中选择元素；目标是枚举方案、统计方案数，或在数量/和等约束下求最值。**
+
+    ###### 维度一：按限制条件与选择规则
+
+    1. **0-1 组合**：每个元素至多选一次。回溯传入 `startIndex = i + 1`；若转成背包，物品外层、容量倒序。代表题：[77. 组合](https://leetcode.cn/problems/combinations)、[494. 目标和](https://leetcode.cn/problems/target-sum)。
+    2. **完全组合**：每个候选元素可无限次选取。回溯传入 `startIndex = i`；若转成背包，物品外层、容量正序。代表题：[39. 组合总和](https://leetcode.cn/problems/combination-sum)、[518. 零钱兑换 II](https://leetcode.cn/problems/coin-change-ii)。
+    3. **含重复元素的组合**：元素不可复用，但输入数值可能重复；先排序，再做树层去重：`if (i > startIndex && nums[i] == nums[i - 1]) continue;`。代表题：[40. 组合总和 II](https://leetcode.cn/problems/combination-sum-ii)。
+    4. **分组或强约束组合**：除选取外，还限制恰好选 `k` 个、总和、分组或互斥关系。代表题：[216. 组合总和 III](https://leetcode.cn/problems/combination-sum-iii)、[689. 三个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays)、[2397. 被列覆盖的最多行数](https://leetcode.cn/problems/maximum-rows-covered-by-columns)。
+
+    ###### 维度二：按求解目标选择算法
+
+    | 目标 | 题目要求 | 优先算法 | 代表题 |
+    | --- | --- | --- | --- |
+    | 输出具体方案 | 返回全部组合路径 | 回溯（DFS + 剪枝） | 77、39、40、216 |
+    | 统计方案数 | 只问有多少种选法 | 动态规划（背包计数） | 494、518 |
+    | 最值或可达性 | 求最少/最多元素数，或能否满足约束 | 动态规划（背包） | 322、2915、689 |
+
+    > **决策口诀**：要路径，用 DFS；只要方案数或最值，用 DP。顺序无关、求组合数时用“物品外层、容量内层”；顺序重要时属于排列计数（如 377），用“容量外层、物品内层”。
 
     | 题目 | 核心问题 | 元素可重复用？ | 顺序是否重要？ | 数量限制？ | 推荐解法 |
     | --- | --- | --- | --- | --- | --- |
@@ -620,20 +637,13 @@
     | [39. 组合总和](https://leetcode.cn/problems/combination-sum) | 从数组中选数，和为 `target`，求所有具体组合 | 是，无限次 | 不重要 | 无固定数量 | 回溯（DFS） |
     | [40. 组合总和 II](https://leetcode.cn/problems/combination-sum-ii) | 从数组中选数，和为 `target`，每个元素只能用一次 | 否 | 不重要 | 无固定数量 | 回溯（DFS）+ 去重 |
     | [518. 零钱兑换 II](https://leetcode.cn/problems/coin-change-ii) | 从数组中选数，和为 `amount`，求组合数 | 是，无限次 | 不重要（组合数） | 无固定数量 | 动态规划（先物品后容量） |
-    | [377. 组合总和 IV](https://leetcode.cn/problems/combination-sum-iv) | 从数组中选数，和为 `target`，求排列数 | 是，无限次 | 重要（排列数） | 无固定数量 | 动态规划（先容量后物品） |
-
-      - [17. 电话号码的字母组合](https://leetcode.cn/problems/letter-combinations-of-a-phone-number) 【模式：基础回溯；核心：递归深度控制数字索引，for 循环遍历字母映射】
-      - [77. 组合](https://leetcode.cn/problems/combine) 【模式：组合回溯；核心：【口诀】组合靠 `start`：不回头看，一路向右】
-      - [39. 组合总和](https://leetcode.cn/problems/combination-sum) 【模式：重复选组合；核心：【原理】传递当前索引 `i` 而非 `i+1` 实现元素可重复选取】
-      - [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets)【子集枚举 + 回溯】
-      - [494. 目标和](https://leetcode.cn/problems/target-sum)【子集选择；0/1 背包组合计数】
-      - [3098. 求出所有子序列的能量和](https://leetcode.cn/problems/find-the-sum-of-subsequence-powers)【子序列选取 + 动态规划】
-
-    ##### 组合数学与计数（Combinatorics）
-      - [2580. 统计将重叠区间合并成组的方案数](https://leetcode.cn/problems/count-ways-to-group-overlapping-ranges)【合并分组 + 组合计数】
-      - [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score)【质因数分解 + 组合计数】
-      - [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-with-maximum-beauty)【组合数学】
-      - [3463. 判断操作后字符串中的数字是否相等 II](https://leetcode.cn/problems/check-if-digits-are-equal-in-string-after-operations-ii)【组合数学取模】
+    | [322. 零钱兑换](https://leetcode.cn/problems/coin-change) | 从数组中选数，和为 `amount`，求最少元素数 | 是，无限次 | 不重要 | 无固定数量 | 完全背包最值 |
+    | [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets) | 从数组选一个满足差值约束的子集，统计方案数 | 否 | 不重要 | 无固定数量 | 回溯 / 动态规划 |
+    | [494. 目标和](https://leetcode.cn/problems/target-sum) | 选择一部分数取负，使表达式等于 `target`，统计方案数 | 否 | 不重要 | 无固定数量 | 0/1 背包计数 |
+    | [2842. 统计一个字符串的 k 子序列美丽值最大的数目](https://leetcode.cn/problems/count-k-subsequences-with-maximum-beauty) | 从字符类型集合中选 `k` 类，使美丽值最大并统计方案数 | 否 | 不重要 | 固定 `k` 个 | 频次统计 + 组合数学 |
+    | [689. 三个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays) | 从候选子数组中选 3 个互不重叠的对象，求最大和 | 否 | 不重要 | 固定 3 个 | 动态规划 |
+    | [2915. 和为目标值的最长子序列的长度](https://leetcode.cn/problems/length-of-the-longest-subsequence-that-sums-to-target) | 从数组选数，和为 `target`，求最多能选多少个 | 否 | 不重要 | 最大化数量 | 0/1 背包 |
+    | [2397. 被列覆盖的最多行数](https://leetcode.cn/problems/maximum-rows-covered-by-columns) | 从列集合选 `numSelect` 列，求覆盖的最大行数 | 否 | 不重要 | 固定 `numSelect` 个 | 位运算 / 枚举 |
 
     ##### 排列（Permutation）
       - [31. 下一个排列](https://leetcode.cn/problems/next-permutation)【模式：标准算法；找 pivot -> 找更大数 -> 交换并反转】
@@ -643,8 +653,10 @@
       - [556. 下一个更大元素 III](https://leetcode.cn/problems/next-greater-element-iii/)
       - [996. 正方形数组的数目](https://leetcode.cn/problems/number-of-squareful-arrays)【预处理/重复数字全排列】
       - [2741. 特别的排列](https://leetcode.cn/problems/special-permutations)【全排列/剪枝】
+      - [377. 组合总和 IV](https://leetcode.cn/problems/combination-sum-iv)【顺序重要；属于排列计数】
 
     ##### 路径与其他回溯
+      - [17. 电话号码的字母组合](https://leetcode.cn/problems/letter-combinations-of-a-phone-number)【按位选择；属于笛卡尔积枚举】
       - [52. N 皇后 II](https://leetcode.cn/problems/n-queens-ii) 【模式：棋盘回溯；核心：【口诀】棋盘靠标记：列号、和、差，三位一体定乾坤】
       - [22. 括号生成](https://leetcode.cn/problems/generate-parentheses) 【模式：配对回溯；核心：【口诀】括号看余额：左括号不超标，右括号不透支】
       - [79. 单词搜索](https://leetcode.cn/problems/word-search) 【模式：矩阵回溯；核心：【口诀】矩阵靠沉岛：先占位再递归，事后记得还原】
