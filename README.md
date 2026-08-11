@@ -410,23 +410,61 @@
       - [2332. 坐上公交的最晚时间](https://leetcode.cn/problems/the-latest-time-to-catch-a-bus)【双指针-易错模拟题】
       - [2760. 最长奇偶子数组](https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold)
 
-7. 贪心
-      - [超级洗衣机](https://leetcode.cn/problems/super-washing-machines)
-      - [课程表3(反悔贪心,排序、最大堆)](https://leetcode.cn/problems/course-schedule-iii)
-      - [2171 拿出最少数目的魔法豆](https://leetcode.cn/problems/removing-minimum-number-of-magic-beans)
-      - [2009. 使数组连续的最少操作数](https://leetcode.cn/problems/minimum-number-of-operations-to-make-array-continuous)
-      - [1702. 修改后的最大二进制字符串](https://leetcode.cn/problems/maximum-binary-string-after-change)
-      - [2007. 从双倍数组中还原原数组](https://leetcode.cn/problems/find-original-array-from-doubled-array)
-      - [3111. 覆盖所有点的最少矩形数目](https://leetcode.cn/problems/minimum-rectangles-to-cover-points)【排序+贪心】
-      - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots)
-      - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares)【平方和贪心，和的平方>=平方和】
-      - [2576. 求出最多标记下标](https://leetcode.cn/problems/find-the-maximum-number-of-marked-indices)
-      - [910. 最小差值 II](https://leetcode.cn/problems/smallest-range-ii)
-      - [3789. 采购的最小花费](https://leetcode.cn/problems/minimum-cost-to-acquire-required-items)【组合定价】
-      - [135. 分发糖果](https://leetcode.cn/problems/candy)【贪心，两次遍历分别处理大于的关系】
-      - [769. 最多能完成排序的块](https://leetcode.cn/problems/max-chunks-to-make-sorted)【贪心】
-      - [2560. 打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv)【贪心+二分答案】
-      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence) 【二分+贪心】
+7. 贪心：局部最优的证明与训练
+
+> 做题时先回答：**当前舍弃的选择，为什么以后不可能更优？** 能用交换论证、不变量或单调边界回答，才适合贪心。
+
+#### A. 边界淘汰与可达性
+
+      - [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water)【移动短板；短板不动无法得到更优解】
+      - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water)【处理较低边界；其蓄水上界已被确定】
+      - [45. 跳跃游戏 II](https://leetcode.cn/problems/jump-game-ii)【维护当前层可达边界与下一层最远位置】
+      - [55. 跳跃游戏](https://leetcode.cn/problems/jump-game)【维护最远可达位置】
+      - [134. 加油站](https://leetcode.cn/problems/gas-station)【失败起点到失败点之间的起点均可跳过】
+      - [135. 分发糖果](https://leetcode.cn/problems/candy)【左右各扫一次，分别满足单侧局部约束】
+      - [1793. 好子数组的最大分数](https://leetcode.cn/problems/maximum-score-of-a-good-subarray)【向较高一侧扩张，尽量延缓最小值下降】
+      - [2216. 美化数组的最少删除数](https://leetcode.cn/problems/minimum-deletions-to-make-array-beautiful)【冲突时删除当前元素，保留更早的可用位置】
+      - [2332. 坐上公交的最晚时间](https://leetcode.cn/problems/the-latest-time-to-catch-a-bus)【模拟后从最后可行时刻向前避开已占用时间】
+
+#### B. 区间、排序与交换论证
+
+      - [56. 合并区间](https://leetcode.cn/problems/merge-intervals)【按起点排序后只维护当前合并区间】
+      - [57. 插入区间](https://leetcode.cn/problems/insert-interval)【利用区间有序性分段处理】
+      - [253. 会议室 II](https://leetcode.cn/problems/meeting-rooms-ii)【按开始时间扫描，堆维护最早释放资源】
+      - [435. 无重叠区间](https://leetcode.cn/problems/non-overlapping-intervals)【优先保留结束最早的区间】
+      - [452. 用最少数量的箭引爆气球](https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons)【每次选择当前重叠区间的最右公共点】
+      - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query)【排序查询，堆维护仍可覆盖的最短区间】
+      - [3111. 覆盖所有点的最少矩形数目](https://leetcode.cn/problems/minimum-rectangles-to-cover-points)【按横坐标排序，尽可能延长当前覆盖范围】
+
+#### C. 排序、配对与阈值选择
+
+      - [910. 最小差值 II](https://leetcode.cn/problems/smallest-range-ii)【排序后枚举唯一可能的分界点】
+      - [2007. 从双倍数组中还原原数组](https://leetcode.cn/problems/find-original-array-from-doubled-array)【从小到大优先匹配当前数的两倍】
+      - [2009. 使数组连续的最少操作数](https://leetcode.cn/problems/minimum-number-of-operations-to-make-array-continuous)【排序去重后维护最长合法值域窗口】
+      - [2171. 拿出最少数目的魔法豆](https://leetcode.cn/problems/removing-minimum-number-of-magic-beans)【枚举保留值，其他值只增不减地清空】
+      - [2576. 求出最多标记下标](https://leetcode.cn/problems/find-the-maximum-number-of-marked-indices)【小值依次匹配满足条件的最小大值】
+      - [3789. 采购的最小花费](https://leetcode.cn/problems/minimum-cost-to-acquire-required-items)【比较组合定价的边际成本后优先购买】
+
+#### D. 反悔贪心与状态维护
+
+      - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence)【维护各长度的最小结尾；更小结尾总是不劣】
+      - [517. 超级洗衣机](https://leetcode.cn/problems/super-washing-machines)【用前缀盈亏刻画跨边界的最低传输量】
+      - [630. 课程表 III](https://leetcode.cn/problems/course-schedule-iii)【按结束时间选课，超时就反悔删除耗时最长课程】
+      - [769. 最多能完成排序的块](https://leetcode.cn/problems/max-chunks-to-make-sorted)【前缀最大值等于下标时可安全分块】
+
+#### E. 构造、不变量与贡献分配
+
+      - [409. 最长回文串](https://leetcode.cn/problems/longest-palindrome)【所有成对字符可保留，至多留一个奇数频次作中心】
+      - [1702. 修改后的最大二进制字符串](https://leetcode.cn/problems/maximum-binary-string-after-change)【归纳操作后的唯一最优形态】
+      - [2731. 移动机器人](https://leetcode.cn/problems/movement-of-robots)【相撞等价于穿透，转化为排序后的距离贡献】
+      - [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score)【单调栈算贡献次数，优先使用更大数】
+      - [2897. 对数组执行操作使平方和最大](https://leetcode.cn/problems/apply-operations-on-array-to-maximize-sum-of-squares)【平方凸性；将高位尽量集中】
+
+#### F. 二分答案中的贪心 check
+
+      - [1482. 制作 m 束花所需的最少天数](https://leetcode.cn/problems/minimum-number-of-days-to-make-m-bouquets)【固定天数后从左到右尽早组成花束】
+      - [2560. 打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv)【固定能力值后尽早选择不相邻房屋】
+      - [2812. 找出最安全路径](https://leetcode.cn/problems/find-the-safest-path-in-a-grid)【固定安全系数后判定路径是否可达】
 
 8. 分治 (Divide and Conquer)
       > **核心逻辑**：
