@@ -977,6 +977,88 @@
   - [2685. 统计完全连通分量的数量](https://leetcode.cn/problems/count-the-number-of-complete-components)
   - [6942. 树中可以形成回文的路径数](https://leetcode.cn/problems/count-paths-that-can-form-a-palindrome-in-a-tree)
 
+## 路径问题：从状态定义到算法选择
+
+“路径”不是单一算法：先识别路径所在的状态空间，再确定目标是**存在性、最短/最优值、方案数，还是具体路径**。本章是跨章节练习导航；题目在原有的数组、树、搜索、DP 与图论章节中仍保留。
+
+| 看到的题面特征 | 优先考虑 | 代表题目 |
+| --- | --- | --- |
+| 网格中只能向右/下，或转移方向天然无环 | 动态规划 | 62、63、64、120 |
+| 无权图、每一步代价相同，要求最少步数 | BFS | 127、433、909、1293 |
+| 有非负边权，要求最小代价 | Dijkstra / 0-1 BFS | 743、1368、1631 |
+| 要列出全部可行路线 | DFS + 回溯 | 79、113、797 |
+| 树上路径和、最长路径或跨子树路径 | DFS + 树形 DP / 前缀和 | 112、124、437、543 |
+
+#### A. 网格与二维结构：路径计数、最值与约束
+
+先确定移动方向能否形成 DAG：若只能向右、向下或逐层前进，通常写出 `dp[i][j]` 即可；若可以四向移动，应转到图搜索或最短路。
+
+- [62. 不同路径](https://leetcode.cn/problems/unique-paths)【路径计数 DP；`dp[i][j] = dp[i-1][j] + dp[i][j-1]`】
+- [63. 不同路径 II](https://leetcode.cn/problems/unique-paths-ii)【障碍物置零；注意起点和首行/首列初始化】
+- [64. 最小路径和](https://leetcode.cn/problems/minimum-path-sum)【最值 DP；由上方、左方的最小代价转移】
+- [120. 三角形最小路径和](https://leetcode.cn/problems/triangle)【自底向上 DP；每层只依赖下一层两个相邻状态】
+- [931. 下降路径最小和](https://leetcode.cn/problems/minimum-falling-path-sum)【三方向转移；处理左右越界】
+- [1289. 下降路径最小和 II](https://leetcode.cn/problems/minimum-falling-path-sum-ii)【维护上一行最小值和次小值，避免枚举整行】
+- [329. 矩阵中的最长递增路径](https://leetcode.cn/problems/longest-increasing-path-in-a-matrix)【记忆化 DFS / 拓扑分层；严格递增保证无环】
+- [417. 太平洋大西洋水流问题](https://leetcode.cn/problems/pacific-atlantic-water-flow)【逆向多源 DFS/BFS；从两侧海岸向高处扩展】
+- [79. 单词搜索](https://leetcode.cn/problems/word-search)【矩阵回溯；原地标记、递归后恢复】
+
+#### B. 树上路径：根到叶、任意起终点与贡献度
+
+树没有环，但要区分路径是否必须向下、是否必须从根开始、以及是否允许在某个节点“拐弯”。
+
+- [112. 路径总和](https://leetcode.cn/problems/path-sum)【根到叶存在性；DFS 累减目标值】
+- [113. 路径总和 II](https://leetcode.cn/problems/path-sum-ii)【输出全部路径；回溯维护当前节点序列】
+- [129. 求根节点到叶节点数字之和](https://leetcode.cn/problems/sum-root-to-leaf-numbers)【路径状态累加；向下传递 `sum * 10 + val`】
+- [437. 路径总和 III](https://leetcode.cn/problems/path-sum-iii)【任意起点向下；前缀和计数】
+- [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree)【后序 DFS；每个节点汇总左右最大深度】
+- [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum)【树形 DP；向父节点只贡献单侧最大收益】
+- [687. 最长同值路径](https://leetcode.cn/problems/longest-univalue-path)【后序合并；只有值相同的边能延伸】
+- [2246. 相邻字符不同的最长路径](https://leetcode.cn/problems/longest-path-with-different-adjacent-characters)【树上直径变体；过滤不满足字符约束的子树】
+- [2673. 使二叉树所有路径值相等的最小代价](https://leetcode.cn/problems/make-costs-of-paths-equal-in-a-binary-tree)【自底向上平衡左右子树路径和】
+
+#### C. 图与矩阵：可达性、全部路径与最少步数
+
+无权图的“最短路径”就是 BFS 的层数；若要求所有路径，使用 DFS 并显式维护 `path`。存在环时要明确 `visited` 的作用域。
+
+- [1971. 寻找图中是否存在路径](https://leetcode.cn/problems/find-if-path-exists-in-graph)【DFS/BFS/并查集；连通性判定】
+- [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands)【网格连通分量；DFS/BFS 沉岛标记】
+- [797. 所有可能的路径](https://leetcode.cn/problems/all-paths-from-source-to-target)【DAG 全路径枚举；DFS + 回溯】
+- [841. 钥匙和房间](https://leetcode.cn/problems/keys-and-rooms)【图遍历；检查可访问节点数】
+- [909. 蛇梯棋](https://leetcode.cn/problems/snakes-and-ladders)【状态图 BFS；注意一维编号到棋盘坐标的转换】
+- [127. 单词接龙](https://leetcode.cn/problems/word-ladder)【最少变换步数；双向 BFS 降低搜索规模】
+- [433. 最小基因变化](https://leetcode.cn/problems/minimum-genetic-mutation)【隐式图 BFS；每次只改变一个字符】
+- [1293. 网格中的最短路径](https://leetcode.cn/problems/shortest-path-in-a-grid-with-obstacles-elimination)【BFS 状态含剩余消除次数；按格子去重不足】
+- [847. 访问所有节点的最短路径](https://leetcode.cn/problems/shortest-path-visiting-all-nodes)【多源 BFS + 状态压缩；状态为 `(node, mask)`】
+
+#### D. 带权、最优与第二目标：最短路模型
+
+边权非负时用 Dijkstra；边权只有 0、1 时可用 0-1 BFS；若目标是“路径上最坏边最小”，常把距离定义改成最大值或配合二分答案。
+
+- [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time)【单源最短路模板；Dijkstra + 最小堆】
+- [1368. 使网格图至少有一条有效路径的最小代价](https://leetcode.cn/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid)【0-1 BFS；沿箭头走的边权为 0】
+- [1631. 最小体力消耗路径](https://leetcode.cn/problems/path-with-minimum-effort)【最小化路径最大边权；Dijkstra 或二分 + BFS】
+- [1976. 到达目的地的方案数](https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination)【Dijkstra 同时维护最短距离与方案数】
+- [2045. 到达目的地的第二短时间](https://leetcode.cn/problems/second-minimum-time-to-reach-destination)【每点维护第一、第二到达时间】
+- [2812. 找出最安全路径](https://leetcode.cn/problems/find-the-safest-path-in-a-grid)【多源 BFS 预处理危险距离；二分阈值 + 可达性判定】
+
+#### E. 计数与路径构造：不是“走到终点”就结束
+
+这类题的难点是把“距离”之外的约束编入状态，或按照题目规则输出一条具体路径。
+
+- [1786. 从第一个节点出发到最后一个节点的受限路径数](https://leetcode.cn/problems/number-of-restricted-paths-from-first-to-last-node)【先 Dijkstra 求到终点距离，再按距离递减做记忆化 DP】
+- [332. 重新安排行程](https://leetcode.cn/problems/reconstruct-itinerary)【欧拉路径；Hierholzer 算法 + 字典序选择】
+- [2065. 最大化一张图中的路径价值](https://leetcode.cn/problems/maximum-path-quality-of-a-graph)【受时间限制的 DFS；访问计数决定节点价值是否重复计算】
+
+#### F. 路径字符串与移动轨迹：栈与坐标模拟
+
+题面中的“路径”若是文件系统字符串或移动指令，通常不需要图搜索：把路径分段、维护栈或坐标集合即可。
+
+- [71. 简化路径](https://leetcode.cn/problems/simplify-path)【栈模拟；忽略 `.`，`..` 弹栈，普通目录入栈】
+- [1496. 判断路径是否相交](https://leetcode.cn/problems/path-crossing)【坐标模拟 + 哈希集合；每一步后检查是否已访问】
+
+> **练习顺序建议**：先做 62 → 64 → 112 → 113 → 200 → 909，建立“DP、DFS、BFS”的路径直觉；再做 127、1293、743、1631、1976；最后挑战 847、1786、332、2065 等需要复合状态或构造的题目。
+
 
 ## 工程小技巧 (Engineering Tips)
 
