@@ -850,6 +850,7 @@
 - [3098. 求出所有子序列的能量和](https://leetcode.cn/problems/find-the-sum-of-subsequence-powers)
 - [最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence)
 - [72. 编辑距离](https://leetcode.cn/problems/edit-distance/)
+- 115\. 不同的子序列
 
 ##### 1.7 数组DP dp[i][j]
 - [3130. 找出所有稳定的二进制数组 II](https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-ii)【dp[i][j][2] 以0或者1结尾的方案数】
