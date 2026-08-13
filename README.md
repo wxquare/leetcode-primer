@@ -1090,6 +1090,7 @@
 - [841. 钥匙和房间](https://leetcode.cn/problems/keys-and-rooms)【图遍历；检查可访问节点数】
 - [909. 蛇梯棋](https://leetcode.cn/problems/snakes-and-ladders)【状态图 BFS；注意一维编号到棋盘坐标的转换】
 - [127. 单词接龙](https://leetcode.cn/problems/word-ladder)【最少变换步数；双向 BFS 降低搜索规模】
+- [126. 单词接龙 II](https://leetcode.cn/problems/word-ladder-ii)【所有最短变换序列；BFS 分层记录前驱关系，再 DFS 回溯恢复路径】
 - [433. 最小基因变化](https://leetcode.cn/problems/minimum-genetic-mutation)【隐式图 BFS；每次只改变一个字符】
 - [1293. 网格中的最短路径](https://leetcode.cn/problems/shortest-path-in-a-grid-with-obstacles-elimination)【BFS 状态含剩余消除次数；按格子去重不足】
 - [847. 访问所有节点的最短路径](https://leetcode.cn/problems/shortest-path-visiting-all-nodes)【多源 BFS + 状态压缩；状态为 `(node, mask)`】
