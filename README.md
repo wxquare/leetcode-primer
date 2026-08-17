@@ -877,6 +877,7 @@
 - [526.优美的排列](https://leetcode.cn/problems/beautiful-arrangement)
 - [638. 大礼包](https://leetcode.cn/problems/shopping-offers)
 - [691. 贴纸拼词](https://leetcode.cn/problems/stickers-to-spell-word)
+- 698\. 划分为k个相等的子集
 - [2741. 特别的排列](https://leetcode.cn/problems/special-permutations)
 
 
