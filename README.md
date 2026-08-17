@@ -480,9 +480,9 @@
 
 - [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water)【移动短板；短板不动无法得到更优解】
 - [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water)【处理较低边界；其蓄水上界已被确定】
-- [45. 跳跃游戏 II](https://leetcode.cn/problems/jump-game-ii)【维护当前层可达边界与下一层最远位置】
+- [45. 跳跃游戏 II](https://leetcode.cn/problems/jump-game-ii)【维护当前层可达边界与下一层最远位置，维护当前cur_max_dis,全局 max_dis】
 - [55. 跳跃游戏](https://leetcode.cn/problems/jump-game)【维护最远可达位置】
-- [134. 加油站](https://leetcode.cn/problems/gas-station)【失败起点到失败点之间的起点均可跳过】
+- [134. 加油站](https://leetcode.cn/problems/gas-station)【失败起点到失败点之间的起点均可跳过,维护 total_net,cur_net】
 - [135. 分发糖果](https://leetcode.cn/problems/candy)【左右各扫一次，分别满足单侧局部约束】
 - [1793. 好子数组的最大分数](https://leetcode.cn/problems/maximum-score-of-a-good-subarray)【向较高一侧扩张，尽量延缓最小值下降】
 - [2216. 美化数组的最少删除数](https://leetcode.cn/problems/minimum-deletions-to-make-array-beautiful)【冲突时删除当前元素，保留更早的可用位置】
