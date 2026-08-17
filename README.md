@@ -528,6 +528,16 @@
 - [2560. 打家劫舍 IV](https://leetcode.cn/problems/house-robber-iv)【固定能力值后尽早选择不相邻房屋】
 - [2812. 找出最安全路径](https://leetcode.cn/problems/find-the-safest-path-in-a-grid)【固定安全系数后判定路径是否可达】
 
+#### G. 前后缀贪心匹配
+
+> 适用：`pattern` 是 `text` 的子序列，且目标需要最大化或最小化匹配位置之间的跨度。
+>
+> - 正向贪心：求每个字符最早匹配位置 `L[i]`。
+> - 反向贪心：求每个字符最晚匹配位置 `R[i]`。
+> - 跨度最大化：前一个字符取 `L[i - 1]`，后一个字符取 `R[i]`，答案为 `max(R[i] - L[i - 1])`。
+
+- [4026. 工位的最大间隔](https://leetcode.cn/problems/maximum-gap-between-stations)【前后缀贪心匹配；最早/最晚匹配位置取极值以最大化相邻跨度】
+
 ### 8. 分治 (Divide and Conquer)
 > **核心逻辑**：
 > 1. **分解 (Divide)**：将原问题拆分为规模较小、相互独立的子问题（如左右子树、数组半区）。
