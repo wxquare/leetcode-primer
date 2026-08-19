@@ -392,17 +392,27 @@
 - [125. 验证回文串](https://leetcode.cn/problems/valid-palindrome/)【首尾夹逼；跳过非字母数字字符后比较】
 - [167. 两数之和 II - 输入有序数组](https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted)【双指针夹逼；利用有序性按和的大小收缩搜索空间】
 
-#### B. 同向、快慢与分组双指针
+#### B. 同向指针
 
-- [26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)【快慢指针；慢指针维护去重结果的尾部】
+- [26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)【同向快慢指针；读指针扫描，写指针维护去重结果的尾部】
 - [151. 反转字符串中的单词](https://leetcode.cn/problems/reverse-words-in-a-string)【双指针 + 局部翻转；原地整理单词边界后逐段翻转】
-- [228. 汇总区间](https://leetcode.cn/problems/summary-ranges)【分组扫描；用起止下标识别 `nums[j + 1] != nums[j] + 1` 的断点】
-- [283. 移动零](https://leetcode.cn/problems/move-zeroes)【快慢指针；慢指针维护非零元素应写入的位置】
+- [283. 移动零](https://leetcode.cn/problems/move-zeroes)【同向快慢指针；读指针扫描非零元素，写指针维护写入位置】
 - [392. 判断子序列](https://leetcode.cn/problems/is-subsequence)【同向双指针；依次匹配 `s` 与 `t`，进阶可预处理 `t` 的序列自动机】
 - [2938. 区分黑球与白球](https://leetcode.cn/problems/separate-black-and-white-balls)【同向扫描；累计左侧白球数量】
+
+#### C. 快慢指针：循环检测
+
+- [141. 环形链表](https://leetcode.cn/problems/linked-list-cycle)【Floyd 判环；快指针每次两步、慢指针每次一步，相遇即存在循环】
+- [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii)【Floyd 找环入口；相遇后将一指针移回起点，两指针同步前进再次相遇于入口】
+- [202. 快乐数](https://leetcode.cn/problems/happy-number)【状态映射 + Floyd 判环；反复替换为各位平方和，最终到达 1 或进入循环】
+- [287. 寻找重复数](https://leetcode.cn/problems/find-the-duplicate-number)【数组映射成链表 + Floyd 找环；不修改原数组，在 $O(n)$ 时间和 $O(1)$ 空间内找到重复数】
+
+#### D. 分组双指针
+
+- [228. 汇总区间](https://leetcode.cn/problems/summary-ranges)【分组扫描；用起止下标识别 `nums[j + 1] != nums[j] + 1` 的断点】
 - [2970. 统计移除递增子数组的数目 I](https://leetcode.cn/problems/count-the-number-of-incremovable-subarrays-i)【前后缀 + 双指针；枚举删除区间的左右边界】
 
-#### C. 三指针分区
+#### E. 三指针分区
 
 - [75. 颜色分类](https://leetcode.cn/problems/sort-colors/)【荷兰国旗；`left`、`cur`、`right` 分别维护 0 区、未知区和 2 区】
 
@@ -510,6 +520,7 @@
 - [57. 插入区间](https://leetcode.cn/problems/insert-interval)【利用区间有序性分段处理】
 - [435. 无重叠区间](https://leetcode.cn/problems/non-overlapping-intervals)【优先保留结束最早的区间】
 - [452. 用最少数量的箭引爆气球](https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons)【每次选择当前重叠区间的最右公共点】
+- [215. 数组中的第 K 个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array)【排序后决策；排序后直接定位，或维护大小为 K 的最小堆保留当前 K 个最大元素】
 - [3111. 覆盖所有点的最少矩形数目](https://leetcode.cn/problems/minimum-rectangles-to-cover-points)【按横坐标排序，尽可能延长当前覆盖范围】
 
 #### C. 排序、配对与阈值选择
@@ -731,10 +742,6 @@
 - [3134. 找出唯一性数组的中位数](https://leetcode.cn/problems/find-the-median-of-the-uniqueness-array)【二分答案 + 双指针统计】
 - [410. 分割数组的最大值](https://leetcode.cn/problems/split-array-largest-sum)【二分答案 + 贪心分段；检查最大子数组和上限是否可行】
 - [871. 最低加油次数](https://leetcode.cn/problems/minimum-number-of-refueling-stops)【贪心 + 最大堆；到不了下一站时补给已路过站点中最多的油】
-
-#### 双指针与划分
-- [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water)【对撞双指针搜索】
-- [179. 最大数](https://leetcode.cn/problems/largest-number)【自定义排序 + 贪心】
 
 ### 2. BFS：状态空间的最短路径 (Breadth-First Search)
 - **基础网格与层级遍历**
