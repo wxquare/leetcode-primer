@@ -57,6 +57,7 @@
 #### E. 子数组
 - [53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray)【Kadane 算法】
 - [152. 乘积最大子数组](https://leetcode.cn/problems/maximum-product-subarray)【维护最大值和最小值】
+- [209. 长度最小的子数组](https://leetcode.cn/problems/minimum-size-subarray-sum)【正数数组滑动窗口；窗口和达到目标后收缩左边界以更新最短长度】
 - [560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k)【前缀和 + 哈希表】
 - [689. 三个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays)【动态规划】
 - [862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k)【前缀和 + 单调队列】
@@ -481,6 +482,8 @@
 - [1329. 将矩阵按对角线排序](https://leetcode.cn/problems/sort-the-matrix-diagonally)
 - [2512.奖励最顶尖的 K 名学生](https://leetcode.cn/problems/reward-top-k-students)
 - [215. 数组中的第 K 个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array)【快速选择/最小堆；平均 $O(n)$ 定位第 K 大元素】
+- [295. 数据流的中位数](https://leetcode.cn/problems/find-median-from-data-stream)【对顶堆；最大堆维护较小一半、最小堆维护较大一半，堆顶给出中位数】
+- [703. 数据流中的第 K 大元素](https://leetcode.cn/problems/kth-largest-element-in-a-stream)【大小为 K 的最小堆；流式插入后堆顶始终是第 K 大元素】
 
 ### 5. 枚举
 - [2555. 两个线段获得的最多奖品](https://leetcode.cn/problems/maximize-win-from-two-segments)【维护左边，枚举右边】
