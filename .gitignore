@@ -1,0 +1,32 @@
+.worktrees/
+docs/
+
+# macOS / editor local metadata
+.DS_Store
+
+# C/C++ build artifacts
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+a.out
+*.dSYM/
+build/
+cmake-build-*/
+
+# Python runtime artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Temporary output from local scripts
+output.pdf
+*.log
+.vscode/
