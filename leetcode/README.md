@@ -957,17 +957,69 @@
 - [3130. 找出所有稳定的二进制数组 II](https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-ii)【dp[i][j][2] 以0或者1结尾的方案数】
 
 #### 2. 背包 DP
-- 01背包
-- [322. 零钱兑换](https://leetcode.cn/problems/coin-change/)
-- [416. 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum)【0/1 背包；判断是否可凑出总和的一半】
-- [474. 一和零](https://leetcode.cn/problems/ones-and-zeroes)【二维 0/1 背包；容量为 0 和 1 的可用数量】
-- 完全背包
-- [494. 目标和](https://leetcode.cn/problems/target-sum)
-- [518. 零钱兑换 II](https://leetcode.cn/problems/coin-change-ii)
-- 多重背包
-- [1155. 掷骰子等于目标和的方法数](https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum)
-- [1449. 数位成本和为目标值的最大数字](https://leetcode.cn/problems/form-largest-integer-with-digits-that-add-up-to-target)【完全背包 DP；先最大化位数，再按数字从大到小恢复答案】
-- 分组背包
+
+背包题先判断：**物品是什么、容量是什么、每件物品能选几次、不同选项是否互斥、目标是可达性/最值/计数中的哪一种**。详细状态转移与 C++ 模板见 [动态规划复习手册](../template/3-DP.md#3-背包-dp)。
+
+##### 2.1 0/1 背包
+
+每件物品最多选择一次；一维滚动数组中，物品在外层、容量倒序遍历。
+
+- [416. 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum)【可达性；判断是否能恰好凑出总和的一半】
+- [494. 目标和](https://leetcode.cn/problems/target-sum)【计数；转化为选择部分元素恰好组成指定和】
+- [1049. 最后一块石头的重量 II](https://leetcode.cn/problems/last-stone-weight-ii)【最值；将石头分成两组，使两组总和尽量接近】
+- [2915. 和为目标值的最长子序列的长度](https://leetcode.cn/problems/length-of-the-longest-subsequence-that-sums-to-target)【恰好装满；最大化选择的元素数量】
+
+##### 2.2 完全背包
+
+每种物品可以选择无限次；一维滚动数组中容量正序遍历。
+
+- [322. 零钱兑换](https://leetcode.cn/problems/coin-change)【最小代价；凑成金额所需的最少硬币数】
+- [518. 零钱兑换 II](https://leetcode.cn/problems/coin-change-ii)【组合计数；物品在外层，避免重复统计排列】
+- [279. 完全平方数](https://leetcode.cn/problems/perfect-squares)【最小代价；平方数可重复使用】
+- [139. 单词拆分](https://leetcode.cn/problems/word-break)【可达性；字典单词可以重复使用】
+- [1449. 数位成本和为目标值的最大数字](https://leetcode.cn/problems/form-largest-integer-with-digits-that-add-up-to-target)【先最大化位数，再恢复字典序最大的答案】
+
+##### 2.3 多重背包
+
+第 `i` 种物品最多选择 `count[i]` 次；常用二进制拆分转成 0/1 背包，数据较大时可用单调队列优化。不要与“组内选一个”的分组背包混淆。
+
+- [2585. 获得分数的方法数](https://leetcode.cn/problems/number-of-ways-to-earn-points)【计数；每种题目有固定数量上限】
+
+##### 2.4 分组背包 / 多选择背包
+
+物品被划分成若干组，每组可以不选或最多选择一个选项；每组必须从上一层 `dp` 转移，避免同组选取多个选项。
+
+- [1155. 掷骰子等于目标和的方法数](https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum)【每个骰子是一组，每组选择一个点数】
+- [2218. 从栈中取出 K 个硬币的最大面值和](https://leetcode.cn/problems/maximum-value-of-k-coins-from-piles)【每个栈是一组，组内选项是取前 `0..size` 枚硬币】
+- [4040. 构造子集和的最少操作次数 I](https://leetcode.cn/problems/minimum-operations-to-form-subset-sum-i/)【每个元素是一组，可达值是互斥选项，代价为操作次数】
+- [4041. 构造子集和的最少操作次数 II](https://leetcode.cn/problems/minimum-operations-to-form-subset-sum-ii/)【组内可达值形如 `(x >> d) << k`，再做恰好装满的最小代价 DP】
+
+##### 2.5 混合背包
+
+同一道题中同时存在 0/1、完全和有数量上限的物品：0/1 物品容量倒序，完全物品容量正序，多重物品先拆分或用单调队列处理。若 `count[i] * weight[i] >= capacity`，该物品在当前容量范围内可直接视为完全背包物品。
+
+##### 2.6 多维背包
+
+选择物品会同时消耗两种或更多资源；若每件物品只能选一次，各个容量维度都要倒序遍历。
+
+- [474. 一和零](https://leetcode.cn/problems/ones-and-zeroes)【二维 0/1 背包；容量分别是可使用的 `0` 和 `1` 的数量】
+- [879. 盈利计划](https://leetcode.cn/problems/profitable-schemes)【二维 0/1 计数；人数和利润共同构成状态】
+
+##### 2.7 依赖背包 / 树形背包
+
+选择某件物品前必须选择其父项；依赖关系形成树时，使用后序 DFS 计算 `dp[u][capacity]`，逐个合并孩子。每次合并一个孩子，本质上是一次分组背包，朴素复杂度通常为 `O(n * capacity^2)`。
+
+##### 2.8 背包的可达性、最值与计数
+
+| 目标 | 初始化 | 聚合方式 | 代表题 |
+| --- | --- | --- | --- |
+| 恰好可达 | `dp[0]=true`，其余为 `false` | 逻辑或 | 416、139 |
+| 不超过容量的最大价值 | 全部初始化为 `0` | `max` | 1049、474 |
+| 恰好装满的最大价值 | `dp[0]=0`，其余为 `-INF` | `max` | 2915、1449 |
+| 恰好装满的最小代价 | `dp[0]=0`，其余为 `INF` | `min` | 322、4040、4041 |
+| 恰好装满的方案数 | `dp[0]=1`，其余为 `0` | 求和 | 494、518、1155、2585 |
+
+**判型口诀**：0/1 倒序、完全正序、多重先拆分、分组读上一层；恰好装满先设不可达，计数先判断组合还是排列。
 
 #### 3. 区间 DP （子问题向内缩小，两端都会向内移动）
 - [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
