@@ -5,7 +5,7 @@
 - [学习路线入口](../guides/roadmap/00-start-here.md)
 - [完整 LeetCode 题单](../guides/indexes/leetcode-problems.md)
 - [按主题索引](../guides/indexes/problems-by-topic.md) / [按模式索引](../guides/indexes/problems-by-pattern.md) / [按难度索引](../guides/indexes/problems-by-difficulty.md) / [按来源索引](../guides/indexes/problems-by-source.md)
-- 本目录角色：LeetCode 题解的本地目录，长目录保留为题目查找入口，源码主要位于 [`src/`](src/)。
+- 本目录角色：LeetCode 题解的本地目录，长目录保留为题目查找入口，源码按主要解法归档在下方七个主题目录。
 
 ## 数据结构
 

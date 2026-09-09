@@ -18,14 +18,14 @@
 
 | 文件 | 主题与包含内容 | 主要入口 / 核心类型 | 难度 |
 | --- | --- | --- | --- |
-| [sorting_algorithms.cc](src/sorting_algorithms.cc) | 排序算法合集：冒泡、插入、选择、希尔、快排、归并、基数、计数、桶与堆排序。 | `bubbleSort`、`quickSort`、`mergeSort`、`heapSort` | ★★★ |
-| [math_algorithms.cc](src/math_algorithms.cc) | 数论与随机算法：素数筛、因子、GCD/LCM、扩欧、快速幂、组合数、采样与洗牌。 | `isPrime`、`gcd`、`pow_mod`、`reservoirSampling` | ★★★ |
-| [string_algorithms.cc](src/string_algorithms.cc) | 字符串算法合集：KMP、Trie 与 AC 自动机。 | `kmp`、`Trie`、`acAutomaton` | ★★★★ |
+| [sorting_algorithms_collection.cc](src/sorting_algorithms_collection.cc) | 排序算法合集：冒泡、插入、选择、希尔、快排、归并、基数、计数、桶与堆排序。 | `bubbleSort`、`quickSort`、`mergeSort`、`heapSort` | ★★★ |
+| [number_theory_algorithms.cc](src/number_theory_algorithms.cc) | 数论与随机算法：素数筛、因子、GCD/LCM、扩欧、快速幂、组合数、采样与洗牌。 | `isPrime`、`gcd`、`pow_mod`、`reservoirSampling` | ★★★ |
+| [string_algorithms_collection.cc](src/string_algorithms_collection.cc) | 字符串算法合集：KMP、Trie 与 AC 自动机。 | `kmp`、`Trie`、`acAutomaton` | ★★★★ |
 | [range_query_algorithms.cc](src/range_query_algorithms.cc) | 区间更新与查询：差分数组、树状数组、动态开点线段树。 | `difference`、`FenwickTree`、`SegTree` | ★★★★ |
-| [dp_knapsack.cc](src/dp_knapsack.cc) | 背包 DP：0/1、完全、多重、二进制优化与混合背包。 | `zeroOnePack`、`completePack`、`boundedKnapsack`、`mixPack` | ★★★★ |
+| [knapsack_dp.cc](src/knapsack_dp.cc) | 背包 DP：0/1、完全、多重、二进制优化与混合背包。 | `zeroOnePack`、`completePack`、`boundedKnapsack`、`mixPack` | ★★★★ |
 | [graph_shortest_path_algorithms.cc](src/graph_shortest_path_algorithms.cc) | 最短路基础合集：无权 BFS、Dijkstra、Bellman-Ford、Floyd。 | `bfs`、`dijkstra`、`bellmanFord`、`floyd` | ★★★★ |
 | [graph_shortest_path_variants.cc](src/graph_shortest_path_variants.cc) | 最短路的另一组实现，含负环检测。 | `bfs`、`dijkstra`、`bellmanFord`、`floyd` | ★★★★ |
-| [data_structure_design_collection.cc](src/data_structure_design_collection.cc) | 旧版数据结构合集：LRU、LFU、哈希表与跳表；优先使用下方独立实现。 | `LRUCache`、`LFUCache`、`MyHashMap`、`SkipList` | ★★★★ |
+| [lru_cache_design.cc](src/lru_cache_design.cc) | 旧版数据结构合集：LRU、LFU、哈希表与跳表；优先使用下方独立实现。 | `LRUCache`、`LFUCache`、`MyHashMap`、`SkipList` | ★★★★ |
 
 ## 独立数据结构与基础算法
 
@@ -61,19 +61,19 @@
 | [traveling_salesman.cc](src/traveling_salesman.cc) | 状压 DP 求 TSP。 | `travelingSalesman` | ★★★★★ |
 | [manacher.cc](src/manacher.cc) | 线性最长回文子串。 | `longest_palindromic_substring` | ★★★★ |
 | [z_function.cc](src/z_function.cc) | Z 函数。 | `z_function` | ★★★ |
-| [dp_digit.cc](src/dp_digit.cc) | 数位 DP。 | `digitDP` | ★★★★ |
+| [digit_dp.cc](src/digit_dp.cc) | 数位 DP。 | `digitDP` | ★★★★ |
 | [matrix_exponentiation.cc](src/matrix_exponentiation.cc) | 矩阵快速幂。 | `matrix_power` | ★★★ |
 
 ## 设计、并发与工程练习
 
 | 文件 | 题目/用途 | 主入口或核心类型 | 难度 |
 | --- | --- | --- | --- |
-| [factory.cc](src/factory.cc) | 工厂模式示例。 | `Factory` | ★★ |
-| [observer.cc](src/observer.cc) | 观察者/访问者模式示例。 | `Visitor` | ★★ |
-| [singleton.cc](src/singleton.cc) | 线程安全单例。 | `Singleton` | ★★ |
-| [cpp_string_raii.cc](src/cpp_string_raii.cc) | 自定义字符串的资源管理。 | `CString` | ★★★ |
-| [cpp_string_raii_variant.cc](src/cpp_string_raii_variant.cc) | 自定义容器/字符串练习。 | `CString` | ★★★ |
-| [producer_consumer.cc](src/producer_consumer.cc) | C++ 生产者—消费者模型。 | `ProducerConsumer` | ★★★ |
+| [factory_pattern.cc](src/factory_pattern.cc) | 工厂模式示例。 | `Factory` | ★★ |
+| [visitor_pattern.cc](src/visitor_pattern.cc) | 观察者/访问者模式示例。 | `Visitor` | ★★ |
+| [singleton_pattern.cc](src/singleton_pattern.cc) | 线程安全单例。 | `Singleton` | ★★ |
+| [string_raii.cc](src/string_raii.cc) | 自定义字符串的资源管理。 | `CString` | ★★★ |
+| [string_raii_copy_move.cc](src/string_raii_copy_move.cc) | 自定义容器/字符串练习。 | `CString` | ★★★ |
+| [bounded_producer_consumer.cc](src/bounded_producer_consumer.cc) | C++ 生产者—消费者模型。 | `ProducerConsumer` | ★★★ |
 | [read_write_locker.cc](src/read_write_locker.cc) | 读写锁。 | `ReadWriteLock` | ★★★ |
 | [concurrency_h2o.go](src/concurrency_h2o.go) | 并发协调生成 H₂O。 | `H2O` | ★★★ |
 | [concurrency_dining_philosophers.go](src/concurrency_dining_philosophers.go) | 哲学家进餐死锁规避。 | `DiningPhilosophers` | ★★★★ |
@@ -91,4 +91,4 @@
 
 ## 后续拆分边界
 
-当前无需把同一算法领域的合集强行拆成几十个小文件；这些函数共享辅助逻辑且作为复习模板更易查阅。若后续要进一步模块化，优先拆分 `data_structure_design_collection.cc` 中尚未独立的 `MyHashMap` 与 `SkipList`，再处理 `math_algorithms.cc` 中的随机采样部分。
+当前无需把同一算法领域的合集强行拆成几十个小文件；这些函数共享辅助逻辑且作为复习模板更易查阅。若后续要进一步模块化，优先拆分 `lru_cache_design.cc` 中尚未独立的 `MyHashMap` 与 `SkipList`，再处理 `number_theory_algorithms.cc` 中的随机采样部分。

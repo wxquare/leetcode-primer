@@ -6,7 +6,7 @@
 
 | Problem | Difficulty | Pattern | Key idea | Source | Review |
 | --- | --- | --- | --- | --- | --- |
-| [1. 两数之和](https://leetcode.cn/problems/two-sum) | Easy | 哈希查找 | 保存已见过的值，并在插入当前值前检查它的补数。 | [leetcode1.cc](../leetcode/src/leetcode1.cc) | `new` |
+| [1. 两数之和](https://leetcode.cn/problems/two-sum) | Easy | 哈希查找 | 保存已见过的值，并在插入当前值前检查它的补数。 | [1_two_sum.cc](../leetcode/数据结构运用/1_two_sum.cc) | `new` |
 
 ## 使用规则
 

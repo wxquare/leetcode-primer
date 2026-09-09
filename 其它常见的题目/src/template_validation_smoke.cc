@@ -17,7 +17,7 @@
 #include "linear_basis.cc"
 #include "matrix_exponentiation.cc"
 #include "coordinate_compression.cc"
-#include "fast_io_and_debug.hpp"
+#include "fast_io_debug.hpp"
 
 int main() {
     UnionFind uf(3); assert(uf.unite(0, 1) && uf.connected(0, 1) && uf.count() == 2);

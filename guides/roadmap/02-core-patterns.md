@@ -12,10 +12,10 @@
 
 代表题：
 
-- [11. 盛最多水的容器](../../leetcode/src/leetcode11.cc)
-- [27. 移除元素](../../leetcode/src/leetcode27.cc)
-- [167. 两数之和 II](../../leetcode/src/leetcode167.cc)
-- [283. 移动零](../../leetcode/src/leetcode283.cc)
+- [11. 盛最多水的容器](../../leetcode/基础算法/11_container_with_most_water.cc)
+- [27. 移除元素](../../leetcode/模拟/27_remove_element.cc)
+- [167. 两数之和 II](../../leetcode/数学/167_two_sum_ii_input_array_is_sorted.cc)
+- [283. 移动零](../../leetcode/模拟/283_move_zeroes.cc)
 
 <a id="sliding-windows"></a>
 
@@ -25,10 +25,10 @@
 
 代表题：
 
-- [3. 无重复字符的最长子串](../../leetcode/src/leetcode3.cc)
-- [239. 滑动窗口最大值](../../leetcode/src/leetcode239.cc)
-- [424. 替换后的最长重复字符](../../leetcode/src/leetcode424.cc)
-- [713. 乘积小于 K 的子数组](../../leetcode/src/leetcode713.cc)
+- [3. 无重复字符的最长子串](../../leetcode/模拟/3_longest_substring_without_repeating_characters.cc)
+- [239. 滑动窗口最大值](../../leetcode/数据结构运用/239_sliding_window_maximum.cc)
+- [424. 替换后的最长重复字符](../../leetcode/模拟/424_character_replacement.cc)
+- [713. 乘积小于 K 的子数组](../../leetcode/基础算法/713_num_subarray_product_less_than_k.cc)
 
 <a id="stacks"></a>
 
@@ -38,10 +38,10 @@
 
 代表题：
 
-- [155. 最小栈](../../leetcode/src/leetcode155.cc)
-- [232. 用栈实现队列](../../leetcode/src/leetcode232.cc)
-- [456. 132 模式](../../leetcode/src/leetcode456.cc)
-- [496. 下一个更大元素 I](../../leetcode/src/leetcode496.cc)
+- [155. 最小栈](../../leetcode/数据结构运用/155_min_stack.cc)
+- [232. 用栈实现队列](../../leetcode/数据结构运用/232_implement_queue_using_stacks.cc)
+- [456. 132 模式](../../leetcode/模拟/456_find132pattern.cc)
+- [496. 下一个更大元素 I](../../leetcode/数据结构运用/496_next_greater_element.cc)
 
 <a id="queues"></a>
 
@@ -51,9 +51,9 @@
 
 代表题：
 
-- [Offer 5. 用两个栈实现队列](../../剑指offer/src/offer5.cc)
-- [Offer 22. 从上往下打印二叉树](../../剑指offer/src/offer22.cc)
-- [Offer 64. 滑动窗口的最大值](../../剑指offer/src/offer64.cc)
+- [Offer 5. 用两个栈实现队列](../../剑指offer/src/offer5_queue_with_two_stacks.cc)
+- [Offer 22. 从上往下打印二叉树](../../剑指offer/src/offer22_print_tree_from_top_to_bottom.cc)
+- [Offer 64. 滑动窗口的最大值](../../剑指offer/src/offer64_sliding_window_maximum.cc)
 - [单调队列模板](../../其它常见的题目/src/monotonic_structures.cc)
 
 <a id="bfs"></a>
@@ -64,10 +64,10 @@
 
 代表题：
 
-- [Offer 22. 从上往下打印二叉树](../../剑指offer/src/offer22.cc)
-- [1306. 跳跃游戏 III](../../leetcode/src/leetcode1306.cc)
-- [1345. 跳跃游戏 IV](../../leetcode/src/leetcode1345.cc)
-- [2045. 到达目的地的第二短时间](../../leetcode/src/leetcode2045.cc)
+- [Offer 22. 从上往下打印二叉树](../../剑指offer/src/offer22_print_tree_from_top_to_bottom.cc)
+- [1306. 跳跃游戏 III](../../leetcode/搜索（非图）/1306_can_reach.cc)
+- [1345. 跳跃游戏 IV](../../leetcode/数据结构运用/1345_min_jumps.cc)
+- [2045. 到达目的地的第二短时间](../../leetcode/搜索（非图）/2045_second_minimum.cc)
 
 <a id="dfs--backtracking"></a>
 
@@ -77,10 +77,10 @@
 
 代表题：
 
-- [51. N 皇后](../../leetcode/搜索（非图）/深度搜索/51.N皇后.cc)
-- [131. 分割回文串](../../leetcode/src/leetcode131.cc)
-- [473. 火柴拼正方形](../../leetcode/src/leetcode473.cc)
-- [698. 划分为 k 个相等的子集](../../leetcode/src/leetcode698.cc)
+- [51. N 皇后](../../leetcode/搜索（非图）/51_n_queens.cc)
+- [131. 分割回文串](../../leetcode/搜索（非图）/131_palindrome_partitioning.cc)
+- [473. 火柴拼正方形](../../leetcode/搜索（非图）/473_makesquare.cc)
+- [698. 划分为 k 个相等的子集](../../leetcode/搜索（非图）/698_can_partition_ksubsets.cc)
 
 <a id="greedy-methods"></a>
 
@@ -90,10 +90,10 @@
 
 代表题：
 
-- [45. 跳跃游戏 II](../../leetcode/src/leetcode45.cc)
-- [55. 跳跃游戏](../../leetcode/src/leetcode55.cc)
-- [402. 移掉 K 位数字](../../leetcode/src/leetcode402.cc)
-- [452. 用最少数量的箭引爆气球](../../leetcode/src/leetcode452.cc)
+- [45. 跳跃游戏 II](../../leetcode/动态规划/45_jump_game_ii.cc)
+- [55. 跳跃游戏](../../leetcode/基础算法/55_jump_game.cc)
+- [402. 移掉 K 位数字](../../leetcode/数学/402_remove_k_digits.cc)
+- [452. 用最少数量的箭引爆气球](../../leetcode/基础算法/452_find_min_arrow_shots.cc)
 
 <a id="prefix-sums"></a>
 
@@ -103,10 +103,10 @@
 
 代表题：
 
-- [238. 除自身以外数组的乘积](../../leetcode/src/leetcode238.cc)
-- [327. 区间和的个数](../../leetcode/src/leetcode327.cc)
-- [560. 和为 K 的子数组](../../leetcode/src/leetcode560.cc)
-- [724. 寻找数组的中心下标](../../leetcode/src/leetcode724.cc)
+- [238. 除自身以外数组的乘积](../../leetcode/基础算法/238_product_of_array_except_self.cc)
+- [327. 区间和的个数](../../leetcode/数据结构运用/327_count_of_range_sum.cc)
+- [560. 和为 K 的子数组](../../leetcode/基础算法/560_subarray_sum.cc)
+- [724. 寻找数组的中心下标](../../leetcode/模拟/724_pivot_index.cc)
 
 <a id="basic-dynamic-programming"></a>
 
@@ -116,7 +116,7 @@
 
 代表题：
 
-- [198. 打家劫舍](../../leetcode/src/leetcode198.cc)
-- [213. 打家劫舍 II](../../leetcode/src/leetcode213.cc)
-- [300. 最长递增子序列](../../leetcode/src/leetcode300.cc)
-- [746. 使用最小花费爬楼梯](../../leetcode/src/leetcode746.cc)
+- [198. 打家劫舍](../../leetcode/动态规划/198_house_robber.cc)
+- [213. 打家劫舍 II](../../leetcode/动态规划/213_house_robber_ii.cc)
+- [300. 最长递增子序列](../../leetcode/动态规划/300_longest_increasing_subsequence.cc)
+- [746. 使用最小花费爬楼梯](../../leetcode/动态规划/746_min_cost_climbing_stairs.cc)

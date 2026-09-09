@@ -16,6 +16,7 @@
 - 如果题目属于 primer v2，不要只更新本地 README；同一次贡献中至少要修改一个 v2 索引。
 - 没有本地源码时，在 `guides/indexes/leetcode-problems.md` 记录 LeetCode 原题链接即可覆盖题单。
 - 保持 README 和所有索引中的 `Review` 值同步。
+- 尚未补全主题、模式或难度字段的保留源码，先登记到 `guides/indexes/experimental-and-unfiled-sources.md`，状态标记为 `待整理`；完成分类后再迁入对应正式索引。
 
 ## 提交前
 

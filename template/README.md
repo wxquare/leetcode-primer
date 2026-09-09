@@ -28,7 +28,7 @@
 | [graph_bridges.cc](../其它常见的题目/src/graph_bridges.cc) | 无向图 Tarjan：同时求桥和割点。 |
 | [graph_zero_one_bfs.cc](../其它常见的题目/src/graph_zero_one_bfs.cc) | 0-1 BFS：边权仅为 0 或 1 时的单源最短路。 |
 | [tree_lowest_common_ancestor.cc](../其它常见的题目/src/tree_lowest_common_ancestor.cc) | 倍增法最近公共祖先（LCA）。 |
-| [tree_lowest_common_ancestor_variant.cc](../其它常见的题目/src/tree_lowest_common_ancestor_variant.cc) | 当前内容同为 LCA 相关实现，文件名可能需后续调整。 |
+| [tree_lca_binary_lifting.cc](../其它常见的题目/src/tree_lca_binary_lifting.cc) | 当前内容同为 LCA 相关实现，文件名可能需后续调整。 |
 | [heavy_light_decomposition.cc](../其它常见的题目/src/heavy_light_decomposition.cc) | 树链剖分：构建重链与节点 DFS 序，并将路径拆分为连续区间。 |
 | [tree_rerooting_dp.cc](../其它常见的题目/src/tree_rerooting_dp.cc) | 换根 DP：以“所有节点距离和”为例提供两次 DFS 框架。 |
 | [traveling_salesman.cc](../其它常见的题目/src/traveling_salesman.cc) | 旅行商问题（TSP）的状态压缩 DP。 |
@@ -47,23 +47,23 @@
 | [range_query_algorithms.cc](../其它常见的题目/src/range_query_algorithms.cc) | 包含差分数组区间增减、树状数组单点更新/区间和、动态开点线段树的区间更新与查询。 |
 | [2-区间查询与统计.md](2-区间查询与统计.md) | 教学文档：从选型、推导到 C++17 模板，覆盖前缀和/差分、离散化、BIT、线段树、莫队和随机哈希。 |
 | [monotonic_structures.cc](../其它常见的题目/src/monotonic_structures.cc) | 单调栈求下一个更大元素下标，单调队列求滑动窗口最大值。 |
-| [sorting_algorithms.cc](../其它常见的题目/src/sorting_algorithms.cc) | 包含冒泡、插入、选择、希尔、快速、归并、基数、计数、桶和堆排序；同时给出数组与 `vector` 版快排/归并。 |
-| [select_k.cc](../其它常见的题目/src/select_k.cc) | 基于快速排序分区的递归 Quickselect，求第 k 小元素。 |
-| [custom_compare.cc](../其它常见的题目/src/custom_compare.cc) | 包含结构体 `operator<`、函数对象比较器、`sort`、`priority_queue` 与 `set` 的自定义排序写法。 |
-| [math_algorithms.cc](../其它常见的题目/src/math_algorithms.cc) | 包含素性判定、两种筛法、因子/公共质因子、gcd/lcm、扩展欧几里得、快速幂与逆元、组合数、拒绝采样、水塘抽样和洗牌。 |
+| [sorting_algorithms_collection.cc](../其它常见的题目/src/sorting_algorithms_collection.cc) | 包含冒泡、插入、选择、希尔、快速、归并、基数、计数、桶和堆排序；同时给出数组与 `vector` 版快排/归并。 |
+| [quickselect_kth.cc](../其它常见的题目/src/quickselect_kth.cc) | 基于快速排序分区的递归 Quickselect，求第 k 小元素。 |
+| [custom_comparator.cc](../其它常见的题目/src/custom_comparator.cc) | 包含结构体 `operator<`、函数对象比较器、`sort`、`priority_queue` 与 `set` 的自定义排序写法。 |
+| [number_theory_algorithms.cc](../其它常见的题目/src/number_theory_algorithms.cc) | 包含素性判定、两种筛法、因子/公共质因子、gcd/lcm、扩展欧几里得、快速幂与逆元、组合数、拒绝采样、水塘抽样和洗牌。 |
 | [linear_basis.cc](../其它常见的题目/src/linear_basis.cc) | 64 位异或线性基：插入、最大异或值与可表示性判断。 |
 | [matrix_exponentiation.cc](../其它常见的题目/src/matrix_exponentiation.cc) | 模意义矩阵乘法与二分快速幂，适用于线性递推。 |
 | [coordinate_compression.cc](../其它常见的题目/src/coordinate_compression.cc) | 泛型坐标压缩：去重排序、值到下标和下标到值的双向映射。 |
-| [dp_digit.cc](../其它常见的题目/src/dp_digit.cc) | 数位 DP：前导零/上界标记、记忆化 DFS，以及区间内步进数计数示例。 |
-| [dp_knapsack.cc](../其它常见的题目/src/dp_knapsack.cc) | 包含 0/1 背包、完全背包、多重背包朴素枚举、多重背包二进制优化，以及混合背包。 |
+| [digit_dp.cc](../其它常见的题目/src/digit_dp.cc) | 数位 DP：前导零/上界标记、记忆化 DFS，以及区间内步进数计数示例。 |
+| [knapsack_dp.cc](../其它常见的题目/src/knapsack_dp.cc) | 包含 0/1 背包、完全背包、多重背包朴素枚举、多重背包二进制优化，以及混合背包。 |
 
 ## 字符串与自动机
 
 | 模板 | 内容 |
 | --- | --- |
-| [cpp_integer_conversion.cc](../其它常见的题目/src/cpp_integer_conversion.cc) | 字符串与整数的转换实现。 |
-| [cpp_c_string_functions.cc](../其它常见的题目/src/cpp_c_string_functions.cc) | 包含 `memcpy`（含内存重叠处理）、`memset`、`strcpy`、`strncpy`、`strcat`、`strcmp` 和 `strlen` 实现。 |
-| [string_algorithms.cc](../其它常见的题目/src/string_algorithms.cc) | 包含 KMP、Trie 的插入/查询，以及 AC 自动机的构建、失败指针和多模式匹配。 |
+| [integer_conversion.cc](../其它常见的题目/src/integer_conversion.cc) | 字符串与整数的转换实现。 |
+| [c_string_operations.cc](../其它常见的题目/src/c_string_operations.cc) | 包含 `memcpy`（含内存重叠处理）、`memset`、`strcpy`、`strncpy`、`strcat`、`strcmp` 和 `strlen` 实现。 |
+| [string_algorithms_collection.cc](../其它常见的题目/src/string_algorithms_collection.cc) | 包含 KMP、Trie 的插入/查询，以及 AC 自动机的构建、失败指针和多模式匹配。 |
 | [string_kmp_template.cc](../其它常见的题目/src/string_kmp_template.cc) | KMP 前缀函数与匹配模板。 |
 | [string_aho_corasick_array.cc](../其它常见的题目/src/string_aho_corasick_array.cc) | 数组子节点版 AC 自动机。 |
 | [string_aho_corasick_map.cc](../其它常见的题目/src/string_aho_corasick_map.cc) | 哈希子节点版 AC 自动机与失败指针。 |
@@ -74,13 +74,13 @@
 
 | 模板 | 内容 |
 | --- | --- |
-| [dp_lis_fenwick_tree.cc](../其它常见的题目/src/dp_lis_fenwick_tree.cc) | 包含树状数组的更新/查询，以及用树状数组求最长递增子序列的示例。 |
-| [data_structure_design_collection.cc](../其它常见的题目/src/data_structure_design_collection.cc) | 包含 LRU 缓存、LFU 缓存、自定义哈希表和跳表的实现。 |
-| [cpp_string_raii.cc](../其它常见的题目/src/cpp_string_raii.cc) | 自定义字符串类的拷贝控制与内存管理。 |
-| [cpp_string_raii_variant.cc](../其它常见的题目/src/cpp_string_raii_variant.cc) | 当前内容为自定义字符串类实现，文件名可能需后续调整。 |
-| [factory.cc](../其它常见的题目/src/factory.cc) | 工厂模式示例。 |
-| [observer.cc](../其它常见的题目/src/observer.cc) | 当前内容为访问者模式示例。 |
-| [singleton.cc](../其它常见的题目/src/singleton.cc) | 单例模式与线程安全初始化。 |
-| [producer_consumer.cc](../其它常见的题目/src/producer_consumer.cc) | 多线程生产者—消费者模型。 |
+| [lis_with_fenwick_tree.cc](../其它常见的题目/src/lis_with_fenwick_tree.cc) | 包含树状数组的更新/查询，以及用树状数组求最长递增子序列的示例。 |
+| [lru_cache_design.cc](../其它常见的题目/src/lru_cache_design.cc) | 包含 LRU 缓存、LFU 缓存、自定义哈希表和跳表的实现。 |
+| [string_raii.cc](../其它常见的题目/src/string_raii.cc) | 自定义字符串类的拷贝控制与内存管理。 |
+| [string_raii_copy_move.cc](../其它常见的题目/src/string_raii_copy_move.cc) | 当前内容为自定义字符串类实现，文件名可能需后续调整。 |
+| [factory_pattern.cc](../其它常见的题目/src/factory_pattern.cc) | 工厂模式示例。 |
+| [visitor_pattern.cc](../其它常见的题目/src/visitor_pattern.cc) | 当前内容为访问者模式示例。 |
+| [singleton_pattern.cc](../其它常见的题目/src/singleton_pattern.cc) | 单例模式与线程安全初始化。 |
+| [bounded_producer_consumer.cc](../其它常见的题目/src/bounded_producer_consumer.cc) | 多线程生产者—消费者模型。 |
 | [read_write_locker.cc](../其它常见的题目/src/read_write_locker.cc) | 读写锁实现。 |
-| [fast_io_and_debug.hpp](../其它常见的题目/src/fast_io_and_debug.hpp) | 快速 I/O 初始化与仅在 `LOCAL` 宏下生效的调试输出宏。 |
+| [fast_io_debug.hpp](../其它常见的题目/src/fast_io_debug.hpp) | 快速 I/O 初始化与仅在 `LOCAL` 宏下生效的调试输出宏。 |

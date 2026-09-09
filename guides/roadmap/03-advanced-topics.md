@@ -16,8 +16,8 @@
 - [拓扑排序模板](../../其它常见的题目/src/graph_topological_sort.cc)
 - [并查集模板](../../其它常见的题目/src/union_find.cc)
 - [Tarjan 强连通分量](../../其它常见的题目/src/tarjan.cc)
-- [210. 课程表 II](../../leetcode/src/leetcode210.cc)
-- [684. 冗余连接](../../leetcode/数据结构运用/并查集/684.%20冗余连接.cc)
+- [210. 课程表 II](../../leetcode/图论/210_course_schedule_ii.cc)
+- [684. 冗余连接](../../leetcode/图论/684_redundant_connection.cc)
 
 <a id="trees"></a>
 
@@ -30,9 +30,9 @@
 - [最近公共祖先模板](../../其它常见的题目/src/tree_lowest_common_ancestor.cc)
 - [树链剖分模板](../../其它常见的题目/src/heavy_light_decomposition.cc)
 - [换根动态规划模板](../../其它常见的题目/src/tree_rerooting_dp.cc)
-- [236. 二叉树的最近公共祖先](../../leetcode/src/leetcode236.cc)
-- [337. 打家劫舍 III](../../leetcode/src/leetcode337.cc)
-- [450. 删除二叉搜索树中的节点](../../leetcode/src/leetcode450.cc)
+- [236. 二叉树的最近公共祖先](../../leetcode/图论/236_lowest_common_ancestor_of_a_binary_tree.cc)
+- [337. 打家劫舍 III](../../leetcode/动态规划/337_house_robber_iii.cc)
+- [450. 删除二叉搜索树中的节点](../../leetcode/图论/450_delete_node_in_abst.cc)
 
 <a id="advanced-dp"></a>
 
@@ -42,12 +42,12 @@
 
 模板与题目：
 
-- [背包动态规划模板](../../其它常见的题目/src/dp_knapsack.cc)
+- [背包动态规划模板](../../其它常见的题目/src/knapsack_dp.cc)
 - [旅行商问题状态压缩动态规划](../../其它常见的题目/src/traveling_salesman.cc)
-- [数位动态规划模板](../../其它常见的题目/src/dp_digit.cc)
+- [数位动态规划模板](../../其它常见的题目/src/digit_dp.cc)
 - [矩阵快速幂模板](../../其它常见的题目/src/matrix_exponentiation.cc)
-- [600. 不含连续 1 的非负整数](../../leetcode/src/leetcode600.cc)
-- [2407. 最长递增子序列 II](../../leetcode/src/leetcode2407.cc)
+- [600. 不含连续 1 的非负整数](../../leetcode/动态规划/600_decimal_to_binary.cc)
+- [2407. 最长递增子序列 II](../../leetcode/动态规划/2407_pushdown.cc)
 
 <a id="interval-data-structures"></a>
 
@@ -61,8 +61,8 @@
 - [树状数组模板](../../其它常见的题目/src/fenwick_tree.cc)
 - [线段树模板](../../其它常见的题目/src/segment_tree.cc)
 - [主席树模板](../../其它常见的题目/src/persistent_segment_tree.cc)
-- [307. 区域和检索 - 数组可修改](../../leetcode/src/leetcode307.cc)
-- [218. 天际线问题](../../leetcode/数据结构运用/线段树/218.%20天际线问题.cc)
+- [307. 区域和检索 - 数组可修改](../../leetcode/图论/307_range_sum_query_mutable.cc)
+- [218. 天际线问题](../../leetcode/数据结构运用/218_the_skyline_problem.cc)
 
 <a id="string-algorithms"></a>
 
@@ -72,12 +72,12 @@
 
 模板与题目：
 
-- [字符串算法合集](../../其它常见的题目/src/string_algorithms.cc)
+- [字符串算法合集](../../其它常见的题目/src/string_algorithms_collection.cc)
 - [KMP 模板](../../其它常见的题目/src/string_kmp_template.cc)
 - [Trie 模板](../../其它常见的题目/src/trie.cc)
 - [Manacher 模板](../../其它常见的题目/src/manacher.cc)
 - [Z 函数模板](../../其它常见的题目/src/z_function.cc)
-- [2851. 字符串 K 次转换等于目标串的方案数量](../../leetcode/动态规划/2851.%20字符串K次转换等于目标串的方案数量.cc)
+- [2851. 字符串 K 次转换等于目标串的方案数量](../../leetcode/动态规划/2851_kmp.cc)
 
 <a id="mathematical-methods"></a>
 
@@ -87,9 +87,9 @@
 
 模板与题目：
 
-- [数学算法合集](../../其它常见的题目/src/math_algorithms.cc)
+- [数学算法合集](../../其它常见的题目/src/number_theory_algorithms.cc)
 - [组合数学与取模](../../leetcode/数学/组合数学与取模.md)
 - [线性基模板](../../其它常见的题目/src/linear_basis.cc)
 - [矩阵快速幂模板](../../其它常见的题目/src/matrix_exponentiation.cc)
-- [50. 幂函数 Pow(x, n)](../../leetcode/src/leetcode50.cc)
-- [233. 数字 1 的个数](../../leetcode/src/leetcode233.cc)
+- [50. 幂函数 Pow(x, n)](../../leetcode/模拟/50_pow_x_n.cc)
+- [233. 数字 1 的个数](../../leetcode/动态规划/233_number_of_digit_one.cc)

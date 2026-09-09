@@ -26,7 +26,7 @@ int main(){
     Singleton* instance1 = Singleton::getInstance();
     Singleton* instance2 = Singleton::getInstance();
     if(instance1 == instance2){
-        std::cout << "singleton" << std::endl;
+        std::cout << "singleton_pattern" << std::endl;
     }
     return 0;
 }
