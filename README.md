@@ -23,7 +23,7 @@
 | [`leetcode/`](leetcode/) | LeetCode 题解、按专题归档的笔记与源码。 | [题目索引](leetcode/README.md) |
 | [`剑指offer/`](剑指offer/) | 《剑指 Offer》66 题实现，源码位于 `src/`，文件名为 `offerN.cc`。 | [题目说明](剑指offer/README.md) |
 | [`其它常见的题目/`](其它常见的题目/) | 面试高频题、算法模板、数据结构设计与并发练习；源码位于平铺的 `src/`。 | [目录索引](其它常见的题目/README.md) |
-| [`template/`](template/) | 数学、区间查询、动态规划和图论学习笔记；相关源码链接至“其它常见的题目”。 | [模板导航](template/README.md) |
+| [`template/`](template/) | 数学、区间查询、动态规划、图论和搜索学习笔记；相关源码链接至“其它常见的题目”。 | [模板导航](template/README.md) |
 
 ## 目录约定
 

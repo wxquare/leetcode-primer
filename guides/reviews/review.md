@@ -31,3 +31,21 @@
 - 优先处理上表中仍为 `new` 的 6 道题。
 - `517` 因为使用过提示，下一次按 `review` 处理，不直接标记为 `mastered`。
 - 26、83、205 按 `1 → 3 → 7 → 14` 天节奏复习；若后续无法独立回忆，则改为 `mistake` 并重新从 1 天节点开始。
+
+## 2026-09-14 复习记录
+
+| Problem | 今日结果 | Review | 解法要点 / 备注 | 下次复习 |
+| --- | --- | --- | --- | --- |
+| [31. 下一个排列](https://leetcode.cn/problems/next-permutation) | 独立完成 | `review` | 从右侧寻找第一个上升拐点，交换右侧第一个更大元素，再反转后缀。 | 2026-09-15 |
+| [74. 搜索二维矩阵](https://leetcode.cn/problems/search-a-2d-matrix) | 独立完成 | `review` | 将二维矩阵映射为一维有序数组，使用二分查找并通过商和余数还原坐标。 | 2026-09-15 |
+| [105. 从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal) | 独立完成 | `review` | 前序确定根节点，中序划分左右子树；按两个遍历区间递归建树。 | 2026-09-15 |
+
+## 2026-09-17 重点薄弱题
+
+以下题目反馈为“不会做”，标记为 `mistake`，后续优先复习，并从 1 天节点重新开始：
+
+| Problem | 今日结果 | Review | 复习重点 | 下次复习 |
+| --- | --- | --- | --- | --- |
+| [312. 戳气球](https://leetcode.cn/problems/burst-balloons) | 不会做 | `mistake` | 区间 DP；尝试将最后戳破的气球作为区间转移的分割点。 | 2026-09-18 |
+| [315. 计算右侧小于当前元素的个数](https://leetcode.cn/problems/count-of-smaller-numbers-after-self) | 不会做 | `mistake` | 离散化 + 树状数组；从右向左统计已经出现的更小排名。 | 2026-09-18 |
+| [399. 除法求值](https://leetcode.cn/problems/evaluate-division) | 不会做 | `mistake` | 带权图；边表示变量之间的比值，使用 DFS/BFS 查询路径乘积。 | 2026-09-18 |

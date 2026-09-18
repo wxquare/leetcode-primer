@@ -11,6 +11,15 @@
 | 拓扑排序 | 有向依赖排序或环检测。 | [图与树指南](../../template/4-图论.md) | [graph_topological_sort.cc](../../其它常见的题目/src/graph_topological_sort.cc) | [210. 课程表 II](../../leetcode/图论/210_course_schedule_ii.cc) |
 | 最近公共祖先 | 根化遍历预处理后的树祖先查询。 | [高级树](../roadmap/03-advanced-topics.md#trees) | [tree_lowest_common_ancestor.cc](../../其它常见的题目/src/tree_lowest_common_ancestor.cc) | [236. 二叉树的最近公共祖先](../../leetcode/图论/236_lowest_common_ancestor_of_a_binary_tree.cc) |
 
+## 搜索
+
+| Template | Trigger | Note | Code | Related practice |
+| --- | --- | --- | --- | --- |
+| 二分与答案二分 | 有序空间或可行性随答案单调变化。 | [搜索专题指南](../../template/5-搜索.md) | [binary_search.cc](../../其它常见的题目/src/binary_search.cc) | [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array) |
+| BFS 与状态空间搜索 | 无权状态图中的最少步数、网格扩散或状态转移。 | [搜索专题指南](../../template/5-搜索.md) | [graph_shortest_path_algorithms.cc](../../其它常见的题目/src/graph_shortest_path_algorithms.cc) | [127. 单词接龙](https://leetcode.cn/problems/word-ladder) |
+| DFS 与回溯 | 需要枚举组合、排列、路径或满足约束的方案。 | [搜索专题指南](../../template/5-搜索.md) | — | [46. 全排列](https://leetcode.cn/problems/permutations) |
+| 启发式搜索 | 状态空间较大，需要状态压缩或估价函数。 | [搜索专题指南](../../template/5-搜索.md) | [graph_a_star_eight_puzzle.cc](../../其它常见的题目/src/graph_a_star_eight_puzzle.cc) | [847. 访问所有节点的最短路径](https://leetcode.cn/problems/shortest-path-visiting-all-nodes) |
+
 ## 动态规划
 
 | Template | Trigger | Note | Code | Related practice |
