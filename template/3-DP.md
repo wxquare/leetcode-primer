@@ -173,8 +173,8 @@ int groupedMinCost(const vector<vector<pair<int, int>>>& groups, int target) {
 | 选项代价 | 得到该数值的最少操作次数 |
 | 不选择本组 | 不把该元素放入最终子集 |
 
-- [4040. 构造子集和的最少操作次数 I](https://leetcode.cn/problems/minimum-operations-to-form-subset-sum-i/)：先枚举每个元素在“先乘后除”限制下的可达值，再做分组最小代价背包。
-- [4041. 构造子集和的最少操作次数 II](https://leetcode.cn/problems/minimum-operations-to-form-subset-sum-ii/)：二进制下除以二是删除末位、乘以二是补 `0`，可达正整数形如 `(x >> d) << k`，再做同样的分组背包。
+- [4040. 构造子集和的最少操作次数 I](https://leetcode.cn/problems/minimum-operations-to-form-subset-sum-i)：先枚举每个元素在“先乘后除”限制下的可达值，再做分组最小代价背包。
+- [4041. 构造子集和的最少操作次数 II](https://leetcode.cn/problems/minimum-operations-to-form-subset-sum-ii)：二进制下除以二是删除末位、乘以二是补 `0`，可达正整数形如 `(x >> d) << k`，再做同样的分组背包。
 
 ### 3.5 混合背包：多种使用次数同时出现
 
@@ -208,7 +208,7 @@ int twoDimensionalKnapsack(const vector<array<int, 3>>& items,
 }
 ```
 
-题单：[474. 一和零](https://leetcode.cn/problems/ones-and-zeroes/)，容量分别是可使用的 `0` 和 `1` 的数量。
+题单：[474. 一和零](https://leetcode.cn/problems/ones-and-zeroes)，容量分别是可使用的 `0` 和 `1` 的数量。
 
 ### 3.7 依赖背包 / 树形背包
 
@@ -416,7 +416,7 @@ int countNoAdjacentEqual(int n) {
 - [198. 打家劫舍](https://leetcode.cn/problems/house-robber)【DP[i][2]】
 - 打家劫舍（1.普通、2.环形、3.树形DP、4.DP+二分）
 - [198. 打家劫舍 II](https://leetcode.cn/problems/PzWKhm)【环形拆成两个普通的数组，max(f(0,n-2),f(1,n-1)】
-- [337. 打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/)【二叉树父子节点不同同时被偷】
+- [337. 打家劫舍 III](https://leetcode.cn/problems/house-robber-iii)【二叉树父子节点不同同时被偷】
 - [552. 学生出勤记录 II](https://leetcode.cn/problems/student-attendance-record-ii)【三维】
 - [689. 三个无重叠子数组的最大和](https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays)【回溯DP的过程】
 - [将三个数组的排序](https://leetcode.cn/problems/sorting-three-groups)
@@ -427,10 +427,10 @@ int countNoAdjacentEqual(int n) {
 - [221. 最大正方形](https://leetcode.cn/problems/maximal-square)
 - [3148. 矩阵中的最大得分](https://leetcode.cn/problems/maximum-difference-score-in-a-grid)
 - [552. 学生出勤记录 II](https://leetcode.cn/problems/student-attendance-record-ii)【三维】
-- [5.最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
+- [5.最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring)
 - [最长公共子序列（LCS）](https://leetcode.cn/problems/longest-common-subsequence)
-- [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA/)
-- [72. 编辑距离](https://leetcode.cn/problems/edit-distance/)
+- [将一个字符串分割成回文串，最少分割次数](https://leetcode.cn/problems/omKAoA)
+- [72. 编辑距离](https://leetcode.cn/problems/edit-distance)
 - 115\. 不同的子序列
 - [300. 最长上升子序列问题 LIS](https://leetcode.cn/problems/longest-increasing-subsequence)
 - [2901. 最长相邻不相等子序列 II](https://leetcode.cn/problems/longest-unequal-adjacent-groups-subsequence-ii)
@@ -453,11 +453,11 @@ int countNoAdjacentEqual(int n) {
 - [2585. 获得分数的方法数](https://leetcode.cn/problems/number-of-ways-to-earn-points)【计数；每种题目有固定数量上限】
 - [1155. 掷骰子等于目标和的方法数](https://leetcode.cn/problems/number-of-dice-rolls-with-target-sum)【每个骰子是一组，每组选择一个点数】
 - [2218. 从栈中取出 K 个硬币的最大面值和](https://leetcode.cn/problems/maximum-value-of-k-coins-from-piles)【每个栈是一组，组内选项是取前 `0..size` 枚硬币】
-- [4040. 构造子集和的最少操作次数 I](https://leetcode.cn/problems/minimum-operations-to-form-subset-sum-i/)【每个元素是一组，可达值是互斥选项，代价为操作次数】
-- [4041. 构造子集和的最少操作次数 II](https://leetcode.cn/problems/minimum-operations-to-form-subset-sum-ii/)【组内可达值形如 `(x >> d) << k`，再做恰好装满的最小代价 DP】
+- [4040. 构造子集和的最少操作次数 I](https://leetcode.cn/problems/minimum-operations-to-form-subset-sum-i)【每个元素是一组，可达值是互斥选项，代价为操作次数】
+- [4041. 构造子集和的最少操作次数 II](https://leetcode.cn/problems/minimum-operations-to-form-subset-sum-ii)【组内可达值形如 `(x >> d) << k`，再做恰好装满的最小代价 DP】
 - [474. 一和零](https://leetcode.cn/problems/ones-and-zeroes)【二维 0/1 背包；容量分别是可使用的 `0` 和 `1` 的数量】
 - [879. 盈利计划](https://leetcode.cn/problems/profitable-schemes)【二维 0/1 计数；人数和利润共同构成状态】
-- [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
+- [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring)
 - [312. 戳气球](https://leetcode.cn/problems/burst-balloons)
 - [375. 猜数字大小 II](https://leetcode.cn/problems/guess-number-higher-or-lower-ii)
 - [887. 鸡蛋掉落](https://leetcode.cn/problems/super-egg-drop)【状态 DP；按操作次数计算可覆盖楼层数，二分转移优化】
@@ -472,11 +472,11 @@ int countNoAdjacentEqual(int n) {
 - [337. 打家劫舍 III](https://leetcode.cn/problems/house-robber-iii)
 - [894. 所有可能的真二叉树](https://leetcode.cn/problems/all-possible-full-binary-trees)
 - [2646. 最小化旅行的价格总和](https://leetcode.cn/problems/minimize-the-total-price-of-the-trips)
-- [2920. 收集所有金币可获得的最大积分](https://leetcode.cn/problems/maximum-points-after-collecting-coins-from-all-nodes/)
+- [2920. 收集所有金币可获得的最大积分](https://leetcode.cn/problems/maximum-points-after-collecting-coins-from-all-nodes)
 - [2925. 在树上执行操作以后得到的最大分数](https://leetcode.cn/problems/maximum-score-after-applying-operations-on-a-tree)
 - [3203. 合并两棵树后的最小直径](https://leetcode.cn/problems/find-minimum-diameter-after-merging-two-trees)
 - [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum)
-- [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/description/)
+- [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree)
 - [687. 最长同值路径](https://leetcode.cn/problems/longest-univalue-path)
 - [2246. 相邻字符不同的最长路径](https://leetcode.cn/problems/longest-path-with-different-adjacent-characters)
 - [834. 树中距离之和](https://leetcode.cn/problems/sum-of-distances-in-tree)
@@ -488,31 +488,31 @@ int countNoAdjacentEqual(int n) {
 - [902. 最大为 N 的数字组合](https://leetcode.cn/problems/numbers-at-most-n-given-digit-set)【dfs = [&](int i,bool is_limit,bool is_num)】
 - [1012. 至少有 1 位重复的数字](https://leetcode.cn/problems/numbers-with-repeated-digits)【dfs = [&](int i,int mask,bool is_limit,bool is_num)】
 - [2376. 统计特殊整数](https://leetcode.cn/problems/count-special-integers)【dfs = [&](int i,int mask,bool is_limit,bool is_num)】
-- [2719. 统计整数数目](https://leetcode.cn/problems/count-of-integers/)
+- [2719. 统计整数数目](https://leetcode.cn/problems/count-of-integers)
 - [2801. 统计范围内的步进数字数目](https://leetcode.cn/problems/count-stepping-numbers-in-range)【dfs = [&](int i,int pre,bool is_limit,bool is_num)->int】
 - [2827. 范围中美丽整数的数目](https://leetcode.cn/problems/number-of-beautiful-integers-in-the-range)
-- [3791. 给定范围内平衡整数的数目](https://leetcode.cn/problems/number-of-balanced-integers-in-a-range/)【auto dfs = [&](auto& self,int i,int j,int diff,bool is_limit,bool is_num) -> long long 】
-- [2407.最长递增子序列II](https://leetcode.cn/problems/longest-increasing-subsequence-ii/submissions)【线段树优化，区间最大值】
+- [3791. 给定范围内平衡整数的数目](https://leetcode.cn/problems/number-of-balanced-integers-in-a-range)【auto dfs = [&](auto& self,int i,int j,int diff,bool is_limit,bool is_num) -> long long 】
+- [2407. 最长递增子序列 II](https://leetcode.cn/problems/longest-increasing-subsequence-ii)【线段树优化，区间最大值】
 - [2713. 矩阵中严格递增的单元格数](https://leetcode.cn/problems/maximum-strictly-increasing-cells-in-a-matrix)
-- [2926. 平衡子序列的最大和](https://leetcode.cn/problems/maximum-balanced-subsequence-sum/)
+- [2926. 平衡子序列的最大和](https://leetcode.cn/problems/maximum-balanced-subsequence-sum)
 - [1483. 树节点的第 K 个祖先](https://leetcode.cn/problems/kth-ancestor-of-a-tree-node)
 - [2836. 在传球游戏中最大化函数值](https://leetcode.cn/problems/maximize-value-of-function-in-a-ball-pfassing-game)
 - lca
 - [2846. 边权重均等查询](https://leetcode.cn/problems/minimum-edge-weight-equilibrium-queries-in-a-tree)
-- [2851. 字符串K次转换等于目标串的方案数量](https://leetcode.cn/problems/string-transformation/submissions465291899/)
+- [2851. 字符串 K 次转换等于目标串的方案数量](https://leetcode.cn/problems/string-transformation)
 - [10. 正则表达式匹配](https://leetcode.cn/problems/regular-expression-matching)【记忆化搜索，*如何处理】
 - 44\. 通配符匹配 【贪心】
 - [72. 编辑距离](https://leetcode.cn/problems/edit-distance)
 - [996. 正方形数组的数目，预处理/重复数字全排列](https://leetcode.cn/problems/number-of-squareful-arrays)
-- [2003. 每棵子树内缺失的最小基因值](https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree/)
+- [2003. 每棵子树内缺失的最小基因值](https://leetcode.cn/problems/smallest-missing-genetic-value-in-each-subtree)
 - [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets)
 - [2707. 字符串中的额外字符](https://leetcode.cn/problems/extra-characters-in-a-string)
 - [2741. 特别的排列，全排列/剪枝](https://leetcode.cn/problems/special-permutations)
 - [2742. 给墙壁刷油漆，状态优化](https://leetcode.cn/problems/painting-the-walls)
-- [2811. 判断是否能拆分数组](https://leetcode.cn/problems/check-if-it-is-possible-to-split-array/description/)
+- [2811. 判断是否能拆分数组](https://leetcode.cn/problems/check-if-it-is-possible-to-split-array)
 - [2896. 执行操作使两个字符串相等](https://leetcode.cn/problems/apply-operations-to-make-two-strings-equal)
 - [3129. 找出所有稳定的二进制数组 I](https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-i)
-- [3154. 到达第 K 级台阶的方案数](https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair/)
+- [3154. 到达第 K 级台阶的方案数](https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair)
 - [3154. 到达第 K 级台阶的方案数](https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair)(转移方程[0,i-1]以及i+1有关，不方便迭代，状态稀疏，logk * logk, 使用哈希表 + mask 方式做状态压缩)
 - 464\. 我能赢吗
 - 486\. 预测赢家

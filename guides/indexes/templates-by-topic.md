@@ -20,6 +20,25 @@
 | DFS 与回溯 | 需要枚举组合、排列、路径或满足约束的方案。 | [搜索专题指南](../../template/5-搜索.md) | — | [46. 全排列](https://leetcode.cn/problems/permutations) |
 | 启发式搜索 | 状态空间较大，需要状态压缩或估价函数。 | [搜索专题指南](../../template/5-搜索.md) | [graph_a_star_eight_puzzle.cc](../../其它常见的题目/src/graph_a_star_eight_puzzle.cc) | [847. 访问所有节点的最短路径](https://leetcode.cn/problems/shortest-path-visiting-all-nodes) |
 
+## 基本算法
+
+| Template | Trigger | Note | Code | Related practice |
+| --- | --- | --- | --- | --- |
+| 双指针与滑动窗口 | 两个指针维护边界，或连续区间可以增量更新。 | [基本算法指南](../../template/6-基本算法.md) | [monotonic_structures.cc](../../其它常见的题目/src/monotonic_structures.cc) | [15. 三数之和](https://leetcode.cn/problems/3sum) |
+| 哈希与前缀状态 | 需要快速判重、计数或查找历史前缀状态。 | [基本算法指南](../../template/6-基本算法.md) | [custom_comparator.cc](../../其它常见的题目/src/custom_comparator.cc) | [560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k) |
+| 排序、Top K 与选择 | 排序后结构简化，或只关心第 k 个元素。 | [基本算法指南](../../template/6-基本算法.md) | [quickselect_kth.cc](../../其它常见的题目/src/quickselect_kth.cc) | [215. 数组中的第 K 个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array) |
+| 贪心与分治 | 局部选择可证明最优，或子问题独立并在合并阶段得到答案。 | [基本算法指南](../../template/6-基本算法.md) | [sorting_algorithms_collection.cc](../../其它常见的题目/src/sorting_algorithms_collection.cc) | [435. 无重叠区间](https://leetcode.cn/problems/non-overlapping-intervals) |
+
+## 数据结构
+
+| Template | Trigger | Note | Code | Related practice |
+| --- | --- | --- | --- | --- |
+| 栈、队列与单调结构 | 需要维护最近极值、窗口极值或嵌套状态。 | [数据结构指南](../../template/7-数据结构.md) | [monotonic_structures.cc](../../其它常见的题目/src/monotonic_structures.cc) | [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum) |
+| 并查集 | 动态合并集合并查询连通性。 | [数据结构指南](../../template/7-数据结构.md) | [union_find.cc](../../其它常见的题目/src/union_find.cc) | [684. 冗余连接](https://leetcode.cn/problems/redundant-connection) |
+| Trie 与字符串结构 | 前缀查询、多模式匹配或字符串状态转移。 | [数据结构指南](../../template/7-数据结构.md) | [string_algorithms_collection.cc](../../其它常见的题目/src/string_algorithms_collection.cc) | [208. 实现 Trie（前缀树）](https://leetcode.cn/problems/implement-trie-prefix-tree) |
+| 树状数组与线段树 | 单点/区间更新和区间聚合查询。 | [区间查询指南](../../template/2-区间查询与统计.md) | [range_query_algorithms.cc](../../其它常见的题目/src/range_query_algorithms.cc) | [307. 区域和检索 - 数组可修改](https://leetcode.cn/problems/range-sum-query-mutable) |
+| 数据结构设计 | 要求 O(1) 访问、淘汰、频次或随机抽样。 | [数据结构指南](../../template/7-数据结构.md) | [lru_cache_design.cc](../../其它常见的题目/src/lru_cache_design.cc) | [146. LRU 缓存](https://leetcode.cn/problems/lru-cache) |
+
 ## 动态规划
 
 | Template | Trigger | Note | Code | Related practice |
