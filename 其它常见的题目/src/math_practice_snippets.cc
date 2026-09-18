@@ -1,83 +1,53 @@
+#include <cstdlib>
+#include <functional>
+#include <numeric>
+#include <stdexcept>
 #include <vector>
-using namespace std;
 
-bool isPrime(int x){
-    if(x < 2) return false;
-    for(int i=2;i*i<=x;i++){
-        if(x % 2 == 0){
-            return false;
-        }
+namespace math_practice {
+bool is_prime(int value) {
+    if (value < 2) return false;
+    for (int divisor = 2; divisor <= value / divisor; ++divisor) {
+        if (value % divisor == 0) return false;
     }
     return true;
 }
 
-
-// 求1-MX之间存在哪些质数
-vector<int> primes;
-const int MX = 10000;
-int init = [](){
-    vector<bool> is_prime(MX+1,true);
-    for(int i=2;i<=MX;i++){
-        primes.push_back(i);
-        for(int j=2*i;j<=MX;j+=i){
-            is_prime[j] = false;
+std::vector<int> primes_up_to(int limit) {
+    if (limit < 2) return {};
+    std::vector<bool> prime(static_cast<std::size_t>(limit + 1), true);
+    prime[0] = prime[1] = false;
+    for (int value = 2; value <= limit / value; ++value) {
+        if (!prime[static_cast<std::size_t>(value)]) continue;
+        for (int multiple = value * value; multiple <= limit; multiple += value) {
+            prime[static_cast<std::size_t>(multiple)] = false;
         }
     }
-    return 0;
-}();
-
-// 求一个数有哪些因子，哪些质因子
-
-
-// 最大公约数
-int gcd(int x,int y){
-    return y == 0 ? x : gcd(y,x % y);
+    std::vector<int> result;
+    for (int value = 2; value <= limit; ++value) {
+        if (prime[static_cast<std::size_t>(value)]) result.push_back(value);
+    }
+    return result;
 }
 
-int lcm(int x,int y){
-    return x * y / gcd(x,y);
+int gcd(int first, int second) { return std::gcd(first, second); }
+
+int lcm(int first, int second) { return std::lcm(first, second); }
+
+long long power(long long base, unsigned exponent) {
+    long long result = 1;
+    while (exponent > 0) {
+        if ((exponent & 1U) != 0) result *= base;
+        base *= base;
+        exponent >>= 1U;
+    }
+    return result;
 }
 
-
-int quick_pow(int x,int e){
-    int ans = 1;
-    while(e){
-        if(e % 2 == 1){
-            ans = ans * x;
-        } else {
-            x = x * x;
-            e = e / 2;
-        }
-    }
-    return ans;
-}
-
-
-// 拒绝采样
-class Solution {
-public:
-    int rand10() {
-        while(1){
-            int x = (rand7() - 1) * 7 + rand7();
-            if(x <= 40){
-                return x % 10 +1;
-            }
-        }
-        return 0;
-    }
-};
-
-
-vector<int> reservoirSampling(vector<int> &nums,int k){
-    int n = nums.size();
-    vector<int> ans;
-    for(int i=0;i<k;i++){
-        ans.push_back(ans[i]);
-    }
-    for(int i=k;i<n;i++){
-        int a = rand() % (i + 1);
-        if(a < k){
-            ans[a] = ans[i];
-        } 
+int rand10(const std::function<int()>& rand7) {
+    while (true) {
+        const int value = (rand7() - 1) * 7 + (rand7() - 1);
+        if (value >= 0 && value < 40) return value % 10 + 1;
     }
 }
+}  // namespace math_practice

@@ -34,7 +34,7 @@
 | [graph_bipartite_matching.cc](../其它常见的题目/src/graph_bipartite_matching.cc) | 二分图判定与匈牙利算法最大匹配。 |
 | [graph_cycle_detection.cc](../其它常见的题目/src/graph_cycle_detection.cc) | 有向/无向图的环检测与最长环相关实现。 |
 | [graph_functional_graph_cycles.cc](../其它常见的题目/src/graph_functional_graph_cycles.cc) | 包含无向图枚举起点 BFS 求最短环，以及有向基环树/内向基环树处理框架。 |
-| [graph_max_flow_dinic.cc](../其它常见的题目/src/graph_max_flow_dinic.cc) | 包含残量网络建图的最大流思路，以及 Dinic 的分层 BFS、增广 DFS 和 `maxFlow` 接口。 |
+| [graph_max_flow_dinic.cc](../其它常见的题目/src/graph_max_flow_dinic.cc) | Dinic 最大流：残量网络、分层 BFS、增广 DFS，以及 `add_edge`/`max_flow` 接口。 |
 | [graph_max_flow_dinic_example.cc](../其它常见的题目/src/graph_max_flow_dinic_example.cc) | Dinic 最大流完整实现示例。 |
 | [graph_a_star_eight_puzzle.cc](../其它常见的题目/src/graph_a_star_eight_puzzle.cc) | 八数码的 A* 启发式搜索。 |
 | [graph_shortest_path_visiting_all_nodes.cc](../其它常见的题目/src/graph_shortest_path_visiting_all_nodes.cc) | 状态压缩 BFS：访问所有节点的最短路径。 |
@@ -75,8 +75,8 @@
 
 | 模板 | 内容 |
 | --- | --- |
-| [integer_conversion.cc](../其它常见的题目/src/integer_conversion.cc) | 字符串与整数的转换实现。 |
-| [c_string_operations.cc](../其它常见的题目/src/c_string_operations.cc) | 包含 `memcpy`（含内存重叠处理）、`memset`、`strcpy`、`strncpy`、`strcat`、`strcmp` 和 `strlen` 实现。 |
+| [integer_conversion.cc](../其它常见的题目/src/integer_conversion.cc) | 提供带越界检查的 `parse` 与支持 2–36 进制的 `format`。 |
+| [c_string_operations.cc](../其它常见的题目/src/c_string_operations.cc) | 在 `cstring_ops` 命名空间提供复制、重叠移动、填充、拼接、比较和长度实现。 |
 | [string_algorithms_collection.cc](../其它常见的题目/src/string_algorithms_collection.cc) | 包含 KMP、Trie 的插入/查询，以及 AC 自动机的构建、失败指针和多模式匹配。 |
 | [string_kmp_template.cc](../其它常见的题目/src/string_kmp_template.cc) | KMP 前缀函数与匹配模板。 |
 | [string_aho_corasick_array.cc](../其它常见的题目/src/string_aho_corasick_array.cc) | 数组子节点版 AC 自动机。 |

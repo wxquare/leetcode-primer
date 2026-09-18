@@ -1,21 +1,23 @@
-class Solution {
-public:
-    bool isValidSudoku(vector<vector<char>>& board) {
-        bool rows[10][10],cols[10][10],subboxes[3][3][10];
-        memset(rows,0,sizeof(rows));
-        memset(cols,0,sizeof(cols));
-        memset(subboxes,0,sizeof(subboxes));
-        for(int i=0;i<9;i++){
-            for(int j=0;j<9;j++){
-                if(board[i][j] == '.') continue;
-                int d = board[i][j] - '0';
-                if(rows[i][d] || cols[j][d]) return false;
-                if(subboxes[i/3][j/3][d]) return false;
-                rows[i][d] = true;
-                cols[j][d] = true;
-                subboxes[i/3][j/3][d] = true;
-            }
+#include <array>
+#include <cstddef>
+#include <vector>
+
+bool valid_sudoku(const std::vector<std::vector<char>>& board) {
+    if (board.size() != 9) return false;
+    std::array<std::array<bool, 9>, 9> rows{};
+    std::array<std::array<bool, 9>, 9> columns{};
+    std::array<std::array<bool, 9>, 9> boxes{};
+    for (std::size_t row = 0; row < 9; ++row) {
+        if (board[row].size() != 9) return false;
+        for (std::size_t column = 0; column < 9; ++column) {
+            const char cell = board[row][column];
+            if (cell == '.') continue;
+            if (cell < '1' || cell > '9') return false;
+            const std::size_t digit = static_cast<std::size_t>(cell - '1');
+            const std::size_t box = row / 3 * 3 + column / 3;
+            if (rows[row][digit] || columns[column][digit] || boxes[box][digit]) return false;
+            rows[row][digit] = columns[column][digit] = boxes[box][digit] = true;
         }
-        return true;
     }
-};
+    return true;
+}

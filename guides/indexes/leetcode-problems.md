@@ -2,7 +2,7 @@
 
 [LeetCode 题目目录](../../leetcode/README.md) / [按来源索引](problems-by-source.md) / [按主题索引](problems-by-topic.md) / [按模式索引](problems-by-pattern.md)
 
-本索引覆盖 [leetcode/README.md](../../leetcode/README.md) 中出现的全部 LeetCode 题目，并补充仓库中尚未进入 README 题单的本地源码题。README 题单共 460 个唯一题目；仓库另有 164 个本地源码题，合计 624 条。README 题目没有本地源码时，题目标题直接链接到 LeetCode 原题；补充条目按仓库源码链接。
+本索引覆盖 [leetcode/README.md](../../leetcode/README.md) 中出现的全部 LeetCode 题目，并补充仓库中尚未进入 README 题单的本地源码题。README 题单共 478 个唯一题目；仓库另有 158 个未进入 README 的本地源码题；索引另收录 17 个扩展题目，合计 653 条。README 题目没有本地源码时，题目标题直接链接到 LeetCode 原题；补充条目按仓库源码链接。
 
 ## 数据结构
 
@@ -667,3 +667,51 @@
 | LeetCode 2809 | [2809_minimum_time.cc](../../leetcode/动态规划/2809_minimum_time.cc) |
 | LeetCode 6911 | [6911_continuous_subarrays.cc](../../leetcode/基础算法/6911_continuous_subarrays.cc) |
 | LCR 089. 打家劫舍 | [LCR 089. 打家劫舍.cc](../../leetcode/动态规划/lcr_089_house_robber.cc) |
+
+## 题单同步补录
+
+| 题目 | 本地源码 |
+| --- | --- |
+| LeetCode 7 | [7_reverse_integer.cc](../../leetcode/模拟/7_reverse_integer.cc) |
+| [44. 通配符匹配](https://leetcode.cn/problems/wildcard-matching) | - |
+| [92. 反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii) | - |
+| [94. 二叉树的中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal) | - |
+| [113. 路径总和 II](https://leetcode.cn/problems/path-sum-ii) | - |
+| [114. 二叉树展开为链表](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list) | - |
+| [115. 不同的子序列](https://leetcode.cn/problems/distinct-subsequences) | - |
+| [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal) | - |
+| [145. 二叉树的后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal) | - |
+| [309. 买卖股票的最佳时机含冷冻期](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown) | - |
+| [464. 我能赢吗](https://leetcode.cn/problems/can-i-win) | - |
+| [503. 下一个更大元素 II](https://leetcode.cn/problems/next-greater-element-ii) | - |
+| [519. 随机翻转矩阵](https://leetcode.cn/problems/random-flip-matrix) | - |
+| [528. 按权重随机选择](https://leetcode.cn/problems/random-pick-with-weight) | - |
+| [685. 冗余连接 II](https://leetcode.cn/problems/redundant-connection-ii) | - |
+| [705. 设计哈希集合](https://leetcode.cn/problems/design-hashset) | - |
+| [706. 设计哈希映射](https://leetcode.cn/problems/design-hashmap) | - |
+| [710. 黑名单中的随机数](https://leetcode.cn/problems/random-pick-with-blacklist) | - |
+| [752. 打开转盘锁](https://leetcode.cn/problems/open-the-lock) | - |
+| [753. 破解保险箱](https://leetcode.cn/problems/cracking-the-safe) | - |
+| [836. 矩形重叠](https://leetcode.cn/problems/rectangle-overlap) | - |
+| [886. 可能的二分法](https://leetcode.cn/problems/possible-bipartition) | - |
+| [913. 猫和老鼠](https://leetcode.cn/problems/cat-and-mouse) | - |
+| [994. 腐烂的橘子](https://leetcode.cn/problems/rotting-oranges) | - |
+| [1025. 除数博弈](https://leetcode.cn/problems/divisor-game) | - |
+| [1135. 连接所有城市的最低成本](https://leetcode.cn/problems/connecting-cities-with-minimum-cost) | - |
+| [1168. 水资源分配优化](https://leetcode.cn/problems/optimize-water-distribution-in-a-village) | - |
+| [1406. 石子游戏 III](https://leetcode.cn/problems/stone-game-iii) | - |
+| LeetCode 1462 | [1462_check_if_prerequisite.cc](../../leetcode/图论/1462_check_if_prerequisite.cc) |
+| [1510. 石子游戏 IV](https://leetcode.cn/problems/stone-game-iv) | - |
+| [1563. 石子游戏 V](https://leetcode.cn/problems/stone-game-v) | - |
+| [1690. 石子游戏 VII](https://leetcode.cn/problems/stone-game-vii) | - |
+| [1803. 统计异或值在范围内的数对有多少](https://leetcode.cn/problems/count-pairs-with-xor-in-a-range) | - |
+| [1872. 石子游戏 VIII](https://leetcode.cn/problems/stone-game-viii) | - |
+| [2359. 找到离给定两个节点最近的节点](https://leetcode.cn/problems/find-closest-node-to-given-two-nodes) | - |
+| LeetCode 2594 | [2594_repair_cars.cc](../../leetcode/数学/2594_repair_cars.cc) |
+| LeetCode 2815 | [2815_max_sum.cc](../../leetcode/模拟/2815_max_sum.cc) |
+| LeetCode 2816 | [2816_double_it.cc](../../leetcode/模拟/2816_double_it.cc) |
+| LeetCode 2817 | [2817_min_absolute_difference.cc](../../leetcode/模拟/2817_min_absolute_difference.cc) |
+| LeetCode 2826 | [2826_minimum_operations.cc](../../leetcode/动态规划/2826_minimum_operations.cc) |
+| LeetCode 2831 | [2831_longest_equal_subarray.cc](../../leetcode/数据结构运用/2831_longest_equal_subarray.cc) |
+| LeetCode 2835 | [2835_minimum_operations.cc](../../leetcode/基础算法/2835_minimum_operations.cc) |
+| LeetCode 2857 | [2857_count_pairs.cc](../../leetcode/模拟/2857_count_pairs.cc) |

@@ -1,95 +1,67 @@
-void* memcpy(void* dest,void* src,size_t n){
-    assert(dest != NULL && src != NULL);
+#include <cstddef>
+#include <cstdint>
+#include <stdexcept>
 
-    if(src < dest && (char*)src + n > dest){
-        char* pdst = (char*)dest+n-1;
-        char* psrc = (char*)src+n-1;
-        while(n--){
-            *pdst-- = *psrc--;
-        }
-    }else{
-        char* pdest = (char*)dest;
-        char* psrc = (char*)src;
-        while(n--){
-            *pdest++ = *psrc++;
-        }
+namespace cstring_ops {
+namespace {
+void require_pointer(const void* pointer, std::size_t count) {
+    if (pointer == nullptr && count != 0) {
+        throw std::invalid_argument("null pointer with non-zero length");
     }
-    return dest;
+}
+}  // namespace
+
+void* copy(void* destination, const void* source, std::size_t count) {
+    require_pointer(destination, count);
+    require_pointer(source, count);
+    auto* output = static_cast<unsigned char*>(destination);
+    const auto* input = static_cast<const unsigned char*>(source);
+    for (std::size_t index = 0; index < count; ++index) output[index] = input[index];
+    return destination;
 }
 
-
-void* memset(void* src,int c,size_t n){
-    assert(src != NULL);
-    char* psrc = (char*)src;
-    while(n--){
-        *psrc++ = (char)c;
+void* move(void* destination, const void* source, std::size_t count) {
+    require_pointer(destination, count);
+    require_pointer(source, count);
+    auto* output = static_cast<unsigned char*>(destination);
+    const auto* input = static_cast<const unsigned char*>(source);
+    const auto output_address = reinterpret_cast<std::uintptr_t>(output);
+    const auto input_address = reinterpret_cast<std::uintptr_t>(input);
+    if (output_address > input_address && output_address < input_address + count) {
+        for (std::size_t index = count; index > 0; --index) output[index - 1] = input[index - 1];
+    } else {
+        copy(destination, source, count);
     }
-    return src;
+    return destination;
 }
 
-char* strcpy(char* dest,const char* src){
-    assert(dest != NULL && src != NULL);
-
-    size_t n = strlen(src);
-    if(src < dest && src + n > dest){
-        char* pdst = dest + n;
-        *pdst-- = '\0';
-        src = src + n - 1;
-        while(n--){
-            *pdst-- = *src--;
-        }
-    }else{
-        char* pdst = dest;
-        while((*pdst++ = *src++) != 0);
-    }
-    return dest;
+void* fill(void* destination, unsigned char value, std::size_t count) {
+    require_pointer(destination, count);
+    auto* output = static_cast<unsigned char*>(destination);
+    for (std::size_t index = 0; index < count; ++index) output[index] = value;
+    return destination;
 }
 
-char* strncpy(char* dest,const char* src,size_t n){
-    assert(dest != NULL && src != NULL);
-
-    if(src < dest && src + n > dest){
-        int m = strlen(src) < n ? strlen(src):n;
-        char* pdst = dest+m;
-        *pdst-- = '\0';
-        src = src + m-1;
-        while(m--){
-            *pdst-- = *src--;
-        }
-    }else{
-        char* pdst = dest;
-        size_t i = 0;
-        while(i++ < n && (*pdst++ = *src++) != '\0');
-        if(*(pdst-1) != '\0') *pdst = '\0';
-    }
-    return dest;
+std::size_t length(const char* text) {
+    if (text == nullptr) throw std::invalid_argument("text must not be null");
+    std::size_t result = 0;
+    while (text[result] != '\0') ++result;
+    return result;
 }
 
-char* strcat(char* dest,const char* src){
-    assert(dest != NULL && src != NULL);
-    char* pdst = dest;
-    while(*pdst != '\0'){
-        pdst++;
-    }
-    while((*pdst++ = *src++) != '\0');
-    return dest;
+int compare(const char* lhs, const char* rhs) {
+    if (lhs == nullptr || rhs == nullptr) throw std::invalid_argument("strings must not be null");
+    while (*lhs != '\0' && *lhs == *rhs) { ++lhs; ++rhs; }
+    return static_cast<unsigned char>(*lhs) - static_cast<unsigned char>(*rhs);
 }
 
-int strcmp(const char* s1,const char* s2){
-    assert(s1 != NULL && s2 != NULL);
-    while(s1 && s2 && *s1 == *s2){
-        s1++;
-        s2++;
-    }
-    return *s1 - *s2;
+char* copy_string(char* destination, const char* source) {
+    copy(destination, source, length(source) + 1);
+    return destination;
 }
 
-
-size_t strlen(const char* src){
-    assert(src != NULL);
-    size_t ret = 0;
-    while(*src++ != '\0'){
-        ret++;
-    }
-    return ret;
+char* concatenate(char* destination, const char* source) {
+    copy(destination + length(destination), source, length(source) + 1);
+    return destination;
 }
+}  // namespace cstring_ops

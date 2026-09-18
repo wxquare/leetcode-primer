@@ -1,75 +1,50 @@
-int errnum = 0;
-int atoi(const char* src){
-    if(src == nullptr) {
-        errnum = -1; //empty string
-        return 0;
-    }
+#include <cctype>
+#include <cstdint>
+#include <limits>
+#include <stdexcept>
+#include <string>
+#include <string_view>
 
-    //remove whitespace characters.
-    while(*src == ' ' || *src == '\t' || *src == '\n'){
-        src++;
+namespace integer_conversion {
+bool parse(std::string_view text, int& value) {
+    std::size_t begin = 0;
+    while (begin < text.size() && std::isspace(static_cast<unsigned char>(text[begin]))) ++begin;
+    std::size_t end = text.size();
+    while (end > begin && std::isspace(static_cast<unsigned char>(text[end - 1]))) --end;
+    if (begin == end) return false;
+    bool negative = false;
+    if (text[begin] == '+' || text[begin] == '-') {
+        negative = text[begin] == '-';
+        if (++begin == end) return false;
     }
-
-    int sign = 1;
-    if(*src == '+'){
-        src++;
-    }else if(*src == '-'){
-        sign = -1;
-        src++;
+    const std::int64_t limit = negative
+        ? -static_cast<std::int64_t>(std::numeric_limits<int>::min())
+        : std::numeric_limits<int>::max();
+    std::int64_t magnitude = 0;
+    for (std::size_t index = begin; index < end; ++index) {
+        const char character = text[index];
+        if (character < '0' || character > '9') return false;
+        const int digit = character - '0';
+        if (magnitude > (limit - digit) / 10) return false;
+        magnitude = magnitude * 10 + digit;
     }
-    //only with sign bit
-    if(*src == '\0') {
-        errnum = -2;
-        return 0;
-    }
-
-    long long res = 0;
-    while(*src != '\0'){
-        if(*src >= '0' && *src <= '9'){
-            res = res * 10 + *src - '0';
-            if((sign == 1 && res > 0x7fffffff) || (sign == -1 && (-1*res) < (int)0x80000000)){
-                errnum = -3;  //out of range
-                return 0;
-            }
-        }else{
-            errnum = -4;  //illegal character
-            return 0;
-        }
-        src++;
-    }
-    return sign*res;
+    value = static_cast<int>(negative ? -magnitude : magnitude);
+    return true;
 }
 
-
-char* itoa(int val,char* buf,size_t radix){
-    assert(buf != nullptr);
-    char* p = buf;
-    if(val < 0){
-        *p++ = '-';
-        val = -1 * val;
-    }
-
-    int a = 0;
-    do{
-        a = val % radix;
-        val /= radix;
-        if(a > 9){
-            *p++ = char(a-9+'a');
-        }else{
-            *p++ = (char)(a + '0');
-        }
-    }while(val != 0);
-
-    *p = '\0';
-    //reverse
-    size_t len = strlen(buf);
-    int left = 0;
-    if(*buf == '-' || *buf == '+'){
-        left++;
-    }
-    int right = len - 1;
-    while(left < right){
-        swap(buf[left++],buf[right--]);
-    }
-    return buf;
+std::string format(int value, unsigned base) {
+    if (base < 2 || base > 36) throw std::invalid_argument("base must be in [2, 36]");
+    const bool negative = value < 0;
+    std::uint64_t magnitude = negative
+        ? static_cast<std::uint64_t>(-static_cast<std::int64_t>(value))
+        : static_cast<std::uint64_t>(value);
+    std::string result;
+    do {
+        const unsigned digit = static_cast<unsigned>(magnitude % base);
+        result.push_back(static_cast<char>(digit < 10 ? '0' + digit : 'a' + digit - 10));
+        magnitude /= base;
+    } while (magnitude != 0);
+    if (negative) result.push_back('-');
+    return std::string(result.rbegin(), result.rend());
 }
+}  // namespace integer_conversion

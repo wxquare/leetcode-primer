@@ -18,8 +18,8 @@
 
 | 文件 | 主题与包含内容 | 主要入口 / 核心类型 | 难度 |
 | --- | --- | --- | --- |
-| [sorting_algorithms_collection.cc](src/sorting_algorithms_collection.cc) | 排序算法合集：冒泡、插入、选择、希尔、快排、归并、基数、计数、桶与堆排序。 | `bubbleSort`、`quickSort`、`mergeSort`、`heapSort` | ★★★ |
-| [number_theory_algorithms.cc](src/number_theory_algorithms.cc) | 数论与随机算法：素数筛、因子、GCD/LCM、扩欧、快速幂、组合数、采样与洗牌。 | `isPrime`、`gcd`、`pow_mod`、`reservoirSampling` | ★★★ |
+| [sorting_algorithms_collection.cc](src/sorting_algorithms_collection.cc) | 排序算法合集：冒泡、插入、选择、希尔、快排、归并、基数、计数、桶与堆排序。 | `sorting_algorithms::*_sort` | ★★★ |
+| [number_theory_algorithms.cc](src/number_theory_algorithms.cc) | 数论与随机算法：素数筛、因子、GCD/LCM、扩欧、快速幂、组合数、采样与洗牌。 | `number_theory::is_prime`、`extended_gcd`、`mod_power` | ★★★ |
 | [string_algorithms_collection.cc](src/string_algorithms_collection.cc) | 字符串算法合集：KMP、Trie 与 AC 自动机。 | `kmp`、`Trie`、`acAutomaton` | ★★★★ |
 | [range_query_algorithms.cc](src/range_query_algorithms.cc) | 区间更新与查询：差分数组、树状数组、动态开点线段树。 | `difference`、`FenwickTree`、`SegTree` | ★★★★ |
 | [knapsack_dp.cc](src/knapsack_dp.cc) | 背包 DP：0/1、完全、多重、二进制优化与混合背包。 | `zeroOnePack`、`completePack`、`boundedKnapsack`、`mixPack` | ★★★★ |
@@ -42,7 +42,7 @@
 | [binary_search.cc](src/binary_search.cc) | 递归与迭代二分查找。 | `binarySearch` | ★ |
 | [binary_search_tree.cc](src/binary_search_tree.cc) | 二叉搜索树插入、查找与删除。 | `BinarySearchTree` | ★★★ |
 | [trie.cc](src/trie.cc) | 前缀树实现。 | `Trie` | ★★★ |
-| [tree_lowest_common_ancestor.cc](src/tree_lowest_common_ancestor.cc) | 倍增法最近公共祖先。 | `lca` | ★★★★ |
+| [tree_lowest_common_ancestor.cc](src/tree_lowest_common_ancestor.cc) | 倍增法最近公共祖先。 | `LowestCommonAncestor::query` | ★★★★ |
 | [heavy_light_decomposition.cc](src/heavy_light_decomposition.cc) | 树链剖分。 | `HeavyLightDecomposition` | ★★★★★ |
 | [linear_basis.cc](src/linear_basis.cc) | 异或线性基。 | `LinearBasis` | ★★★★ |
 
@@ -56,12 +56,12 @@
 | [graph_minimum_spanning_tree.cc](src/graph_minimum_spanning_tree.cc) | Kruskal 最小生成树。 | `kruskal` | ★★★ |
 | [graph_topological_sort.cc](src/graph_topological_sort.cc) | Kahn 拓扑排序与环检测。 | `topologicalSort` | ★★★ |
 | [graph_bipartite_matching.cc](src/graph_bipartite_matching.cc) | 二分图判定与匈牙利匹配。 | `isBipartite`、`maximumMatching` | ★★★★ |
-| [graph_max_flow_dinic.cc](src/graph_max_flow_dinic.cc) | Dinic 最大流。 | `Dinic` | ★★★★★ |
+| [graph_max_flow_dinic.cc](src/graph_max_flow_dinic.cc) | Dinic 最大流。 | `Dinic::add_edge`、`max_flow` | ★★★★★ |
 | [min_cost_max_flow.cc](src/min_cost_max_flow.cc) | 最小费用最大流。 | `MinCostMaxFlow` | ★★★★★ |
 | [traveling_salesman.cc](src/traveling_salesman.cc) | 状压 DP 求 TSP。 | `travelingSalesman` | ★★★★★ |
 | [manacher.cc](src/manacher.cc) | 线性最长回文子串。 | `longest_palindromic_substring` | ★★★★ |
 | [z_function.cc](src/z_function.cc) | Z 函数。 | `z_function` | ★★★ |
-| [digit_dp.cc](src/digit_dp.cc) | 数位 DP。 | `digitDP` | ★★★★ |
+| [digit_dp.cc](src/digit_dp.cc) | 数位 DP。 | `digit_dp::count_stepping_numbers` | ★★★★ |
 | [matrix_exponentiation.cc](src/matrix_exponentiation.cc) | 矩阵快速幂。 | `matrix_power` | ★★★ |
 
 ## 设计、并发与工程练习
@@ -87,7 +87,7 @@
 | --- | --- | --- | --- |
 | [graph_shortest_path_visiting_all_nodes.cc](src/graph_shortest_path_visiting_all_nodes.cc) | 访问所有节点的最短路径（状态压缩 BFS）。 | `shortestPathLength` | ★★★★★ |
 | [graph_a_star_eight_puzzle.cc](src/graph_a_star_eight_puzzle.cc) | 八数码 A* 搜索。 | `solvePuzzle` | ★★★★★ |
-| [interview_valid_sudoku.cc](src/interview_valid_sudoku.cc) | 判断 9×9 数独是否合法。 | `isValidSudoku` | ★★ |
+| [interview_valid_sudoku.cc](src/interview_valid_sudoku.cc) | 判断 9×9 数独是否合法。 | `valid_sudoku` | ★★ |
 
 ## 后续拆分边界
 

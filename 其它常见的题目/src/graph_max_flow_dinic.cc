@@ -1,127 +1,78 @@
-
-
-#include <iostream>
-#include <vector>
+#include <algorithm>
+#include <limits>
 #include <queue>
-using namespace std;
-
-
-
-
-struct Edge {
-    int to;
-    int capacity;
-    int flow;
-    int rev; // 反向边在vector中的下标
-};
-
-/*
-    n个节点的有向权图
-*/
-int maxFlow(int n,vector<vector<int>>& edges,int s,int t){
-
-    // build graph
-    vector<vector<Edge>> g(n);
-    for(auto e : edges){
-        g[e[0]].push_back({e[1],e[2]});
-    }
-
-    
-
-}
-
-
-const int INF = 1e9;
-
-struct Edge {
-    int to;
-    int capacity;
-    int flow;
-    int rev; // 反向边在vector中的下标
-};
+#include <stdexcept>
+#include <vector>
 
 class Dinic {
 public:
-    int n; // 图中顶点的数量
-    vector<vector<Edge>> graph;
-    vector<int> level; // 层次图
-    vector<int> iter; // 当前弧优化
+    explicit Dinic(int vertex_count)
+        : graph_(checked_size(vertex_count)), level_(graph_.size()), next_edge_(graph_.size()) {}
 
-    Dinic(int n) {
-        this->n = n;
-        graph.resize(n);
-        level.resize(n);
-        iter.resize(n);
+    void add_edge(int from, int to, long long capacity) {
+        check_vertex(from); check_vertex(to);
+        if (capacity < 0) throw std::invalid_argument("capacity must be non-negative");
+        const int reverse_from = static_cast<int>(graph_[static_cast<std::size_t>(to)].size());
+        const int reverse_to = static_cast<int>(graph_[static_cast<std::size_t>(from)].size());
+        graph_[static_cast<std::size_t>(from)].push_back({to, reverse_from, capacity});
+        graph_[static_cast<std::size_t>(to)].push_back({from, reverse_to, 0});
     }
 
-    void addEdge(int from, int to, int capacity) {
-        graph[from].push_back({to, capacity, 0, graph[to].size()});
-        graph[to].push_back({from, 0, 0, graph[from].size() - 1});
+    long long max_flow(int source, int sink) {
+        check_vertex(source); check_vertex(sink);
+        if (source == sink) return 0;
+        long long result = 0;
+        while (build_levels(source, sink)) {
+            std::fill(next_edge_.begin(), next_edge_.end(), 0);
+            while (const long long pushed = send(source, sink, std::numeric_limits<long long>::max())) {
+                result += pushed;
+            }
+        }
+        return result;
     }
 
-    bool bfs(int s, int t) {
-        fill(level.begin(), level.end(), -1);
-        queue<int> q;
-        q.push(s);
-        level[s] = 0;
+private:
+    struct Edge { int to; int reverse; long long capacity; };
+    std::vector<std::vector<Edge>> graph_;
+    std::vector<int> level_;
+    std::vector<std::size_t> next_edge_;
 
-        while (!q.empty()) {
-            int u = q.front();
-            q.pop();
-
-            for (const Edge& e : graph[u]) {
-                if (level[e.to] < 0 && e.flow < e.capacity) {
-                    level[e.to] = level[u] + 1;
-                    q.push(e.to);
+    static std::size_t checked_size(int vertex_count) {
+        if (vertex_count < 0) throw std::invalid_argument("vertex count must be non-negative");
+        return static_cast<std::size_t>(vertex_count);
+    }
+    void check_vertex(int vertex) const {
+        if (vertex < 0 || static_cast<std::size_t>(vertex) >= graph_.size()) {
+            throw std::out_of_range("vertex is outside the graph");
+        }
+    }
+    bool build_levels(int source, int sink) {
+        std::fill(level_.begin(), level_.end(), -1);
+        std::queue<int> pending;
+        level_[static_cast<std::size_t>(source)] = 0; pending.push(source);
+        while (!pending.empty()) {
+            const int current = pending.front(); pending.pop();
+            for (const Edge& edge : graph_[static_cast<std::size_t>(current)]) {
+                if (edge.capacity > 0 && level_[static_cast<std::size_t>(edge.to)] == -1) {
+                    level_[static_cast<std::size_t>(edge.to)] = level_[static_cast<std::size_t>(current)] + 1;
+                    pending.push(edge.to);
                 }
             }
         }
-
-        return level[t] >= 0;
+        return level_[static_cast<std::size_t>(sink)] != -1;
     }
-
-    int dfs(int u, int t, int f) {
-        if (u == t) return f;
-
-        for (int& i = iter[u]; i < graph[u].size(); i++) {
-            Edge& e = graph[u][i];
-            if (e.capacity > e.flow && level[e.to] == level[u] + 1) {
-                int d = dfs(e.to, t, min(f, e.capacity - e.flow));
-                if (d > 0) {
-                    e.flow += d;
-                    graph[e.to][e.rev].flow -= d;
-                    return d;
-                }
-            }
+    long long send(int current, int sink, long long available) {
+        if (current == sink) return available;
+        auto& edges = graph_[static_cast<std::size_t>(current)];
+        for (std::size_t& index = next_edge_[static_cast<std::size_t>(current)]; index < edges.size(); ++index) {
+            Edge& edge = edges[index];
+            if (edge.capacity == 0 || level_[static_cast<std::size_t>(edge.to)] != level_[static_cast<std::size_t>(current)] + 1) continue;
+            const long long pushed = send(edge.to, sink, std::min(available, edge.capacity));
+            if (pushed == 0) continue;
+            edge.capacity -= pushed;
+            graph_[static_cast<std::size_t>(edge.to)][static_cast<std::size_t>(edge.reverse)].capacity += pushed;
+            return pushed;
         }
-
         return 0;
     }
-
-    int maxFlow(int s, int t) {
-        int flow = 0;
-        while (bfs(s, t)) {
-            fill(iter.begin(), iter.end(), 0);
-            int f;
-            while ((f = dfs(s, t, INF)) > 0) {
-                flow += f;
-            }
-        }
-        return flow;
-    }
 };
-
-int main() {
-    int n = 4;
-    Dinic dinic(n);
-    dinic.addEdge(0, 1, 2);
-    dinic.addEdge(0, 2, 3);
-    dinic.addEdge(1, 2, 1);
-    dinic.addEdge(1, 3, 1);
-    dinic.addEdge(2, 3, 2);
-
-    int maxFlow = dinic.maxFlow(0, 3);
-    cout << "Max Flow: " << maxFlow << endl;
-
-    return 0;
-}

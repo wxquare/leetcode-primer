@@ -1,57 +1,68 @@
-#include <vector>
+#include <algorithm>
+#include <limits>
 #include <queue>
-using namespace std;
+#include <stdexcept>
+#include <utility>
+#include <vector>
 
-
-namespace undirected_graph{
-    /*
-        1. 无向图的最短环
-        2. 枚举每个点跑BFS
-    */
-
-int findShortestCycle(int n,vector<vector<int>>& edges){
-    vector<vector<int>> g(n);
-    for(auto e : edges){
-        g[e[0]].push_back(e[1]);
-        g[e[1]].push_back(e[0]);
+namespace graph_cycles {
+int shortest_undirected_cycle(int vertex_count,
+                              const std::vector<std::pair<int, int>>& edges) {
+    if (vertex_count < 0) throw std::invalid_argument("vertex count must be non-negative");
+    std::vector<std::vector<int>> graph(static_cast<std::size_t>(vertex_count));
+    for (const auto& [from, to] : edges) {
+        if (from < 0 || from >= vertex_count || to < 0 || to >= vertex_count) {
+            throw std::out_of_range("edge endpoint is outside the graph");
+        }
+        graph[static_cast<std::size_t>(from)].push_back(to);
+        graph[static_cast<std::size_t>(to)].push_back(from);
     }
-    int dis[n]; // start 到每个点的距离
-    function<int(int)> bfs = [&](int start)->int {
-        int ans = -1;
-        memset(dis,-1,sizeof(dis));
-        dis[start] = 0;
-
-        queue<pair<int,int>> q;
-        q.push({start,-1});
-        while(!q.empty()){
-            auto [u,fa] = q.front();
-            q.pop();
-
-            for(int v : g[u]){
-                if(dis[v] == -1){
-                    dis[v] = dis[u] + 1;
-                    q.push({v,u});
-                } else { // 第二次遇到且不是father节点
-                    if(v != fa){
-                        int t = dis[u] + dis[v] + 1;
-                        ans = ans == -1 ? t : min(t,ans);
-                    }
+    int answer = std::numeric_limits<int>::max();
+    for (int start = 0; start < vertex_count; ++start) {
+        std::vector<int> distance(static_cast<std::size_t>(vertex_count), -1);
+        std::vector<int> parent(static_cast<std::size_t>(vertex_count), -1);
+        std::queue<int> pending;
+        distance[static_cast<std::size_t>(start)] = 0;
+        pending.push(start);
+        while (!pending.empty()) {
+            const int current = pending.front();
+            pending.pop();
+            for (int next : graph[static_cast<std::size_t>(current)]) {
+                if (distance[static_cast<std::size_t>(next)] == -1) {
+                    distance[static_cast<std::size_t>(next)] = distance[static_cast<std::size_t>(current)] + 1;
+                    parent[static_cast<std::size_t>(next)] = current;
+                    pending.push(next);
+                } else if (parent[static_cast<std::size_t>(current)] != next) {
+                    answer = std::min(answer, distance[static_cast<std::size_t>(current)] +
+                                             distance[static_cast<std::size_t>(next)] + 1);
                 }
             }
         }
-    };
-    int ans = -1;
-    for(int i=0;i<n;i++){
-        int t = bfs(i);
-        if(t == -1) continue;
-        ans = ans == -1 ? t : min(ans,t);
     }
-    return ans;
+    return answer == std::numeric_limits<int>::max() ? -1 : answer;
 }
+
+int longest_directed_cycle(const std::vector<int>& next) {
+    const int size = static_cast<int>(next.size());
+    for (int vertex : next) {
+        if (vertex < -1 || vertex >= size) throw std::out_of_range("successor is outside the graph");
+    }
+    std::vector<int> visit(static_cast<std::size_t>(size), 0);
+    std::vector<int> depth(static_cast<std::size_t>(size), 0);
+    int answer = -1;
+    for (int start = 0; start < size; ++start) {
+        if (visit[static_cast<std::size_t>(start)] != 0) continue;
+        const int marker = start + 1;
+        int current = start, current_depth = 0;
+        while (current != -1 && visit[static_cast<std::size_t>(current)] == 0) {
+            visit[static_cast<std::size_t>(current)] = marker;
+            depth[static_cast<std::size_t>(current)] = current_depth++;
+            current = next[static_cast<std::size_t>(current)];
+        }
+        if (current != -1 && visit[static_cast<std::size_t>(current)] == marker) {
+            answer = std::max(answer, current_depth - depth[static_cast<std::size_t>(current)]);
+        }
+    }
+    return answer;
 }
-
-namespace directed_graph {
-int findlo
-};
-
-
+}  // namespace graph_cycles

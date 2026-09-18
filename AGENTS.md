@@ -53,3 +53,10 @@ English for technical execution details.
 - 题单整理遵循保守原则：不得删除、遗漏或减少原有题目；允许补充题目、调整分类、拆分同一行中的多个题目和统一格式，但整理前后必须核对原有条目仍全部保留。
 - 专题一级分类使用连续数字编号，二级分类使用 `1.1`、`1.2` 等数字编号；解释性文字、模板说明和复习表不强制添加 `【】`。
 - README 与 template 的职责调整不得导致 README 题号集合减少；题目移动或重新归类后，必须核对整理前后的题号集合和数量。
+
+## 文档检查
+
+- 普通检查：`python3 tools/check_markdown_consistency.py`。
+- 检查脚本测试：`python3 -m unittest discover -s tools -p 'test_*.py'`。
+- 需要保护题号集合时，先保存修改前的 README，再运行：`python3 tools/check_markdown_consistency.py --baseline /path/to/README-before.md`。
+- 检查脚本返回非零状态时，不得提交文档整理结果；修复题目行、标题编号、本地链接或 LeetCode 链接后再提交。

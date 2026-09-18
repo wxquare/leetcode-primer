@@ -1,208 +1,117 @@
+#include <algorithm>
+#include <functional>
+#include <numeric>
+#include <random>
+#include <stdexcept>
 #include <vector>
-using namespace std;
 
-
-// 判断一个数是否是否为素数/质数
-bool isPrime(int x){
-    if(x < 2) return false;
-    for(int i=2;i*i<=x;i++){
-        if(x % 2 == 0){
-            return false;
-        }
+namespace number_theory {
+bool is_prime(int value) {
+    if (value < 2) return false;
+    for (int divisor = 2; divisor <= value / divisor; ++divisor) {
+        if (value % divisor == 0) return false;
     }
     return true;
 }
 
-// 求1-n之间的所有素数
-vector<int> getPrimes(int n){
-    vector<int> isPrime(n+1,true);
-    vector<int> primes;
-    for(int i=2;i<=n;i++){
-        if(isPrime[i]){
-            primes.push_back(i);
-            for(long long j=2*i;j<=n;j+=i){
-                isPrime[j] = false;
-            }
+std::vector<int> primes_up_to(int limit) {
+    if (limit < 2) return {};
+    std::vector<bool> prime(static_cast<std::size_t>(limit + 1), true);
+    prime[0] = prime[1] = false;
+    for (int value = 2; value <= limit / value; ++value) {
+        if (!prime[static_cast<std::size_t>(value)]) continue;
+        for (int multiple = value * value; multiple <= limit; multiple += value) {
+            prime[static_cast<std::size_t>(multiple)] = false;
         }
     }
-    return primes;
-}
-
-
-// 求解1- MX之间有哪些素数
-const int MX = 10000;
-vector<int> primes;
-int init = [&](){
-    vector<int> isPrime(MX+1,true);
-    for(int i=2;i<=MX;i++){
-        if(isPrime[i]){
-            primes.push_back(i);
-            for(long long j=2*i;j<=MX;j+=i){
-                isPrime[j] = false;
-            }
-        }
-    }
-    return 0;
-}();
-
-
-// 计算某个数有哪些因子
-vector<int> getFactors(int x){
-    vector<int> ans;
-    for(int i=2;i*i<=x;i++){
-        while((x % i) == 0){
-            ans.push_back(i);
-            ans.push_back(x / i);
-        }
-    }
-    if(x > 1){
-        ans.push_back(x);
-    }
-    return ans;
-}
-
-
-// 计算一些数的公共质因子
-vector<int> getCommonFactor(vector<int>& nums){
-    int mn = *min_element(nums.begin(),nums.end());
-    vector<int> ans;
-    vector<int> primes = getPrimes(mn);
-    for(int p : primes){
-        int flag = true;
-        for(int num : nums){
-            if(num % p != 0){
-                flag = false;
-                break;
-            }
-        }
-        if(flag) ans.push_back(p);
-    }
-    return ans;
-}
-
-
-// 最大公约数
-int gcd(int a,int b){
-    return b == 0 ? a : gcd(b,a%b);
-}
-
-// 最小公倍数
-int lcm(int a,int b){
-    return a * b / gcd(a,b);
-}
-
-
-// 扩展欧基里德算法
-// 乘法逆元
-// gcd(a,b) = 1，可以求得乘法逆元
-int exgcd(int a,int b,int &x,int &y){
-    if(b == 0){
-        x = 1;
-        y = 0;
-        return a;
-    }
-    int r = exgcd(b,a%b,x,y);
-    int t = y;
-    y = x - (a/b)*y;
-    x = y;
-    return r;
-}
-
-// 根据 费马小定理，快速幂
-// 如果 MOD 是一个素数，且 a 是不可被 MOD 整除的整数，
-const int MOD = 1e9 + 7;  
-int combination_mod(long long n,long long k){
-    long long numerator = 1;
-    long long denominator = 1;
-
-    for(long long i=0;i<k;i++){
-        numerator = numerator * (n - i) % MOD;
-        denominator = denominator * (i+1) % MOD;
-    }
-    return numerator * pow_mod(denominator,MOD-2) % MOD;
-}
-
-// 快速幂
-int pow_mod(int x, long long e){
-    int e = e % MOD;
-    
-    long long ans = 1;
-    while(e){
-        if((e & 1) != 0){
-            ans = ans * x % MOD;
-        }
-        x = x * x % MOD;
-        e = e / 2;
-    }
-    return ans;
-}
-
-
-// 如果mod为素数，且y不能为MOD整除
-int division_MOD(long long x,long long y){
-    return x * pow_mod(y,MOD-2) % MOD;
-}
-
-// 拒绝采样
-// 用rand7(),实现rand10()
-// rand7 产生1-7的随机数
-int rejectSampling(){
-    int ans;
-    while(1){
-        int x = (rand7()-1) * 7 + (rand7() - 1);
-        if(x >= 40) continue;
-        ans = x % 10 + 1;
-    }
-    return ans;
-}
-
-// 水塘抽样
-vector<int> reservoirSampling(vector<int>& nums,int k){
-    vector<int> ans;
-    for(int i=0;i<nums.size();i++){
-        if(i < k){
-            ans.push_back(nums[i]);
-        } else {
-            int j = rand() % i;
-            if(j < k) ans[j] = nums[i];
-        }
-    }
-    return ans;
-}
-
-// 洗牌算法
-void shuffle(vector<int>& cards){
-    for(int i=0;i<cards.size();i++){
-        int j = rand() % i;
-        swap(cards[i],cards[j]);
-    }
-}
-
-
-// Function to calculate combination C(n, k)
-long long combination(int n, int k) {
-    if (k > n) return 0;
-    if (k == 0 || k == n) return 1;
-
-    k = min(k, n - k); // Take advantage of symmetry property C(n, k) == C(n, n-k)
-    long long result = 1;
-    for (int i = 0; i < k; ++i) {
-        result *= (n - i);
-        result /= (i + 1);
+    std::vector<int> result;
+    for (int value = 2; value <= limit; ++value) {
+        if (prime[static_cast<std::size_t>(value)]) result.push_back(value);
     }
     return result;
 }
 
-vector<vector<int>> binomialCoefficient(int n,int k){
-    vector<vector<int>> res(n+1,vector<int>(k+1,0));
-    for(int i=0;i<=n;i++){
-        for(int j=0;j<=min(i,k);j++){
-            if(i == 0 || j == 0){
-                res[i][j] = 1;
-            } else {
-                res[i][j] = res[i-1][j-1] + res[i-1][j];
-            }
+std::vector<int> prime_factors(int value) {
+    if (value == 0) throw std::invalid_argument("zero has no finite prime factorization");
+    value = std::abs(value);
+    std::vector<int> factors;
+    for (int divisor = 2; divisor <= value / divisor; ++divisor) {
+        while (value % divisor == 0) {
+            factors.push_back(divisor);
+            value /= divisor;
         }
     }
-    return res;
+    if (value > 1) factors.push_back(value);
+    return factors;
 }
+
+std::vector<int> common_prime_factors(const std::vector<int>& values) {
+    if (values.empty()) return {};
+    int common = 0;
+    for (int value : values) common = std::gcd(common, value);
+    auto factors = prime_factors(common);
+    factors.erase(std::unique(factors.begin(), factors.end()), factors.end());
+    return factors;
+}
+
+int gcd(int first, int second) { return std::gcd(first, second); }
+int lcm(int first, int second) { return std::lcm(first, second); }
+
+struct ExtendedGcdResult { long long gcd; long long x; long long y; };
+
+ExtendedGcdResult extended_gcd(long long first, long long second) {
+    if (second == 0) {
+        const long long sign = first < 0 ? -1 : 1;
+        return {first * sign, sign, 0};
+    }
+    const auto next = extended_gcd(second, first % second);
+    return {next.gcd, next.y, next.x - (first / second) * next.y};
+}
+
+long long mod_power(long long base, long long exponent, long long modulus) {
+    if (modulus <= 1 || exponent < 0) throw std::invalid_argument("invalid modular power arguments");
+    base %= modulus;
+    if (base < 0) base += modulus;
+    long long result = 1 % modulus;
+    while (exponent > 0) {
+        if ((exponent & 1) != 0) result = result * base % modulus;
+        base = base * base % modulus;
+        exponent >>= 1;
+    }
+    return result;
+}
+
+long long combination_mod(long long n, long long k, long long prime_modulus) {
+    if (k < 0 || k > n) return 0;
+    if (k > n - k) k = n - k;
+    long long numerator = 1, denominator = 1;
+    for (long long index = 1; index <= k; ++index) {
+        numerator = numerator * ((n - k + index) % prime_modulus) % prime_modulus;
+        denominator = denominator * (index % prime_modulus) % prime_modulus;
+    }
+    return numerator * mod_power(denominator, prime_modulus - 2, prime_modulus) % prime_modulus;
+}
+
+int rand10(const std::function<int()>& rand7) {
+    while (true) {
+        const int value = (rand7() - 1) * 7 + (rand7() - 1);
+        if (value >= 0 && value < 40) return value % 10 + 1;
+    }
+}
+
+std::vector<int> reservoir_sample(const std::vector<int>& values, std::size_t count,
+                                  std::mt19937& generator) {
+    if (count > values.size()) throw std::invalid_argument("sample is larger than input");
+    std::vector<int> sample(values.begin(), values.begin() + static_cast<std::ptrdiff_t>(count));
+    for (std::size_t index = count; index < values.size(); ++index) {
+        std::uniform_int_distribution<std::size_t> distribution(0, index);
+        const std::size_t position = distribution(generator);
+        if (position < count) sample[position] = values[index];
+    }
+    return sample;
+}
+
+void shuffle(std::vector<int>& values, std::mt19937& generator) {
+    std::shuffle(values.begin(), values.end(), generator);
+}
+}  // namespace number_theory
