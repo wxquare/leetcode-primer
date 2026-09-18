@@ -14,7 +14,7 @@
 - [复习方法](guides/review-method.md)：使用 `new`、`review`、`mastered`、`mistake` 和 `1 -> 3 -> 7 -> 14` 天复习节奏。
 - [题目笔记模板](guides/problem-note-template.md)：统一题目笔记与索引字段。
 - [命名规范](guides/naming-conventions.md)：统一新增源码文件命名。
-- [贡献指南](guides/contribution-guide.md)：新增题目时同步本地 README 与 v2 索引。
+- [贡献指南](guides/contribution-guide.md)：新增题目时同步本地 README 与索引。
 
 ## 内容目录
 
@@ -57,4 +57,4 @@ LeetCode 题解按题号和英文简称命名为 `<题号>_<english_slug>.<扩�
 - 从 [学习路线](guides/roadmap/00-start-here.md) 开始，再通过 [完整 LeetCode 题单](guides/indexes/leetcode-problems.md) 或主题/模式/难度索引做针对性练习。
 - 每个目录的 README 是该目录的事实入口；编译或修改源码前，先阅读对应 README。
 - 同一主题可能保留多种实现，用于比较不同思路；优先以各目录 README 的说明为准。
-- 新增题目时，同步更新源码、所属目录 README 和对应的 v2 索引。
+- 新增题目时，同步更新源码、所属目录 README 和对应的索引。

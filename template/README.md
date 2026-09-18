@@ -1,6 +1,6 @@
 # 模板目录
 
-## Primer v2 导航
+## 导航
 
 - [学习路线入口](../guides/roadmap/00-start-here.md)
 - [模板索引](../guides/indexes/templates-by-topic.md) / [按模式索引](../guides/indexes/problems-by-pattern.md) / [按主题索引](../guides/indexes/problems-by-topic.md)
@@ -8,7 +8,7 @@
 
 本目录保留算法学习笔记；对应的 C/C++ 源码已平铺迁至 [其它常见的题目](../其它常见的题目/src/)。使用前请按题目输入、索引范围和编译环境调整。
 
-专题文档约定：`leetcode/README.md` 只做粗粒度导航，下面的 Markdown 模板负责系统学习、核心模板和 7 天复习闭环。
+专题文档约定：`leetcode/README.md` 负责粗粒度分类和完整题单，下面的 Markdown 模板负责系统学习、核心模板和 7 天复习闭环。
 
 ## 专题学习文档
 

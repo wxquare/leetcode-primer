@@ -1,6 +1,6 @@
 # 剑指 Offer 题目索引
 
-## Primer v2 导航
+## 导航
 
 - [学习路线入口](../guides/roadmap/00-start-here.md)
 - [按来源索引](../guides/indexes/problems-by-source.md) / [按主题索引](../guides/indexes/problems-by-topic.md) / [按模式索引](../guides/indexes/problems-by-pattern.md)
