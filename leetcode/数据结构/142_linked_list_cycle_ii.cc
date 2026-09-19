@@ -1,0 +1,1 @@
+struct ListNode{int val;ListNode*next;ListNode(int x):val(x),next(0){}}; class Solution{public:ListNode* detectCycle(ListNode*h){ListNode*a=h,*b=h;while(b&&b->next){a=a->next;b=b->next->next;if(a==b){for(a=h;a!=b;a=a->next,b=b->next);return a;}}return 0;}};

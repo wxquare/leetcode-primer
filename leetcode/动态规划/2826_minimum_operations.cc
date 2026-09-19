@@ -1,3 +1,5 @@
+#include <algorithm>
+#include <climits>
 #include <vector>
 using namespace std;
 
@@ -38,5 +40,4 @@ public:
         return min(min(dp[1],dp[2]),dp[3]);
     }
 };
-
 

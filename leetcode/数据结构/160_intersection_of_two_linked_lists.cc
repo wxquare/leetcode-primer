@@ -1,0 +1,1 @@
+struct ListNode{int val;ListNode*next;ListNode(int x):val(x),next(0){}}; class Solution{public:ListNode* getIntersectionNode(ListNode*a,ListNode*b){ListNode*x=a,*y=b;while(x!=y)x=x?x->next:b,y=y?y->next:a;return x;}};

@@ -1,0 +1,2 @@
+#include <vector>
+using namespace std; class MyCircularQueue{vector<int>a;int h=0,n=0,k;public:MyCircularQueue(int K):a(K),k(K){}bool enQueue(int x){if(isFull())return false;a[(h+n)%k]=x;n++;return true;}bool deQueue(){if(isEmpty())return false;h=(h+1)%k;n--;return true;}int Front(){return isEmpty()?-1:a[h];}int Rear(){return isEmpty()?-1:a[(h+n-1+k)%k];}bool isEmpty(){return n==0;}bool isFull(){return n==k;}};

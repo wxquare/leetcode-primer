@@ -1,0 +1,1 @@
+struct Node{int val;Node*left,*right,*next;Node():val(0),left(0),right(0),next(0){}Node(int x):val(x),left(0),right(0),next(0){}}; class Solution{public:Node* connect(Node*r){for(Node*cur=r;cur;){Node d;Node*tail=&d;for(Node*p=cur;p;p=p->next){if(p->left)tail=tail->next=p->left;if(p->right)tail=tail->next=p->right;}cur=d.next;}return r;}};

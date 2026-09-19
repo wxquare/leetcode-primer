@@ -2,11 +2,7 @@
 // int rand7();
 // @return a random integer in the range 1 to 7
 
-#include <cstdlib>  //rand()
-
-int rand7(){
-    return rand() % 7 + 1;
-}
+int rand7();
 
 class Solution {
 public:

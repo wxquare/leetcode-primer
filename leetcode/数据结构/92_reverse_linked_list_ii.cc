@@ -1,0 +1,1 @@
+struct ListNode{int val;ListNode*next;ListNode(int x):val(x),next(0){}}; class Solution{public:ListNode*reverseBetween(ListNode*h,int l,int r){ListNode d(0);d.next=h;ListNode*p=&d;for(int i=1;i<l;i++)p=p->next;ListNode*q=p->next;for(int i=l;i<r;i++){ListNode*x=q->next;q->next=x->next;x->next=p->next;p->next=x;}return d.next;}};

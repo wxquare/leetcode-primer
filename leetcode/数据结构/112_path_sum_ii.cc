@@ -1,0 +1,2 @@
+#include <vector>
+using namespace std; struct TreeNode{int val;TreeNode*left,*right;TreeNode(int x):val(x),left(0),right(0){}}; class Solution{vector<vector<int>>r;vector<int>p;void f(TreeNode*x,int t){if(!x)return;p.push_back(x->val);if(!x->left&&!x->right&&t==x->val)r.push_back(p);f(x->left,t-x->val);f(x->right,t-x->val);p.pop_back();}public:vector<vector<int>> pathSum(TreeNode*x,int t){f(x,t);return r;}};

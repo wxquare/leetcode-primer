@@ -1,29 +1,4 @@
-class Solution {
-public:
-    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
-        vector<int> in(numCourses,0);
-        vector<vector<int>> g(numCourses);
-        for(auto p : prerequisites){
-            in[p[1]]++;
-            g[p[0]].push_back(p[1]);
-        }
-        function<void(int)> dfs = [&](int x){
-            for(auto y : g[x]){
-                in[y]--;
-                if(in[y] == 0){
-                    dfs(y);
-                }
-            }
-        };
-        for(int i=0;i<numCourses;i++){
-            if(in[i] == 0){
-                dfs(i);
-            }
-        }
-        for(int i=0;i<numCourses;i++){
-            if(in[i] > 0) return false;
-        }
-        return true;
-
-    }
-};
+#include <queue>
+#include <vector>
+using namespace std;
+class Solution { public:bool canFinish(int n,vector<vector<int>>& p){vector<vector<int>>g(n);vector<int>d(n);for(auto&x:p){g[x[1]].push_back(x[0]);++d[x[0]];}queue<int>q;for(int i=0;i<n;++i)if(!d[i])q.push(i);int c=0;while(!q.empty()){int u=q.front();q.pop();++c;for(int v:g[u])if(!--d[v])q.push(v);}return c==n;} };

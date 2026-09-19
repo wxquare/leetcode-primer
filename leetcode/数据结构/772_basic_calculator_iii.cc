@@ -1,0 +1,2 @@
+#include <string>
+using namespace std; class Solution{int i;long f(string&s){long n=0,r=0;char op='+';while(i<s.size()){char c=s[i++];if(c>='0'&&c<='9')n=n*10+c-'0';else if(c=='(')n=f(s);else if(c==')')break;if((c=='+'||c=='-'||c=='*'||c=='/')||c==')'){if(op=='+')r+=n;else if(op=='-')r-=n;else if(op=='*')r*=n;else r/=n;op=c;n=0;}}if(op=='+')r+=n;else if(op=='-')r-=n;else if(op=='*')r*=n;else r/=n;return r;}public:int calculate(string s){i=0;return f(s);}};

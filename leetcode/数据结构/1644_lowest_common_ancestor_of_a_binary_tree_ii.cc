@@ -1,0 +1,1 @@
+struct TreeNode{int val;TreeNode*left,*right;TreeNode(int x):val(x),left(0),right(0){}}; class Solution{TreeNode*ans;bool f(TreeNode*r,TreeNode*p,TreeNode*q){if(!r)return false;int c=f(r->left,p,q)+f(r->right,p,q)+(r==p||r==q);if(c==2)ans=r;return c>0;}public:TreeNode* lowestCommonAncestor(TreeNode*r,TreeNode*p,TreeNode*q){ans=0;return f(r,p,q),ans;}};

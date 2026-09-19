@@ -1,0 +1,1 @@
+struct ListNode{int val;ListNode*next;ListNode(int x):val(x),next(0){}}; class Solution{public:ListNode* insertionSortList(ListNode*h){ListNode d(0);while(h){ListNode*n=h->next,*p=&d;while(p->next&&p->next->val<h->val)p=p->next;h->next=p->next;p->next=h;h=n;}return d.next;}};
