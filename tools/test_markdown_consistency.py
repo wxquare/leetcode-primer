@@ -9,7 +9,10 @@ from tools.check_markdown_consistency import (
     validate_index_source_identity,
     validate_local_links,
     validate_problem_index_coverage,
+    validate_public_indexes_have_no_review_state,
     validate_readme,
+    validate_taxonomy_structure,
+    validate_template_titles,
     validate_url_style,
 )
 
@@ -146,6 +149,68 @@ class MarkdownConsistencyTest(unittest.TestCase):
             self.assertTrue(any("首页 LeetCode 源码统计不一致" in error for error in errors))
             self.assertTrue(any("首页完整题单统计不一致" in error for error in errors))
             self.assertTrue(any("完整索引统计不一致" in error for error in errors))
+
+    def test_public_indexes_must_not_store_personal_review_state(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.write(
+                root,
+                "guides/indexes/problems-by-topic.md",
+                "| Problem | Difficulty | Pattern | Key idea | Source | Review |\n"
+                "| --- | --- | --- | --- | --- | --- |\n"
+                "| 1. 两数之和 | Easy | 哈希 | 记录补数 | source.cc | `new` |\n",
+            )
+            errors = validate_public_indexes_have_no_review_state(root)
+            self.assertTrue(any("个人复习状态" in error for error in errors))
+
+    def test_public_indexes_may_link_to_review_documentation(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.write(
+                root,
+                "guides/indexes/problems-by-topic.md",
+                "个人记录可以在本地使用 `review` 状态。\n",
+            )
+            self.assertEqual(
+                validate_public_indexes_have_no_review_state(root), []
+            )
+
+    def test_taxonomy_rejects_legacy_directories_and_template_names(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for name in (
+                "基础算法",
+                "数据结构运用",
+                "数学",
+                "搜索（非图）",
+                "动态规划",
+                "图论",
+                "模拟",
+            ):
+                (root / "leetcode" / name).mkdir(parents=True)
+            self.write(root, "template/6-基本算法.md", "# 基本算法\n")
+            errors = validate_taxonomy_structure(root)
+            self.assertTrue(any("一级分类目录" in error for error in errors))
+            self.assertTrue(any("模板文件" in error for error in errors))
+
+    def test_taxonomy_rejects_readme_heading_order(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.write(
+                root,
+                "leetcode/README.md",
+                "## 1. 数据结构\n## 2. 基础算法\n## 3. 数学\n"
+                "## 4. 搜索\n## 5. 动态规划\n## 6. 图论\n",
+            )
+            errors = validate_taxonomy_structure(root)
+            self.assertTrue(any("README 主分类" in error for error in errors))
+
+    def test_numbered_template_title_must_match_filename(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.write(root, "template/1-基础算法.md", "# 基本算法专题复习手册\n")
+            errors = validate_template_titles(root)
+            self.assertTrue(any("一级标题" in error for error in errors))
 
 
 if __name__ == "__main__":

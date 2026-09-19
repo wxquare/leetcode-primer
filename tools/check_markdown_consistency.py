@@ -18,6 +18,28 @@ PROBLEM_LINK = re.compile(r"^- \[([^\]]+)\]\(([^)]+)\)")
 INDEX_PROBLEM = re.compile(r"^\| (?:\[(\d+)\.|LeetCode (\d+)\b|(\d+)\.)")
 LOCAL_PROBLEM = re.compile(r"^(\d+)_.*\.(?:cc|go|lua|py|sql)$")
 SOURCE_SUFFIXES = {".cc", ".go", ".hpp", ".lua", ".py", ".sql"}
+PUBLIC_PROBLEM_INDEXES = (
+    "problems-by-topic.md",
+    "problems-by-pattern.md",
+    "problems-by-difficulty.md",
+    "problems-by-source.md",
+)
+CANONICAL_CATEGORIES = (
+    "基础算法",
+    "数据结构",
+    "数学",
+    "搜索",
+    "动态规划",
+    "图论",
+)
+CANONICAL_TEMPLATES = tuple(
+    f"{index}-{name}.md"
+    for index, name in enumerate(CANONICAL_CATEGORIES, 1)
+)
+CROSS_TOPIC_TEMPLATES = (
+    "专题-区间查询与统计.md",
+    "专题-路径问题.md",
+)
 
 
 def markdown_files(root: Path) -> Iterable[Path]:
@@ -297,6 +319,91 @@ def validate_url_style(root: Path) -> List[str]:
     return errors
 
 
+def validate_public_indexes_have_no_review_state(root: Path) -> List[str]:
+    """Reject user-specific review progress in committed classification indexes."""
+    errors: List[str] = []
+    index_root = root / "guides/indexes"
+    review_state = re.compile(r"`(?:new|review|mastered|mistake)`")
+    for name in PUBLIC_PROBLEM_INDEXES:
+        path = index_root / name
+        if not path.exists():
+            continue
+        for line_number, line in lines_without_code(path):
+            if line.startswith("|") and (
+                "| Review |" in line or review_state.search(line)
+            ):
+                errors.append(
+                    f"{path}:{line_number}:公共索引不应包含个人复习状态"
+                )
+    return errors
+
+
+def validate_taxonomy_structure(root: Path) -> List[str]:
+    errors: List[str] = []
+    leetcode_root = root / "leetcode"
+    if leetcode_root.exists():
+        actual = {
+            path.name for path in leetcode_root.iterdir() if path.is_dir()
+        }
+        expected = set(CANONICAL_CATEGORIES)
+        if actual != expected:
+            errors.append(
+                f"{leetcode_root}:一级分类目录不一致：实际 {sorted(actual)}，"
+                f"期望 {sorted(expected)}"
+            )
+        simulation = leetcode_root / "基础算法" / "模拟"
+        if actual == expected and not simulation.is_dir():
+            errors.append(f"{simulation}:基础算法缺少模拟二级目录")
+
+    template_root = root / "template"
+    if template_root.exists():
+        expected_templates = set(CANONICAL_TEMPLATES + CROSS_TOPIC_TEMPLATES)
+        actual_templates = {
+            path.name
+            for path in template_root.glob("*.md")
+            if path.name != "README.md"
+        }
+        if actual_templates != expected_templates:
+            errors.append(
+                f"{template_root}:模板文件不一致：实际 {sorted(actual_templates)}，"
+                f"期望 {sorted(expected_templates)}"
+            )
+
+    readme = leetcode_root / "README.md"
+    if readme.exists():
+        headings = []
+        for _, line in lines_without_code(readme):
+            match = re.match(r"^## (\d+)\. (.+)$", line)
+            if match:
+                headings.append((int(match.group(1)), match.group(2)))
+        expected_headings = list(enumerate(CANONICAL_CATEGORIES, 1))
+        if headings != expected_headings:
+            errors.append(
+                f"{readme}:README 主分类不一致：实际 {headings}，"
+                f"期望 {expected_headings}"
+            )
+    return errors
+
+
+def validate_template_titles(root: Path) -> List[str]:
+    errors: List[str] = []
+    for filename, category in zip(CANONICAL_TEMPLATES, CANONICAL_CATEGORIES):
+        path = root / "template" / filename
+        if not path.exists():
+            continue
+        headings = [
+            line[2:].strip()
+            for _, line in lines_without_code(path)
+            if line.startswith("# ")
+        ]
+        expected = f"{category}专题复习手册"
+        if headings != [expected]:
+            errors.append(
+                f"{path}:一级标题不一致：实际 {headings}，期望 [{expected}]"
+            )
+    return errors
+
+
 def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path("."))
@@ -312,6 +419,9 @@ def main(argv: Optional[List[str]] = None) -> int:
     errors.extend(validate_readme(readme, baseline))
     errors.extend(validate_local_links(root))
     errors.extend(validate_url_style(root))
+    errors.extend(validate_public_indexes_have_no_review_state(root))
+    errors.extend(validate_taxonomy_structure(root))
+    errors.extend(validate_template_titles(root))
     errors.extend(validate_problem_index_coverage(root, readme, index))
     errors.extend(validate_index_source_identity(root, index))
     errors.extend(validate_documented_statistics(root, readme))

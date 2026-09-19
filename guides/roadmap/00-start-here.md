@@ -2,7 +2,7 @@
 
 [仓库首页](../../README.md) / [复习方法](../review-method.md)
 
-本路线把仓库中的题解、模板和复习规则组织成四个阶段。学习记录中的复习状态必须使用 `new`、`review`、`mastered`、`mistake`，并按 [1 -> 3 -> 7 -> 14 天节奏](../review-method.md) 复盘。
+本路线把仓库中的题解、模板和复习规则组织成四个阶段。个人学习记录中的复习状态使用 `new`、`review`、`mastered`、`mistake`，并按 [1 -> 3 -> 7 -> 14 天节奏](../review-method.md) 复盘；记录保存在本地 `.local/reviews/`，不提交到仓库。
 
 ## 如何选择起点
 

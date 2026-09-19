@@ -1,6 +1,7 @@
 .agents/
 .superpowers/
 /work/
+/.local/
 
 # macOS / editor local metadata
 .DS_Store

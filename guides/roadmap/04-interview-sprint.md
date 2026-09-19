@@ -2,7 +2,7 @@
 
 [路线入口](00-start-here.md) / [核心模式](02-core-patterns.md) / [高级专题](03-advanced-topics.md) / [复习方法](../review-method.md)
 
-两周冲刺只做四件事：限时练习、错题复盘、模板召回、重做 `mistake` 项。每晚按 [复习方法](../review-method.md) 更新状态；`mistake` 题重新从 1 天复习节奏开始，不能直接回到 `review` 或 `mastered`。
+两周冲刺只做四件事：限时练习、错题复盘、模板召回、重做 `mistake` 项。每晚按 [复习方法](../review-method.md) 更新本地个人记录；`mistake` 题重新从 1 天复习节奏开始，不能直接回到 `review` 或 `mastered`。
 
 ## 冲刺规则
 

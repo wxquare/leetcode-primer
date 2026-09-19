@@ -57,12 +57,12 @@
 
 模板与题目：
 
-- [区间查询教学文档](../../template/2-区间查询与统计.md)
+- [区间查询教学文档](../../template/专题-区间查询与统计.md)
 - [树状数组模板](../../其它常见的题目/src/fenwick_tree.cc)
 - [线段树模板](../../其它常见的题目/src/segment_tree.cc)
 - [主席树模板](../../其它常见的题目/src/persistent_segment_tree.cc)
 - [307. 区域和检索 - 数组可修改](../../leetcode/图论/307_range_sum_query_mutable.cc)
-- [218. 天际线问题](../../leetcode/数据结构运用/218_the_skyline_problem.cc)
+- [218. 天际线问题](../../leetcode/数据结构/218_the_skyline_problem.cc)
 
 <a id="string-algorithms"></a>
 
@@ -91,5 +91,5 @@
 - [组合数学与取模](../../leetcode/数学/组合数学与取模.md)
 - [线性基模板](../../其它常见的题目/src/linear_basis.cc)
 - [矩阵快速幂模板](../../其它常见的题目/src/matrix_exponentiation.cc)
-- [50. 幂函数 Pow(x, n)](../../leetcode/模拟/50_pow_x_n.cc)
+- [50. 幂函数 Pow(x, n)](../../leetcode/基础算法/模拟/50_pow_x_n.cc)
 - [233. 数字 1 的个数](../../leetcode/动态规划/233_number_of_digit_one.cc)
