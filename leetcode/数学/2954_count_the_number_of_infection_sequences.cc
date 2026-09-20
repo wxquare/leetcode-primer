@@ -1,3 +1,34 @@
 #include <vector>
 using namespace std;
-class Solution { long long power(long long a,long long e){const long long MOD=1000000007;long long r=1;while(e){if(e&1)r=r*a%MOD;a=a*a%MOD;e>>=1;}return r;}public:int numberOfSequence(int n,vector<int>&sick){const long long MOD=1000000007;vector<long long>fact(n+1,1),inv(n+1,1);for(int i=1;i<=n;++i)fact[i]=fact[i-1]*i%MOD;inv[n]=power(fact[n],MOD-2);for(int i=n;i;--i)inv[i-1]=inv[i]*i%MOD;int healthy=n-sick.size();long long ans=fact[healthy];int left=sick[0],right=n-1-sick.back();ans=ans*inv[left]%MOD*inv[right]%MOD;int exponent=0;for(int i=1;i<(int)sick.size();++i){int gap=sick[i]-sick[i-1]-1;ans=ans*inv[gap]%MOD;if(gap>0)exponent+=gap-1;}return ans*power(2,exponent)%MOD;} };
+class Solution {
+    long long power(long long a, long long e) {
+        const long long MOD = 1000000007;
+        long long r = 1;
+        while (e) {
+            if (e & 1) r = r * a % MOD;
+            a = a * a % MOD;
+            e >>= 1;
+        }
+        return r;
+    }
+
+public:
+    int numberOfSequence(int n, vector<int>& sick) {
+        const long long MOD = 1000000007;
+        vector<long long> fact(n + 1, 1), inv(n + 1, 1);
+        for (int i = 1; i <= n; ++i) fact[i] = fact[i - 1] * i % MOD;
+        inv[n] = power(fact[n], MOD - 2);
+        for (int i = n; i; --i) inv[i - 1] = inv[i] * i % MOD;
+        int healthy = n - sick.size();
+        long long ans = fact[healthy];
+        int left = sick[0], right = n - 1 - sick.back();
+        ans = ans * inv[left] % MOD * inv[right] % MOD;
+        int exponent = 0;
+        for (int i = 1; i < (int)sick.size(); ++i) {
+            int gap = sick[i] - sick[i - 1] - 1;
+            ans = ans * inv[gap] % MOD;
+            if (gap > 0) exponent += gap - 1;
+        }
+        return ans * power(2, exponent) % MOD;
+    }
+};

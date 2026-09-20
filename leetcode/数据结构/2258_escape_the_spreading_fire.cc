@@ -1,4 +1,53 @@
 #include <vector>
 #include <queue>
 #include <algorithm>
-using namespace std; class Solution{public:int maximumMinutes(vector<vector<int>>&g){int m=g.size(),n=g[0].size();vector<vector<int>>f(m,vector<int>(n,1e9));queue<pair<int,int>>q;for(int i=0;i<m;i++)for(int j=0;j<n;j++)if(g[i][j]==1)f[i][j]=0,q.push({i,j});int di[4]={1,-1,0,0},dj[4]={0,0,1,-1};while(!q.empty()){pair<int,int> u=q.front();q.pop();int i=u.first,j=u.second;for(int d=0;d<4;d++){int x=i+di[d],y=j+dj[d];if(x>=0&&x<m&&y>=0&&y<n&&g[x][y]==0&&f[x][y]>f[i][j]+1)f[x][y]=f[i][j]+1,q.push({x,y});}}auto ok=[&](int w){vector<vector<int>>d(m,vector<int>(n,-1));queue<pair<int,int>>z;z.push({0,0});d[0][0]=w;while(!z.empty()){pair<int,int> u=z.front();z.pop();int i=u.first,j=u.second;for(int k=0;k<4;k++){int x=i+di[k],y=j+dj[k];if(x<0||x>=m||y<0||y>=n||g[x][y]==2)continue;int t=d[i][j]+1;if(x==m-1&&y==n-1){if(t<=f[x][y])return true;}else if(t<f[x][y]&&d[x][y]<0)d[x][y]=t,z.push({x,y});}}return false;};int l=0,r=1000000000;while(l<r){int x=l+(r-l+1)/2;if(ok(x))l=x;else r=x-1;}return l;}};
+using namespace std;
+class Solution {
+public:
+    int maximumMinutes(vector<vector<int>>& g) {
+        int m = g.size(), n = g[0].size();
+        vector<vector<int>> f(m, vector<int>(n, 1e9));
+        queue<pair<int, int>> q;
+        for (int i = 0; i < m; i++)
+            for (int j = 0; j < n; j++)
+                if (g[i][j] == 1) f[i][j] = 0, q.push({i, j});
+        int di[4] = {1, -1, 0, 0}, dj[4] = {0, 0, 1, -1};
+        while (!q.empty()) {
+            pair<int, int> u = q.front();
+            q.pop();
+            int i = u.first, j = u.second;
+            for (int d = 0; d < 4; d++) {
+                int x = i + di[d], y = j + dj[d];
+                if (x >= 0 && x < m && y >= 0 && y < n && g[x][y] == 0 && f[x][y] > f[i][j] + 1)
+                    f[x][y] = f[i][j] + 1, q.push({x, y});
+            }
+        }
+        auto ok = [&](int w) {
+            vector<vector<int>> d(m, vector<int>(n, -1));
+            queue<pair<int, int>> z;
+            z.push({0, 0});
+            d[0][0] = w;
+            while (!z.empty()) {
+                pair<int, int> u = z.front();
+                z.pop();
+                int i = u.first, j = u.second;
+                for (int k = 0; k < 4; k++) {
+                    int x = i + di[k], y = j + dj[k];
+                    if (x < 0 || x >= m || y < 0 || y >= n || g[x][y] == 2) continue;
+                    int t = d[i][j] + 1;
+                    if (x == m - 1 && y == n - 1) {
+                        if (t <= f[x][y]) return true;
+                    } else if (t < f[x][y] && d[x][y] < 0) d[x][y] = t, z.push({x, y});
+                }
+            }
+            return false;
+        };
+        int l = 0, r = 1000000000;
+        while (l < r) {
+            int x = l + (r - l + 1) / 2;
+            if (ok(x)) l = x;
+            else r = x - 1;
+        }
+        return l;
+    }
+};

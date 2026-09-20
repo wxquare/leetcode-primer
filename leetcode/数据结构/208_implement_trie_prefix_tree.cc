@@ -1,2 +1,39 @@
 #include <string>
-using namespace std; class Trie{struct N{N*c[26];bool e;N():e(0){for(int i=0;i<26;i++)c[i]=0;}};N*r;public:Trie():r(new N){}void insert(string w){N*p=r;for(char x:w){if(!p->c[x-'a'])p->c[x-'a']=new N;p=p->c[x-'a'];}p->e=1;}bool search(string w){N*p=r;for(char x:w){if(!p->c[x-'a'])return false;p=p->c[x-'a'];}return p->e;}bool startsWith(string w){N*p=r;for(char x:w){if(!p->c[x-'a'])return false;p=p->c[x-'a'];}return true;}};
+using namespace std;
+class Trie {
+    struct N {
+        N* c[26];
+        bool e;
+        N() : e(0) {
+            for (int i = 0; i < 26; i++) c[i] = 0;
+        }
+    };
+    N* r;
+
+public:
+    Trie() : r(new N) {}
+    void insert(string w) {
+        N* p = r;
+        for (char x : w) {
+            if (!p->c[x - 'a']) p->c[x - 'a'] = new N;
+            p = p->c[x - 'a'];
+        }
+        p->e = 1;
+    }
+    bool search(string w) {
+        N* p = r;
+        for (char x : w) {
+            if (!p->c[x - 'a']) return false;
+            p = p->c[x - 'a'];
+        }
+        return p->e;
+    }
+    bool startsWith(string w) {
+        N* p = r;
+        for (char x : w) {
+            if (!p->c[x - 'a']) return false;
+            p = p->c[x - 'a'];
+        }
+        return true;
+    }
+};

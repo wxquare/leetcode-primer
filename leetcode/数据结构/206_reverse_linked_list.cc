@@ -1,1 +1,18 @@
-struct ListNode{int val;ListNode*next;ListNode(int x):val(x),next(0){}}; class Solution{public:ListNode* reverseList(ListNode*h){ListNode*p=0;while(h){ListNode*n=h->next;h->next=p;p=h;h=n;}return p;}};
+struct ListNode {
+    int val;
+    ListNode* next;
+    ListNode(int x) : val(x), next(0) {}
+};
+class Solution {
+public:
+    ListNode* reverseList(ListNode* h) {
+        ListNode* p = 0;
+        while (h) {
+            ListNode* n = h->next;
+            h->next = p;
+            p = h;
+            h = n;
+        }
+        return p;
+    }
+};

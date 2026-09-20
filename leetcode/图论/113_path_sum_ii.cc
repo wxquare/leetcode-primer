@@ -1,2 +1,25 @@
 #include <vector>
-using namespace std; struct TreeNode{int val;TreeNode*left,*right;TreeNode(int x):val(x),left(0),right(0){}}; class Solution{void go(TreeNode*r,int t,vector<int>&p,vector<vector<int>>&o){if(!r)return;p.push_back(r->val);if(!r->left&&!r->right&&t==r->val)o.push_back(p);go(r->left,t-r->val,p,o);go(r->right,t-r->val,p,o);p.pop_back();}public:vector<vector<int>>pathSum(TreeNode*r,int t){vector<vector<int>>o;vector<int>p;go(r,t,p,o);return o;}};
+using namespace std;
+struct TreeNode {
+    int val;
+    TreeNode *left, *right;
+    TreeNode(int x) : val(x), left(0), right(0) {}
+};
+class Solution {
+    void go(TreeNode* r, int t, vector<int>& p, vector<vector<int>>& o) {
+        if (!r) return;
+        p.push_back(r->val);
+        if (!r->left && !r->right && t == r->val) o.push_back(p);
+        go(r->left, t - r->val, p, o);
+        go(r->right, t - r->val, p, o);
+        p.pop_back();
+    }
+
+public:
+    vector<vector<int>> pathSum(TreeNode* r, int t) {
+        vector<vector<int>> o;
+        vector<int> p;
+        go(r, t, p, o);
+        return o;
+    }
+};

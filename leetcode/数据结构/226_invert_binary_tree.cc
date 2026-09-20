@@ -1,1 +1,16 @@
-struct TreeNode{int val;TreeNode*l,*r;TreeNode(int x):val(x),l(0),r(0){}}; class Solution{public:TreeNode* invertTree(TreeNode*r){if(r){TreeNode*t=r->l;r->l=invertTree(r->r);r->r=invertTree(t);}return r;}};
+struct TreeNode {
+    int val;
+    TreeNode *l, *r;
+    TreeNode(int x) : val(x), l(0), r(0) {}
+};
+class Solution {
+public:
+    TreeNode* invertTree(TreeNode* r) {
+        if (r) {
+            TreeNode* t = r->l;
+            r->l = invertTree(r->r);
+            r->r = invertTree(t);
+        }
+        return r;
+    }
+};

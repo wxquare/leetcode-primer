@@ -1,1 +1,15 @@
-class Solution { public:int maximumXorProduct(long long a,long long b,int n){const long long MOD=1000000007;if(n==0)return (a%MOD)*(b%MOD)%MOD;long long mask=(1LL<<n)-1,x=a&~mask,y=b&~mask;for(long long bit=1LL<<(n-1);bit;bit>>=1){bool abit=a&bit,bbit=b&bit;if(abit==bbit)x|=bit,y|=bit;else if(x<y)x|=bit;else y|=bit;}return (x%MOD)*(y%MOD)%MOD;} };
+class Solution {
+public:
+    int maximumXorProduct(long long a, long long b, int n) {
+        const long long MOD = 1000000007;
+        if (n == 0) return (a % MOD) * (b % MOD) % MOD;
+        long long mask = (1LL << n) - 1, x = a & ~mask, y = b & ~mask;
+        for (long long bit = 1LL << (n - 1); bit; bit >>= 1) {
+            bool abit = a & bit, bbit = b & bit;
+            if (abit == bbit) x |= bit, y |= bit;
+            else if (x < y) x |= bit;
+            else y |= bit;
+        }
+        return (x % MOD) * (y % MOD) % MOD;
+    }
+};
