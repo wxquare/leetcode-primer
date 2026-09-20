@@ -2,7 +2,7 @@
 
 [LeetCode 题目目录](../../leetcode/README.md) / [按来源索引](problems-by-source.md) / [按主题索引](problems-by-topic.md) / [按模式索引](problems-by-pattern.md)
 
-本索引覆盖 [leetcode/README.md](../../leetcode/README.md) 中出现的全部 LeetCode 题目，并补充仓库中尚未进入 README 题单的本地源码题。README 题单共 478 个唯一题目；仓库另有 178 个未进入 README 的本地源码题；索引另收录 0 个扩展题目，合计 656 条。README 题目没有本地源码时，题目标题直接链接到 LeetCode 原题；补充条目按仓库源码链接。
+本索引覆盖 [leetcode/README.md](../../leetcode/README.md) 中出现的全部 LeetCode 题目，并补充仓库中尚未进入 README 题单的本地源码题。README 题单共 525 个唯一题目；仓库另有 141 个未进入 README 的本地源码题；索引另收录 0 个扩展题目，合计 666 条。README 题目没有本地源码时，题目标题直接链接到 LeetCode 原题；补充条目按仓库源码链接。
 
 ## 基础算法
 
@@ -17,6 +17,7 @@
 | [567. 字符串的排列](https://leetcode.cn/problems/permutation-in-string) | - |
 | [1052. 爱生气的书店老板](https://leetcode.cn/problems/grumpy-bookstore-owner) | - |
 | [2024. 考试的最大困扰度](https://leetcode.cn/problems/maximize-the-confusion-of-an-exam) | - |
+| [8. 字符串转换整数（atoi）](https://leetcode.cn/problems/string-to-integer-atoi) | - |
 | [1004. 最大连续 1 的个数 III](https://leetcode.cn/problems/max-consecutive-ones-iii) | - |
 | [3298. 统计重新排列后包含另一个字符串的子字符串数目 II](https://leetcode.cn/problems/count-substrings-that-can-be-rearranged-to-contain-a-string-ii) | - |
 | [面试题 17.09. 第 k 个数](https://leetcode.cn/problems/get-kth-magic-number-lcci) | - |
@@ -24,6 +25,7 @@
 | [912. 排序数组，快速排序和归并排序](https://leetcode.cn/problems/sort-an-array) | - |
 | [2512.奖励最顶尖的 K 名学生](https://leetcode.cn/problems/reward-top-k-students) | [2512_reward_top_k_students.cc](../../leetcode/基础算法/2512_reward_top_k_students.cc) |
 | [215. 数组中的第 K 个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array) | - |
+| [347. 前 K 个高频元素](https://leetcode.cn/problems/top-k-frequent-elements) | - |
 | [2555. 两个线段获得的最多奖品](https://leetcode.cn/problems/maximize-win-from-two-segments) | - |
 | [2735. 收集巧克力](https://leetcode.cn/problems/collecting-chocolates) | - |
 | [66. 加一](https://leetcode.cn/problems/plus-one) | [66_plus_one.cc](../../leetcode/数学/66_plus_one.cc) |
@@ -113,6 +115,7 @@
 | [435. 无重叠区间](https://leetcode.cn/problems/non-overlapping-intervals) | - |
 | [452. 用最少数量的箭引爆气球](https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons) | [452_find_min_arrow_shots.cc](../../leetcode/基础算法/452_find_min_arrow_shots.cc) |
 | [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query) | - |
+| [1850. 邻位交换的第 K 个最小妙数](https://leetcode.cn/problems/minimum-adjacent-swaps-to-reach-the-kth-smallest-number) | - |
 | [2580. 统计将重叠区间合并成组的方案数](https://leetcode.cn/problems/count-ways-to-group-overlapping-ranges) | - |
 | [3111. 覆盖所有点的最少矩形数目](https://leetcode.cn/problems/minimum-rectangles-to-cover-points) | - |
 | [995. K 连续位的最小翻转次数](https://leetcode.cn/problems/minimum-number-of-k-consecutive-bit-flips) | - |
@@ -224,6 +227,7 @@
 | [2216. 美化数组的最少删除数](https://leetcode.cn/problems/minimum-deletions-to-make-array-beautifu) | - |
 | [2818. 操作使得分最大](https://leetcode.cn/problems/apply-operations-to-maximize-score) | - |
 | [剑指 Offer 59 - II. 队列的最大值](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof) | - |
+| [LCR 184. 设计自助结算系统](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof) | - |
 | [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum) | [239_sliding_window_maximum.cc](../../leetcode/数据结构/239_sliding_window_maximum.cc) |
 | [295. 数据流的中位数](https://leetcode.cn/problems/find-median-from-data-stream) | [295_find_median_from_data_stream.cc](../../leetcode/数据结构/295_find_median_from_data_stream.cc) |
 | [480. 滑动窗口中位数](https://leetcode.cn/problems/sliding-window-median) | [480_median_sliding_window.cc](../../leetcode/数据结构/480_median_sliding_window.cc) |
@@ -346,6 +350,7 @@
 | [410. 分割数组的最大值](https://leetcode.cn/problems/split-array-largest-sum) | - |
 | [871. 最低加油次数](https://leetcode.cn/problems/minimum-number-of-refueling-stops) | - |
 | [433. 最小基因变化](https://leetcode.cn/problems/minimum-genetic-mutation) | - |
+| [317. 离建筑物最近的距离](https://leetcode.cn/problems/shortest-distance-from-all-buildings) | - |
 | [2477. 到达首都的最少油耗](https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital) | - |
 | [77. 组合](https://leetcode.cn/problems/combinations) | - |
 | [494. 目标和](https://leetcode.cn/problems/target-sum) | [494_target_sum.cc](../../leetcode/动态规划/494_target_sum.cc) |
@@ -353,6 +358,7 @@
 | [518. 零钱兑换 II](https://leetcode.cn/problems/coin-change-ii) | - |
 | [40. 组合总和 II](https://leetcode.cn/problems/combination-sum-ii) | - |
 | [216. 组合总和 III](https://leetcode.cn/problems/combination-sum-iii) | - |
+| [37. 解数独](https://leetcode.cn/problems/sudoku-solver) | - |
 | [322. 零钱兑换](https://leetcode.cn/problems/coin-change) | - |
 | [2597. 美丽子集的数目](https://leetcode.cn/problems/the-number-of-beautiful-subsets) | [2597_beautiful_subsets.cc](../../leetcode/搜索/2597_beautiful_subsets.cc) |
 | [46. 全排列](https://leetcode.cn/problems/permutations) | - |
@@ -375,6 +381,10 @@
 | [70. 爬楼梯](https://leetcode.cn/problems/climbing-stairs) | - |
 | [509. 斐波那契数](https://leetcode.cn/problems/fibonacci-number) | [509_fibonacci_number.cc](../../leetcode/数学/509_fibonacci_number.cc) |
 | [746. 使用最小花费爬楼梯](https://leetcode.cn/problems/min-cost-climbing-stairs) | [746_min_cost_climbing_stairs.cc](../../leetcode/动态规划/746_min_cost_climbing_stairs.cc) |
+| [121. 买卖股票的最佳时机](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock) | - |
+| [122. 买卖股票的最佳时机 II](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii) | - |
+| [123. 买卖股票的最佳时机 III](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii) | - |
+| [188. 买卖股票的最佳时机 IV](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv) | - |
 | [1043. 分隔数组以得到最大和](https://leetcode.cn/problems/partition-array-for-maximum-sum) | - |
 | [1137. 第 N 个泰波那契数](https://leetcode.cn/problems/n-th-tribonacci-number) | - |
 | [1306. 跳跃游戏 III](https://leetcode.cn/problems/jump-game-iii) | [1306_can_reach.cc](../../leetcode/搜索/1306_can_reach.cc) |
@@ -385,6 +395,7 @@
 | [2830. 销售利润最大化](https://leetcode.cn/problems/maximize-the-profit-as-the-salesman) | - |
 | [354. 俄罗斯套娃信封问题](https://leetcode.cn/problems/russian-doll-envelopes) | - |
 | [673. 最长递增子序列的个数](https://leetcode.cn/problems/number-of-longest-increasing-subsequence) | - |
+| [1671. 得到山形数组的最少删除次数](https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array) | - |
 | [198. 打家劫舍](https://leetcode.cn/problems/house-robber) | [198_house_robber.cc](../../leetcode/动态规划/198_house_robber.cc) |
 | [337. 打家劫舍 III](https://leetcode.cn/problems/house-robber-iii) | [337_house_robber_iii.cc](../../leetcode/动态规划/337_house_robber_iii.cc) |
 | [552. 学生出勤记录 II](https://leetcode.cn/problems/student-attendance-record-ii) | - |

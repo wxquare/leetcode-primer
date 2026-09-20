@@ -8,6 +8,7 @@
 - [按模式索引](../guides/indexes/problems-by-pattern.md)
 - [按难度索引](../guides/indexes/problems-by-difficulty.md)
 - [按来源索引](../guides/indexes/problems-by-source.md)
+- 当前面试全量题单共收录 525 道去重题目；题目分配在下方六大主题及两个跨分类专题中。
 - 本目录角色：LeetCode 题解的本地目录，长目录保留为题目查找入口，源码按主要解法归档在下方六个主题目录；模拟题位于“基础算法”的二级目录中。
 
 ## 1. 基础算法
@@ -65,8 +66,10 @@
 - [30. 串联所有单词的子串](https://leetcode.cn/problems/substring-with-concatenation-of-all-words)【按单词长度分组的窗口 + 词频统计】
 - [2024. 考试的最大困扰度](https://leetcode.cn/problems/maximize-the-confusion-of-an-exam)【不定长窗口；窗口内较少字符数不超过 `k`】
 - [1004. 最大连续 1 的个数 III](https://leetcode.cn/problems/max-consecutive-ones-iii)【不定长窗口；窗口内 0 的数量不超过 `k`】
+- [424. 替换后的最长重复字符](基础算法/模拟/424_character_replacement.cc)【滑动窗口；维护窗口最大频次并限制替换次数】
 - [2962. 统计最大元素出现至少 K 次的子数组](https://leetcode.cn/problems/count-subarrays-where-max-element-appears-at-least-k-times)【满足条件后收缩左边界；累计以当前右端点结尾的合法子数组】
 - [3298. 统计重新排列后包含另一个字符串的子字符串数目 II](https://leetcode.cn/problems/count-substrings-that-can-be-rearranged-to-contain-a-string-ii)【需求频次窗口；满足覆盖后累计合法左边界数量】
+- [3134. 找出唯一性数组的中位数](搜索/3134_median_of_uniqueness_array.cc)【二分答案 + 滑动窗口；统计不同元素数量不超过阈值的子数组】
 
 #### 2.3 可变窗口：最短覆盖
 
@@ -115,6 +118,7 @@
 - [1329. 将矩阵按对角线排序](https://leetcode.cn/problems/sort-the-matrix-diagonally)【按对角线分组；分别排序后写回矩阵】
 - [2512. 奖励最顶尖的 K 名学生](https://leetcode.cn/problems/reward-top-k-students)【评分统计 + 排序/堆；按总分和姓名规则取前 K 名】
 - [215. 数组中的第 K 个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array)【快速选择/最小堆；平均 $O(n)$ 定位第 K 大元素】
+- [347. 前 K 个高频元素](https://leetcode.cn/problems/top-k-frequent-elements)【频次统计 + 堆或桶排序；提取高频元素】
 - [295. 数据流的中位数](https://leetcode.cn/problems/find-median-from-data-stream)【对顶堆；最大堆维护较小一半、最小堆维护较大一半，堆顶给出中位数】
 - [703. 数据流中的第 K 大元素](https://leetcode.cn/problems/kth-largest-element-in-a-stream)【大小为 K 的最小堆；流式插入后堆顶始终是第 K 大元素】
 
@@ -124,9 +128,12 @@
 - [3404. 统计特殊子序列的数目](https://leetcode.cn/problems/count-special-subsequences)【枚举中间结构；结合数值关系和频次统计方案】
 
 ### 6. 模拟、分组与循环
+- [6. Z 字形变换](基础算法/6_zig_zag_conversion.cc)【字符串分行模拟；按行号往返移动并拼接结果】
+- [8. 字符串转换整数（atoi）](https://leetcode.cn/problems/string-to-integer-atoi)【字符串解析；处理前导空格、符号、非法字符与整数溢出】
 - [66. 加一](https://leetcode.cn/problems/plus-one)【模拟进位；从最低位向前传播进位】
 - [65. 有效数字](https://leetcode.cn/problems/valid-number)【一个字符串包含+-.e判断是否是一个有效的数字】
 - [415. 字符串相加](https://leetcode.cn/problems/add-strings)【逐位模拟加法；从低位向高位维护进位】
+- [556. 下一个更大元素 III](搜索/556_next_greater_element_iii.cc)【下一个排列；交换、反转后缀并检查整数范围】
 - [466. 统计重复个数](https://leetcode.cn/problems/count-the-repetitions)【循环模拟 + 周期加速；记录重复状态避免逐字符超时】
 - [1103. 分糖果 II](https://leetcode.cn/problems/distribute-candies-to-people)【循环队列分糖果】
 > 知识点：按照题目要求，数组会被分割成若干组，且每一组的判断/处理逻辑是一样的【分组模拟；识别每组边界并复用相同处理逻辑】
@@ -157,6 +164,7 @@
 - [57. 插入区间](https://leetcode.cn/problems/insert-interval)【利用区间有序性分段处理】
 - [435. 无重叠区间](https://leetcode.cn/problems/non-overlapping-intervals)【优先保留结束最早的区间】
 - [452. 用最少数量的箭引爆气球](https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons)【每次选择当前重叠区间的最右公共点】
+- [406. 根据身高重建队列](数据结构/406_queue_reconstruction_by_height.cc)【排序 + 贪心；按身高和前方人数逐步放置】
 - [215. 数组中的第 K 个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array)【排序后决策；排序后直接定位，或维护大小为 K 的最小堆保留当前 K 个最大元素】
 - [3111. 覆盖所有点的最少矩形数目](https://leetcode.cn/problems/minimum-rectangles-to-cover-points)【按横坐标排序，尽可能延长当前覆盖范围】
 
@@ -212,6 +220,8 @@
 - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query)【排序查询；最小堆维护已开始且尚能覆盖当前查询的候选区间】
 - [2402. 会议室 III](https://leetcode.cn/problems/meeting-rooms-iii)【双最小堆：`occupied` 按结束时间维护占用会议室，`ready` 按编号维护空闲会议室；无空闲时延后到最早释放时刻】
 - [502. IPO](https://leetcode.cn/problems/ipo)【双堆贪心；按资本解锁项目，用最大堆选择当前收益最高项目】
+- [621. 任务调度器](基础算法/621_least_interval.cc)【贪心 + 优先队列；按任务频次安排冷却周期】
+- [871. 最低加油次数](搜索/871_minimum_refueling_stops.cc)【贪心 + 最大堆；需要加油时选择经过的最大油量】
 
 #### 7.9 栈驱动的贪心：单调淘汰与字典序构造
 
@@ -237,6 +247,7 @@
 - [148. 排序链表](https://leetcode.cn/problems/sort-list) 【模式：归并排序；快慢指针找中点 + 递归拆分 + 有序链表合并】
 - [222. 完全二叉树的节点个数](https://leetcode.cn/problems/count-complete-tree-nodes) 【模式：属性统计；利用完全二叉树性质，通过高度差判断满二叉树并递归】
 - [236. 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree) 【模式：状态上传；递归寻找左右子树中的目标，根据返回值决策】
+- [493. 翻转对](基础算法/493_reverse_pairs.cc)【归并排序分治；在合并阶段统计跨区间翻转对】
 
 
 ## 2. 数据结构
@@ -259,6 +270,7 @@
 - [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands)【DFS/BFS 沉岛，直接改写网格】
 - [289. 生命游戏](https://leetcode.cn/problems/game-of-life)【位编码同时保存旧状态和新状态】
 - [448. 找到所有数组中消失的数字](https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array)【原地负号标记】
+- [80. 删除有序数组中的重复项 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii)【同向双指针；写入位置最多保留每个值两次】
 
 #### 1.2 缺失、重复、唯一与峰值，多数
 
@@ -301,6 +313,7 @@
 - [253. 会议室 II](https://leetcode.cn/problems/meeting-rooms-ii)【模式：上下车/差分思想；核心：将起点看作 +1，终点看作 -1，求最大并发数；或利用小顶堆维护当前结束时间】
 - [435. 无重叠区间](https://leetcode.cn/problems/non-overlapping-intervals)【模式：贪心留空；核心：按终点排序，尽量保留先结束的区间，以给后续留出更多空间】
 - [452. 用最少数量的箭引爆气球](https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons)【模式：区间交集；核心：按终点排序，贪心选择重叠区域的边缘】
+- [729. 我的日程安排表 I](基础算法/模拟/729_my_calendar.cc)【有序集合；检查相邻区间是否重叠】
 - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query)【排序查询 + 最小堆维护候选区间】
 - [2580. 统计将重叠区间合并成组的方案数](https://leetcode.cn/problems/count-ways-to-group-overlapping-ranges)【模式：区间合并 + 组合数学；核心：合并后得到 m 个独立连通块，结果为 $2^m$】
 - [3111. 覆盖所有点的最少矩形数目](https://leetcode.cn/problems/minimum-rectangles-to-cover-points)【按横坐标排序，尽可能延长当前覆盖范围】
@@ -364,6 +377,7 @@
 - [221. 最大正方形](https://leetcode.cn/problems/maximal-square)【二维动态规划】
 - [1277. 统计全为 1 的正方形子矩阵](https://leetcode.cn/problems/count-square-submatrices-with-all-ones)【二维 DP；以当前位置为右下角的最大边长累加到答案】
 - [240. 搜索二维矩阵 II](https://leetcode.cn/problems/search-a-2d-matrix-ii)【右上角起步的线性搜索】
+- [378. 有序矩阵中第 K 小的元素](搜索/378_kth_smallest_in_sorted_matrix.cc)【值域二分或堆；统计矩阵中不大于中值的元素数量】
 - [289. 生命游戏](https://leetcode.cn/problems/game-of-life)【原地状态编码】
 - [305. 岛屿数量 II](https://leetcode.cn/problems/number-of-islands-ii)【二维坐标 + 并查集】
 - [407. 接雨水 II](https://leetcode.cn/problems/trapping-rain-water-ii)【优先队列 BFS】
@@ -468,6 +482,7 @@
 ### 3. 队列、双端队列与堆 (用于滑动窗口极值或动态 TopK)
 - [剑指 Offer 59 - II. 队列的最大值](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof)【队列 + 双端队列 + 单调队列】
 - [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum) 【双端单调递减队列】
+- [LCR 184. 设计自助结算系统](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof)【单调队列；用队列维护顺序并用递减双端队列维护最大值】
 - [295. 数据流的中位数](https://leetcode.cn/problems/find-median-from-data-stream)【最大堆 + 最小堆】
 - [480. 滑动窗口中位数](https://leetcode.cn/problems/sliding-window-median)【双堆 + 延迟删除；维护窗口两半元素数量平衡】
 - [703. 数据流中的第 K 大元素](https://leetcode.cn/problems/kth-largest-element-in-a-stream)【大小为 `k` 的最小堆；堆顶即第 K 大元素】
@@ -487,6 +502,7 @@
 - [92. 反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii)【模式：局部反转；核心：头插法实现一次遍历反转】
 - [160. 相交链表](https://leetcode.cn/problems/intersection-of-two-linked-lists)【模式：双指针同步；核心：`a+c+b = b+c+a`，消除长度差实现首遇】
 - [206. 反转链表](https://leetcode.cn/problems/reverse-linked-list)【模式：迭代反转；核心：利用 `pre`, `cur`, `next` 三指针完成原地调向】
+- [24. 两两交换链表中的节点](基础算法/模拟/24_swap_nodes_in_pairs.cc)【链表分段操作；用哨兵节点和指针调整完成相邻节点交换】
 - [1721. 交换链表中的节点](https://leetcode.cn/problems/swapping-nodes-in-a-linked-list)【模式：快慢指针；核心：找倒数第 k 个节点与正数第 k 个节点进行交换】
 
 #### 4.2 快慢指针与环形检测
@@ -496,6 +512,7 @@
 - [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii)【模式：双指针追赶；核心：相遇后将一指针归零，同步慢走寻找环入口】
 - [287. 寻找重复数](https://leetcode.cn/problems/find-the-duplicate-number)【模式：映射找环；将数组索引视为链表指针，转化为环入口问题】
 - [876. 链表的中间结点](https://leetcode.cn/problems/middle-of-the-linked-list)【模式：快慢指针；核心：`fast` 走两步 `slow` 走一步，`fast` 到头时 `slow` 在中点】
+- [234. 回文链表](数据结构/234_palindrome_linked_list.cc)【快慢指针 + 反转链表；`O(1)` 额外空间判断回文】
 
 #### 4.3 合并、排序与分隔
 - [21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists)【模式：双指针归并；合并有序链表的基础】
@@ -503,6 +520,7 @@
 - [86. 分隔链表](https://leetcode.cn/problems/partition-list)【模式：双链表拆分；将节点按大小分拨到两个哑节点链表，最后首尾相连】
 - [147. 对链表进行插入排序](https://leetcode.cn/problems/insertion-sort-list)【模式：插入排序；维护已排序部分，将新节点插入合适位置】
 - [148. 链表归并排序](https://leetcode.cn/problems/sort-list)【模式：归并排序；核心：快慢指针找中点 + 递归合并】
+- [143. 重排链表](基础算法/模拟/143_reorder_list.cc)【快慢指针、链表反转与交替合并】
 
 #### 4.4 复杂链表与采样
 - [138. 随机链表的复制](https://leetcode.cn/problems/copy-list-with-random-pointer)【模式：原地克隆；核心：`A->A'->B->B'` 插入法，实现 $O(1)$ 空间拷贝随机指针】
@@ -524,6 +542,7 @@
 - [222. 完全二叉树的节点个数](https://leetcode.cn/problems/count-complete-tree-nodes)【模式：分治 + 完全二叉树性质；核心：利用左右子树高度差判断满二叉树，实现 $O(\log^2 n)$ 极速计数】
 - [226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree)【模式：递归/层序；核心：交换左右子节点，自底向上或自顶向下均可】
 - [637. 二叉树的层平均值](https://leetcode.cn/problems/average-of-levels-in-binary-tree)【模式：BFS；核心：按层求和，注意利用 `long long` 防止累加溢出】
+- [404. 左叶子之和](图论/404_sum_of_left_leaves.cc)【树形 DFS；识别左叶子并累计其节点值】
 
 #### 5.2 路径、祖先与贡献度计算 (DFS 进阶)
 - [114. 二叉树展开为链表](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list)【模式：递归/前驱节点；核心：将左子树插入右侧，注意清空左指针以防成环】
@@ -534,11 +553,14 @@
 - [236. 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree)【模式：DFS 递归；核心：利用返回值上传状态（自底向上聚合），实现无副作用的纯函数设计】
 - [572. 另一棵树的子树](https://leetcode.cn/problems/subtree-of-another-tree)【模式：双重递归；核心：对每个节点调用 `isSameTree`】
 - [1644. LCA II](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree-ii)【模式：计数 DFS；核心：需完整遍历以确认 p, q 是否均存在】
+- [1123. 最深叶节点的最近公共祖先](图论/1123_lowest_common_ancestor_of_deepest_leaves.cc)【后序遍历与树形 DP；比较左右子树最深叶深度】
 
 #### 5.3 构造、变换与序列化
 - [105. 从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal)【模式：分治；核心：前序定根，中序分左右；优化：哈希表预处理索引实现 $O(n)$】
 - [106. 从中序与后序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal)【模式：分治；核心：后序定根，中序分左右】
 - [117. 填充每个节点的下一个右侧节点指针 II](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii)【模式：层序遍历 / 链表模拟；核心：利用已建立的 `next` 指针作为“下一层”的驱动，实现 $O(1)$ 空间复杂度】
+- [297. 二叉树的序列化与反序列化](图论/297_serialize_and_deserialize_binary_tree.cc)【树遍历与编码设计；保证空节点信息可恢复结构】
+- [449. 序列化和反序列化二叉搜索树](图论/449_serialize_and_deserialize_bst.cc)【利用 BST 有序性编码；按前序序列和上下界恢复结构】
 
 #### 5.4 二叉搜索树 (BST 专项)
 - [98. 验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree)【模式：中序遍历 / 分治；陷阱：需保证子树所有节点均在全局上下界内，而非仅满足局部父子关系】
@@ -548,6 +570,8 @@
 - [230. 二叉搜索树中第 K 小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-bst)【模式：中序遍历；核心：利用 BST 中序递增特性，通过迭代法实现“早期停止”以优化性能；进阶：频繁查询可维护子树 size 实现 $O(h)$ 检索】
 - [530. 二叉搜索树的最小绝对差](https://leetcode.cn/problems/minimum-absolute-difference-in-bst)【模式：中序遍历；核心：利用 BST 中序递增特性；进阶：Morris 遍历可实现 $O(1)$ 空间复杂度】
 - [2673. 使二叉树所有路径值相等的最小代价](https://leetcode.cn/problems/make-costs-of-paths-equal-in-a-binary-tree)【模式：贪心/树形 DP；核心：自底向上平衡左右子树代价】
+- [235. 二叉搜索树的最近公共祖先](图论/235_lowest_common_ancestor_of_a_binary_search_tree.cc)【BST 性质；根据节点值关系沿一条路径定位最近公共祖先】
+- [701. 二叉搜索树中的插入操作](图论/701_insert_into_bst.cc)【BST 性质；沿比较路径找到插入位置】
 
 ### 6. 平衡二叉搜索树 (std::map/set)
 
@@ -603,6 +627,7 @@
 - [172. 阶乘后的零](https://leetcode.cn/problems/factorial-trailing-zeroes)【统计因子 5；答案为 `n/5 + n/25 + ...`】
 - [1998. 数组的最大公因数排序](https://leetcode.cn/problems/gcd-sort-of-an-array)【质因数分解 + 并查集；按公共质因数连接可交换元素】
 - [2709. 最大公约数遍历](https://leetcode.cn/problems/greatest-common-divisor-traversal)【质因数分解 + 连通性；判断所有元素是否属于同一连通块】
+- [3790. 最小全 1 倍数](数学/3790_smallest_all_ones_multiple.cc)【数论与模状态；按余数搜索由 1 构成的最小倍数】
 
 ### 2. 模运算与快速幂
 
@@ -621,6 +646,7 @@
 - [118. 杨辉三角](https://leetcode.cn/problems/pascals-triangle)【组合数递推；每项由上一行相邻两项相加得到】
 - [2930. 重新排列后包含指定子字符串的字符串数目](https://leetcode.cn/problems/number-of-strings-which-can-be-rearranged-to-contain-substring)【容斥原理 + 组合计数；统计至少包含目标字符集合的排列数】
 - [3154. 到达第 K 级台阶的方案数](https://leetcode.cn/problems/find-number-of-ways-to-reach-the-k-th-stair)【组合数 + 状态计数；按跳跃次数确定可达位置】
+- [60. 第 K 个排列](搜索/60_permutation_sequence.cc)【阶乘数系统；按分组规模直接定位第 `k` 个排列】
 - [3405. 统计恰好有 K 个相等相邻元素的数组数目](https://leetcode.cn/problems/count-the-number-of-arrays-with-k-matching-adjacent-elements)【组合计数；先选择相等相邻位置，再填充不同元素】
 
 ### 4. 数位与数字构造
@@ -628,6 +654,8 @@
 数位统计、数位 DP、前导零、上界限制和数字切分。
 
 - [233. 数字 1 的个数](https://leetcode.cn/problems/number-of-digit-one)【数位统计；按当前位、高位和低位分情况计数】
+- [12. 整数转罗马数字](数学/12_integer_to_roman.cc)【贪心构造；按从大到小的罗马数字单位依次消耗数值】
+- [13. 罗马数字转整数](数学/13_roman_to_integer.cc)【规则解析；当前符号小于后继符号时执行减法】
 - [400. 第 N 位数字](https://leetcode.cn/problems/nth-digit)【数字分组定位；按位数段扣除数量后定位具体数字和数字位】
 - [2698. 求一个整数的惩罚数](https://leetcode.cn/problems/find-the-punishment-number-of-an-integer)【数字切分 + DFS；枚举平方数的分段和是否等于原数】
 - [2801. 统计范围内的步进数字数目](https://leetcode.cn/problems/count-stepping-numbers-in-range)【数位 DP；状态记录上一位、上界和前导零】
@@ -643,6 +671,7 @@ lowbit、x & (x - 1)、异或、位掩码和二进制 Trie。
 - [260. 只出现一次的数字 III](https://leetcode.cn/problems/single-number-iii)【异或分组；利用最低不同位将两个答案分开】
 - [318. 最大单词长度乘积](https://leetcode.cn/problems/maximum-product-of-word-lengths)【位掩码表示字符集合；通过按位与判断是否有公共字符】
 - [421. 数组中两个数的最大异或值](https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array)【二进制 Trie；从高位到低位贪心寻找相反位】
+- [201. 数字范围按位与](数学/201_bitwise_and_of_numbers_range.cc)【位运算；不断移除右侧不同的低位，保留公共高位前缀】
 
 ### 6. 随机化与概率算法
 
@@ -686,6 +715,9 @@ lowbit、x & (x - 1)、异或、位掩码和二进制 Trie。
 - [162. 寻找峰值](https://leetcode.cn/problems/find-peak-element)【局部单调二分；根据相邻元素大小向上坡方向移动】
 - [153. 寻找旋转排序数组中的最小值](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array)【比较 `mid` 与右端点；定位旋转点所在的无序区间】
 - [154. 寻找旋转排序数组中的最小值 II](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array-ii)【重复元素导致无法判断时收缩右边界】
+- [69. x 的平方根](数学/69_sqrt_x.cc)【二分查找；在有序答案空间中寻找平方不超过 `x` 的最大整数】
+- [81. 搜索旋转排序数组 II](基础算法/81_search_in_rotated_sorted_array_ii.cc)【旋转数组二分；重复值导致两端无法判断时收缩边界】
+- [704. 二分查找](搜索/704_binary_search.cc)【闭区间与半开区间；维护不变量完成有序查找】
 - [1482. 制作 m 束花所需的最少天数](https://leetcode.cn/problems/minimum-number-of-days-to-make-m-bouquets)【二分最小天数；用贪心判断能否组成足够花束】
 - [410. 分割数组的最大值](https://leetcode.cn/problems/split-array-largest-sum)【二分答案；贪心检查分段数量是否不超过限制】
 
@@ -699,6 +731,7 @@ lowbit、x & (x - 1)、异或、位掩码和二进制 Trie。
 - [752. 打开转盘锁](https://leetcode.cn/problems/open-the-lock)【状态空间 BFS；四位密码每次转动一格，避开死亡状态】
 - [909. 蛇梯棋](https://leetcode.cn/problems/snakes-and-ladders)【棋盘状态 BFS；将编号映射到坐标并模拟一次掷骰转移】
 - [994. 腐烂的橘子](https://leetcode.cn/problems/rotting-oranges)【多源 BFS；所有腐烂橘子同时作为初始层扩散】
+- [317. 离建筑物最近的距离](https://leetcode.cn/problems/shortest-distance-from-all-buildings)【多源 BFS；累计每个空地到所有建筑物的距离】
 - [1306. 跳跃游戏 III](https://leetcode.cn/problems/jump-game-iii)【数组状态 BFS/DFS；访问下标并避免重复跳转】
 - [1345. 跳跃游戏 IV](https://leetcode.cn/problems/jump-game-iv)【BFS + 值到下标映射；同值下标只扩展一次】
 - [1368. 使网格图至少有一条有效路径的最小代价](https://leetcode.cn/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid)【0-1 BFS；免费沿箭头走，改变方向代价为 1】
@@ -717,6 +750,8 @@ lowbit、x & (x - 1)、异或、位掩码和二进制 Trie。
 - [52. N 皇后 II](https://leetcode.cn/problems/n-queens-ii)【棋盘回溯计数；状态与 N 皇后相同但只累计方案数】
 - [79. 单词搜索](https://leetcode.cn/problems/word-search)【网格回溯；原地标记访问位置并在递归结束后恢复】
 - [131. 分割回文串](https://leetcode.cn/problems/palindrome-partitioning)【字符串回溯 + 预处理；枚举切分位置并判断子串回文】
+- [37. 解数独](https://leetcode.cn/problems/sudoku-solver)【回溯搜索；用行、列、宫约束和位掩码剪枝】
+- [216. 组合总和 III](搜索/216_combination_sum_iii.cc)【组合回溯；限制选择数量、目标和并剪枝】
 - [698. 划分为 k 个相等的子集](https://leetcode.cn/problems/partition-to-k-equal-sum-subsets)【回溯 + 剪枝；按桶分配元素并跳过等价桶状态】
 
 ### 4. 逆向、状态压缩与启发式搜索
@@ -742,7 +777,13 @@ DP 专题负责粗粒度分类和完整题单；完整的状态定义、转移�
 - [53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray)【Kadane；维护以当前位置结尾的最大子数组和】
 - [70. 爬楼梯](https://leetcode.cn/problems/climbing-stairs)【线性递推；当前状态由前两级转移】
 - [198. 打家劫舍](https://leetcode.cn/problems/house-robber)【状态机；当前房屋在“偷/不偷”之间选择】
+- [121. 买卖股票的最佳时机](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock)【一次交易；维护历史最低买入价与最大收益】
+- [122. 买卖股票的最佳时机 II](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii)【无限次交易；累加所有正向价格差】
+- [123. 买卖股票的最佳时机 III](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii)【最多两次交易；状态机或四状态 DP】
+- [188. 买卖股票的最佳时机 IV](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv)【最多 `k` 次交易；压缩交易状态并处理大 `k`】
 - [309. 买卖股票的最佳时机含冷冻期](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown)【状态机 DP；持有、卖出、冷冻期分别建模】
+- [343. 整数拆分](数学/343_integer_break.cc)【线性 DP；枚举最后一次拆分，取各段乘积的最大值】
+- [714. 买卖股票的最佳时机含手续费](动态规划/714_best_time_to_buy_and_sell_stock_with_transaction_fee.cc)【状态 DP；比较持有和不持有股票的收益】
 - [746. 使用最小花费爬楼梯](https://leetcode.cn/problems/min-cost-climbing-stairs)【滚动 DP；到达当前台阶的最小代价】
 
 ### 2. 背包 DP
@@ -755,6 +796,7 @@ DP 专题负责粗粒度分类和完整题单；完整的状态定义、转移�
 - [474. 一和零](https://leetcode.cn/problems/ones-and-zeroes)【二维 0/1 背包；同时限制 0 和 1 的数量】
 - [494. 目标和](https://leetcode.cn/problems/target-sum)【0/1 背包计数；将正负号选择转为目标和】
 - [518. 零钱兑换 II](https://leetcode.cn/problems/coin-change-ii)【完全背包组合计数；物品放在外层避免排列重复】
+- [377. 组合总和 Ⅳ](搜索/377_combination_sum_iv.cc)【完全背包；区分组合与排列的遍历顺序】
 - [698. 划分为 k 个相等的子集](https://leetcode.cn/problems/partition-to-k-equal-sum-subsets)【状态压缩/回溯；把元素分配到等和桶中】
 - [879. 盈利计划](https://leetcode.cn/problems/profitable-schemes)【二维 0/1 计数；人数和利润共同构成状态】
 
@@ -766,6 +808,8 @@ DP 专题负责粗粒度分类和完整题单；完整的状态定义、转移�
 - [72. 编辑距离](https://leetcode.cn/problems/edit-distance)【双序列 DP；插入、删除、替换对应三种转移】
 - [1143. 最长公共子序列](https://leetcode.cn/problems/longest-common-subsequence)【LCS；相等时取对角线，否则取上/左最大值】
 - [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence)【序列 DP；也可用贪心 + 二分优化到 `O(n log n)`】
+- [334. 递增的三元子序列](动态规划/334_increasing_triplet_subsequence.cc)【贪心维护最小和次小值；出现更大的第三个值即可构成递增三元组】
+- [1671. 得到山形数组的最少删除次数](https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array)【左右 LIS；保留一个先增后减的最长子序列】
 - [354. 俄罗斯套娃信封问题](https://leetcode.cn/problems/russian-doll-envelopes)【排序 + LIS；宽度升序、相同宽度高度降序】
 - [583. 两个字符串的删除操作](https://leetcode.cn/problems/delete-operation-for-two-strings)【LCS 变形；长度减去公共子序列贡献】
 - [673. 最长递增子序列的个数](https://leetcode.cn/problems/number-of-longest-increasing-subsequence)【长度 DP + 方案计数】
@@ -778,6 +822,7 @@ DP 专题负责粗粒度分类和完整题单；完整的状态定义、转移�
 - [312. 戳气球](https://leetcode.cn/problems/burst-balloons)【区间 DP；枚举区间内最后被戳破的气球】
 - [375. 猜数字大小 II](https://leetcode.cn/problems/guess-number-higher-or-lower-ii)【区间最坏代价 DP；枚举第一次猜测位置】
 - [516. 最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence)【区间 DP；两端相等时向内转移】
+- [132. 分割回文串 II](动态规划/132_palindrome_partitioning_ii.cc)【回文预处理 + 区间 DP；求最少切割次数】
 - [877. 石子游戏](https://leetcode.cn/problems/stone-game)【区间博弈 DP；维护当前玩家相对对手的最优差值】
 - [887. 鸡蛋掉落](https://leetcode.cn/problems/super-egg-drop)【状态优化 DP；按操作次数计算可覆盖楼层数】
 - [1140. 石子游戏 II](https://leetcode.cn/problems/stone-game-ii)【区间 + 状态 DP；状态包含当前位置和可取石子上限】
@@ -833,6 +878,7 @@ DP 专题负责粗粒度分类和完整题单；完整的状态定义、转移�
 - [44. 通配符匹配](https://leetcode.cn/problems/wildcard-matching)【记忆化搜索/贪心；处理 `*` 的匹配范围】
 - [464. 我能赢吗](https://leetcode.cn/problems/can-i-win)【博弈 + 状态压缩；判断当前玩家是否存在必胜选择】
 - [486. 预测赢家](https://leetcode.cn/problems/predict-the-winner)【区间博弈 DP；维护当前玩家相对分差】
+- [1340. 跳跃游戏 V](动态规划/1340_jump_game_v.cc)【记忆化搜索 + 动态规划；按高度限制枚举可跳位置】
 - [913. 猫和老鼠](https://leetcode.cn/problems/cat-and-mouse)【图上博弈；状态包含双方位置与轮次】
 - [2851. 字符串 K 次转换等于目标串的方案数量](https://leetcode.cn/problems/string-transformation)【KMP/循环结构 + 矩阵快速幂；快速计算多次转移】
 - [3283. 吃掉所有兵需要的最多移动次数](https://leetcode.cn/problems/maximum-number-of-moves-to-kill-all-pawns)【状态压缩博弈；预计算棋盘移动距离后进行最优转移】
@@ -1042,6 +1088,7 @@ DP 专题负责粗粒度分类和完整题单；完整的状态定义、转移�
 - [2360. 图中的最长环](https://leetcode.cn/problems/longest-cycle-in-a-graph)【拓扑剥离或时间戳 DFS；计算每个有向环的长度】
 
 ### 10. 高级图论与连通性 (基环树/网络流)
+- [2477. 到达首都的最少油耗](搜索/2477_minimum_fuel_cost.cc)【树形 DFS；按子树人数向上汇聚并计算车辆数量】
 - [1489. 找到最小生成树里的关键边和伪关键边](https://leetcode.cn/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree)【Kruskal 重跑；分别强制加入或禁用边判断关键性】
 - [2685. 统计完全连通分量的数量](https://leetcode.cn/problems/count-the-number-of-complete-components)【DFS/BFS + 边数统计；比较边数与完全图理论边数】
 - [7rLGCR. 守卫城堡](https://leetcode.cn/problems/7rLGCR)【网络流/最小割；将防守和攻击限制建模为容量】
@@ -1062,6 +1109,7 @@ DP 专题负责粗粒度分类和完整题单；完整的状态定义、转移�
 - [303. 区域和检索 - 数组不可变](https://leetcode.cn/problems/range-sum-query-immutable)【前缀和；`pref[r + 1] - pref[l]` 在 $O(1)$ 时间查询静态区间和】
 - [238. 除了自身以外数组的乘积](https://leetcode.cn/problems/product-of-array-except-self)【前缀积 + 后缀积；两次扫描避免使用除法】
 - [560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k)【前缀和 + 哈希表；将子数组和转化为两前缀和之差】
+- [327. 区间和的个数](数据结构/327_count_of_range_sum.cc)【前缀和 + 归并排序；统计满足范围约束的前缀和对】
 - [1423. 可获得的最大点数](https://leetcode.cn/problems/maximum-points-you-can-obtain-from-cards)【前缀和/滑动窗口；枚举从两端取得的牌数】
 - [253. 会议室 II](https://leetcode.cn/problems/meeting-rooms-ii)【差分/扫描线；起点 `+1`、终点 `-1`，前缀最大值为最大并发数】
 - [995. K 连续位的最小翻转次数](https://leetcode.cn/problems/minimum-number-of-k-consecutive-bit-flips)【差分；记录翻转影响的起止位置】
@@ -1080,6 +1128,7 @@ DP 专题负责粗粒度分类和完整题单；完整的状态定义、转移�
 - [307. 区域和检索 - 数组可修改](https://leetcode.cn/problems/range-sum-query-mutable)【树状数组；单点更新、前缀和查询均为 $O(\log n)$】
 - [315. 计算右侧小于当前元素的个数](https://leetcode.cn/problems/count-of-smaller-numbers-after-self)【离散化 + 树状数组；经典逆序统计】
 - [1505. 最多 K 次交换相邻数位后得到的最小整数](https://leetcode.cn/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits)【树状数组；维护已删除位置造成的相对偏移】
+- [1850. 邻位交换的第 K 个最小妙数](https://leetcode.cn/problems/minimum-adjacent-swaps-to-reach-the-kth-smallest-number)【贪心构造 + 树状数组；逐位选择并计算移动代价】
 - [DQUERY. D-query](https://www.spoj.com/problems/DQUERY/)【离线扫描线 + 树状数组；按右端点扫描，元素最近出现位置置换以统计区间不同元素数】
 - [1851. 包含每个查询的最小区间](https://leetcode.cn/problems/minimum-interval-to-include-each-query)【离线排序 + 最小堆；按查询值推进区间起点】
 - [2747. 统计没有收到请求的服务器数目](https://leetcode.cn/problems/count-zero-request-servers)【离线排序 + 滑动窗口；按查询时间维护活跃服务器】
