@@ -6,6 +6,7 @@
 
 - [学习路线](guides/roadmap/00-start-here.md)：按基础阶段、核心模式、高级专题和面试冲刺组织学习顺序。
 - [完整 LeetCode 题单](guides/indexes/leetcode-problems.md)：聚合 `leetcode/README.md` 的题单，并补录仓库中尚未进入题单的本地源码题；没有本地源码时链接 LeetCode 原题。
+- [面试高频 Top 100](leetcode/top100.md) / [面试高频 Top 300](leetcode/top300.md)：按常见面试频率整理的重点题单，附主要考点与解题思路。
 - [按主题](guides/indexes/problems-by-topic.md) / [按模式](guides/indexes/problems-by-pattern.md) / [按难度](guides/indexes/problems-by-difficulty.md) / [按来源](guides/indexes/problems-by-source.md) / [模板索引](guides/indexes/templates-by-topic.md)：从不同维度查找题解和模板。
 - [待整理源码](guides/indexes/experimental-and-unfiled-sources.md)：已保留但尚未完成学习分类的源码、示例与工具。
 
@@ -20,7 +21,7 @@
 
 | 目录 | 内容 | 入口 |
 | --- | --- | --- |
-| [`leetcode/`](leetcode/) | LeetCode 题解、按专题归档的题单与源码；这里是本地题解目录的主要入口。 | [题目索引](leetcode/README.md) |
+| [`leetcode/`](leetcode/) | LeetCode 题解、按专题归档的题单与源码；这里是本地题解目录的主要入口。 | [题目索引](leetcode/README.md) / [Top 100](leetcode/top100.md) / [Top 300](leetcode/top300.md) |
 | [`剑指offer/`](剑指offer/) | 《剑指 Offer》66 题实现，源码位于 `src/`，文件名为 `offerN.cc`。 | [题目说明](剑指offer/README.md) |
 | [`其它常见的题目/`](其它常见的题目/) | 面试高频题、算法模板、数据结构实现、设计模式与并发练习；源码位于平铺的 `src/`。 | [目录索引](其它常见的题目/README.md) |
 | [`template/`](template/) | 六大分类学习文档，以及区间查询与统计、路径问题两个跨分类专题；可编译源码统一链接至“其它常见的题目”。 | [模板导航](template/README.md) |
