@@ -132,7 +132,7 @@ class MarkdownConsistencyTest(unittest.TestCase):
             self.assertEqual(statistics.local_only_problems, 1)
             self.assertEqual(statistics.all_problems, 2)
 
-    def test_stale_documented_statistics_are_rejected(self):
+    def test_homepage_statistics_are_optional_but_index_statistics_are_checked(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             readme = self.write(
@@ -146,8 +146,7 @@ class MarkdownConsistencyTest(unittest.TestCase):
                 "README 题单共 99 个唯一题目；仓库另有 99 个本地源码题，合计 198 条。\n",
             )
             errors = validate_documented_statistics(root, readme)
-            self.assertTrue(any("首页 LeetCode 源码统计不一致" in error for error in errors))
-            self.assertTrue(any("首页完整题单统计不一致" in error for error in errors))
+            self.assertFalse(any("首页" in error for error in errors))
             self.assertTrue(any("完整索引统计不一致" in error for error in errors))
 
     def test_public_indexes_must_not_store_personal_review_state(self):

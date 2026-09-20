@@ -187,43 +187,11 @@ def repository_statistics(root: Path, readme: Path) -> RepositoryStatistics:
     )
 
 
-def _language_phrase(languages: tuple[str, ...]) -> str:
-    if not languages:
-        return "无"
-    if len(languages) == 1:
-        return languages[0]
-    return "、".join(languages[:-1]) + " 与 " + languages[-1]
-
-
 def validate_documented_statistics(root: Path, readme: Path) -> List[str]:
     statistics = repository_statistics(root, readme)
     errors: List[str] = []
-    home = root / "README.md"
     index = root / "guides/indexes/leetcode-problems.md"
-    home_text = home.read_text(encoding="utf-8") if home.exists() else ""
     index_text = index.read_text(encoding="utf-8") if index.exists() else ""
-    expected_home = (
-        f"- LeetCode：{statistics.leetcode_sources} 个源码文件，覆盖 "
-        f"{_language_phrase(statistics.leetcode_languages)}。"
-    )
-    if expected_home not in home_text:
-        errors.append(f"{home}:首页 LeetCode 源码统计不一致，期望：{expected_home}")
-    expected_offer = f"- 剑指 Offer：{statistics.offer_sources} 个 C++ 题解文件。"
-    if expected_offer not in home_text:
-        errors.append(f"{home}:首页剑指 Offer 源码统计不一致，期望：{expected_offer}")
-    expected_other = (
-        f"- 其它常见题目：{statistics.other_sources} 个多语言源码/头文件，"
-        "覆盖图论、字符串、区间查询、动态规划、数据结构、设计模式与并发。"
-    )
-    if expected_other not in home_text:
-        errors.append(f"{home}:首页其它题目源码统计不一致，期望：{expected_other}")
-    expected_problem_total = (
-        f"- 完整 LeetCode 题单：{statistics.all_problems} 道去重题目，其中包含 "
-        f"{statistics.local_only_problems} 道未进入 README 题单的本地源码题和 "
-        f"{statistics.index_only_problems} 道扩展题目。"
-    )
-    if expected_problem_total not in home_text:
-        errors.append(f"{home}:首页完整题单统计不一致，期望：{expected_problem_total}")
     expected_index = (
         f"README 题单共 {statistics.readme_problems} 个唯一题目；仓库另有 "
         f"{statistics.local_only_problems} 个未进入 README 的本地源码题；"

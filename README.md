@@ -1,62 +1,95 @@
+<div align="center">
+
 # leetcode-primer
 
-一个以 C++ 算法题解为主的学习与复盘仓库，收录 LeetCode、剑指 Offer、算法模板、数据结构实现和少量工程练习。仓库用学习路线、专题模板、题单索引和复习规则组织内容，方便按主题学习、按模式练习，并在本地记录复习进度。LeetCode 目录还包含少量 SQL 题目；通用模板和并发、工具示例另有 Go、Python、Lua 及头文件实现。
+**面向求职面试的 C++ 算法题解、学习路线与间隔复盘仓库**
 
-## 快速导航
+![LeetCode 题单](https://img.shields.io/badge/LeetCode-666%20题-brightgreen)
+![主要语言](https://img.shields.io/badge/主要语言-C%2B%2B-blue)
 
-- [学习路线](guides/roadmap/00-start-here.md)：按基础阶段、核心模式、高级专题和面试冲刺组织学习顺序。
-- [完整 LeetCode 题单](guides/indexes/leetcode-problems.md)：聚合 `leetcode/README.md` 的题单，并补录仓库中尚未进入题单的本地源码题；没有本地源码时链接 LeetCode 原题。
-- [面试高频 Top 100](leetcode/top100.md) / [面试高频 Top 300](leetcode/top300.md)：按常见面试频率整理的重点题单，附主要考点与解题思路。
-- [按主题](guides/indexes/problems-by-topic.md) / [按模式](guides/indexes/problems-by-pattern.md) / [按难度](guides/indexes/problems-by-difficulty.md) / [按来源](guides/indexes/problems-by-source.md) / [模板索引](guides/indexes/templates-by-topic.md)：从不同维度查找题解和模板。
-- [待整理源码](guides/indexes/experimental-and-unfiled-sources.md)：已保留但尚未完成学习分类的源码、示例与工具。
+[开始刷题](guides/roadmap/00-start-here.md) · [Top 100](leetcode/top100.md) · [Top 300](leetcode/top300.md) · [完整题单](guides/indexes/leetcode-problems.md) · [复习方法](guides/review-method.md)
 
-## 学习与复盘
+</div>
 
-- [复习方法](guides/review-method.md)：使用 `new`、`review`、`mastered`、`mistake` 和 `1 -> 3 -> 7 -> 14` 天复习节奏；个人进度保存在本地 `.local/reviews/`，不提交到仓库。
-- [题目笔记模板](guides/problem-note-template.md)：统一题目笔记与索引字段。
-- [命名规范](guides/naming-conventions.md)：统一新增源码文件命名。
-- [贡献指南](guides/contribution-guide.md)：新增题目时同步本地 README 与索引。
+---
 
-## 内容目录
+## 为面试而学，而不只是刷题
 
-| 目录 | 内容 | 入口 |
+这是一个以 C++ 算法题解为主的学习与复盘仓库，收录 LeetCode、剑指 Offer、算法模板、数据结构实现，以及少量并发和工程练习。它把题解组织为一条可执行的学习路线：**按阶段建立模型，按模式专项练习，再用错题复盘巩固面试表现**。
+
+适合准备算法面试、希望建立系统刷题框架，或需要快速回顾常用模板的读者。
+
+## 面试冲刺，从这里开始
+
+| 你的目标 | 推荐入口 | 你会得到什么 |
 | --- | --- | --- |
-| [`leetcode/`](leetcode/) | LeetCode 题解、按专题归档的题单与源码；这里是本地题解目录的主要入口。 | [题目索引](leetcode/README.md) / [Top 100](leetcode/top100.md) / [Top 300](leetcode/top300.md) |
-| [`剑指offer/`](剑指offer/) | 《剑指 Offer》66 题实现，源码位于 `src/`，文件名为 `offerN.cc`。 | [题目说明](剑指offer/README.md) |
-| [`其它常见的题目/`](其它常见的题目/) | 面试高频题、算法模板、数据结构实现、设计模式与并发练习；源码位于平铺的 `src/`。 | [目录索引](其它常见的题目/README.md) |
-| [`template/`](template/) | 六大分类学习文档，以及区间查询与统计、路径问题两个跨分类专题；可编译源码统一链接至“其它常见的题目”。 | [模板导航](template/README.md) |
+| 从零建立刷题顺序 | [学习路线](guides/roadmap/00-start-here.md) | 基础阶段、核心模式、高级专题与面试冲刺的阶段化安排。 |
+| 优先攻克最常考题 | [面试高频 Top 100](leetcode/top100.md) | 高频题与对应的主要考点、解题思路。 |
+| 做更完整的面试覆盖 | [面试高频 Top 300](leetcode/top300.md) | 面向系统复习的重点题单。 |
+| 按目标补齐题目 | [完整 LeetCode 题单](guides/indexes/leetcode-problems.md) | 666 道去重题目；本地有源码时直达源码，没有时链接原题。 |
+| 按解法查缺补漏 | [按模式](guides/indexes/problems-by-pattern.md) / [按主题](guides/indexes/problems-by-topic.md) / [按难度](guides/indexes/problems-by-difficulty.md) / [按来源](guides/indexes/problems-by-source.md) | 从双指针、滑动窗口、DP、图论等维度定位练习。 |
 
-## 目录约定
+> **建议的冲刺顺序：** 先沿学习路线补齐基础，再完成 Top 100；面试前按模式回顾薄弱点，用 Top 300 和错题记录做混合练习。
 
-- `guides/` 存放学习路线、完整索引、主题/模式/难度索引、模板索引以及复习和协作规范。
-- LeetCode 源码按主要解法归档在 `leetcode/` 下的六个主题目录中；大多数文件使用 `<题号>_<英文简称>.<扩展名>` 命名，LCR 等特殊编号沿用对应命名；模拟题统一位于 `leetcode/基础算法/模拟/`。
-- 剑指 Offer 源码位于 `剑指offer/src/`，不再保留中间 `cpp/` 层级。
-- “其它常见的题目”的源码位于平铺的 `src/`；文件使用小写英文 `snake_case`，例如 `graph_dijkstra.cc`、`string_kmp.cc`、`concurrency_h2o.go`。
-- `template/` 只保留 Markdown 学习模板；对应的可编译源码统一放在“其它常见的题目”。
+## 学习与复盘闭环
 
-## LeetCode 源码归类规则
+```text
+选择专题或高频题 → 独立完成并复盘思路 → 记录错误原因 → 按间隔重复回顾 → 回到混合题检验
+```
 
-LeetCode 题解按题号和英文简称命名为 `<题号>_<english_slug>.<扩展名>`（特殊编号按对应格式命名），并归入一个主要主题目录。一个题目可能同时涉及多个主题；目录归类按代码中占主导地位的解法决定，索引再提供主题和模式维度的交叉查找：
+- 使用 `new`、`review`、`mastered`、`mistake` 标记掌握状态。
+- 按 `1 → 3 → 7 → 14` 天节奏复习；失误题回到复习队列。
+- 个人记录放在本地 `.local/reviews/`，不会提交到仓库。可从[复习记录示例](guides/reviews/review.example.md)开始，并阅读完整的[复习方法](guides/review-method.md)。
 
-1. 二分、排序、双指针、滑动窗口、贪心、分治、模拟 → `基础算法`
-2. 栈、队列、堆、哈希、链表、树、Trie、区间结构 → `数据结构`
-3. 数论、数位、组合、取模、位运算、随机化、几何 → `数学`
-4. 非图状态空间的 DFS、BFS、回溯、剪枝、启发式搜索 → `搜索`
-5. 状态转移、背包、区间、树形、状态压缩、数位 DP → `动态规划`
-6. 图遍历、并查集、拓扑排序、最短路、生成树、匹配、网络流 → `图论`
+## 快速上手
 
-跨分类内容通过[区间查询与统计](template/专题-区间查询与统计.md)和[路径问题](template/专题-路径问题.md)两个专题串联复习，不新增一级源码目录。
+本仓库按题目和专题保存相对独立的源码，没有统一构建系统。克隆后可直接编译带有 `main` 函数的示例文件：
 
-## 当前规模
+```bash
+git clone https://github.com/wxquare/leetcode-primer.git
+cd leetcode-primer
 
-- LeetCode：677 个源码文件，覆盖 C++ 与 SQL。
-- 剑指 Offer：66 个 C++ 题解文件。
-- 其它常见题目：79 个多语言源码/头文件，覆盖图论、字符串、区间查询、动态规划、数据结构、设计模式与并发。
-- 完整 LeetCode 题单：666 道去重题目，其中包含 141 道未进入 README 题单的本地源码题和 0 道扩展题目。
+# 示例：编译并运行 KMP 实现
+g++ -std=c++17 -O2 "其它常见的题目/src/string_kmp.cc" -o /tmp/string_kmp
+/tmp/string_kmp
+```
 
-## 使用建议
+开始记录自己的复习进度：
 
-- 从 [学习路线](guides/roadmap/00-start-here.md) 开始，再通过 [完整 LeetCode 题单](guides/indexes/leetcode-problems.md) 或主题/模式/难度索引做针对性练习。
-- 每个目录的 README 是该目录的事实入口；编译或修改源码前，先阅读对应 README。
-- 同一主题可能保留多种实现，用于比较不同思路；优先以各目录 README 的说明为准。
-- 新增题目时，同步更新源码、所属目录 README 和对应的索引。
+```bash
+mkdir -p .local/reviews
+cp guides/reviews/review.example.md .local/reviews/YYYY-MM-DD.md
+```
+
+填写后的记录仅保留在本地；题目笔记可参考[题目笔记模板](guides/problem-note-template.md)。
+
+## 内容地图
+
+```text
+leetcode-primer/
+├── guides/                         # 学习路线、多维索引、复习与协作规范
+│   ├── roadmap/                    # 阶段化学习路线
+│   └── indexes/                    # 题单、主题、模式、难度与来源索引
+├── leetcode/                       # LeetCode 题解，按六个主要主题归档
+│   ├── 基础算法/ 数据结构/ 数学/
+│   └── 搜索/ 动态规划/ 图论/
+├── 剑指offer/                      # 《剑指 Offer》66 题，源码在 src/
+├── 其它常见的题目/                  # 高频题、模板、数据结构、设计模式与并发练习
+│   └── src/                        # C++、Go、Python、Lua 等源码/头文件
+└── template/                       # Markdown 学习模板与跨分类专题
+```
+
+| 内容 | 入口 | 说明 |
+| --- | --- | --- |
+| LeetCode 题解 | [题目索引](leetcode/README.md) | 按六大主要主题归档的题解、题单与源码。 |
+| 剑指 Offer | [题目说明](剑指offer/README.md) | 66 个 C++ 题解，源码命名为 `offerN.cc`。 |
+| 常见题与工程练习 | [目录索引](其它常见的题目/README.md) | 图论、字符串、区间查询、动态规划、并发等多语言实现。 |
+| 算法模板 | [模板导航](template/README.md) | 六大分类学习文档，以及区间查询与统计、路径问题等跨分类专题。 |
+| 模板索引 | [按主题查看模板](guides/indexes/templates-by-topic.md) | 按专题定位可复用的学习模板。 |
+
+## 阅读与贡献约定
+
+- LeetCode 源码以主导解法归入基础算法、数据结构、数学、搜索、动态规划或图论；跨分类题目通过[主题索引](guides/indexes/problems-by-topic.md)和[模式索引](guides/indexes/problems-by-pattern.md)交叉查找。
+- LeetCode 文件通常命名为 `<题号>_<english_slug>.<扩展名>`；其它常见题目使用小写 `snake_case`。详细规则见[命名规范](guides/naming-conventions.md)。
+- 新增题目时，请同步更新源码、所属目录 README 和至少一条索引；具体要求见[贡献指南](guides/contribution-guide.md)。
+- 每个目录的 README 是该目录的事实入口；需要完整模板、题单或规则时，优先沿上方链接进入对应的权威文档。
