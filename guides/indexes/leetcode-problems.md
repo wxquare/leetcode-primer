@@ -2,7 +2,7 @@
 
 [LeetCode 题目目录](../../leetcode/README.md) / [按来源索引](problems-by-source.md) / [按主题索引](problems-by-topic.md) / [按模式索引](problems-by-pattern.md)
 
-本索引覆盖 [leetcode/README.md](../../leetcode/README.md) 中出现的全部 LeetCode 题目，并补充仓库中尚未进入 README 题单的本地源码题。README 题单共 478 个唯一题目；仓库另有 158 个未进入 README 的本地源码题；索引另收录 17 个扩展题目，合计 653 条。README 题目没有本地源码时，题目标题直接链接到 LeetCode 原题；补充条目按仓库源码链接。
+本索引覆盖 [leetcode/README.md](../../leetcode/README.md) 中出现的全部 LeetCode 题目，并补充仓库中尚未进入 README 题单的本地源码题。README 题单共 478 个唯一题目；仓库另有 178 个未进入 README 的本地源码题；索引另收录 0 个扩展题目，合计 656 条。README 题目没有本地源码时，题目标题直接链接到 LeetCode 原题；补充条目按仓库源码链接。
 
 ## 基础算法
 
@@ -503,6 +503,9 @@
 
 | 题目 | 本地源码 |
 | --- | --- |
+| LeetCode 59（剑指 Offer II 59：队列的最大值） | [59_ii_max_queue_lcof.cc](../../leetcode/数据结构/59_ii_max_queue_lcof.cc) |
+| LeetCode 193（LCR 193：二叉搜索树的最近公共祖先） | [193_lowest_common_ancestor_of_a_bst_lcr.cc](../../leetcode/数据结构/193_lowest_common_ancestor_of_a_bst_lcr.cc) |
+| LeetCode 2954. 统计感染序列的数目 | [2954_count_the_number_of_infection_sequences.cc](../../leetcode/数学/2954_count_the_number_of_infection_sequences.cc) |
 | LeetCode 2 | [2_add_two_numbers.cc](../../leetcode/数学/2_add_two_numbers.cc) |
 | LeetCode 6 | [6_zig_zag_conversion.cc](../../leetcode/基础算法/6_zig_zag_conversion.cc) |
 | LeetCode 12 | [12_integer_to_roman.cc](../../leetcode/数学/12_integer_to_roman.cc) |
