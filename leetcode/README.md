@@ -121,6 +121,7 @@
 - [347. 前 K 个高频元素](https://leetcode.cn/problems/top-k-frequent-elements)【频次统计 + 堆或桶排序；提取高频元素】
 - [295. 数据流的中位数](https://leetcode.cn/problems/find-median-from-data-stream)【对顶堆；最大堆维护较小一半、最小堆维护较大一半，堆顶给出中位数】
 - [703. 数据流中的第 K 大元素](https://leetcode.cn/problems/kth-largest-element-in-a-stream)【大小为 K 的最小堆；流式插入后堆顶始终是第 K 大元素】
+- [315. 计算右侧小于当前元素的个数](https://leetcode.cn/problems/count-of-smaller-numbers-after-self)【归并排序 + 合并有序时统计右侧小于当前元素的数量】
 
 ### 5. 枚举与状态遍历
 - [2555. 两个线段获得的最多奖品](https://leetcode.cn/problems/maximize-win-from-two-segments)【维护左边，枚举右边】
