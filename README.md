@@ -7,7 +7,7 @@
 ![LeetCode 题单](https://img.shields.io/badge/LeetCode-666%20题-brightgreen)
 ![主要语言](https://img.shields.io/badge/主要语言-C%2B%2B-blue)
 
-[开始刷题](guides/roadmap/00-start-here.md) · [Top 100](leetcode/top100.md) · [Top 300](leetcode/top300.md) · [完整题单](guides/indexes/leetcode-problems.md) · [复习方法](guides/review-method.md)
+[开始刷题](guides/roadmap/00-start-here.md) · [Top 100](leetcode/top100.md) · [Top 300](leetcode/top300.md) · [完整题单](guides/indexes/leetcode-problems.md) · [后端与系统设计](system-design/README.md) · [复习方法](guides/review-method.md)
 
 </div>
 
@@ -17,7 +17,11 @@
 
 这是一个以 C++ 算法题解为主的学习与复盘仓库，收录 LeetCode、剑指 Offer、算法模板、数据结构实现，以及少量并发和工程练习。它把题解组织为一条可执行的学习路线：**按阶段建立模型，按模式专项练习，再用错题复盘巩固面试表现**。
 
-适合准备算法面试、希望建立系统刷题框架，或需要快速回顾常用模板的读者。
+适合准备算法面试、后端基础面试和系统设计面试，或需要快速回顾常用模板的读者。
+
+## 后端与系统设计
+
+仓库同时整理后端面试中的核心基础与系统设计题目。[核心后端基础题](system-design/question-bank/core-backend-foundations.md)覆盖 12 个技术领域，共 200 个主题、1000 道题，采用“问题、答案、追问”三段式整理。
 
 ## 面试冲刺，从这里开始
 
@@ -76,7 +80,9 @@ leetcode-primer/
 ├── 剑指offer/                      # 《剑指 Offer》66 题，源码在 src/
 ├── 其它常见的题目/                  # 高频题、模板、数据结构、设计模式与并发练习
 │   └── src/                        # C++、Go、Python、Lua 等源码/头文件
-└── template/                       # Markdown 学习模板与跨分类专题
+├── template/                       # Markdown 学习模板与跨分类专题
+└── system-design/                 # 后端基础与系统设计面试
+    └── question-bank/              # 分专题题库
 ```
 
 | 内容 | 入口 | 说明 |
