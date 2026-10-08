@@ -14,8 +14,8 @@
 - 每道新题必须有一个本地事实来源，并且有一条 README 记录指向它。
 - 不要在未更新本地 README 的情况下把题目加入索引。
 - 不要只更新本地 README；同一次贡献中至少要修改一条对应索引。
-- 没有本地源码时，在 `guides/indexes/leetcode-problems.md` 记录 LeetCode 原题链接即可覆盖题单。
-- 尚未补全主题、模式或难度字段的保留源码，先登记到 `guides/indexes/experimental-and-unfiled-sources.md`，状态标记为 `待整理`；完成分类后再迁入对应正式索引。
+- 没有本地源码时，在 `algorithm-interview/guides/indexes/leetcode-problems.md` 记录 LeetCode 原题链接即可覆盖题单。
+- 尚未补全主题、模式或难度字段的保留源码，先登记到 `algorithm-interview/guides/indexes/experimental-and-unfiled-sources.md`，状态标记为 `待整理`；完成分类后再迁入对应正式索引。
 - 不要提交个人复习状态、下次复习日期、错题记录或随机抽题历史；这些内容保存在 `.local/reviews/`。
 
 ## 提交前

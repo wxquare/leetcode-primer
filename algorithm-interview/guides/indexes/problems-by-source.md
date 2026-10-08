@@ -1,6 +1,6 @@
 # 按来源分类的题目
 
-[完整 LeetCode 题单](leetcode-problems.md) / [LeetCode 题目目录](../../leetcode/README.md) / [剑指 Offer 题目目录](../../剑指offer/README.md) / [其它题目目录](../../其它常见的题目/README.md)
+[完整 LeetCode 题单](leetcode-problems.md) / [LeetCode 题目目录](../../leetcode/README.md) / [剑指 Offer 题目目录](../../剑指offer/README.md) / [其它题目目录](../../implementations/README.md)
 
 本页记录仓库中已有本地实现的题目；完整 LeetCode 题单（含无本地源码时的 LeetCode 原题链接）见 [leetcode-problems.md](leetcode-problems.md)。
 
@@ -132,9 +132,9 @@
 
 | Problem | Difficulty | Pattern | Key idea | Source |
 | --- | --- | --- | --- | --- |
-| 二分查找模板 | Easy | 二分查找 | 比较中点与目标，收缩有效区间。 | [binary_search.cc](../../其它常见的题目/src/binary_search.cc) |
-| 单调结构模板 | Medium | 单调栈 | 保持候选的单调顺序，移除过期或被支配的值。 | [monotonic_structures.cc](../../其它常见的题目/src/monotonic_structures.cc) |
-| 并查集模板 | Medium | 并查集 | 路径压缩，并按规模合并集合。 | [union_find.cc](../../其它常见的题目/src/union_find.cc) |
-| 树状数组模板 | Medium | 树状数组 | 用 lowbit 跳转更新和查询前缀聚合。 | [fenwick_tree.cc](../../其它常见的题目/src/fenwick_tree.cc) |
-| 最短路算法 | Hard | 最短路 | 按边权约束选择 BFS、Dijkstra、Bellman-Ford 或 Floyd。 | [graph_shortest_path_algorithms.cc](../../其它常见的题目/src/graph_shortest_path_algorithms.cc) |
-| 背包动态规划模板 | Hard | 动态规划 | 循环方向需匹配物品重数和状态复用规则。 | [knapsack_dp.cc](../../其它常见的题目/src/knapsack_dp.cc) |
+| 二分查找模板 | Easy | 二分查找 | 比较中点与目标，收缩有效区间。 | [binary_search.cc](../../implementations/src/binary_search.cc) |
+| 单调结构模板 | Medium | 单调栈 | 保持候选的单调顺序，移除过期或被支配的值。 | [monotonic_structures.cc](../../implementations/src/monotonic_structures.cc) |
+| 并查集模板 | Medium | 并查集 | 路径压缩，并按规模合并集合。 | [union_find.cc](../../implementations/src/union_find.cc) |
+| 树状数组模板 | Medium | 树状数组 | 用 lowbit 跳转更新和查询前缀聚合。 | [fenwick_tree.cc](../../implementations/src/fenwick_tree.cc) |
+| 最短路算法 | Hard | 最短路 | 按边权约束选择 BFS、Dijkstra、Bellman-Ford 或 Floyd。 | [graph_shortest_path_algorithms.cc](../../implementations/src/graph_shortest_path_algorithms.cc) |
+| 背包动态规划模板 | Hard | 动态规划 | 循环方向需匹配物品重数和状态复用规则。 | [knapsack_dp.cc](../../implementations/src/knapsack_dp.cc) |

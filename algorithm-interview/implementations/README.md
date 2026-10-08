@@ -1,12 +1,12 @@
-# 其它常见的题目
+# 算法实现
 
 ## 导航
 
-- [学习路线入口](../guides/roadmap/00-start-here.md)
+- [算法学习路线](../guides/roadmap/00-start-here.md)
 - [按来源索引](../guides/indexes/problems-by-source.md) / [按主题索引](../guides/indexes/problems-by-topic.md) / [模板索引](../guides/indexes/templates-by-topic.md)
-- 本目录角色：LeetCode 与《剑指 Offer》之外的题目、模板源码和工程练习目录，表格保留为本地源码索引。
+- 本目录保存与具体题目解法相对独立的算法、数据结构和可复用源码。
 
-这里收录 LeetCode 与《剑指 Offer》之外的常见算法题、可复用模板、数据结构设计题与并发练习。源码统一位于平铺的 [`src/`](src/) 目录，采用小写英文 `snake_case`，并用主题前缀表达用途。
+这里收录 LeetCode 与《剑指 Offer》之外的算法和数据结构实现。源码位于平铺的 [`src/`](src/) 目录，采用小写英文 `snake_case`，并用主题前缀表达用途。并发、设计模式、资源管理和限流示例统一维护在[系统设计工程示例](../../system-design-interview/examples/README.md)。
 
 ## 整理规则
 
@@ -64,22 +64,24 @@
 | [digit_dp.cc](src/digit_dp.cc) | 数位 DP。 | `digit_dp::count_stepping_numbers` | ★★★★ |
 | [matrix_exponentiation.cc](src/matrix_exponentiation.cc) | 矩阵快速幂。 | `matrix_power` | ★★★ |
 
-## 设计、并发与工程练习
+## 工程示例索引
+
+以下示例由系统设计领域统一维护，源码只保留一份。
 
 | 文件 | 题目/用途 | 主入口或核心类型 | 难度 |
 | --- | --- | --- | --- |
-| [factory_pattern.cc](src/factory_pattern.cc) | 工厂模式示例。 | `Factory` | ★★ |
-| [visitor_pattern.cc](src/visitor_pattern.cc) | 观察者/访问者模式示例。 | `Visitor` | ★★ |
-| [singleton_pattern.cc](src/singleton_pattern.cc) | 线程安全单例。 | `Singleton` | ★★ |
-| [string_raii.cc](src/string_raii.cc) | 自定义字符串的资源管理。 | `CString` | ★★★ |
-| [string_raii_copy_move.cc](src/string_raii_copy_move.cc) | 自定义容器/字符串练习。 | `CString` | ★★★ |
-| [bounded_producer_consumer.cc](src/bounded_producer_consumer.cc) | C++ 生产者—消费者模型。 | `ProducerConsumer` | ★★★ |
-| [read_write_locker.cc](src/read_write_locker.cc) | 读写锁。 | `ReadWriteLock` | ★★★ |
-| [concurrency_h2o.go](src/concurrency_h2o.go) | 并发协调生成 H₂O。 | `H2O` | ★★★ |
-| [concurrency_dining_philosophers.go](src/concurrency_dining_philosophers.go) | 哲学家进餐死锁规避。 | `DiningPhilosophers` | ★★★★ |
-| [concurrency_producer_consumer_sum.go](src/concurrency_producer_consumer_sum.go) | Go 并发生产与消费。 | `main` | ★★★ |
-| [lua_token_rate_limit.lua](src/lua_token_rate_limit.lua) | Redis Lua 令牌桶限流。 | Redis 脚本入口 | ★★★ |
-| [lua_token_limiter.py](src/lua_token_limiter.py) | Redis 令牌桶限流客户端。 | `TokenLimiter` | ★★★ |
+| [factory_pattern.cc](../../system-design-interview/examples/src/factory_pattern.cc) | 工厂模式示例。 | `Factory` | ★★ |
+| [visitor_pattern.cc](../../system-design-interview/examples/src/visitor_pattern.cc) | 观察者/访问者模式示例。 | `Visitor` | ★★ |
+| [singleton_pattern.cc](../../system-design-interview/examples/src/singleton_pattern.cc) | 线程安全单例。 | `Singleton` | ★★ |
+| [string_raii.cc](../../system-design-interview/examples/src/string_raii.cc) | 自定义字符串的资源管理。 | `CString` | ★★★ |
+| [string_raii_copy_move.cc](../../system-design-interview/examples/src/string_raii_copy_move.cc) | 自定义容器/字符串练习。 | `CString` | ★★★ |
+| [bounded_producer_consumer.cc](../../system-design-interview/examples/src/bounded_producer_consumer.cc) | C++ 生产者—消费者模型。 | `ProducerConsumer` | ★★★ |
+| [read_write_locker.cc](../../system-design-interview/examples/src/read_write_locker.cc) | 读写锁。 | `ReadWriteLock` | ★★★ |
+| [concurrency_h2o.go](../../system-design-interview/examples/src/concurrency_h2o.go) | 并发协调生成 H₂O。 | `H2O` | ★★★ |
+| [concurrency_dining_philosophers.go](../../system-design-interview/examples/src/concurrency_dining_philosophers.go) | 哲学家进餐死锁规避。 | `DiningPhilosophers` | ★★★★ |
+| [concurrency_producer_consumer_sum.go](../../system-design-interview/examples/src/concurrency_producer_consumer_sum.go) | Go 并发生产与消费。 | `main` | ★★★ |
+| [lua_token_rate_limit.lua](../../system-design-interview/examples/src/lua_token_rate_limit.lua) | Redis Lua 令牌桶限流。 | Redis 脚本入口 | ★★★ |
+| [lua_token_limiter.py](../../system-design-interview/examples/src/lua_token_limiter.py) | Redis 令牌桶限流客户端。 | `TokenLimiter` | ★★★ |
 
 ## 独立题目
 

@@ -10,6 +10,7 @@ from tools.check_markdown_consistency import (
     validate_local_links,
     validate_problem_index_coverage,
     validate_public_indexes_have_no_review_state,
+    validate_required_paths,
     validate_readme,
     validate_taxonomy_structure,
     validate_template_titles,
@@ -29,7 +30,7 @@ class MarkdownConsistencyTest(unittest.TestCase):
             root = Path(directory)
             readme = self.write(
                 root,
-                "leetcode/README.md",
+                "algorithm-interview/leetcode/README.md",
                 """## 题单
 ### 1. 数组
 - [1. 两数之和](https://leetcode.cn/problems/two-sum)【哈希】
@@ -80,10 +81,14 @@ class MarkdownConsistencyTest(unittest.TestCase):
                 "README.md",
                 "- [1. A](target.md)【a】\n"
                 "- [2. B](missing.md)【b】\n"
+                "- [3. C](target.md#target)【c】\n"
+                "- [4. D](target.md#missing-heading)【d】\n"
                 "- [3. C](https://leetcode-cn.com/problems/c)【c】\n"
                 "- [4. D](https://leetcode.cn/problems/d/description/)【d】\n",
             )
-            self.assertTrue(any("不存在" in error for error in validate_local_links(root)))
+            link_errors = validate_local_links(root)
+            self.assertTrue(any("不存在" in error for error in link_errors))
+            self.assertTrue(any("标题锚点不存在" in error for error in link_errors))
             self.assertTrue(any("旧域名" in error for error in validate_url_style(root)))
             self.assertTrue(any("异常路径" in error for error in validate_url_style(root)))
 
@@ -91,12 +96,12 @@ class MarkdownConsistencyTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             readme = self.write(
-                root, "leetcode/README.md", "- [1. A](https://leetcode.cn/problems/a)【a】\n"
+                root, "algorithm-interview/leetcode/README.md", "- [1. A](https://leetcode.cn/problems/a)【a】\n"
             )
-            self.write(root, "leetcode/数组/3_c.cc", "// source\n")
+            self.write(root, "algorithm-interview/leetcode/数组/3_c.cc", "// source\n")
             index = self.write(
                 root,
-                "guides/indexes/leetcode-problems.md",
+                "algorithm-interview/guides/indexes/leetcode-problems.md",
                 "| [2. B](https://leetcode.cn/problems/b) | - |\n",
             )
             errors = validate_problem_index_coverage(root, readme, index)
@@ -106,10 +111,10 @@ class MarkdownConsistencyTest(unittest.TestCase):
     def test_index_source_link_must_match_row_problem_id(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            self.write(root, "leetcode/数组/2_wrong.cc", "// source\n")
+            self.write(root, "algorithm-interview/leetcode/数组/2_wrong.cc", "// source\n")
             index = self.write(
                 root,
-                "guides/indexes/leetcode-problems.md",
+                "algorithm-interview/guides/indexes/leetcode-problems.md",
                 "| [1. A](https://leetcode.cn/problems/a) | "
                 "[2_wrong.cc](../../leetcode/数组/2_wrong.cc) |\n",
             )
@@ -120,12 +125,13 @@ class MarkdownConsistencyTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             readme = self.write(
-                root, "leetcode/README.md", "- [1. A](https://leetcode.cn/problems/a)【a】\n"
+                root, "algorithm-interview/leetcode/README.md", "- [1. A](https://leetcode.cn/problems/a)【a】\n"
             )
-            self.write(root, "leetcode/数组/1_a.cc", "// source\n")
-            self.write(root, "leetcode/数组/2_b.sql", "-- source\n")
-            self.write(root, "剑指offer/src/offer1_a.cc", "// source\n")
-            self.write(root, "其它常见的题目/src/example.go", "package main\n")
+            self.write(root, "algorithm-interview/leetcode/数组/1_a.cc", "// source\n")
+            self.write(root, "algorithm-interview/leetcode/数组/2_b.sql", "-- source\n")
+            self.write(root, "algorithm-interview/剑指offer/src/offer1_a.cc", "// source\n")
+            self.write(root, "algorithm-interview/implementations/src/example.go", "package main\n")
+            self.write(root, "system-design-interview/examples/src/concurrency.go", "package main\n")
             statistics = repository_statistics(root, readme)
             self.assertEqual(statistics.leetcode_sources, 2)
             self.assertEqual(statistics.readme_problems, 1)
@@ -136,13 +142,13 @@ class MarkdownConsistencyTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             readme = self.write(
-                root, "leetcode/README.md", "- [1. A](https://leetcode.cn/problems/a)【a】\n"
+                root, "algorithm-interview/leetcode/README.md", "- [1. A](https://leetcode.cn/problems/a)【a】\n"
             )
-            self.write(root, "leetcode/数组/1_a.cc", "// source\n")
+            self.write(root, "algorithm-interview/leetcode/数组/1_a.cc", "// source\n")
             self.write(root, "README.md", "- LeetCode：99 个源码文件，覆盖 C++。\n")
             self.write(
                 root,
-                "guides/indexes/leetcode-problems.md",
+                "algorithm-interview/guides/indexes/leetcode-problems.md",
                 "README 题单共 99 个唯一题目；仓库另有 99 个本地源码题，合计 198 条。\n",
             )
             errors = validate_documented_statistics(root, readme)
@@ -154,7 +160,7 @@ class MarkdownConsistencyTest(unittest.TestCase):
             root = Path(directory)
             self.write(
                 root,
-                "guides/indexes/problems-by-topic.md",
+                "algorithm-interview/guides/indexes/problems-by-topic.md",
                 "| Problem | Difficulty | Pattern | Key idea | Source | Review |\n"
                 "| --- | --- | --- | --- | --- | --- |\n"
                 "| 1. 两数之和 | Easy | 哈希 | 记录补数 | source.cc | `new` |\n",
@@ -167,7 +173,7 @@ class MarkdownConsistencyTest(unittest.TestCase):
             root = Path(directory)
             self.write(
                 root,
-                "guides/indexes/problems-by-topic.md",
+                "algorithm-interview/guides/indexes/problems-by-topic.md",
                 "个人记录可以在本地使用 `review` 状态。\n",
             )
             self.assertEqual(
@@ -186,8 +192,8 @@ class MarkdownConsistencyTest(unittest.TestCase):
                 "图论",
                 "模拟",
             ):
-                (root / "leetcode" / name).mkdir(parents=True)
-            self.write(root, "template/6-基本算法.md", "# 基本算法\n")
+                (root / "algorithm-interview/leetcode" / name).mkdir(parents=True)
+            self.write(root, "algorithm-interview/templates/6-基本算法.md", "# 基本算法\n")
             errors = validate_taxonomy_structure(root)
             self.assertTrue(any("一级分类目录" in error for error in errors))
             self.assertTrue(any("模板文件" in error for error in errors))
@@ -197,7 +203,7 @@ class MarkdownConsistencyTest(unittest.TestCase):
             root = Path(directory)
             self.write(
                 root,
-                "leetcode/README.md",
+                "algorithm-interview/leetcode/README.md",
                 "## 1. 数据结构\n## 2. 基础算法\n## 3. 数学\n"
                 "## 4. 搜索\n## 5. 动态规划\n## 6. 图论\n",
             )
@@ -207,9 +213,43 @@ class MarkdownConsistencyTest(unittest.TestCase):
     def test_numbered_template_title_must_match_filename(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            self.write(root, "template/1-基础算法.md", "# 基本算法专题复习手册\n")
+            self.write(root, "algorithm-interview/templates/1-基础算法.md", "# 基本算法专题复习手册\n")
             errors = validate_template_titles(root)
             self.assertTrue(any("一级标题" in error for error in errors))
+
+    def test_required_paths_report_missing_new_domain_roots(self):
+        with tempfile.TemporaryDirectory() as directory:
+            errors = validate_required_paths(Path(directory))
+            self.assertTrue(any("algorithm-interview/README.md" in error for error in errors))
+            self.assertTrue(any("system-design-interview/README.md" in error for error in errors))
+
+    def test_required_paths_pass_for_new_domain_roots(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            required = (
+                "README.md",
+                "algorithm-interview/README.md",
+                "algorithm-interview/leetcode/README.md",
+                "algorithm-interview/guides/indexes/leetcode-problems.md",
+                "algorithm-interview/implementations/README.md",
+                "algorithm-interview/implementations/src",
+                "algorithm-interview/templates",
+                "system-design-interview/README.md",
+                "system-design-interview/examples/README.md",
+                "system-design-interview/examples/src",
+                "system-design-interview/question-bank/backend-1000-foundations.md",
+                "system-design-interview/question-bank/system-design-ecommerce-180.md",
+                "system-design-interview/question-bank/system-design-general-100.md",
+                "system-design-interview/question-bank/ai-agent-50-engineering.md",
+            )
+            for name in required:
+                path = root / name
+                if "." in path.name:
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.touch()
+                else:
+                    path.mkdir(parents=True, exist_ok=True)
+            self.assertEqual(validate_required_paths(root), [])
 
 
 if __name__ == "__main__":

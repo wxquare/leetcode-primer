@@ -1,6 +1,6 @@
 # 01 基础阶段
 
-[路线入口](00-start-here.md) / [复习方法](../review-method.md)
+[路线入口](00-start-here.md) / [复习方法](../../../guides/review-method.md)
 
 基础阶段的目标不是刷题数量，而是把常用数据结构和控制流写到稳定。每个主题先读源码导航，再做代表题；做错的题在个人复习记录中标记为 `mistake`，按复习节奏重来。
 
@@ -21,7 +21,7 @@
 
 ## 字符串
 
-源码导航：[LeetCode 字符串索引](../../leetcode/README.md)、[字符串模板导航](../../template/README.md)
+源码导航：[LeetCode 字符串索引](../../leetcode/README.md)、[字符串模板导航](../../templates/README.md)
 
 代表题：
 
@@ -47,7 +47,7 @@
 
 ## 树
 
-源码导航：[剑指 Offer 树题索引](../../剑指offer/README.md)、[树与图模板导航](../../template/README.md)
+源码导航：[剑指 Offer 树题索引](../../剑指offer/README.md)、[树与图模板导航](../../templates/README.md)
 
 代表题：
 
@@ -60,7 +60,7 @@
 
 ## 哈希表
 
-源码导航：[LeetCode 哈希相关索引](../../leetcode/README.md)、[其它常见题目索引](../../其它常见的题目/README.md)
+源码导航：[LeetCode 哈希相关索引](../../leetcode/README.md)、[其它常见题目索引](../../implementations/README.md)
 
 代表题：
 
@@ -73,7 +73,7 @@
 
 ## 排序
 
-源码导航：[排序模板](../../其它常见的题目/src/sorting_algorithms_collection.cc)、[快速选择模板](../../其它常见的题目/src/quickselect_kth.cc)
+源码导航：[排序模板](../../implementations/src/sorting_algorithms_collection.cc)、[快速选择模板](../../implementations/src/quickselect_kth.cc)
 
 代表题：
 
@@ -86,7 +86,7 @@
 
 ## 二分查找
 
-源码导航：[二分查找模板](../../其它常见的题目/src/binary_search.cc)、[LeetCode 二分索引](../../leetcode/README.md)
+源码导航：[二分查找模板](../../implementations/src/binary_search.cc)、[LeetCode 二分索引](../../leetcode/README.md)
 
 代表题：
 

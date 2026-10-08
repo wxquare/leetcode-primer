@@ -1,6 +1,6 @@
 # 按主题分类的题目
 
-[完整 LeetCode 题单](leetcode-problems.md) / [复盘方法](../review-method.md) / [题目笔记模板](../problem-note-template.md)
+[完整 LeetCode 题单](leetcode-problems.md) / [复盘方法](../../../guides/review-method.md) / [题目笔记模板](../../../guides/problem-note-template.md)
 
 ## 基础算法
 

@@ -1,6 +1,6 @@
 # 03 高级专题
 
-[路线入口](00-start-here.md) / [核心模式](02-core-patterns.md) / [模板导航](../../template/README.md) / [复习方法](../review-method.md)
+[路线入口](00-start-here.md) / [核心模式](02-core-patterns.md) / [模板导航](../../templates/README.md) / [复习方法](../../../guides/review-method.md)
 
 高级阶段以模板理解和建模能力为主。每个主题先读模板，手写一次核心结构，再做题验证。遇到写法依赖边界条件的题，必须在笔记中记录失败输入和修正点。
 
@@ -12,10 +12,10 @@
 
 模板与题目：
 
-- [最短路模板合集](../../其它常见的题目/src/graph_shortest_path_algorithms.cc)
-- [拓扑排序模板](../../其它常见的题目/src/graph_topological_sort.cc)
-- [并查集模板](../../其它常见的题目/src/union_find.cc)
-- [Tarjan 强连通分量](../../其它常见的题目/src/tarjan.cc)
+- [最短路模板合集](../../implementations/src/graph_shortest_path_algorithms.cc)
+- [拓扑排序模板](../../implementations/src/graph_topological_sort.cc)
+- [并查集模板](../../implementations/src/union_find.cc)
+- [Tarjan 强连通分量](../../implementations/src/tarjan.cc)
 - [210. 课程表 II](../../leetcode/图论/210_course_schedule_ii.cc)
 - [684. 冗余连接](../../leetcode/图论/684_redundant_connection.cc)
 
@@ -27,9 +27,9 @@
 
 模板与题目：
 
-- [最近公共祖先模板](../../其它常见的题目/src/tree_lowest_common_ancestor.cc)
-- [树链剖分模板](../../其它常见的题目/src/heavy_light_decomposition.cc)
-- [换根动态规划模板](../../其它常见的题目/src/tree_rerooting_dp.cc)
+- [最近公共祖先模板](../../implementations/src/tree_lowest_common_ancestor.cc)
+- [树链剖分模板](../../implementations/src/heavy_light_decomposition.cc)
+- [换根动态规划模板](../../implementations/src/tree_rerooting_dp.cc)
 - [236. 二叉树的最近公共祖先](../../leetcode/图论/236_lowest_common_ancestor_of_a_binary_tree.cc)
 - [337. 打家劫舍 III](../../leetcode/动态规划/337_house_robber_iii.cc)
 - [450. 删除二叉搜索树中的节点](../../leetcode/图论/450_delete_node_in_abst.cc)
@@ -42,10 +42,10 @@
 
 模板与题目：
 
-- [背包动态规划模板](../../其它常见的题目/src/knapsack_dp.cc)
-- [旅行商问题状态压缩动态规划](../../其它常见的题目/src/traveling_salesman.cc)
-- [数位动态规划模板](../../其它常见的题目/src/digit_dp.cc)
-- [矩阵快速幂模板](../../其它常见的题目/src/matrix_exponentiation.cc)
+- [背包动态规划模板](../../implementations/src/knapsack_dp.cc)
+- [旅行商问题状态压缩动态规划](../../implementations/src/traveling_salesman.cc)
+- [数位动态规划模板](../../implementations/src/digit_dp.cc)
+- [矩阵快速幂模板](../../implementations/src/matrix_exponentiation.cc)
 - [600. 不含连续 1 的非负整数](../../leetcode/动态规划/600_decimal_to_binary.cc)
 - [2407. 最长递增子序列 II](../../leetcode/动态规划/2407_pushdown.cc)
 
@@ -57,10 +57,10 @@
 
 模板与题目：
 
-- [区间查询教学文档](../../template/专题-区间查询与统计.md)
-- [树状数组模板](../../其它常见的题目/src/fenwick_tree.cc)
-- [线段树模板](../../其它常见的题目/src/segment_tree.cc)
-- [主席树模板](../../其它常见的题目/src/persistent_segment_tree.cc)
+- [区间查询教学文档](../../templates/专题-区间查询与统计.md)
+- [树状数组模板](../../implementations/src/fenwick_tree.cc)
+- [线段树模板](../../implementations/src/segment_tree.cc)
+- [主席树模板](../../implementations/src/persistent_segment_tree.cc)
 - [307. 区域和检索 - 数组可修改](../../leetcode/图论/307_range_sum_query_mutable.cc)
 - [218. 天际线问题](../../leetcode/数据结构/218_the_skyline_problem.cc)
 
@@ -72,11 +72,11 @@
 
 模板与题目：
 
-- [字符串算法合集](../../其它常见的题目/src/string_algorithms_collection.cc)
-- [KMP 模板](../../其它常见的题目/src/string_kmp_template.cc)
-- [Trie 模板](../../其它常见的题目/src/trie.cc)
-- [Manacher 模板](../../其它常见的题目/src/manacher.cc)
-- [Z 函数模板](../../其它常见的题目/src/z_function.cc)
+- [字符串算法合集](../../implementations/src/string_algorithms_collection.cc)
+- [KMP 模板](../../implementations/src/string_kmp_template.cc)
+- [Trie 模板](../../implementations/src/trie.cc)
+- [Manacher 模板](../../implementations/src/manacher.cc)
+- [Z 函数模板](../../implementations/src/z_function.cc)
 - [2851. 字符串 K 次转换等于目标串的方案数量](../../leetcode/动态规划/2851_kmp.cc)
 
 <a id="mathematical-methods"></a>
@@ -87,9 +87,9 @@
 
 模板与题目：
 
-- [数学算法合集](../../其它常见的题目/src/number_theory_algorithms.cc)
+- [数学算法合集](../../implementations/src/number_theory_algorithms.cc)
 - [组合数学与取模](../../leetcode/数学/组合数学与取模.md)
-- [线性基模板](../../其它常见的题目/src/linear_basis.cc)
-- [矩阵快速幂模板](../../其它常见的题目/src/matrix_exponentiation.cc)
+- [线性基模板](../../implementations/src/linear_basis.cc)
+- [矩阵快速幂模板](../../implementations/src/matrix_exponentiation.cc)
 - [50. 幂函数 Pow(x, n)](../../leetcode/基础算法/模拟/50_pow_x_n.cc)
 - [233. 数字 1 的个数](../../leetcode/动态规划/233_number_of_digit_one.cc)

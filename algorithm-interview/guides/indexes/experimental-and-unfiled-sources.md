@@ -1,6 +1,6 @@
 # 待整理源码索引
 
-[仓库首页](../../README.md) / [完整 LeetCode 题单](leetcode-problems.md) / [按来源分类](problems-by-source.md)
+[仓库首页](../../../README.md) / [完整 LeetCode 题单](leetcode-problems.md) / [按来源分类](problems-by-source.md)
 
 本页收录已保留、但尚未编入主题、模式、难度或来源索引的源码。`待整理` 表示文件可查阅，但尚未补全学习笔记与分类字段。
 
@@ -33,15 +33,15 @@
 | 内容 | Source | Status |
 | --- | --- | --- |
 | 随机 LeetCode 题号生成工具 | [generate.cc](../../leetcode/基础算法/模拟/random_problem_generator.cc) | `待整理` |
-| 轮流打印并发示例 | [concurrency_turn_based_print.go](../../其它常见的题目/src/concurrency_turn_based_print.go) | `待整理` |
-| 轮流输出字符串并发示例 | [concurrency_turn_based_string.go](../../其它常见的题目/src/concurrency_turn_based_string.go) | `待整理` |
-| 生产者消费者并发示例 | [concurrency_producer_consumer.go](../../其它常见的题目/src/concurrency_producer_consumer.go) | `待整理` |
-| 零、偶、奇数并发示例 | [concurrency_zero_even_odd.go](../../其它常见的题目/src/concurrency_zero_even_odd.go) | `待整理` |
-| 数学练习片段 | [math_practice_snippets.cc](../../其它常见的题目/src/math_practice_snippets.cc) | `待整理` |
-| 归并排序 | [merge_sort.cc](../../其它常见的题目/src/merge_sort.cc) | `待整理` |
-| PDF 提取与重编号工具 | [pdf_extract_and_renumber.py](../../其它常见的题目/src/pdf_extract_and_renumber.py) | `待整理` |
-| 快速排序 | [quick_sort.cc](../../其它常见的题目/src/quick_sort.cc) | `待整理` |
-| 动态开点懒标记线段树 | [segment_tree_dynamic_lazy.cc](../../其它常见的题目/src/segment_tree_dynamic_lazy.cc) | `待整理` |
-| KMP 字符串匹配 | [string_kmp.cc](../../其它常见的题目/src/string_kmp.cc) | `待整理` |
-| 模板烟测 | [template_validation_smoke.cc](../../其它常见的题目/src/template_validation_smoke.cc) | `待整理` |
-| 二叉树基础 | [tree_binary_tree_basics.cc](../../其它常见的题目/src/tree_binary_tree_basics.cc) | `待整理` |
+| 轮流打印并发示例 | [concurrency_turn_based_print.go](../../../system-design-interview/examples/src/concurrency_turn_based_print.go) | `待整理` |
+| 轮流输出字符串并发示例 | [concurrency_turn_based_string.go](../../../system-design-interview/examples/src/concurrency_turn_based_string.go) | `待整理` |
+| 生产者消费者并发示例 | [concurrency_producer_consumer.go](../../../system-design-interview/examples/src/concurrency_producer_consumer.go) | `待整理` |
+| 零、偶、奇数并发示例 | [concurrency_zero_even_odd.go](../../../system-design-interview/examples/src/concurrency_zero_even_odd.go) | `待整理` |
+| 数学练习片段 | [math_practice_snippets.cc](../../implementations/src/math_practice_snippets.cc) | `待整理` |
+| 归并排序 | [merge_sort.cc](../../implementations/src/merge_sort.cc) | `待整理` |
+| PDF 提取与重编号工具 | [pdf_extract_and_renumber.py](../../../tools/pdf_extract_and_renumber.py) | `待整理` |
+| 快速排序 | [quick_sort.cc](../../implementations/src/quick_sort.cc) | `待整理` |
+| 动态开点懒标记线段树 | [segment_tree_dynamic_lazy.cc](../../implementations/src/segment_tree_dynamic_lazy.cc) | `待整理` |
+| KMP 字符串匹配 | [string_kmp.cc](../../implementations/src/string_kmp.cc) | `待整理` |
+| 模板烟测 | [template_validation_smoke.cc](../../implementations/src/template_validation_smoke.cc) | `待整理` |
+| 二叉树基础 | [tree_binary_tree_basics.cc](../../implementations/src/tree_binary_tree_basics.cc) | `待整理` |

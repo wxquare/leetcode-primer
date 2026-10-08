@@ -1,6 +1,6 @@
 # 按模式分类的题目
 
-[完整 LeetCode 题单](leetcode-problems.md) / [核心模式](../roadmap/02-core-patterns.md) / [高级专题](../roadmap/03-advanced-topics.md) / [复盘方法](../review-method.md)
+[完整 LeetCode 题单](leetcode-problems.md) / [核心模式](../roadmap/02-core-patterns.md) / [高级专题](../roadmap/03-advanced-topics.md) / [复盘方法](../../../guides/review-method.md)
 
 ## 哈希查找
 

@@ -6,10 +6,12 @@ from __future__ import annotations
 import argparse
 import re
 import sys
+import unicodedata
 from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable, List, Optional
+from urllib.parse import unquote, urlsplit
 
 
 PROBLEM_LABEL = re.compile(r"^(?:\d+|LCR|面试题|剑指 Offer|DQUERY)\b")
@@ -39,6 +41,28 @@ CANONICAL_TEMPLATES = tuple(
 CROSS_TOPIC_TEMPLATES = (
     "专题-区间查询与统计.md",
     "专题-路径问题.md",
+)
+ALGORITHM_ROOT = Path("algorithm-interview")
+LEETCODE_ROOT = ALGORITHM_ROOT / "leetcode"
+TEMPLATE_ROOT = ALGORITHM_ROOT / "templates"
+INDEX_ROOT = ALGORITHM_ROOT / "guides" / "indexes"
+IMPLEMENTATION_ROOT = ALGORITHM_ROOT / "implementations"
+SYSTEM_DESIGN_ROOT = Path("system-design-interview")
+REQUIRED_PATHS = (
+    Path("README.md"),
+    ALGORITHM_ROOT / "README.md",
+    LEETCODE_ROOT / "README.md",
+    INDEX_ROOT / "leetcode-problems.md",
+    IMPLEMENTATION_ROOT / "README.md",
+    IMPLEMENTATION_ROOT / "src",
+    TEMPLATE_ROOT,
+    SYSTEM_DESIGN_ROOT / "README.md",
+    SYSTEM_DESIGN_ROOT / "question-bank" / "backend-1000-foundations.md",
+    SYSTEM_DESIGN_ROOT / "question-bank" / "system-design-ecommerce-180.md",
+    SYSTEM_DESIGN_ROOT / "question-bank" / "system-design-general-100.md",
+    SYSTEM_DESIGN_ROOT / "question-bank" / "ai-agent-50-engineering.md",
+    SYSTEM_DESIGN_ROOT / "examples" / "README.md",
+    SYSTEM_DESIGN_ROOT / "examples" / "src",
 )
 
 
@@ -85,7 +109,7 @@ def extract_index_problem_ids(path: Path) -> set[int]:
 
 def extract_local_problem_ids(root: Path) -> set[int]:
     identifiers: set[int] = set()
-    source_root = root / "leetcode"
+    source_root = root / LEETCODE_ROOT
     if not source_root.exists():
         return identifiers
     for path in source_root.rglob("*"):
@@ -111,7 +135,7 @@ def validate_problem_index_coverage(
 
 def validate_index_source_identity(root: Path, index: Path) -> List[str]:
     errors: List[str] = []
-    leetcode_root = (root / "leetcode").resolve()
+    leetcode_root = (root / LEETCODE_ROOT).resolve()
     for line_number, line in lines_without_code(index):
         label = INDEX_PROBLEM.match(line)
         if not label:
@@ -157,7 +181,7 @@ def _source_files(directory: Path) -> List[Path]:
 
 
 def repository_statistics(root: Path, readme: Path) -> RepositoryStatistics:
-    leetcode_sources = _source_files(root / "leetcode")
+    leetcode_sources = _source_files(root / LEETCODE_ROOT)
     language_names = {
         ".cc": "C++",
         ".go": "Go",
@@ -172,14 +196,17 @@ def repository_statistics(root: Path, readme: Path) -> RepositoryStatistics:
     )
     readme_ids = set(extract_problem_counts(readme))
     local_ids = extract_local_problem_ids(root)
-    index_path = root / "guides/indexes/leetcode-problems.md"
+    index_path = root / INDEX_ROOT / "leetcode-problems.md"
     index_ids = extract_index_problem_ids(index_path) if index_path.exists() else set()
     expected_ids = readme_ids | local_ids
     return RepositoryStatistics(
         leetcode_sources=len(leetcode_sources),
         leetcode_languages=languages,
-        offer_sources=len(_source_files(root / "剑指offer")),
-        other_sources=len(_source_files(root / "其它常见的题目")),
+        offer_sources=len(_source_files(root / ALGORITHM_ROOT / "剑指offer")),
+        other_sources=(
+            len(_source_files(root / IMPLEMENTATION_ROOT))
+            + len(_source_files(root / SYSTEM_DESIGN_ROOT / "examples"))
+        ),
         readme_problems=len(readme_ids),
         local_only_problems=len(local_ids - readme_ids),
         index_only_problems=len(index_ids - expected_ids),
@@ -190,7 +217,7 @@ def repository_statistics(root: Path, readme: Path) -> RepositoryStatistics:
 def validate_documented_statistics(root: Path, readme: Path) -> List[str]:
     statistics = repository_statistics(root, readme)
     errors: List[str] = []
-    index = root / "guides/indexes/leetcode-problems.md"
+    index = root / INDEX_ROOT / "leetcode-problems.md"
     index_text = index.read_text(encoding="utf-8") if index.exists() else ""
     expected_index = (
         f"README 题单共 {statistics.readme_problems} 个唯一题目；仓库另有 "
@@ -256,17 +283,58 @@ def validate_readme(path: Path, baseline: Optional[Path] = None) -> List[str]:
 
 def validate_local_links(root: Path) -> List[str]:
     errors: List[str] = []
+    heading_cache: dict[Path, set[str]] = {}
     for path in markdown_files(root):
         for line_number, line in lines_without_code(path):
             for target in MARKDOWN_LINK.findall(line):
-                target = target.split("#", 1)[0].split("?", 1)[0].strip("<>")
-                if not target or target.startswith(("http://", "https://", "mailto:")):
+                target = target.strip().strip("<>")
+                parts = urlsplit(target)
+                if parts.scheme or parts.netloc:
                     continue
-                if any(character.isspace() for character in target):
+                if any(character.isspace() for character in parts.path):
                     continue
-                if not (path.parent / target).resolve().exists():
+                link_path = unquote(parts.path)
+                resolved = (path.parent / link_path).resolve()
+                if not resolved.exists():
                     errors.append(f"{path}:{line_number}:本地链接不存在：{target}")
+                    continue
+                if parts.fragment and resolved.is_file() and resolved.suffix.lower() == ".md":
+                    if resolved not in heading_cache:
+                        heading_cache[resolved] = markdown_heading_slugs(resolved)
+                    fragment = unquote(parts.fragment).lower()
+                    if fragment not in heading_cache[resolved]:
+                        errors.append(
+                            f"{path}:{line_number}:本地标题锚点不存在：{target}"
+                        )
     return errors
+
+
+def markdown_heading_slugs(path: Path) -> set[str]:
+    slugs: set[str] = set()
+    occurrences: Counter[str] = Counter()
+    for _, line in lines_without_code(path):
+        for explicit in re.finditer(
+            r"""<a\s+id=["']([^"']+)["']""", line, flags=re.IGNORECASE
+        ):
+            slugs.add(unquote(explicit.group(1)).lower())
+        heading = re.match(r"^#{1,6}\s+(.+?)\s*#*\s*$", line)
+        if not heading:
+            continue
+        title = heading.group(1)
+        title = re.sub(r"!?(\[[^\]]*\])\([^)]*\)", r"\1", title)
+        title = re.sub(r"<[^>]+>", "", title).replace("`", "")
+        base = []
+        for character in title.lower():
+            category = unicodedata.category(character)
+            if character.isspace():
+                base.append("-")
+            elif character in "-_" or category[0] in {"L", "N", "M"}:
+                base.append(character)
+        slug = "".join(base)
+        occurrence = occurrences[slug]
+        occurrences[slug] += 1
+        slugs.add(f"{slug}-{occurrence}" if occurrence else slug)
+    return slugs
 
 
 def validate_url_style(root: Path) -> List[str]:
@@ -290,7 +358,7 @@ def validate_url_style(root: Path) -> List[str]:
 def validate_public_indexes_have_no_review_state(root: Path) -> List[str]:
     """Reject user-specific review progress in committed classification indexes."""
     errors: List[str] = []
-    index_root = root / "guides/indexes"
+    index_root = root / INDEX_ROOT
     review_state = re.compile(r"`(?:new|review|mastered|mistake)`")
     for name in PUBLIC_PROBLEM_INDEXES:
         path = index_root / name
@@ -308,7 +376,7 @@ def validate_public_indexes_have_no_review_state(root: Path) -> List[str]:
 
 def validate_taxonomy_structure(root: Path) -> List[str]:
     errors: List[str] = []
-    leetcode_root = root / "leetcode"
+    leetcode_root = root / LEETCODE_ROOT
     if leetcode_root.exists():
         actual = {
             path.name for path in leetcode_root.iterdir() if path.is_dir()
@@ -323,7 +391,7 @@ def validate_taxonomy_structure(root: Path) -> List[str]:
         if actual == expected and not simulation.is_dir():
             errors.append(f"{simulation}:基础算法缺少模拟二级目录")
 
-    template_root = root / "template"
+    template_root = root / TEMPLATE_ROOT
     if template_root.exists():
         expected_templates = set(CANONICAL_TEMPLATES + CROSS_TOPIC_TEMPLATES)
         actual_templates = {
@@ -356,7 +424,7 @@ def validate_taxonomy_structure(root: Path) -> List[str]:
 def validate_template_titles(root: Path) -> List[str]:
     errors: List[str] = []
     for filename, category in zip(CANONICAL_TEMPLATES, CANONICAL_CATEGORIES):
-        path = root / "template" / filename
+        path = root / TEMPLATE_ROOT / filename
         if not path.exists():
             continue
         headings = [
@@ -372,6 +440,15 @@ def validate_template_titles(root: Path) -> List[str]:
     return errors
 
 
+def validate_required_paths(root: Path) -> List[str]:
+    """Ensure the canonical interview-domain entry points and roots exist."""
+    return [
+        f"{root / path}:必需路径不存在"
+        for path in REQUIRED_PATHS
+        if not (root / path).exists()
+    ]
+
+
 def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path("."))
@@ -380,10 +457,11 @@ def main(argv: Optional[List[str]] = None) -> int:
     args = parser.parse_args(argv)
 
     root = args.root.resolve()
-    readme = (args.readme or root / "leetcode/README.md").resolve()
-    index = root / "guides/indexes/leetcode-problems.md"
+    readme = (args.readme or root / LEETCODE_ROOT / "README.md").resolve()
+    index = root / INDEX_ROOT / "leetcode-problems.md"
     baseline = args.baseline.resolve() if args.baseline else None
     errors = []
+    errors.extend(validate_required_paths(root))
     errors.extend(validate_readme(readme, baseline))
     errors.extend(validate_local_links(root))
     errors.extend(validate_url_style(root))

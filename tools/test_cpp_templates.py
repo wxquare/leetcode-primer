@@ -6,7 +6,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TEMPLATE_ROOT = ROOT / "其它常见的题目" / "src"
+IMPLEMENTATION_ROOT = ROOT / "algorithm-interview" / "implementations" / "src"
+EXAMPLE_ROOT = ROOT / "system-design-interview" / "examples" / "src"
 FAILING_TEMPLATES = (
     "c_string_operations.cc",
     "digit_dp.cc",
@@ -59,9 +60,11 @@ def compile_and_run(source: str, *, run: bool = True) -> subprocess.CompletedPro
         return executed
 
 
-def include_driver(relative_path: str, assertions: str = "") -> str:
+def include_driver(
+    relative_path: str, assertions: str = "", *, root: Path = IMPLEMENTATION_ROOT
+) -> str:
     """Return a driver that includes one repository source and appends assertions."""
-    source = (TEMPLATE_ROOT / relative_path).as_posix()
+    source = (root / relative_path).as_posix()
     return f'#include "{source}"\n{assertions}\n'
 
 
@@ -79,7 +82,7 @@ int main() {
     assert(cstring_ops::length(destination) == 6);
     assert(cstring_ops::compare(destination, "hello!") == 0);
 }
-"""))
+""", root=EXAMPLE_ROOT))
 
     def test_integer_conversion(self):
         compile_and_run(include_driver("integer_conversion.cc", r"""
@@ -94,7 +97,7 @@ int main() {
     assert(integer_conversion::format(-255, 16) == "-ff");
     assert(integer_conversion::format(10, 2) == "1010");
 }
-"""))
+""", root=EXAMPLE_ROOT))
 
     def test_valid_sudoku(self):
         compile_and_run(include_driver("interview_valid_sudoku.cc", r"""

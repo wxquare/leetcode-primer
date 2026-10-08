@@ -1,6 +1,6 @@
 # 按难度分类的题目
 
-[完整 LeetCode 题单](leetcode-problems.md) / [路线图入口](../roadmap/00-start-here.md) / [复盘方法](../review-method.md)
+[完整 LeetCode 题单](leetcode-problems.md) / [路线图入口](../roadmap/00-start-here.md) / [复盘方法](../../../guides/review-method.md)
 
 ## 简单
 

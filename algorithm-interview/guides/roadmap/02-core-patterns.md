@@ -1,6 +1,6 @@
 # 02 核心模式
 
-[路线入口](00-start-here.md) / [上一阶段](01-foundations.md) / [复习方法](../review-method.md)
+[路线入口](00-start-here.md) / [上一阶段](01-foundations.md) / [复习方法](../../../guides/review-method.md)
 
 核心模式阶段重点训练“题目识别”。每一节先写下识别信号，再做两到四题；如果题目做出来但无法解释模式选择，仍在个人复习记录中按 `review` 处理，不急着标记为 `mastered`。
 
@@ -54,7 +54,7 @@
 - [Offer 5. 用两个栈实现队列](../../剑指offer/src/offer5_queue_with_two_stacks.cc)
 - [Offer 22. 从上往下打印二叉树](../../剑指offer/src/offer22_print_tree_from_top_to_bottom.cc)
 - [Offer 64. 滑动窗口的最大值](../../剑指offer/src/offer64_sliding_window_maximum.cc)
-- [单调队列模板](../../其它常见的题目/src/monotonic_structures.cc)
+- [单调队列模板](../../implementations/src/monotonic_structures.cc)
 
 <a id="bfs"></a>
 
