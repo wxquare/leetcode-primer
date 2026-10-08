@@ -1,4 +1,4 @@
-# leetcode-primer
+# interview-primer
 
 ## 导航
 

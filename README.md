@@ -23,11 +23,11 @@
 
 ## 快速上手
 
-题解和示例以独立源码文件组织，没有统一构建系统。当前 GitHub 仓库地址仍为 `wxquare/leetcode-primer`：
+题解和示例以独立源码文件组织，没有统一构建系统。GitHub 仓库地址为 `wxquare/interview-primer`：
 
 ```bash
-git clone https://github.com/wxquare/leetcode-primer.git
-cd leetcode-primer
+git clone https://github.com/wxquare/interview-primer.git
+cd interview-primer
 
 # 编译并运行 KMP 示例
 g++ -std=c++17 -O2 "algorithm-interview/implementations/src/string_kmp.cc" -o /tmp/string_kmp
