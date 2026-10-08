@@ -21,9 +21,13 @@
 
 ## 后端与系统设计
 
-仓库同时整理后端面试中的核心基础与系统设计题目。[核心后端基础题](system-design/question-bank/core-backend-foundations.md)覆盖 12 个技术领域，共 200 个主题、1000 道题，采用“问题、答案、追问”三段式整理。
+仓库同时整理后端面试中的核心基础与系统设计题目。[核心后端基础题](system-design/question-bank/backend-1000-foundations.md)覆盖 12 个技术领域，共 200 个主题、1000 道题，采用“问题、答案、追问”三段式整理。
 
-[AI 与 AI Agent 开发高频面试 50 题](system-design/question-bank/2026-09-26-ai-agent-development-interview-50.md)覆盖 LLM、Prompt、RAG、Agent 执行、生产工程、安全与架构，适合 AI 应用与 Agent 工程岗复习。
+[电商系统设计 180 题](system-design/question-bank/system-design-ecommerce-180.md)按平台架构、商品、库存、营销、搜索、交易、支付和可靠性组织电商场景。
+
+[通用与非电商系统设计 100 题](system-design/question-bank/system-design-general-100.md)覆盖系统设计基础、容量治理、数据一致性、中间件、可靠性及多类非电商业务系统。
+
+[AI 与 AI Agent 开发高频面试 50 题](system-design/question-bank/ai-agent-50-engineering.md)覆盖 LLM、Prompt、RAG、Agent 执行、生产工程、安全与架构，适合 AI 应用与 Agent 工程岗复习。
 
 ## 面试冲刺，从这里开始
 

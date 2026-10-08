@@ -715,6 +715,7 @@
 
 ## 参考
 
-- [系统设计面试 50 题](system-design-interview-50.md)
+- [电商系统设计 180 题](system-design-ecommerce-180.md)
+- [通用与非电商系统设计 100 题](system-design-general-100.md)
 - [书稿第 13 章 Agent 的演化与架构总纲](https://wxquare.github.io/ai-book/part2/01-agent-architecture.html)
 - [书稿第 16 章 Harness Engineering](https://wxquare.github.io/ai-book/part2/04-harness-engineering.html)
