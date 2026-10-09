@@ -7,7 +7,7 @@
 - [核心后端基础](question-bank/backend-1000-foundations.md)：MySQL、Redis、Kafka、Elasticsearch、网络、操作系统、容器、语言与工具等主题。
 - [电商系统设计 180 题](question-bank/system-design-ecommerce-180.md)：平台、商品、库存、营销、搜索、交易、支付与可靠性。
 - [通用与非电商系统设计 100 题](question-bank/system-design-general-100.md)：系统设计基础、通用技术主题及多类非电商业务。
-- [AI 与 AI Agent 工程 50 题](question-bank/ai-agent-50-engineering.md)：LLM、Prompt、RAG、Agent、生产工程、安全与架构。
+- [AI 与 AI Agent 工程 100 题](question-bank/ai-agent-100-engineering.md)：LLM、上下文、RAG、工具与 MCP、执行恢复、评测、安全及端到端架构。
 
 ## 代码练习
 

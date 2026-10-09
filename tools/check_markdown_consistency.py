@@ -60,7 +60,7 @@ REQUIRED_PATHS = (
     SYSTEM_DESIGN_ROOT / "question-bank" / "backend-1000-foundations.md",
     SYSTEM_DESIGN_ROOT / "question-bank" / "system-design-ecommerce-180.md",
     SYSTEM_DESIGN_ROOT / "question-bank" / "system-design-general-100.md",
-    SYSTEM_DESIGN_ROOT / "question-bank" / "ai-agent-50-engineering.md",
+    SYSTEM_DESIGN_ROOT / "question-bank" / "ai-agent-100-engineering.md",
     SYSTEM_DESIGN_ROOT / "examples" / "README.md",
     SYSTEM_DESIGN_ROOT / "examples" / "src",
 )

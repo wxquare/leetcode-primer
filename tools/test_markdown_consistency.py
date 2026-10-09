@@ -240,7 +240,7 @@ class MarkdownConsistencyTest(unittest.TestCase):
                 "system-design-interview/question-bank/backend-1000-foundations.md",
                 "system-design-interview/question-bank/system-design-ecommerce-180.md",
                 "system-design-interview/question-bank/system-design-general-100.md",
-                "system-design-interview/question-bank/ai-agent-50-engineering.md",
+                "system-design-interview/question-bank/ai-agent-100-engineering.md",
             )
             for name in required:
                 path = root / name
